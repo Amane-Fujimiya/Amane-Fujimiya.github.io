@@ -5,6 +5,7 @@ title: The classical setting of statistical learning
 ---
 
 To be honest. Writing this is like just summarize the topic in a fancy way. Not so much I hope it is.
+
 ___
 
 ## Setting
