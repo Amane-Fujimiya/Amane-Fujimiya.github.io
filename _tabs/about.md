@@ -9,4 +9,4 @@ Hello! I'm Fujimiya Amane (藤宮天音), a physicist, researcher in Machine Lea
 
 I created this site to well, gather knowledge if able, publish and holds my works later on, and well - for blogging purposes in the future, perhaps. It's not too bad to gain a bit of exposure, no? 
 
-Most of the site is not complete as of now, so this might change for better or worse. 
+Here is my [email](mailto:fujimiyaamane@outlook.com), in which I am able to reply almost any time. 
