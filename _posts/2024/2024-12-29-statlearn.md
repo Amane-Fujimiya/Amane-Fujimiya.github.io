@@ -6,6 +6,7 @@ title: The classical setting of statistical learning
 
 To be honest. Writing this is like just summarize the topic in a fancy way. Not so much I hope it is.
 ___
+
 ## Setting
 The **general setting** of the learning problem can be defined as follows. Let the probability measure $F(z)$ be defined on space $Z$. Consider the set of functions $Q(z,\alpha),\alpha\in\Lambda$. The goal is to minimize the risk functional 
 
@@ -32,6 +33,7 @@ We say that an **inductive principle** defines a **learning process** if for any
 The ERM principle, noted also, is quite general. The classical methods for the solution of a specific learning problem, such as the least-square method in the problem of regression estimation or the maximum likelihood (ML) method. 
 
 The formulation of the learning problem, is indeed rather broad, but the main one as far as the classical theory is considered, should be of pattern recognition, regression estimation, and density estimation. 
+
 ___
 
 ## I. Pattern Recognition
