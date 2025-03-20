@@ -169,6 +169,11 @@ collections:
     output: true
     sort_by: order
 
+#collections:
+#  theories:
+#    output: true
+#    permalink: /:collection/:categories:output_ext
+
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project

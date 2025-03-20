@@ -2,21 +2,19 @@
 layout: post
 math: true
 title: The classical setting of statistical learning
+category: statistical_learning
 ---
 
 To be honest. Writing this is like just summarize the topic in a fancy way. Not so much I hope it is.
 
-___
-
 ## Setting
-The **general setting** of the learning problem can be defined as follows. Let the probability measure $F(z)$ be defined on space $Z$. Consider the set of functions $Q(z,\alpha),\alpha\in\Lambda$. The goal is to minimize the risk functional 
+The **general setting** of the learning problem can be defined as follows. Let the probability measure $$F(z)$$ be defined on space $Z$. Consider the set of functions $Q(z,\alpha),\alpha\in\Lambda$. The goal is to minimize the risk functional 
 
 $$R(\alpha)=\int Q(z,\alpha) \, dF(z), \quad \alpha\in\Lambda$$
 
 where the probability measure $F(z)$ is unknown, but an i.i.d. sample 
 
-$$z_{1},\dots,z_{\ell}$$
-is given. 
+$$z_{1},\dots,z_{\ell}$$ is given. 
 The learning problem considered above are particular cases of this general problem of *minimizing the risk functional* on the basis of empirical data, where $z$ describe a pair $(x,y)$ and $Q(z,\alpha)$ is the specific loss function. To apply them to specific problems, one has to substitute the corresponding loss functions in the formulas obtained. 
 ## Empirical risk minimization (ERM)
 In order to **minimize** the risk functional with an unknown distribution function $F(z)$, the following inductive principle can be applied: 
