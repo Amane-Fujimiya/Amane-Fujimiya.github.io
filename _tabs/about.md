@@ -13,4 +13,9 @@ Here is my [email](mailto:fujimiyaamane@outlook.com), in which I am able to repl
 
 ## Info
 
->! The maintainer of this website is Bui Gia Khanh, a second-year undergraduate student of Hanoi University of Science, Vietnam National University. As of now, this site is actively maintained for the source available. So, yes, just about right. 
+There's not quite a lot of things to say. At least for now. At first, I even though of this website as a kind of experiments. But then, here we are, and I really try to make this to work it out properly so. 
+
+<details>
+  <summary>Here's the thing.</summary>
+The maintainer of this website is Bui Gia Khanh, a second-year undergraduate student of Hanoi University of Science, Vietnam National University. As of now, this site is actively maintained for the source available. So, yes, just about right.
+</details>
