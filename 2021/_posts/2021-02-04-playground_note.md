@@ -1,4 +1,9 @@
-
+---
+layout: post
+math: true
+title: Playground notes.
+category: machine learning 
+---
 
 The playground exercise includes: 
 

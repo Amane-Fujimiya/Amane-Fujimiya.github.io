@@ -1,9 +1,8 @@
-
 ---
 layout: post
 math: true
-title: Raman spectroscopy and machine learning
-category: machine learning physics incomplete
+title: Physics trick.
+category: machine learning physics 
 ---
 
 While looking for mathematics videos, I stumbled upon a video, dubbed "S-Tier Acrobatic Calculus that Physicists do" of which I was pleasantly surprised by what is presented in the video. 
