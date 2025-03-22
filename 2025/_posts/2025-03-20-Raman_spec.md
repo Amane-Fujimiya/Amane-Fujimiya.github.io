@@ -20,6 +20,8 @@ Hopefully it's will be nice and shiny.
 So, what is it about? The theory of optics, and whatever going on with **lights**, have various conjectures, theories and interpretation. At least to be familiar of one such, we might as well proceed with the simplest one - *ray optics*, and this, alongside *wave optics*, found the foundation of the discussion for modern optics. 
 
 One particular aspect of why rays and wave optics are easier than others comes from the fact that they are developed, and treated succinctly without the knowledge of electromagnetism. Of course, Maxwell was born in the 19th century and not earlier, so that is understandable. So, here, *light is not considered to be an electromagnetic phenomenon*.
+
+Afterward, we will discuss the formalism into electromagnetic effects by Maxwell, and the dilemma of the photoelectric effect - one such effect that changes the perception and interperation of what lights, and other matters to be. 
 ## I.1. Ray optics
 
 While the nature of light is far more complex than one can simply make it out of such, the naive definition of light can be defined two-fold - a *dynamic container* of energy to specific configuration, and by the configuration, either wave-like behaviour, and particle-like observations. For ray optics, the most correct model of said treatment is caleld the *Corpuscular theory of light*, by Issac Newton and Pierre Gassendi (the first guy I know - everyone knows - the second... well not quite), where matter or light is made up of small particles called corpuscles (or 'little particles'). 
@@ -36,6 +38,7 @@ The fundamental principle of ray optics, called **Fermat's principle**, concerns
 $$
 \ell [\mathbf{r}]:= \int_{0}^{d} n(\mathbf{r}) \: ds
 $$
+
 This quantity is proportional to the time light takes to traverse the path, $\Delta t= \ell /c_{0}$. Fermat's principle states that the optical rays traverse paths that satisfy $\delta \ell = 0$, or the path length is the same throughout the path. This principle is also often called the *principle of least time*. For ray optics, this principle settles the analysis and path calculations. 
 
 ### Paraxial rays.
@@ -86,7 +89,25 @@ Another theory of light, much different than what is perceived as rays, or parti
 1. Light travels in a hypothetical medium ether (high elasticity with very low density) as waves. 
 2. He proposed that light waves are of longitudinal nature. Later on, it was found that they are transverse. 
 
+The need for the theory of *wave optics* comes rather conveniently. While geometrical optics (ray optics) can explain relection, refraction, and other effects, sone phenomena like interference and diffraction can only be satisfactorily described, at least for then, only by considering light as waves. We should however, note that, nevertheless, we are still only approximating the world, or in this case, the light. Classical physics analyzes lights by considering its abstraction to either *particles* (corpuscular) or by *waves* (Huygen's), both of them at the point is based on pure travel experiments. We know light moves. And that's it. 
+
+### Waves - oscillation and vibration
+Before anything, let's summarize that is there to be said of waves, since we are trying to interpret it so. 
+
+Everything likes to be in equilibrium. Well, *most of them*. Nevertheless, consider a relatively stable and in-equilibrium objects and system surrounding it. Any finite change constitutes to its present-future state transition *perturbs* this equilibrium to certain level. For example, a stationary object in which the forces surrounding it, acting on it, and its existence (by Newton, rigid bodies cancel the forces out) is in equilibrium, and you *push it*, introducing additional outer subjects in, you have *perturbed* the system, and make it moving. 
+
+### Huygen's principle
+There's something called *wavefront*. Consider throwing stone on a calm pool of water - the waves spread out from the point of impact. Every point on the surface oscillates with time. At any instant, if one take a picture of the wave behaviour would show circular rings of the highest amplitude. The waves at any given ring, or any given circular region of radius $r$ from the point of impact is *in phase* - they are moving in the same direction and oscillate at the same distance. Such a locus of points, which oscillate in phase is called a **wavefront** - thus, a wavefront is defined *to be a surface of constant phase*.  
+
+Set the source as $S$, for $r'$ the distance from the source to point $O$. 
+
 # II. Raman scattering
+
+Raman effect, or *scattering*, is a type of optical interaction phenomenon. As we have interpreted earlier, our experiments with lights has been conducted in a fairly standard way of seeing light interacts with matters, or no at all. We would want to remember that light is an object moving in the consideration of different medium - including vacuum being classified as one, and air, and mediums contains materials of sufficient size. 
+
+Any time propagation light (or any type of radiation) encounters a boundary for an object that is different from the material the light is coming from, some fraction of the light will be reflected from that surface. For simple geometries, this is known as the **Fresnel reflection** for flat surfaces, **Mie scattering** for scattering from spheres, or **Rayleigh scattering** for sub-wavelength particles. By conservation, those events are called *elastic events*, such that if we isolate the system into $I-A-O$ or input (I)- action (A) - output chain, $E_{I}=E_{O}$ and the light remains the same. The other way around, where *something is missing* at the end - either because the medium exchange the luminiferous energy into something else (thermodynamic energies), is called *inelastic* (referencing exactly momuntum transfer). And in such, one particular event is **Raman scattering**, and hence, the purpose why we are here. 
+
+
 
 ## Preliminary (or recap)
 ### II.1. Basic definition
@@ -96,8 +117,9 @@ The expression *material system* will be used for the **matter** involved in the
 4. **Transition energy** between states are $E_{fi}=E_{f}-E_{i}$, and can be defined more by the associated $\omega$: $$E_{fi}=\hbar \omega_{fi},\omega_{fi}=\omega_{f}-\omega_{i}$$
 5. The *incident radiation* will be taken to consists of one or more **monochromatic EM waves** (of singular colour) of frequency $\omega_{1},\omega_{2},\dots$ with photon energies $\hbar \omega_{1},\hbar \omega_{2},\dots$ If there is only **one** monochromatic component, the interaction is called *one-colour process*. Conversely, for $M$ components, it is called $\mathbf{M}$-colour process. 
 6. All light-scattering processes are characterized by the fact that, unlike direct absorption, the *energy* of an *incident photon* is not **required** to be equal to the energy corresponding to the difference between two discrete energy levels of the material system. 
+
 ### II.2. Optical processes
-Optical properties and processes observed in optical system is comprised of several definitions and terms describing such. 
+Optical properties and processes observed in optical system consists of several definitions and terms describing such. 
 
 The simplest group of optical phenomena consists of **reflection**, **propagation**, and **transmission**. These phenomena can occur while light propagates through an optical medium. 
 In the propagation phase (of the interaction between material and the incident light that was not reflected), there are several phenomena that can happens: 
@@ -111,6 +133,7 @@ In the propagation phase (of the interaction between material and the incident l
 	4. Not always accompanies absorption as a reemission process, since excited energy can dissipate before the characteristic time. 
 4. Scattering: Redirection and changes of frequency of incident lights propagating through the medium. The scattering effect is **elastic** if frequency is constant, but **inelastic** if it varies. 
 Other than the abovementioned phenomena, there's nonlinear optical phenomenon, such as frequency double. All of which happens within high intensity light. 
+
 ## The Raman effect
 When **monochromatic radiation** of frequency $\omega_{1}$ is incident on system of material, most of it is transmitted without change, but some scattering occurs. 
 
