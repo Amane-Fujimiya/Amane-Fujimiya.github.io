@@ -2,7 +2,9 @@
 layout: post
 math: true
 title: Physics trick.
-category: machine learning physics 
+category: 
+    - physics
+    - incomplete
 ---
 
 While looking for mathematics videos, I stumbled upon a video, dubbed "S-Tier Acrobatic Calculus that Physicists do" of which I was pleasantly surprised by what is presented in the video. 

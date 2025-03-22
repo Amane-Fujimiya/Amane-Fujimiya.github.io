@@ -2,7 +2,10 @@
 layout: post
 math: true
 title: Raman spectroscopy and machine learning
-category: machine learning physics incomplete
+category: 
+	- machine learning
+	- physics
+	- incomplete
 ---
 
 **This is incomplete**. I just update on the go.
