@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.28">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Fujimiya Amane">
+<meta name="dcterms.date" content="2025-03-20">
+
+<title>Raman spectroscopy - an analysis – Amane in the Unknown</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-c8b544e1eab81f7563542c0a8b71d1e9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-352d86000b8551449f8b28dcc7a192db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Raman spectroscopy - an analysis – Amane in the Unknown">
+<meta property="og:description" content="The journey to find the truth. Or whatever skewed version of it">
+<meta property="og:image" content="https://amane-fujimiya.github.io/images/optics_ass_1.png">
+<meta property="og:site_name" content="Amane in the Unknown">
+<meta property="og:image:alt" content="The components of light ray">
+<meta property="og:image:height" content="405">
+<meta property="og:image:width" content="733">
+<meta name="twitter:title" content="Raman spectroscopy - an analysis – Amane in the Unknown">
+<meta name="twitter:description" content="The journey to find the truth. Or whatever skewed version of it">
+<meta name="twitter:image" content="https://amane-fujimiya.github.io/images/optics_ass_1.png">
+<meta name="twitter:image:alt" content="The components of light ray">
+<meta name="twitter:image-height" content="405">
+<meta name="twitter:image-width" content="733">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    window.setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      window.setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    window.hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(darkModeDefault) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const darkModeDefault = false;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !window.hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+    };
+    // Switch to dark mode if need be
+    if (window.hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/favicon.ico" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Amane in the Unknown</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../essays/index.html"> 
+<span class="menu-text">Essays</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../sketches/index.html"> 
+<span class="menu-text">Sketches</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notes/index.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../document/index.qmd"> 
+<span class="menu-text">Docs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../main/index.html"> 
+<span class="menu-text">Main</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blogs/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:fujimiyaamane@outlook.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#paraxial-rays." id="toc-paraxial-rays." class="nav-link" data-scroll-target="#paraxial-rays.">Paraxial rays.</a></li>
+  <li><a href="#i.2.-wave-optics" id="toc-i.2.-wave-optics" class="nav-link" data-scroll-target="#i.2.-wave-optics">I.2. Wave optics</a>
+  <ul class="collapse">
+  <li><a href="#waves---oscillation-and-vibration" id="toc-waves---oscillation-and-vibration" class="nav-link" data-scroll-target="#waves---oscillation-and-vibration">Waves - oscillation and vibration</a></li>
+  <li><a href="#huygens-principle" id="toc-huygens-principle" class="nav-link" data-scroll-target="#huygens-principle">Huygen’s principle</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#ii.-raman-scattering" id="toc-ii.-raman-scattering" class="nav-link" data-scroll-target="#ii.-raman-scattering">II. Raman scattering</a>
+  <ul class="collapse">
+  <li><a href="#preliminary-or-recap" id="toc-preliminary-or-recap" class="nav-link" data-scroll-target="#preliminary-or-recap">Preliminary (or recap)</a>
+  <ul class="collapse">
+  <li><a href="#ii.1.-basic-definition" id="toc-ii.1.-basic-definition" class="nav-link" data-scroll-target="#ii.1.-basic-definition">II.1. Basic definition</a></li>
+  <li><a href="#ii.2.-optical-processes" id="toc-ii.2.-optical-processes" class="nav-link" data-scroll-target="#ii.2.-optical-processes">II.2. Optical processes</a></li>
+  </ul></li>
+  <li><a href="#the-raman-effect" id="toc-the-raman-effect" class="nav-link" data-scroll-target="#the-raman-effect">The Raman effect</a></li>
+  <li><a href="#spectroscopy" id="toc-spectroscopy" class="nav-link" data-scroll-target="#spectroscopy">Spectroscopy</a>
+  <ul class="collapse">
+  <li><a href="#comparison-to-other-spectroscopic-methods" id="toc-comparison-to-other-spectroscopic-methods" class="nav-link" data-scroll-target="#comparison-to-other-spectroscopic-methods">Comparison to other spectroscopic methods</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Raman spectroscopy - an analysis</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Physics</div>
+    <div class="quarto-category">machine learning</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Fujimiya Amane </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 20, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>This is incomplete</strong>. I just update on the go.</p>
+<p>It’s been a while since there is anything happening on the frontal page. And, considering that I just have done a small essay on Raman spectroscopy, and the topic of optical physics, it’s a good thing to visit this topic a bit further than before.</p>
+<section id="introduction" class="level1 page-columns page-full">
+<h1>Introduction</h1>
+<p>This article, or rather, the small post (not so small, however) will introduce certain topics on optical physics and its interaction with materials, the interpretation of such events, scattering and Raman scattering, and spectroscopic application of the exact jargon we just threw around there, and certain data-specific, machine learning approach - <em>coincidentally</em> my essay as well.</p>
+<p>Hopefully it’s will be nice and shiny. # I. Optical physics So, what is it about? The theory of optics, and whatever going on with <strong>lights</strong>, have various conjectures, theories and interpretation. At least to be familiar of one such, we might as well proceed with the simplest one - <em>ray optics</em>, and this, alongside <em>wave optics</em>, found the foundation of the discussion for modern optics.</p>
+<p>One particular aspect of why rays and wave optics are easier than others comes from the fact that they are developed, and treated succinctly without the knowledge of electromagnetism. Of course, Maxwell was born in the 19th century and not earlier, so that is understandable. So, here, <em>light is not considered to be an electromagnetic phenomenon</em>.</p>
+<p>Afterward, we will discuss the formalism into electromagnetic effects by Maxwell, and the dilemma of the photoelectric effect - one such effect that changes the perception and interperation of what lights, and other matters to be. ## I.1. Ray optics</p>
+<p>While the nature of light is far more complex than one can simply make it out of such, the naive definition of light can be defined two-fold - a <em>dynamic container</em> of energy to specific configuration, and by the configuration, either wave-like behaviour, and particle-like observations. For ray optics, the most correct model of said treatment is caleld the <em>Corpuscular theory of light</em>, by Issac Newton and Pierre Gassendi (the first guy I know - everyone knows - the second… well not quite), where matter or light is made up of small particles called corpuscles (or ‘little particles’).</p>
+<blockquote class="blockquote">
+<p>Notice that by the above passage, we directly infer that, if you do not know by now, and to clarify, that light can be both waves, or streams of particles. As a wave, we can speed of the <strong>propagation speed</strong> of the wave <span class="math inline">\(\omega\)</span> as <span class="math inline">\(v(\omega)=\dot{x}=f\lambda\)</span> for <span class="math inline">\(\lambda\)</span> the wavelength. However, for ray optics, we consider only somewhat the particle case more.</p>
+</blockquote>
+<p>The fundamental assumption in the theory of ray optics is that light travels in the form of rays. A <strong>ray</strong> means, or represents a beam of light, however, this ray is often not monochromatic - but polychromatic - or with the shade of multiple colors. This model of light is fairly limited, since there exist only two ways of interaction: <em>reflection</em> or <em>refraction</em>. We would want to see what is more important in such theory.</p>
+<p>For light to travels, as for things to live, it propagates, or moves in a media. Hence, most of our results lives in what is called <strong>optical media</strong>. <em>Space</em>, without anything, is one kind of exception in such space. Assuming the media are lossless<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, we can characterize them completely by a quantity called <strong>index of refraction</strong>, denoted by <span class="math inline">\(n\)</span>. For the empty space, <span class="math inline">\(n=1\)</span>, and usually, <span class="math inline">\(n\geq 1\)</span>, or by how light is bent (refracted, or strays from its original vector directive).</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;By Ohm’s law, <span class="math inline">\(\mathbf{J}=\sigma \mathbf{E}\)</span>, where <span class="math inline">\(\sigma\)</span> is the conductivity. A media that is lossless has the conductivity <span class="math inline">\(\sigma\)</span> to be negligible, its permeability <span class="math inline">\(\mu\)</span> and permittivity <span class="math inline">\(\epsilon\)</span> finite. When an electromagnetic wave propagates through a lossless medium, the amplitude of its electric field or magnetic field remains constant throughout the propagation. Thus, we can call it a ‘non-interrupting’ medium for waves.</p></div></div><p>The fundamental principle of ray optics, called <strong>Fermat’s principle</strong>, concerns of the <em>optical path length</em>. Consider a path <span class="math inline">\(\mathbf{r}(s)\)</span> between points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in an optical medium; this path is paramterized by <span class="math inline">\(s\)</span>, so that <span class="math inline">\(A=\mathbf{r}(0), B=\mathbf{r}(d)\)</span>, where <span class="math inline">\(s,d\to L\)</span> for dimension. Then, the optical path length is the length is this path, weighted by the local refractive index. That is</p>
+<p><span class="math display">\[
+\ell [\mathbf{r}]:= \int_{0}^{d} n(\mathbf{r}) \: ds
+\]</span></p>
+<p>This quantity is proportional to the time light takes to traverse the path, <span class="math inline">\(\Delta t= \ell /c_{0}\)</span>. Fermat’s principle states that the optical rays traverse paths that satisfy <span class="math inline">\(\delta \ell = 0\)</span>, or the path length is the same throughout the path. This principle is also often called the <em>principle of least time</em>. For ray optics, this principle settles the analysis and path calculations.</p>
+<section id="paraxial-rays." class="level3">
+<h3 class="anchored" data-anchor-id="paraxial-rays.">Paraxial rays.</h3>
+<p>For ray optics, we need a formalism for keeping track of optical rays. Represent a ray by a vector, which keep track of the position and direction of the ray with respect to the <strong>optical axis</strong>, the reference axis for optical propagation. The displacement <span class="math inline">\(y\)</span> from the optical axis, and the direction <span class="math inline">\(\theta\)</span> are sufficient to <em>completely</em> specify the ray at a particular longitudinal position <span class="math inline">\(z\)</span>.</p>
+<p><img src="../..\images/optics_ass_1.png" class="img-fluid" alt="The components of light ray">{: .align-center width=400px}</p>
+<p>An observation can conclude that <span class="math inline">\(\theta = y'\)</span>, which then makes the coordinate to be</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+    y \\ \theta
+\end{bmatrix} = \begin{bmatrix}
+    y \\ y'
+\end{bmatrix}
+\]</span></p>
+<p>For any optical system of rays, we want to calculate the change in the ray vectors. In this sense, we get the model of optical system as a <em>transformation</em> of the ray vectors during its propagation.</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+    y \\ \theta
+\end{bmatrix} =\mathbf{f} \begin{bmatrix}
+    y \\ y'
+\end{bmatrix}
+\]</span></p>
+<p>for <span class="math inline">\(\mathbf{f}\)</span> modelling the optical system. Dealing with multivariate expressions, we obtain the approximation:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+y_2 \\ y_2'
+\end{bmatrix} = \left.
+\begin{bmatrix}
+\frac{\partial f_1}{\partial y_1} &amp; \frac{\partial f_1}{\partial y_1'} \\
+\frac{\partial f_2}{\partial y_1} &amp; \frac{\partial f_2}{\partial y_1'}
+\end{bmatrix}\right|_{y_1 = y_1' = 0}
+\begin{bmatrix}
+y_1 \\ y_1'
+\end{bmatrix} +\text{higher-order terms in } y_1, y_1'
+\]</span></p>
+<p>by Taylor-expanding the function. This is the <strong>paraxial approximation</strong>. The matrix of derivatives is the <strong>transfer matrix</strong> that represents the optical system in the paraxial approximation. Hence, we obtained an effective formalism for treating change of optical system.</p>
+</section>
+<section id="i.2.-wave-optics" class="level2">
+<h2 class="anchored" data-anchor-id="i.2.-wave-optics">I.2. Wave optics</h2>
+<p>Another theory of light, much different than what is perceived as rays, or particle stream by Newton’s corpuscular theory, is Crhistiaan Huygen’s wave theory (1960, Traité de la Lumière). For such theory, it follows: 1. Light travels in a hypothetical medium ether (high elasticity with very low density) as waves. 2. He proposed that light waves are of longitudinal nature. Later on, it was found that they are transverse.</p>
+<p>The need for the theory of <em>wave optics</em> comes rather conveniently. While geometrical optics (ray optics) can explain relection, refraction, and other effects, sone phenomena like interference and diffraction can only be satisfactorily described, at least for then, only by considering light as waves. We should however, note that, nevertheless, we are still only approximating the world, or in this case, the light. Classical physics analyzes lights by considering its abstraction to either <em>particles</em> (corpuscular) or by <em>waves</em> (Huygen’s), both of them at the point is based on pure travel experiments. We know light moves. And that’s it.</p>
+<section id="waves---oscillation-and-vibration" class="level3">
+<h3 class="anchored" data-anchor-id="waves---oscillation-and-vibration">Waves - oscillation and vibration</h3>
+<p>Before anything, let’s summarize that is there to be said of waves, since we are trying to interpret it so.</p>
+<p>Everything likes to be in equilibrium. Well, <em>most of them</em>. Nevertheless, consider a relatively stable and in-equilibrium objects and system surrounding it. Any finite change constitutes to its present-future state transition <em>perturbs</em> this equilibrium to certain level. For example, a stationary object in which the forces surrounding it, acting on it, and its existence (by Newton, rigid bodies cancel the forces out) is in equilibrium, and you <em>push it</em>, introducing additional outer subjects in, you have <em>perturbed</em> the system, and make it moving.</p>
+</section>
+<section id="huygens-principle" class="level3">
+<h3 class="anchored" data-anchor-id="huygens-principle">Huygen’s principle</h3>
+<p>There’s something called <em>wavefront</em>. Consider throwing stone on a calm pool of water - the waves spread out from the point of impact. Every point on the surface oscillates with time. At any instant, if one take a picture of the wave behaviour would show circular rings of the highest amplitude. The waves at any given ring, or any given circular region of radius <span class="math inline">\(r\)</span> from the point of impact is <em>in phase</em> - they are moving in the same direction and oscillate at the same distance. Such a locus of points, which oscillate in phase is called a <strong>wavefront</strong> - thus, a wavefront is defined <em>to be a surface of constant phase</em>.</p>
+<p>Set the source as <span class="math inline">\(S\)</span>, for <span class="math inline">\(r'\)</span> the distance from the source to point <span class="math inline">\(O\)</span>.</p>
+</section>
+</section>
+</section>
+<section id="ii.-raman-scattering" class="level1 page-columns page-full">
+<h1>II. Raman scattering</h1>
+<p>Raman effect, or <em>scattering</em>, is a type of optical interaction phenomenon. As we have interpreted earlier, our experiments with lights has been conducted in a fairly standard way of seeing light interacts with matters, or no at all. We would want to remember that light is an object moving in the consideration of different medium - including vacuum being classified as one, and air, and mediums contains materials of sufficient size.</p>
+<p>Any time propagation light (or any type of radiation) encounters a boundary for an object that is different from the material the light is coming from, some fraction of the light will be reflected from that surface. For simple geometries, this is known as the <strong>Fresnel reflection</strong> for flat surfaces, <strong>Mie scattering</strong> for scattering from spheres, or <strong>Rayleigh scattering</strong> for sub-wavelength particles. By conservation, those events are called <em>elastic events</em>, such that if we isolate the system into <span class="math inline">\(I-A-O\)</span> or input (I)- action (A) - output chain, <span class="math inline">\(E_{I}=E_{O}\)</span> and the light remains the same. The other way around, where <em>something is missing</em> at the end - either because the medium exchange the luminiferous energy into something else (thermodynamic energies), is called <em>inelastic</em> (referencing exactly momuntum transfer). And in such, one particular event is <strong>Raman scattering</strong>, and hence, the purpose why we are here.</p>
+<section id="preliminary-or-recap" class="level2">
+<h2 class="anchored" data-anchor-id="preliminary-or-recap">Preliminary (or recap)</h2>
+<section id="ii.1.-basic-definition" class="level3">
+<h3 class="anchored" data-anchor-id="ii.1.-basic-definition">II.1. Basic definition</h3>
+<p>The expression <em>material system</em> will be used for the <strong>matter</strong> involved in the scattering act. This will always be taken to be an assembly of free rotating, non-interacting molecules. 2. <em>Radiation</em> refers to electromagnetic radiation, characterized among other things, by frequency <span class="math inline">\(f\)</span> and related quantities. The frequency in interest is the <em>angular frequency</em> <span class="math inline">\(\omega\:(\mathrm{rad\:s}^{-1})\)</span>. 3. In the material system, the energy of a molecule in its initial state <span class="math inline">\(i\)</span>, before the interaction, is defined by <span class="math inline">\(E_{i}\)</span>, in its final state <span class="math inline">\(f\)</span>, is defined by <span class="math inline">\(E_{f}\)</span>. The ground is denoted by <span class="math inline">\(E_{g}\)</span>. <strong>Excited electronic state</strong> is denoted by <span class="math display">\[E_{e}\to E_{e_{1}},\dots,E_{e_{n}},\dots\]</span> 4. <strong>Transition energy</strong> between states are <span class="math inline">\(E_{fi}=E_{f}-E_{i}\)</span>, and can be defined more by the associated <span class="math inline">\(\omega\)</span>: <span class="math display">\[E_{fi}=\hbar \omega_{fi},\omega_{fi}=\omega_{f}-\omega_{i}\]</span> 5. The <em>incident radiation</em> will be taken to consists of one or more <strong>monochromatic EM waves</strong> (of singular colour) of frequency <span class="math inline">\(\omega_{1},\omega_{2},\dots\)</span> with photon energies <span class="math inline">\(\hbar \omega_{1},\hbar \omega_{2},\dots\)</span> If there is only <strong>one</strong> monochromatic component, the interaction is called <em>one-colour process</em>. Conversely, for <span class="math inline">\(M\)</span> components, it is called <span class="math inline">\(\mathbf{M}\)</span>-colour process. 6. All light-scattering processes are characterized by the fact that, unlike direct absorption, the <em>energy</em> of an <em>incident photon</em> is not <strong>required</strong> to be equal to the energy corresponding to the difference between two discrete energy levels of the material system.</p>
+</section>
+<section id="ii.2.-optical-processes" class="level3">
+<h3 class="anchored" data-anchor-id="ii.2.-optical-processes">II.2. Optical processes</h3>
+<p>Optical properties and processes observed in optical system consists of several definitions and terms describing such.</p>
+<p>The simplest group of optical phenomena consists of <strong>reflection</strong>, <strong>propagation</strong>, and <strong>transmission</strong>. These phenomena can occur while light propagates through an optical medium. In the propagation phase (of the interaction between material and the incident light that was not reflected), there are several phenomena that can happens: 1. Refraction: Reduction of velocity when exiting the material (entering free space), which causes the bending of lights. 1. Question: Why this happens? Excluding the Snail’s law, or Huygens’ principle, what is the “physical” explanation? 2. Absorption: This occurs if the frequency <span class="math inline">\(f\)</span> of the light is resonant with the <em>transition frequencies</em> of the atoms in the medium (this occurs during atomic electron transition process, governed by <span class="math inline">\(E=hf\)</span>), which attenuates the incident light gradually. Selective absorption is the result for coloration in many materials. 3. Luminescence: Is the phenomena of spontaneous emission of light, from the <em>excited atoms of the material</em>. This is accompanied, usually by absorption, such that to pull the atom state into excited state. Certain properties are 1. Light emitted during de-excitation process is non-aligned to the incident light propagating through the material. 2. Frequency is different, and based of excited electron and material’s type. 3. There’s a characteristic amount of time for the de-excitation process to occurs. 4. Not always accompanies absorption as a reemission process, since excited energy can dissipate before the characteristic time. 4. Scattering: Redirection and changes of frequency of incident lights propagating through the medium. The scattering effect is <strong>elastic</strong> if frequency is constant, but <strong>inelastic</strong> if it varies. Other than the abovementioned phenomena, there’s nonlinear optical phenomenon, such as frequency double. All of which happens within high intensity light.</p>
+</section>
+</section>
+<section id="the-raman-effect" class="level2">
+<h2 class="anchored" data-anchor-id="the-raman-effect">The Raman effect</h2>
+<p>When <strong>monochromatic radiation</strong> of frequency <span class="math inline">\(\omega_{1}\)</span> is incident on system of material, most of it is transmitted without change, but some scattering occurs.</p>
+<p><img src="../..\images/rtas.png" class="img-fluid" alt="Types of effects">{: .align-center width=400px}</p>
+<p>If the frequency content of the scattered radiation is analysed, aside from <span class="math inline">\(\omega_{1}\)</span>, there is also various <em>new frequencies</em> of type <span class="math inline">\(\omega_{1}\pm \omega_{M}\)</span>. The frequency <span class="math inline">\(\omega_{M}\)</span> in a <strong>molecular</strong> system are found to lie principally in the ranges associated with transitions between <em>rotational, vibrational</em> and <em>electronic</em> levels. Those levels are referring to <strong>energy level</strong> of excited state aside from the ground state <span class="math inline">\(E_{g}\)</span>. For rotational for example, the diatomic molecule has the rotational energy level at <span class="math display">\[E(J)=B(J+1)\]</span> where <span class="math inline">\(J\)</span> is the quantum number of the total rotational angular momentum, <span class="math inline">\(B\)</span> is the rotational constant, and <span class="math display">\[B=\frac{h}{2\pi^{2}cI}\]</span> where <span class="math inline">\(I=\mu r^{2}\)</span> being the moment of inertia of the molecule. As such, there are a lot of excited state in those ranges.</p>
+<p>Scattering <em>without change</em> of frequency is called <strong>Rayleigh</strong> scattering, and that with change of frequency is called <strong>Raman scattering</strong> after C. V. Raman. Raman bands at frequencies less than the incident frequency are referred to as <strong>Stokes-band scattering</strong>, while the opposite is called <strong>anti-Stokes scattering</strong>. For Mie scattering, then it is a version of Rayleigh (technically speaking) but <strong>much stronger</strong>.</p>
+<p>Statistically, during the event of light incidents that leads to scattering effect, <strong>most</strong> light passing through undergoes Rayleigh scattering. This is an <em>elastic effect</em>, which means that the light does not gain or lose energy during the scattering. Therefore, it stays at the same wavelength.</p>
+<p>Raman scattering is then <em>different</em> in that it is inelastic. The light photons <em>lose</em> or <em>gain</em> energy during the scattering process, and therefore increase or decrease in wavelength respectively.</p>
+<p>For most experiments and practical purposes, we often take, for such reason, Rayleigh scattering as the basis for selecting the region of scattering frame that we want to focus on. Usually, anti-Raman is not a good indicator and readable spectrum, since it <em>blends</em> in with large noises and thereof, hence we would like to use the left-hand side - Stokes line more than enough. This does not mean that anti-Stokes holds no values or information - from a statistical standpoint however - capturing anti-Stokes is much more difficult.</p>
+<blockquote class="blockquote">
+<p><strong>The origin for the Stokes name.</strong> According to Stokes’ law, the frequency of fluorescent light is always smaller or at most <strong>equal</strong> of that exciting light. Stokes lines are thus those that correspond to Stoke’s law, and anti-Stokes line are those that contradict it. This is adopted for the Raman effect, in spite of its difference from the original intended term of usage.</p>
+</blockquote>
+</section>
+<section id="spectroscopy" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="spectroscopy">Spectroscopy</h2>
+<p>Spectroscopy utilizes electromagnetic radiation, when interaction with atoms and molecules. Their ‘after effect’ varies, for example, being induced absorption, spontaneous emission, induced emission. Some of the more direct descriptions includes luminescence and fluorescence, scattering, and reflections. Of all, the typical interest is based on the event of <strong>scattering</strong>.</p>
+<p>Even with some of its drawback, characteristic scattering is less susceptible to the environment (<em>fluorescence spectroscopy</em>), spectrum is easier to decodes (<em>IR spectroscopy</em>), somewhat easier to set up and maintain (<em>reflection-absorption spectroscopy</em>), and others.</p>
+<p>Traditionally, Raman used light from the Sun focused through a telescope to achieve a high enough intensity in his scattered signal.</p>
+<p>Modern <strong>spectrometers</strong> use both improved sources and more sensitive detectors to obtain better results. Nowadays, lasers are normally employed due to their high intensity, single wavelength and coherent beam instead.</p>
+<section id="comparison-to-other-spectroscopic-methods" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="comparison-to-other-spectroscopic-methods">Comparison to other spectroscopic methods</h3>
+<p>In the commonly used infrared absorption spectroscopy, infrared light excites certain vibrational frequencies of molecules and is absorbed by them, not re-emitted. This gives an <strong>absorption spectrum</strong>, with bands at characteristic <strong>wavenumbers</strong>. Other absorption techniques use higher energy radiation (e.g.&nbsp;ultraviolet) and raise electrons to an excited state.</p>
+<p><em>Fluorescence</em> occurs when light (often UV) is incident on a molecule and promotes an electron to an excited state. The molecule is also vibrating. Firstly it relaxes from its vibrational state, dissipating this energy (normally as heat). Then, when it drops back down to the ground state, the photon released has less energy than the incident photon. The increased wavelength often means that the light is now in the visible region. This is how <em>fluorescent</em> lighting works, by ionisation of mercury to produce UV light, which is then absorbed by a fluorescent coating and re-radiated as visible light. Fluorescence can also be used for spectroscopy.</p>
+<p>Under such consideration, Raman is listed of several advantages: - Can be used with solids, liquids or gases. - No sample preparation needed. For infrared spectroscopy solids must be ground into KBr pellets or with nujol to form a mull. - Non-destructive No vacuum needed unlike some techniques, which saves on expensive vacuum equipment. - Short timescale. Raman spectra can be acquired quickly. - Can work with aqueous solutions (infrared spectroscopy has trouble with aqueous solutions because the water interferes strongly with the wavelengths used) - Glass vials can be used (unlike in infrared spectroscopy, where the glass causes interference) - Can use down fibre optic cables for remote sampling.</p>
+<p>Conversely, their drawbacks are not lacking: - Cannot be used for metals or alloys. - The Raman effect is very weak, which leads to low sensitivity, making it difficult to measure low concentrations of a substance. This can be countered by using one of the alternative techniques (e.g.&nbsp;Resonance Raman) which increases the effect. - Can be swamped by fluorescence from some materials.</p>
+<p>The second point might be one of the biggest drawback for Raman spectroscopic system - it is simply <strong>too expensive</strong> to guarantee specific error and retrieval acceptance bound when handling experiments related to spectroscopic extraction. Even the best, most DIY-like spectroscoper costs almost $4000 <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+
+
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;See <a href="https://pubs.acs.org/doi/10.1021/acs.jchemed.0c01028">this article on ACS.</a></p></div></div></section>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/amane-fujimiya\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block">Amane Fujimiya</span></p>
+</div>   
+    <div class="nav-footer-center">
+<p><span class="faux-block"><a href="https://forms.gle/LBFx3sUqrD9LLLHb7/"></a></span></p>
+</div>
+    <div class="nav-footer-right">
+<p><span class="faux-block">Everything <a href="https://en.wikipedia.org/wiki/Public_domainl">PD</a>; <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.en/">CC0</a> fallback.</span></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

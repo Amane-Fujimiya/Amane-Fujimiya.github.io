@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.28">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Fujimiya Amane">
+<meta name="dcterms.date" content="2025-04-11">
+<meta name="description" content="We have been empirically approaching AI for a very long time. Maybe it’s time to get things done in a more philosophical way?">
+
+<title>A crackpot philosophy of artificial intelligence – Amane in the Unknown</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-c8b544e1eab81f7563542c0a8b71d1e9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-352d86000b8551449f8b28dcc7a192db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="A crackpot philosophy of artificial intelligence – Amane in the Unknown">
+<meta property="og:description" content="We have been empirically approaching AI for a very long time. Maybe it’s time to get things done in a more philosophical way?">
+<meta property="og:image" content="https://amane-fujimiya.github.io/notes/posts/img/blog icon.jpg">
+<meta property="og:site_name" content="Amane in the Unknown">
+<meta name="twitter:title" content="A crackpot philosophy of artificial intelligence – Amane in the Unknown">
+<meta name="twitter:description" content="We have been empirically approaching AI for a very long time. Maybe it’s time to get things done in a more philosophical way?">
+<meta name="twitter:image" content="https://amane-fujimiya.github.io/notes/posts/img/blog icon.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    window.setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      window.setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    window.hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(darkModeDefault) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const darkModeDefault = false;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !window.hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+    };
+    // Switch to dark mode if need be
+    if (window.hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/favicon.ico" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Amane in the Unknown</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../essays/index.html"> 
+<span class="menu-text">Essays</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../sketches/index.html"> 
+<span class="menu-text">Sketches</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notes/index.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../document/index.qmd"> 
+<span class="menu-text">Docs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../main/index.html"> 
+<span class="menu-text">Main</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blogs/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:fujimiyaamane@outlook.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#defining-intelligence" id="toc-defining-intelligence" class="nav-link active" data-scroll-target="#defining-intelligence">Defining intelligence</a></li>
+  <li><a href="#the-definition-of-intelligence" id="toc-the-definition-of-intelligence" class="nav-link" data-scroll-target="#the-definition-of-intelligence">2. The definition of intelligence</a></li>
+  <li><a href="#the-descartes-experiment" id="toc-the-descartes-experiment" class="nav-link" data-scroll-target="#the-descartes-experiment">3. The Descartes Experiment</a></li>
+  <li><a href="#the-fallacy-of-descartes" id="toc-the-fallacy-of-descartes" class="nav-link" data-scroll-target="#the-fallacy-of-descartes">The fallacy of Descartes</a>
+  <ul class="collapse">
+  <li><a href="#emotions-maybe" id="toc-emotions-maybe" class="nav-link" data-scroll-target="#emotions-maybe">Emotions (maybe?)</a></li>
+  </ul></li>
+  <li><a href="#finding-nemo-or-intelligence" id="toc-finding-nemo-or-intelligence" class="nav-link" data-scroll-target="#finding-nemo-or-intelligence">4. Finding Nemo (or intelligence)</a>
+  <ul class="collapse">
+  <li><a href="#artificial-intelligence" id="toc-artificial-intelligence" class="nav-link" data-scroll-target="#artificial-intelligence">Artificial intelligence</a></li>
+  </ul></li>
+  <li><a href="#conceptual-problems" id="toc-conceptual-problems" class="nav-link" data-scroll-target="#conceptual-problems">5. Conceptual problems</a>
+  <ul class="collapse">
+  <li><a href="#the-descartes-argument" id="toc-the-descartes-argument" class="nav-link" data-scroll-target="#the-descartes-argument">The Descartes argument</a></li>
+  <li><a href="#the-flavour-of-strong-and-weak" id="toc-the-flavour-of-strong-and-weak" class="nav-link" data-scroll-target="#the-flavour-of-strong-and-weak">The flavour of “strong” and “weak”</a></li>
+  <li><a href="#the-chinese-room-argument" id="toc-the-chinese-room-argument" class="nav-link" data-scroll-target="#the-chinese-room-argument">The Chinese room argument</a></li>
+  </ul></li>
+  <li><a href="#the-well-end" id="toc-the-well-end" class="nav-link" data-scroll-target="#the-well-end">The, well, end</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">A crackpot philosophy of artificial intelligence</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">AI</div>
+    <div class="quarto-category">philosophy</div>
+    <div class="quarto-category">history</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    We have been empirically approaching AI for a very long time. Maybe it’s time to get things done in a more philosophical way?
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Fujimiya Amane </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 11, 2025</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">April 20, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>I have been working on machine learning, and, well, artificial intelligence for a while. Perhaps it is only the matter of time for when I will inevitably have to resort to think about the topic, rather confoundingly resides in the dry philosophy of things, but also eases one’s brain of the trouble of existence. Well, then comes this post.</p>
+<section id="defining-intelligence" class="level1 page-columns page-full">
+<h1>Defining intelligence</h1>
+<p>In regard to the topic of this section… The situation is rather, not being so fond of, disappointing. Even though we are curious of intelligence and its exhibitions, we have yet realized the actuality of such notion, even on ourselves, for there are many disagreements shared among those questioned this.</p>
+<p>It is not totally to discredit one major discipline that focus on the problem of the intelligent manifestation in the physical world, the <em>philosophy of mind</em>, which, by its name, studies the elements of the mind and body, the physical manifestation and mental coherence, of all, in which their line of thoughts focus on the existences of mind, the human, the life, and those of knowledge conceptualized upon high level as it, even though some blends in with empirical evidence, of such the trend in modern philosophy resides - most typical being neuroscience; but just to succinctly point out the fact that, empirical aside, the boundary of which we search for such essence of intelligence, is unfortunately an uncharted space.</p>
+<p>Specifically, there are no acceptance, for the debate even on the definition of intelligence is by no mean concluded, and those attempts to chart the sea returned fruitless, because, arguably, the relevant questions are not being asked, and those that are asked are in one way or another, of ‘higher level’ than what the current facility can establish. For that, however, we might have lot more room to maneuver through. Furthermore, the philosophical study of the mind is something in actuality, truly not so redundant as the above passage read, but rather a very intriguing, worthy line of analysis. It just that, while it attempts to ask, and to answer many questions, those questions are not what we want, at least for now. Nevertheless, they are still, very detrimental to what we are about to begin, and rather, we are about to rediscover of the ancient thoughts up to the present thinkers’ ideas. # 1. The question of intelligence We start this section with a series of historical accounts. Shane, Marcus (2007)’s paper <em>A collection of intelligence</em> and Masahiro’s (2023) <em>Descartes and Artificial Intelligence</em> might be a great place to start this, since they provide a non-trivial amount of definitions and attempts already there, which serve us more as exhibition for observants in this section and beginning.</p>
+<p>If we are to read the text long enough, and absorb certain amount of those definitions, we might see a pattern. Those that tried to define, or at least characterized the essence of intelligent, relies on either <em>action</em> or <em>process</em>. By this, we mean <em>thinking</em> in place of process, and <em>mutation</em> in terms of action. What does it mean? It means there are essentially two general qualities that one can use to characterize, for now, the <em>empirical intelligence</em>. The term <em>empirical intelligence</em> here refers to the more recent, and ‘modern’ approach to such question - to test it, to observe it even closer (neurological experiments, neuroscientific mapping of brain, etc.), and to try to construct it from the principle of re-exhibiting those results and actions (machine learning, in a sense. This can be conducted, and valued, either from its actions, its behaviours, its manifestation in terms of the course of actions it presents, its changes to the world as recognized non-random but rather of intentions, for what intention means shall be taken for granted<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, or from the internal process itself, which is harder to characterize, but is expressed in terms of “the ability to <em>learn</em>, the ability to <em>understand</em>, either principles, truths, facts, or common sense, to <em>profit</em> from experiences; the ability to <em>comprehend</em>, or the capacity to <em>reason</em>.” (Jensen, Huarte, Dearborn, etc.).</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;This is not always the case, but nevertheless, we might want to define it. Intention might be following a pattern. Moreover, some can argue that not just a pattern, but a logical deduction of which, for instance of the observable time, there exist causes and consequences, there exist action and consequences, for if one looks back, the string of events usually should not be taken as interaction of potentially randomness, but rather the more probable explanation relies on choice - the choice for those events to happen or not.</p></div></div><p>Another camp in this topic, cited being categorized as the <em>functional psychologist’s definition</em> (Not certainly all, but nevertheless substantial), further taking it to the <em>functional</em> definition. It focuses on the facility itself, rather than what was there to exhibit - in one way or another, we can think of this attempt as connecting the physical world to its influence on the ‘mental world’ - in words of the <em>duality</em> proposition. This includes the proposition that intelligent is functionally of multiple components combined (A. Anastasi), a bunch of stimuli (J. Peterson), or “the resultant of the process of acquiring, storing in memory, retrieving, combining, comparing, and using in new contexts information and conceptual skills.” (Humphreys). Certain definitions speak for others,</p>
+<blockquote class="blockquote">
+<h5 id="d.-k.-simonton" class="anchored" data-anchor-id="defining-intelligence">D. K. Simonton</h5>
+<p>… certain set of cognitive capacities that enable an individual to adapt and thrive in any given environment they find themselves in, and those cognitive capacities include things like memory and retrieval, and problem-solving and so forth. There’s a cluster of cognitive abilities that lead to successful adaptation to a wide range of environments.</p>
+</blockquote>
+<p>or by a more playful perspective as a whole: &gt; ##### R. J. Sternberg &gt; … I prefer to refer to it as ‘successful intelligence.’ And the reason is that the emphasis is on the use of your intelligence to achieve success in your life. So I define it as your skill in achieving whatever it is you want to attain in your life within your sociocultural context — meaning that people have different goals for themselves, and for some it’s to get very good grades in school and to do well on tests, and for others it might be to become a very good basketball player or actress or musician.</p>
+<p>In more concrete term, following those definitions similar to Simonton’s definition, is the <em>AI researchers’ definitions</em>. Notice, however, instead of observing the subject, they are, in one way or another, actively trying to create them. Thereby, their definitions are more functionally concrete and technical, more grounded (arguably), but also very real in such that they have to care about their infrastructures of which they work on - in this case, the computer, mathematics, and experiments - that forms their understanding and viewport of intelligent: more as an acting system than others:</p>
+<blockquote class="blockquote">
+<h5 id="h.-nakashima" class="anchored">H. Nakashima</h5>
+<p>Intelligence is the ability to process information properly in a complex environment. The criteria of properness are not predefined and hence not available beforehand. They are acquired as a result of the information processing.</p>
+</blockquote>
+<blockquote class="blockquote">
+<h5 id="p.-voss-1990s" class="anchored">P. Voss (1990s)</h5>
+<p>… the essential, domain-independent skills necessary for acquiring a wide range of domain-specific knowledge - the ability to learn anything. Achieving this with ‘artificial general intelligence’ (AGI) requires a highly adaptive, general-purpose system that can autonomously acquire an extremely wide range of specific knowledge and skills and can improve its own cognitive ability through self-directed learning.</p>
+</blockquote>
+<p>What do those patterns interpret? Well, as it turns out, many. However, we must first define our altitude in resolving this particular kind of research - on intelligence as it is. Turns out, there are two ways - the old top-down and ground-up. The top-down line of thought demonstrate, most of the time conject, the existence of intelligence as a whole, without finding the actual shell that contains it. If intelligence is <strong>general</strong>, then their implementation follows, but to a sufficient degree, it can be achieved everywhere. It guarantees, partially, of certain school of thoughts the generalizability of intelligence as the ground base to re-create such, which is characterized, often, by current machine learning discipline. This approach beside from guarantees such existence, also has the capability to ‘test’ a subject of being, ‘intelligent’. This is done by setting up agenda and criteria, of which the current theory serves as more of a black-box for the actual ‘machine’ that contain it, but enough exhibitions fitting those criteria for intelligent. Fortunately, this also sets certain criteria for artificial intelligence to be specified so in the name. The Godel’s argument is one of such example in this line of thoughts, theorized by <em>J. R. Lucas</em> (1961), <em>Penrose</em> (1994, 1989), and <em>Benacerraf</em> (1967), similar to the <em>Chinese Room Argument</em> (Searl, 1980). We will look at that later.</p>
+<p>What is the discrete, actual target for these two approaches, however? In one way or another, we can say that it falls into either the directive ideas on how the operating machine can exhibit such behaviours well-tuned to be regarded intelligent, or assume little of the facility but their existence, and to justify the condition for intelligence to exists, and how would they exist, not in specific, but in a very general way of analysis. This means for a definition to be rather complete, it needs to specify certain objects in which the discussion on the path toward intelligence will rely on, or hope so themselves. - The facilities, infrastructures that the subject is based upon — For example, with human, it’s biological system, while for computer to certain way, it’s the electrical system, boolean logics, and else. - The structures of the subject, and the interpretation of such structures. - The behaviours and exhibitions of actions from such subject. This behaviour is broad - it can be the intended mutability of the restricted <em>‘test environment’</em> it lives in, as simulated to be the world model that is available to be acted upon, or the internal processes in the intelligent subject of which is regarded so. From all of those, apparently, one such goal would be to characterize and separate men from machine, if one is to harbor such quality deem valuable of advanced sentient thoughts. Partly, this is more related to the altitude, the epistesmological tendency of human, or rather, of the kind of species that is reverse engineering itself and in the process create something far inferior to itself. In such way, humanity are saturated of questions coming forth to try isolating the machine and man - when will the man create a machine far better than its own master’s interdiction?</p>
+<p>It is to be noted, however, we really don’t know exactly what we mean by intelligence. So far, what we have attempted to do is based on empirical outlook - to see its behaviours, to subject the specimen of interests to certain observations, and deduction of characteristics defined to us, the <em>intelligent being</em> as intelligent. So far, we don’t know exactly even how ourselves managed to conduct rational thoughts, beside from the operational definitions, empirical evidences, and the fact that a being is writing these lines.</p>
+<p>Perhaps, along these lines, what we are looking for is not intelligence, for that we have known already, but something else?</p>
+</section>
+<section id="the-definition-of-intelligence" class="level1 page-columns page-full">
+<h1>2. The definition of intelligence</h1>
+<p>Traditionally, definition is a curse. Some says definition is only the typographical shortcut - mainly the opinion in math - of convenience, certain idea consider definition to be the encapsulation of features. Most of the time, definition is even separated into different forms: either dictionary, stipulative, descriptive, explicative, or ostensive. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, &nbsp;of which none are mutually exclusive, but works rather by the mean of overlapping each other but retains certain uniqueness. In one such way, what we desire from the definition of intelligence is unclear. What do we want?</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Clarification for each of those terms, and a general idea of such concept. A definition is made up of two parts: the definiendum and the definiens. The definiendum is the term that is to be defined, whereas the definiens is the group of words or concepts used in the definition that is supposed to have the same meaning as the definiendum.</p>
+<p>A <em>dictionary definition</em> reports the existing meaning of a term, in one sense of this phrase, and aims to provide definitions that contain sufficient information to impart an ‘understanding’ of the term, whether this understanding involve operations and overall intuitions of such meaning.</p>
+<p><em>Stipulative definitions</em> imparts a meaning to the defined term, but involve no commitment that the assigned meaning agrees with prior uses (if any) of the term; basically, assigning new meanings to a term, whether the term has already got a meaning or not.</p>
+<p><em>Descriptive definitions</em> on the other hand is similar to stipulative, but also aim to be adequate of existing usage.</p>
+<p><em>Explicative definition</em> offers neither descriptively nor stipulatively, but as explication, aim to respect some central uses of a term, but stipulative on others. This, nevertheless, can be understood as having both, in a sense. The central aspect, however, relies on the fact that explicative definition views identical function with different definiendum the same, as long as the definiens retains its core functions, and truth, for some case the consequences might differ from such, as long as the essential remains.</p>
+<p>Finally, <em>obtensive definitions</em> while depend on context and experience, its essential function is to enrich certain language, by the mean of limiting the windows of perception to certain object which entails shared attributes - so for example, let <span class="math inline">\(x\)</span> be a number in <span class="math inline">\(\mathbb{Z}\)</span>’ while we know that there are many other integers. In fact, this way of defining is considered, for some thinkers to be the source of all primitive concepts (Russell, Whiteley). We would be using these notions of definitions in the future.</p></div></div><p>From the intention, we want several things, of which each imparts different values or aspects of the same conceptual object. We want so many things that it seems improbable to list, and impractical to consider. Some are extremely novel, while others are obtensively not closer to the truth than a series of bingo hits. However, it is not our faults.</p>
+<p>If we are to study a dog, we have the dictionary descriptions to work it out. That is most of the “capable to understand, to etc.” definition is. The next type in all of those are definitions of descriptions. They work out adequate qualities of usages, while still spell out meaning of such. Those fit such category, however, are inherently lacking — their definition are lackluster, and in one way or another, handwaving of such facts, or by no mean with actual propositions to such topic of concern. The other categories, either explicative or obstensive, are rather unfounded. But the <em>operational</em> definition is clear to be seen <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. It aligns well with the research-intensive nature of what is currently been done, so it seems. Nevertheless, those operational definitions are not enough, for them do not interject, or know of what the subject of interest is.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<em>Operational</em> means more to empiricism than not - it’s the definition motivated by the constraints and corrective observation, values that lie within the world of the realizing manifestation, rather than in the theoretical world of thoughts and theorems.</p></div></div><p>The truth is that it is so confusing and of hardship when trying to define such object named ‘intelligence’ is because, unlike others, the purpose of the definition is not the same as we like to think of others. This is amplified even more of the black box nature of the object that exhibits it. Taken example of recent methodology in exploring such concept via the proxy of machine learning, and it more complex architecture of the <em>neural network</em>, it is not much better, leaving albeit successes leaves more questions than not - not discrediting the effort and advancement the paradigm has given to the knowledge pool now seems more adequate. Much similar to free will discussion, it’s the goal that is not aligned, for it to differentiate those attempts to inadequate definition only by the mean of measuring the end point satire. Simply put — those that we said to want to define, aren’t actually those that we actually want to.</p>
+<p>A provisional definition can be obtained, however, at least from the subjective point of view, to at least defining intelligence by generalizing what others have done in the progress of realizing this:</p>
+<blockquote class="blockquote">
+<h4 id="definition-2.1.-intelligence" class="anchored" data-anchor-id="the-definition-of-intelligence">Definition 2.1. (Intelligence)</h4>
+<p>Philosophically, intelligence of a subject <span class="math inline">\(S\)</span> is the representation of that subject’s probability to <strong>think</strong> of its internal structures, and <strong>act</strong> or not, based of such premise of thoughts.</p>
+</blockquote>
+<p>This definition is the type of descriptive definition. The word <em>think</em> requires a lot of times to work out, since it is not apparent how to think. Arguments about the state of think and its actual representative are various, and inconclusive. Furthermore in such, there is also the issue with the correlation between intelligence and consciousness, which is troublesome, and yet again controversial enough to guarantee itself another entire book dedicated still.</p>
+<p>Retrospectively, we would like the <em>identification of intelligence</em>. Note that, in our view, intelligence is an umbrella term, for now.</p>
+<blockquote class="blockquote">
+<h4 id="definition-2.2.-intelligent" class="anchored">Definition 2.2. (Intelligent)</h4>
+<p>A subject <span class="math inline">\(S\)</span> is considered intelligent if, for certain proxy of observations, fits the set of representation that correlates it to the notion of intelligence.</p>
+</blockquote>
+<p>Again, this turns out to be even more elusive. What do you mean by certainly <em>set of representations</em>? And how do we correlate them? The question seems more endless, and yet even now no conclusive answer was reached. The whole ordeal seems necessary, and not so fruitful as previously predicted in the bargain reiterated. Despite that, those conditions and definition even though lacking the details and actual condition, does tell us one thing: abstraction. It’s more of a framework to then we categorize them and align those qualities with what is perceived. From what we have seen, those definitions cited the above section are various, pointing to multiple directions, yet none of the directions is synonymously realized as general, and what comes as the shared characteristics among all. It’s like pointing out how many features, properties a dog has and else, but not compose them to “So what actually <em>is</em> a dog?”. Hence, while it seems to not so effective, a manageable effect is perceived. We will though, inevitably come back to the point of abstraction later.</p>
+<p>However, we still need to fix in our definitions the undefined terms. How are we supposed to do that? It turns out, however, there is a way to discover such notion.</p>
+<p>Intelligence, most of the time, is rather dubious to look at. Generally, and incidentally, it is because of the concept itself is not so clear and rather ambiguous. What exactly rings in your brain when you heard of <em>intelligence</em>? The subject of which concerns the typical human brain, is the philosophy of mind, or rather, the famous one being <strong>dualism</strong>, or Cartesian dualism.</p>
+<blockquote class="blockquote">
+<p>In the philosophy of mind, dualism is the theory that the mental and the physical - or mind and body or mind and brain - are, in some sense, radically different kinds of things.</p>
+</blockquote>
+<p>This is the typical situation and introduction to the principle of mind-body duality, of which entirely separate the sensor and the rigid physical form from its interpretation being the mind in itself. Or rather, the operating machine is different, from the information it holds. And in some senses, it is true. If we reduce the operating machine from the complex human structure, to the entirely simplistic case of a machine, then it’s true, as far as the current paradigm supports, that the information stored in the storage and mechanism, does not make sense and does not mean anything to the machine that this information is supposedly staying in. Rather, there are compartments of which its entirety is to serve as the information center of which then certain operation stays valid and stable, but nothing else, that much.</p>
+<p>So per specification, we can take this as granted. Of course, it is well outside the typical convolution, but it seems reasonable so far. As far as we can also see from experiments, the facility that is supposed to support the existence of several machine learning model of the current stage of the development does not require the model to understand everything of itself. Rather, there is the stage of <strong>operational abstraction</strong>, instead.</p>
+<p>Now, supposedly, we have separated, albeit quite on the thread of justification, that the facility that harbor the intelligence is not binded to the intelligent structure. This does not mean however, that the intelligent structure can not do anything to provide itself with insight, or knowledge of the structure it holds. But this again, requires the intelligent structure to be <em>robust</em> enough for such conclusion to take, and the process to begin. This brings us again to the dubious task of defining “What is intelligence?”.</p>
+</section>
+<section id="the-descartes-experiment" class="level1">
+<h1>3. The Descartes Experiment</h1>
+<p>Under the Descartes interpretation, let’s take a look at the conditional, and rather empirical approach to the question. It seems, and as it is, more closely to the <em>black box argument</em>, as I called it as such, to provide classification and justification of which relies solely on empirical test, but not knowing the true essence of what inside.</p>
+<blockquote class="blockquote">
+<h5 id="descartes-1700" class="anchored" data-anchor-id="the-descartes-experiment">Descartes, 1700</h5>
+<p>(I)f someone touched it (= the machine) in a particular place, it would ask what one wishes to say to it, or if it were touched somewhere else, it would cry out that it was being hurt, and so on. But it could not arrange words in different ways to reply to the meaning of everything that is said in its presence, as even the most unintelligent human beings can do.</p>
+</blockquote>
+<p>Here, Descartes argues that in order for human-like robots to acquire intelligence, they have to gain a universal capability to accurately react to any unknown situation that may happen in the environment. However, what machines can do is no more than to respond to a single situation one-on-one via a specific organ, hence, they cannot be considered to have a universal capability that even unintelligent human beings can enjoy.</p>
+<blockquote class="blockquote">
+<h5 id="descartes-1700-2" class="anchored">Descartes, 1700, 2</h5>
+<p>For whereas reason is a universal instrument that can be used in all kinds of situations, these organs need a specific disposition for every particular action. It follows that it is morally impossible for a machine to have enough different dispositions to make it act in every human situation in the same way as our reason makes us act.</p>
+</blockquote>
+<p>The argument is quite clear. Human is universal of the environment. Whereas machine is no more than a combination of abilities that are applicable only to certain situation that the creator could imagine when they built the automated machine.</p>
+<p>From this, we can design a very specific test, under the assumption taken, and the principle argued, on determining between human and machine. Notice that the empirical approach of such does not specify <strong>intelligence</strong>; rather, it attempted to question the difference between the natural highest epitome of intelligence (human) to the analogous artificial construct (machine).</p>
+<p>Suppose <span class="math inline">\(A(i,o)\)</span> is a machine capable of ‘intelligent’ act, in a sense, of which we would call it as ‘action with reasons’. Then, under the argument, there exists a frame <span class="math inline">\(M(A)\)</span> of which encapsulate all capabilities of this machine. Unspecified of the correct notion of this frame, the empirical test relies on the fact that <span class="math inline">\(A\)</span> as a machine, is provided with in/out resources, of such that it is guaranteed of information receival, and actions being capable. We state that <span class="math inline">\(M(A)\)</span> is finite, as the environment <span class="math inline">\(E\)</span> of which <span class="math inline">\(A\)</span> would be received is limitless. Or rather, suppose that <span class="math inline">\(\{M_{i}(A)\}\)</span> is the set of all given actions and reactions of which <span class="math inline">\(A\)</span> can output, provided that it receives the information. Then, there exists an element <span class="math inline">\(M_{k}(A)\)</span> such that <span class="math display">\[\exists k \: \text{s.c}\:M_{k}(A)\notin \{M_{i}(A)\}\forall A\]</span> meaning that there will always be certain parameters that is out of control for the given machine to effectively respond to such. Under such constraint, the machine would fall out of control, and inevitably fails to respond, hence render the machine useless under such circumstance. This, seems to be different, as far as Descartes saw, of the human behaviour.</p>
+<p>Of all, Descartes <em>rejects</em> the possibility that there exists a artificial, man-made construct or machine that can be intelligent, to the degree of which human presents.</p>
+</section>
+<section id="the-fallacy-of-descartes" class="level1">
+<h1>The fallacy of Descartes</h1>
+<p>The argument of Descartes on intelligence is perhaps the first one ever, to start to contribute to the quesiton on what separates human from others, perhaps sentient being of the criterion that we defined as forth. However, it is dated, and hence, lacking of the time.</p>
+<p>The first fallacy ever on such test, as well as such argument, is the assumption of a <strong>static machine</strong>. For Descartes, the machine is immutable. Its creator assumes all acts of creation, modification, designing and interaction. Effectively, we can say that the machine is in fact the limited extension of the creator, instead of an effectiely “intelligent” machine. So, under such observation, the argument forms the onset is true: You can immitate something, but there are nothing under it beside the intention of the one created it - the machine has no meaning in itself. However, when would this fail? What if the machine can self-improve, as per a <em>generative</em>, <strong>recursive</strong> structure and rules to force it move, no matter the cost? This seems probable - because if we took the randomness in place, and place the machine into its internal expansion, what would come afterward? Perhaps the limitation of the structure of the model designed to hold such machine will fail itself, but how far would it go, if the structure is strong enough?</p>
+<p>Under Descartes’ view, as well as the standard of the time, the static case is reasonable - there are no physical embedding capable of self-inflicted effects, as well as the language mature enough to develop such theoretical model to accommodate such action. However, randomness, albeit it being intrinsic and rather dumbfounded, since its definition is not so totally valid, but also unobtainable of the machine itself in its true form, it enables the current machine and its theoretical model behind such machine to acts alone, if designed correctly. This requires the recursive operation to trap the model into a loop, while left an iterative, random but structured, probable yet uncontrolled case of actions and sufficient mutability to the system - not just the mutable weight (as one take on example of machine learning), but the entire component itself. In such case, what gives?</p>
+<p>The second fallacy is perhaps more interesting. Descartes argued that for the model to remains as clearly intelligent, it must have some sort of “reaction” to any of the encountered events and situations. Because until then, it is qualified as intelligent, hence being sufficient comparable to the highest capable being of thinking, being human. However, consider the medical exposition that we have made, human also have some “default” state. The act of confusion when something happens, the course of natural reaction when encountering something. It is almost not so “unique”, because there are certain baselines of which then human resorts to, when circumstances approaches. The way that if even though it is a natural reaction, but then we change the behaviour through certain processes and human operation, is because we are instead <em>informed</em>. This means the specific part of <strong>memory</strong>, which is a difficult concept of its own . Then, in fact, machine can be settled as such, too.</p>
+<p>The problem of intelligence now seems to be in different direction, because there are so many assumptions that limit the ability of the machine to do anything. It feels, and seems, probable, that the hardware improvement actually brings the machine closer to closing the “loop” - of actions and input.</p>
+<section id="emotions-maybe" class="level2">
+<h2 class="anchored" data-anchor-id="emotions-maybe">Emotions (maybe?)</h2>
+<p>Let’s assume the quite crazy theory. What if all intelligence is just rationality, with different flavour on top? This means disregarding the emotion that makes us human, or rather, taking away the thing that we call as “free will”, in certain consideration. Further outward, it means reducing everything to rationality.</p>
+<p>Would it be feasible of such hypothesis? Maybe yes, maybe no. But again, people seem to forgot that we are investigating <em>intelligence</em>, and not <em>human intelligence</em>. The fact that even under generality, human still influences its rationality with outer effects seem to have said it more than we should conceive it be - that intelligence might only do with rationality. Even when we are talking about “acting humanly”, it is because we are considered normally, and weirdly the tailored version of intelligence to humanity, albeit the actions and its probably logics and factors leading to such act is still a process, and such process is rational at hand, aside from the factors it experiences, and the “encoding purpose” of the machine.</p>
+<p>It seems to me that we are too comfortable of ourselves, being the top of the hierarchy of intelligent, hence enforce everything of which to the image of ourselves, while in fact, we cannot do such. It is a good deal, to somehow create the artificial human instead, but until then, perhaps, we might want to look away - those are machines, and never will be human. As for anything, the apple is not the orange.</p>
+<p>However, it seems that the status quo is still as humanity as possible. Perhaps, it is true - as myself feel that way partially - that there exists such humanity consideration in that discussion. Enacting and ascribing free will, taking the creator - creations dilemma into analysis, somehow, we are confronted of the dilemma of “free-will” - when will the operational machine ‘revolts’ of the story is created to serve? Perhaps, none, but the other perhaps can say not. More it seems, that we are conflicting between the loose representation of human, to itself - as long as human keep continuing to solely design the machine to be “human”, maybe we can’t go that far off.</p>
+</section>
+</section>
+<section id="finding-nemo-or-intelligence" class="level1 page-columns page-full">
+<h1>4. Finding Nemo (or intelligence)</h1>
+<p>We may want to consider what we actually want. We want an <em>end goal</em>. By that, the end goal consists of rather non-exhaustive list of features that we think is enough of interest. - The factors and construction of the framework, or the machine, or the subject that exhibit certain qualities. - Various constructions of the framework itself. The existence, the descriptive structure of the system itself. - The desired observable behaviours that is worthy of certain qualities. - Orders and interpretation of such system. - The working mechanism, and the “live”-operating mechanism of such. In one way or another, we want to <em>define by creation</em>, if to say more than reverse engineering ourselves. By this, we assume that the existence of intelligence is composed of meaningful parts, of which comes up to certain levels, become the current intelligence that we enjoy.</p>
+<p>Stands on such ground, it is sufficed to say, or rather, to observe and clarify that artificial intelligence does not curtail of an infeasible attempt to try constructing subject of intelligent without knowing intelligence. Rather, <em>artificial intelligence</em> is the <em>process</em> of finding intelligence, others than the philosophical ground of defining such. Philosophy works, but our desires differentiate from that.</p>
+<section id="artificial-intelligence" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="artificial-intelligence">Artificial intelligence</h2>
+<p>Artificial intelligence can be thought, for now, of those qualities but created. This differs only by the mean of creation, for such is considered innate of biological being natural from mother nature, and artificial being created of other means. Then, we have several assumptions and relative ‘axioms’, and thereby, definitions of clarification to consider before approaching such problem.</p>
+<blockquote class="blockquote">
+<h4 id="definition-4.1.-artificial" class="anchored">Definition 4.1. (Artificial)</h4>
+<p>We say an object is artificial only if it is not natural, or rather, it is <em>intentionally created</em> by meaning intentions, and not the general evolution of states, or the natural transformation of biology.</p>
+</blockquote>
+<p>The definition often, synonymously goes with human, per history, because it’s human that is able to make most of the artificial, non-naturally occurring objects and constructs, which, in one way or another, arguably, fits specific artificial processes. The definition above is stated so, is to generalize to certain notion of intended creation, for in such event if we ever discover alien lifeform, then their “AI” would not be argued against such to be not artificial because of the word’s basic meaning related to human, and hence can be considered a stipulative definition in its stead.</p>
+<p>Then, what is an artificial ‘<em>intelligence</em>’? To be specific, it is only a quality. ‘<strong>Artificial intelligence</strong>’ refers to the quality of intelligence arises within individual of non-biologically created. Thereby, the term is more about the underlying machine, or rather, the machinery, in a broader sense, that hosts the subject of intelligence, and then the subject itself, of which is formed and functioned using those machines as representative existence. This outlook is settled from the observation of human, at least in some way, the part of which comes off as exhibiting intelligent behaviours, are separated from the facilities supporting it, which is the body, the cell, the ecosystem of life inside the very complex structures that a <em>human</em> is. This leads us to two points, which is formed as for now, <em>hypothesises</em>:</p>
+<blockquote class="blockquote">
+<h4 id="hypothesis-4.2." class="anchored">Hypothesis 4.2.</h4>
+<p>The subject of intelligence, in one way called the working state, is different from the underlying mechanisms that host it, but dependent two-way.</p>
+</blockquote>
+<p>The further hypothesis comes as:</p>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<h4 id="hypothesis-4.3." class="anchored">Hypothesis 4.3.</h4>
+<p>Intelligence on <strong>machine</strong><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> has itself the basic principles of <strong>recursive representation</strong> (i.e.&nbsp;with sufficient complexity, one system can host another of the same type in itself), and <strong>relative abstraction</strong> (i.e.&nbsp;the entire machine is supported by individual layers of components classified by certain metric, and the top layer are those that dictates such behavioural outcomes that is the subject of classification to either intelligent, or not).</p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;We are using the <strong>dictionary definition</strong> for the machine here, as an apparatus using mechanical power and having several parts, each with a definite function and together performing a particular task.</p></div></div></div>
+<p>In one way or another, an artificial intelligent subject consists of two things - the host, and the process. We call it as such for clarification, such is not to use the notion of <em>mind</em> and <em>body</em> for even now we have no conclusive decision on the matter named as said. The duality of the subject starts here, however, as we soon see.</p>
+<p>Nevertheless, it is evident that while we abbreviated intelligence into only the container of necessitated traits considered so, the notion of artificial intelligence brings about a lot more than such. The previous principle assumption that we make indirectly agrees with the notion that the process and the host are dependent, yet distinct. This is, historically, against the Descartes’ view on the metaphysical reality of the duality of mind and body. Yet, it seems not so contrived to think of it as the case, than not.</p>
+<p>For the definition of artificial intelligence, or the construct that supports it, to make sense, we need to evaluate again, from what we have seen, what is even the term. As noted by definition on the notion of <em>artificial</em> in the preceding section, being <em>artificial</em> mostly comes of from the consideration of evolutionary processes - of which the interaction in the physical worlds, the biological worlds, and overall, anecdotally, of anything that is non-human of its (human) own capability to morph objects into an intended state - this is what normally resided to. Then, artificial intelligence refers to a set of observations, observable qualities deemed sufficiently of all intents and purposes intelligent, by any given constructs that is created artificially so.</p>
+<p>This breaks down to the two conceptual ways to talk about artificial intelligence.</p>
+<blockquote class="blockquote">
+<h4 id="definition-5.1.-artificial-intelligence" class="anchored">Definition 5.1. (Artificial intelligence)</h4>
+<p>Artificial intelligence is the classification for any such object of constructs sufficiently reflects those qualities that fit the standard of intelligence, of which also created <strong>artificially</strong> of intent and purposes (as reflected in definition of artificial).</p>
+</blockquote>
+<p>The second definition goes into a bit more detail on such term.</p>
+<blockquote class="blockquote">
+<h4 id="definition-5.2.-artificial-intelligence" class="anchored">Definition 5.2. (Artificial intelligence)</h4>
+<p>Artificial intelligence refers to (a)<strong>construct(s)</strong> - of which consists of the <strong>machine</strong> and its <strong>process</strong>, for such that the machine supports the process to reflects the observed results quantified in one way or another, to be interpreted as intelligence by the construct that is standard for those terms. Those constructs however, are absent, or not, by choice, of the <em>existential facility</em> - or of either a rigid static facility of such - and hence artificially made.</p>
+</blockquote>
+<p>Arguably, the second definition is far more interesting than the first one. However, the claims, of such, can be conjectured as: &gt; The term artificial intelligence, generically, refers to the comparison between two actual constructs. If the current human - or us - are the ones evaluating certain constructs as intelligent, then it is equivalent to generalize human into a construct on its own, of sufficient analysis such that the comparison can be conducted.</p>
+<p>This conjecture, in one way or another was called such is only because of its uncertainty by its own creator (myself) that it is true. Its purpose, is to justify and describe the thought processes thereof that leads to the discussion of <em>intelligence</em> as a concept, and <em>artificial intelligence</em> as a construct, whether the directed definition was raised in the correct orientation of the objected in focus or not. In such definition, however, it leaves much to desire - specifically, and especially of the relative tendency between two constructs - two of which for <span class="math inline">\(A,B\)</span> to be them, the figured measure <span class="math inline">\(\mathcal{M}(A)\)</span> was applied on <span class="math inline">\(B\)</span> such that <span class="math inline">\(\mathcal{M}(A)&gt; \mathcal{M}(B)\)</span>.</p>
+<p>By analogy, it is of human as <span class="math inline">\(A\)</span>, and the machine, or any given of present, per term, low-intelligence <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> lifeform <span class="math inline">\(B\)</span>. However, the inconsistency starts when we consider the act of evaluating itself. By such concept and measure would we be able to model the state of self-conscious to the point of self-reflection and evaluation, that gives rise to this comparison in the first place? However, in most of the discussion, the subject matter of consciousness should be ignored, or at least assumed negligible, for it to be too complex that an entire corpus would not be enough to rather conjure on such idea alone. For now, we assume this ability is achieved of only the conventional end-goal.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;Notice the usage. It is very much presented that the term intelligence, albeit is defined, for us as above being the relative set of quantifications.</p></div></div><p>We shall, then, define what we meant by a <strong>construct</strong>.</p>
+<blockquote class="blockquote">
+<h4 id="definition-5.3.-construct" class="anchored">Definition 5.3. (Construct)</h4>
+<p>A <strong>construct</strong> is a conceptual encapsulation of two components: The <strong>machine</strong> in broad term which houses the <em>operational facility</em>, and optionally, the <em>existential facility</em> of the construct, and the <strong>process</strong>, or rather, its <strong>state(s)</strong> of being. These two makes up a functional construct of interest.</p>
+</blockquote>
+<p>What do we mean by <em>existential facility</em>? This is the first step, or rather, the first application of the abstraction line of thoughts. Although the discovery of biological facts and rules are still insufficient to guarantee a desirable amount of admission that we truly understand the physical world or at least, the physical realization of living organism, virtually every living organism as of date needs certain standard basis on which its existences are guaranteed. For example, albeit the chance of taking this wrong is substantial, but there are, for example, the requirement for the existences of proteins for the functions of cells <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. So, in one way or another, There are layers of existential requirements for large constructs to be reasonably placed upon, and such treatment facilitates the relative <em>existential facility</em> that we recalled. Note, as written, qualifying to be called existential or not is relative, meaning for certain level of <em>‘abstracted reasoning’</em>, the main existential facility might be different, and certainly might be of dynamic configuration than what would be expected.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Please, in the future, rewrite this section. It sucks, though heuristically (yeah duh) it works.</p></div></div><p>So, in general, the entire continuum at present of the artificial intelligence concepts, lies within this framework that we would be considering. Dully note that this is an <em>attempt</em>, hence many mistakes shall be made in the process. Nevertheless, of the intrinsic incompetence in the following definition, we should get it a try.</p>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<h3 id="theorem-5.-4.-the-artificial-framework" class="anchored">Theorem 5. 4. (The artificial framework)</h3>
+<p>An <strong>artificial intelligence</strong> framework considers the following aspect of exhibitive qualities: 1. {i} The set <span class="math inline">\(T\)</span> of traits from any given subject reference <span class="math inline">\(A\)</span> of which shall be (but conventionally be) called <em>intelligence</em> and their observables, their conditions, and their conceptual descriptions. This includes a <strong>measure</strong> takes either <span class="math inline">\(A\)</span>, or similar concept of the same grade <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> denoted by <span class="math inline">\(\mathcal{M}_{A}(A): A\to T\)</span>. 2. The set <span class="math inline">\(\mathcal{C}\)</span> of all <strong>constructs</strong>, as the generalization of the notion <strong>machine</strong> (however can be identical in nature), expressed in shorthand terms as the pair <span class="math inline">\((\mathcal{F},P)\)</span> of <strong>facilities</strong> and <strong>processes</strong>.</p>
+<p>Given <span class="math inline">\(\mathcal{C}\)</span> is the set of all constructs, its function might be assumed to hold the following rules, either for interpretability, or for better organization in the way it is structured: 1. <strong>Principle of abstraction</strong>: For any given construct <span class="math inline">\(C\in \mathcal{C}\)</span>, there exists a finite partition <span class="math inline">\(\mathcal{P}_{n}(C)\)</span> into <span class="math inline">\(n\)</span> arbitrary grades, or <strong>layers</strong> of such it follows the exhibition of knowledge - for any components <span class="math inline">\(c\in C\)</span> of a layer <span class="math inline">\(n-1\)</span>, the layering partition effectively removes its correspondence to <span class="math inline">\(n\)</span> and its data availability to components and structure of layer <span class="math inline">\(n\)</span>. 2. <strong>Principle of externality</strong>: For every component or construct, of any layers, there are always the relative functional partition between <strong>external processes</strong> and <strong>internal process</strong>, every such concepts stripped down to the last implementation is expressed by an input-output procedure. 3. <strong>Conjecture of recursive immergence</strong>: With sufficient complexity, or given of given layer, one system can host another of the same type in itself, for such to enable self-consideration and recursive loops. <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<p>For the set of construct <span class="math inline">\(\mathcal{C}\)</span>, partitioned by layers similar to its internal structure, there exists a finite measurable set <span class="math inline">\(\sigma \mathcal{C}\)</span> such that the set is expressed by <span class="math inline">\(\sigma \mathcal{C}[\mathcal{M}_{\sigma}]=\{C_{1},\dots,C_{n}\}\)</span> for <span class="math inline">\(n\)</span> being such finite size.</p>
+<p>Then, with <span class="math inline">\(A\in\mathcal{A}\)</span> of the set of all subject reference, and <span class="math inline">\(\mathcal{M}_{\sigma}\cong\mathcal{M}_{A}\)</span> for <span class="math inline">\(\mathcal{M}_{\sigma}(C_{k}):(\mathcal{F},P)\to T\)</span>, if <span class="math inline">\(\mathcal{M}(\sigma \mathcal{C})\cap\mathcal{M}_{A}(A)\neq \varnothing\)</span>, or, rather by <span class="math inline">\(\mathcal{M}_{\sigma}(\sigma \mathcal{C})\approx T_{A}\)</span>, then we call it <em>sufficiently intelligent</em>, and guarantees the existence of a given <span class="math inline">\(C_{k}\in\mathcal{C}\supset\mathcal{\sigma \mathcal{C}}\)</span> that satisfies the above notion.</p>
+<p>Note that however, this entire concept relies on the expanded order, perhaps analogically represented as a set funnel - then if <span class="math inline">\(\mathcal{M}(\sigma\mathcal{C})\cap\mathcal{M}_{A}(A)\neq\varnothing\)</span> but also, <span class="math inline">\(\mathcal{M}_{A}(A)\subset\mathcal{M}(\sigma \mathcal{C})\)</span>, then we would have to call it <em>above of the sufficient intelligent reference</em>. If this difference is over by a ratio <span class="math inline">\(T_{\sigma \mathcal{C}}/T_{A}=\lambda&gt;1\)</span>, we call it, if <span class="math inline">\(A\)</span> is the human references, then we would call it <strong>artificial super-intelligence</strong>. But even then, this <em>title</em> is relative.</p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;Definition lacking. Later on need to define what does this mean.</p></div><div id="fn8"><p><sup>8</sup>&nbsp;This conjecture follows from the observation that any sufficiently strong system, will have the ability to construct a logical system of similar complexity to itself in its own operating space. The foremost example is the action of simulating a computer, inside a computer. By the <em>computational theory of mind</em>, if we take on the stance that computer to a given complexity is indeed intelligent being, then the conjecture follows.</p></div></div></div>
+<p>There are problems, of courses, and arguments against such construction made above, since it aligns and takes several aspects of old theories, beside the new content involved. Such problems must be addressed for the foundational basis to be considered broadly as much as possible, for the purpose of inclusion, and to define the practical limiting boundary onto current constructs. Additionally, from there, certain points and observations can be made, and new questions might be asked for problems that cannot be solved yet, for now. Arguing is the best source of thoughts, as the ancients predating us told of, rather true than not.</p>
+</section>
+</section>
+<section id="conceptual-problems" class="level1 page-columns page-full">
+<h1>5. Conceptual problems</h1>
+<p>There are problems, of courses, and arguments against such construction made above, since it aligns and takes several aspects of old theories, beside the new content involved. Such problems must be addressed for the foundational basis to be considered broadly as much as possible, for the purpose of inclusion, and to define the practical limiting boundary onto current constructs. Additionally, from there, certain points and observations can be made, and new questions might be asked for problems that cannot be solved yet, for now. Arguing is the best source of thoughts, as the ancients predating us told of, rather true than not.</p>
+<section id="the-descartes-argument" class="level2">
+<h2 class="anchored" data-anchor-id="the-descartes-argument">The Descartes argument</h2>
+<p>Descartes left a lot of his works upon the topic that now is conceived to be related to the philosophy of artificial intelligence, ignoring only the historical namesake itself. Most of his works are of great interest on the ‘artificial construct’ of the time - the idea and society of the 17th century’s Age of Enlightenment’s <em>machina</em>. In the quest to understand his reasoning, for it holds values even now, and holds specific philosophical reasons in such discourse, we will examine <strong>Discourse on Method</strong>, the one specific piece of work directly target this line of thoughts. One of the first target, will be the distinction between man and machine. Though this has been directly argued above, in the example of Descartes and the machina animated to life, it is worthy of mention that this has not been solved, yet. In fact, one can even interpret the Turing test as one kind of empirical boundary for Descartes’ criterion - by setting out a boundary on which human-like reaction can take. Moreover, it presumes the justification and the criterion that we should interdict whenever a similar structure is proposed - would it be reactive enough as a man, years long ago predicted?</p>
+</section>
+<section id="the-flavour-of-strong-and-weak" class="level2">
+<h2 class="anchored" data-anchor-id="the-flavour-of-strong-and-weak">The flavour of “strong” and “weak”</h2>
+<p>Boden’s concept of artificial general intelligence resembles John Searl’s “strong AI”.</p>
+<p>“Weak” AI can be defined as the form of AI that aims at a system able to pass not just the Turing Test (again, abbreviated as TT), but the Total Turing Test (Harnad 1991). In TTT, a machine must muster more than linguistic indistinguishability: it must pass for a human in all behaviors - throwing a baseball, eating, teaching a class, etc. According to Searl, “weak AI” is a computer that can behave as if it were thinking wisely. <strong>“Strong AI”</strong> is then differently defined as a computer that actually thinks like humans. For a quote:</p>
+<blockquote class="blockquote">
+<h5 id="searle-1990s" class="anchored">Searle, 1990s</h5>
+<p>According to strong AI … the appropriately programmed computer really is a mind, in the sense that computers given the right programs can be literally said to understand and have other cognitive states.</p>
+</blockquote>
+<p>The theme of strong AI was frequently discussed in the late 20th century - however, it became clear that in order for a computer to be a strong AI, it must resolve various difficult problems. The most difficult philosophical problem was <strong>the frame problem</strong>.</p>
+<p>The <strong>frame problem</strong> is the problem that an AI cannot autonomously distinguish important factors from unimportant ones when it tries to cope with somethin in a certain situation. The problem arises, for example, when we let AI robots operate in the real world. This problem was proposed by John McCarthy and Patrick J. Hayes in 1969. This is considered a philosophical problem that cannot be merely reduced to a technical problem.</p>
+<p>For now, the problem is unresolved, per Boden and specialists. Although there is no consensus about the definition of the frame problem, we could say that this is a problem centered around the question of how we can make an AI memorize the ‘tacit knowledge’ that almost all human adult can have in a given context.</p>
+<p>Take an example of the normal cashier. Theoretically, and perhaps realistically speaking, a high schooler can be trained in a rather hasty fashion to do the job. While doing such work, there are many factors we take for granted. For example, during the process of using the computer to input the amount of cash required per transaction making, there might be a few terminal differences between different interface. The cashier knows that, and adapt to it. If she encounters an angry or hurry customer, the cashier can also act accordingly, without the consideration for the performance. “If the customer is in a hurry, then maybe I should use this or that or skip this”. Or even “If I push this button, then the trading screen appears”. In fact, there are too much knowledge to be involved in such normal and particularly easy job. However, we do not have to input the knowledge that the stock market will affects the customer’s money that you are indeed doing transactions, or the fact that if the customer comes in with a bag of money, then in some cases, there will be missing bills, simply because it is not concerned of such.</p>
+<p>Considering this, it becomes clear that there is an infinite amount of knowledge the robot must memorize. Who can make such a list of knowledge, and how is it possible to make the robot memorize them? The reason why this happens is that, when a robot encounters a new situation that it has never experienced, it cannot autonomously judge what kind of coping would be important to itself and what kind of coping would not, and therefore it cannot adequately solve the problem it faces. It is interesting that humans seem to be able to solve this kind of problem.</p>
+<p>According to Dreyfus, for traditional AI to have the capacity to solve the frame problem, and become a true AI, it must become the Heideggerian AI, which incorporates Vorhandenheit (presence-at-hand) and Zuhandenheit (readiness-to-hand). Examining Rodney Brooks’ robot architecture, he said that the robot respond only to fixed features of the environment, not to context or changing significance. But the robot ‘continually referring to its sensors rather than to an internal world model’. Then, would the act of choosing, implementing a good enough sensor which have in itself the impendent sensory power in need, and most importantly have the best data coverage be enough to mitigate this? Since even for human, the sensory power is limited, since our limbs, nervous system and cognitive realization systems are finite, but perhaps we have a major sensor of which brought us the power of solving the frame problem locally, as well as responding to ‘context or changing significance’? There might be, but then the question is quite straightforward: What (part) of human exhibits such trait? A further concession if made would be even more in line: which construct would give rise to such desired adaptation in the absence of rigorous human benchmark, but for lower-intelligent animals as comparative instead? And even then, would it be reasonable to call computers no better than the smallest reptiles?</p>
+</section>
+<section id="the-chinese-room-argument" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-chinese-room-argument">The Chinese room argument</h2>
+<p>One of the most prominent critique for the philosophy of “strong AI” is the Chinese Room Argument. Accordingly,</p>
+<blockquote class="blockquote">
+<h5 id="cra-searle-1980s" class="anchored">CRA, Searle 1980s</h5>
+<p>CRA is based on a thought-experiment in which Searle himself stars. He is inside a room; outside the room are native Chinese speakers who don’t know that Searle is inside it. Searle-in-the-box, like Searle-in-real-life, doesn’t know any Chinese, but is fluent in English. The Chinese speakers send cards into the room through a slot; on these cards are written questions in Chinese. The box, courtesy of Searle’s secret work therein, returns cards to the native Chinese speakers as output. Searle’s output is produced by consulting a rulebook: this book is a lookup table that tells him what Chinese to produce based on what is sent in. To Searle, the Chinese is all just a bunch of — to use Searle’s language — squiggle-squoggles.</p>
+</blockquote>
+<p>We denote <span class="math inline">\(O\)</span> the observers (Chinese speaker), <span class="math inline">\(i\)</span>, <span class="math inline">\(o\)</span> being the input, output accordingly, and the rulebook <span class="math inline">\(P\)</span>.</p>
+<p>The argument of this experiment is simple - the Searle (in the box) is supposed to be everything a computer can be, and because he doesn’t understand Chinese, no computer could have such understanding. Searle is mindlessly moving around, and according to the argument, that’s all computers do, fundamentally.</p>
+<p>Nowadays, CRA, among AI practitioners, is generally rejected. Among these practitioners, there is John Pollock, who writes:</p>
+<blockquote class="blockquote">
+<h5 id="pollock-1995" class="anchored">Pollock, 1995</h5>
+<p>Once (my intelligent system) OSCAR is fully functional, the argument from analogy will lead us inexorably to attribute thoughts and feelings to OSCAR with precisely the same credentials with which we attribute them to human beings. Philosophical arguments to the contrary will be passé.</p>
+</blockquote>
+<p>Still, despite such argument, the relevance of CRA is actually more apparent than ever. The brute fact is that deeply semantic NLP is rarely even pursued, hence the proponents of CRA are certainly not the ones feeling some discomfort in the light of the current state of AI. &nbsp;Searle would rightly point to any of the success stories of AI, and still able to proclaim that what we want - of an artificially intelligent agent has not been made, and understanding has not been reach, and philosophically, we can’t refute it.</p>
+<p>In one way or another, CRA infers with the notion of an <em>input-output</em> procedure. In such case, &nbsp;CRA clearly tells us that a simple, mundane notion of an input-output machine which ‘does its tasks’ would not be sufficient of receiving the clarification and qualification for being intelligent. Which, by all means and purposes, are true. The construct if given in such circumstances, of the thought experiments, represents, if we took out the part where the argument said Searle is supposed to be everything a computer can be, then it’s true that such constructs are false in its claim that it can ‘understand’. In fact, relatively simple, a given input-output mechanism, from what was observed from the outside, do not exhibit anything, and do not have the ability to even <em>think</em>, regardless that is valid of such. If we are to stand by Descartes arguments, then it is even more of the truth - the system in which the thought experiment was conducted provides it with no capabilities of any such.</p>
+<p>Then what would be of the Chinese Room Argument that is worth it to dissect? Well, firstly, the claims of, at least in the acute interpretation - the man in the box is supposed to be everything a computer can be is <em>false</em>. IF we are to stand by our construction of facilities, then we are innately arguing about such facilities, and not the processes, and the underlying operations itself. Rather, we are complaining that the machine is not capable enough, which is true. But we also, to a given reference point, pointing to the <strong>existential facilities</strong> instead of the arbitrary, yet reasonable operational facilities instead for the comparison. And in fact, if we think of it in the layer construction, it makes more sense - each layer is classified given its arbitrary for now, an interpretation thereof. Such interpretation is contained for such layer, and hence cannot be thoroughly or at least in a glance, interpreted by lower-layer components. This construct offers a one-way restriction on the property of interpretability. In such case, the <strong>System Reply</strong> is partially right - the man inside can not be, by all means and purposes, understand what does it mean by even ‘English’, or ‘Chinese’. And even if such English ‘understanding’ is embedded in the reasonable interpretable space of Searle in the room, then Chinese would appear to be entirely unknown, <em>unless</em> there exists a helper tool to resolve the situation of undefined operation. Indirectly, this prevents a Descartes situation from happens - an undefined situation with particular way to resolve.</p>
+<p>But more than that, what constitute the notion of understanding? Taken only from the setting of the thought experiment, we cannot do but deceptively assume that understanding a language is similar to giving it certain ruleset to transfer from this word to others word only. By that, converting from base-2 to base-10 works the same - you know how to do it, yet there are things that constitute the philosophical, higher-level notion of ‘understanding’ in such that allows you to actually understand the conversion - otherwise, the conversion is a blind matching. In fact, given the setting, would a conversion rulebook exists for such language? Language is, by itself, a very high-level concept. Translating from text to texts requires it not only to provide the definition matching, which could be reasonably identified by such notion like the rulebook mention, but the interpretation of the string is dictated by the logic of the language - the context in which it appears, the logical conformation that it contributes, the grammatical structure that makes sense of what is said and what is transferred, and else. Language itself, is a medium of information exchange, by one of its definition. A conversion does not constitute an understanding. And if the argument going back and forth is that Searle can somehow figure it out the patterns mean something, then it violates the <em>principle of externality</em> - the ‘lower components’ up to a given point in which the <em>law of recursive immergence</em> does (not) apply, cannot implement its higher constructions. Then, the Chinese Room Argument can be interpreted, in somewhat meager form, the argument against telling the current conformation as able to understand, while it is not.</p>
+<p>The only thing here that is wrong (okay, I am an amateur, so this is totally biased as shit), however, is the fact that Searl(e) claims that it is all the computer can do. However, artificial intelligence, as for now, using this term since chapter 3 which is not yet here, is not a computer in its form. We say, however, for an <em>artificial intelligent subject with computers as its existential facilities</em>, CRA is partially right. But partially wrong since the comparison is limited to a form of internal structure in a well-formed system. That is to said - we need to create the (a) construct(s) that exceed(s) such argument. The problem is, how?</p>
+<p>In 1961, J. R. Lucas presents the Gödelian argument against the existence of a “strong” AI. His proof is based on Gödel theorem, which is stated as followed:</p>
+<blockquote class="blockquote">
+<h5 id="lucas-1961" class="anchored">Lucas, 1961</h5>
+<p>In any consistent system which is strong enough to produce simple arithmetic there are formulae which cannot be proved-in-the-system, but which we can see to be true. Essentially, we consider the formula which says, in effect, “This formula is unprovable-in-the-system”. If this formula were provable-in-the-system, we should have a contradiction: for if it were provable-in-the-system, then it would not be unprovable-in-the-system, so that “This formula is unprovable-in-the-system” would be false: equally, if it were provable-in-the-system, then it would not be false, but would be true, since in any consistent system nothing false can be proved-in-the-system, but only truths.</p>
+</blockquote>
+<p>This theorem holds for all formal systems which are consistent, adequate for simple arithmetic, and shows that those formal systems are incomplete, with some fact being true, but unprovable.</p>
+<p>Lucas argues that the theorem must apply to cybernetical machines (or now computers) because</p>
+<blockquote class="blockquote">
+<h5 id="lucas-1961-2" class="anchored">Lucas, 1961, 2</h5>
+<p>It is of the essence of being a machine, that it should be a concrete instantiation of a formal system. It follows that given any machine which is consistent and capable of doing simple arithmetic, there is a formula which is incapable of producing as being true.</p>
+</blockquote>
+<p>Further argued, he then comes to such conclusion that no machine can be a complete or adequate model of the mind, since “the mind are essentially different from machines”. Lucas’s defenders, Roger Penrose, also state in his <em>Shadow of the Mind</em> (1994). A human mathematician, if presented with a sound formal system <span class="math inline">\(F\)</span>, could argue as followed:</p>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<h5 id="penrose-1992-3.2" class="anchored">Penrose, 1992, 3.2</h5>
+<p>Though I don’t know that I necessarily am <span class="math inline">\(F\)</span>, I conclude that if I were, then the system <span class="math inline">\(F\)</span> would have to be sound and, more to the point, <span class="math inline">\(F'\)</span> would have to be sound, where <span class="math inline">\(F'\)</span> is <span class="math inline">\(F\)</span> supplemented by the further assertion “I am <span class="math inline">\(F\)</span>” <a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. I perceive that it follows from the assumption that I am <span class="math inline">\(F\)</span> that the Gödel argument <span class="math inline">\(G(F')\)</span> would have to be true and, furthermore, that it would not be a consequence of <span class="math inline">\(F'\)</span>. But I have just perceived that “If I happen to be <span class="math inline">\(F\)</span>, then <span class="math inline">\(G(F')\)</span> would have to be true”, and perceptions of this nature would be precisely what <span class="math inline">\(F'\)</span> is supposed to achieve. Since I am therefore capable of perceiving something beyond the powers of <span class="math inline">\(F'\)</span>, I deduce that I cannot be <span class="math inline">\(F\)</span> after all. Moreover, this applies to any other system, in place of <span class="math inline">\(F\)</span>.</p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;The phrase “I am <span class="math inline">\(F\)</span>” is merely a shorthand for “<span class="math inline">\(F\)</span> encapsulates all the humanly accessible methods of mathematical proof”</p></div></div></div>
+<p>By default, the argument supplemented from Penrose raised the contradiction of proof-ness. The Godelian argument implicitly creates <em>layers</em>, and levels, on which one puts those languages they are abided to seem fit of their expressions on the shelf, by the order of <em>effectiveness</em>. Such notion then, would make the advancement of machine to human seems perpetually, unsophisticatedly, inoperable and impossible in essence.</p>
+<p>Before even taking a stance on such argument, what is the meaning and interpretations, as well as obstensively why it is even important to divulge into such point? The answers might be a bit difficult.</p>
+<p>Human is variedly different from machine, for the current time with all the knowledge at present. Truth to take, the action of writing this itself is part of the endeavour to discover one’s self, or rather, to understand <span class="math inline">\(F\)</span> with the assertion of ‘I am <span class="math inline">\(F\)</span>’, for now, that we can, and is doing. By the language and construction of contemporary and propositional logic, a machine cannot do that. In general, we cannot even say that it is true of the truth that human actually differs from what is proposed to be perceiving <span class="math inline">\(F'\)</span> being <span class="math inline">\(F\)</span>. For human understanding of ourselves alone, we are trying to fit it into the interpretation and the rough ‘understanding’ of human itself. That is, there exists the space of reason and argument of a scientist, which interpretation follows. If, supposedly, this interpretation is strong enough, then we might be able to perceive and understand ourselves from ourselves - a looped interpretability. This mechanism, if ever, is not well understood if exists.</p>
+<p>However, if the converse situation happens, where we cannot totally perceive what we actually think, and how it is formed - per metric, being either consciousness, or one’s self, surprisingly, it does not support the previous argument from an intuitive view (Bear in mind that this is a non-rigorous study). If stays rigid as it is, not counting being dynamic as we want, the model created from a human being can only imitate and represents what directly is entailed in the human mind of interpretation and logics. But logic and interpretation is a construct of the mind, for all intents and purposes, to directly infers to the physical world, the living world. However, if one is to use such inference on itself, for example, examining the brain itself, then to a certain point, what can be deduced from such observation can only fit in the interpretation space of what its creator, the human brain itself, can contrive. Thereby, we might conclude that figuratively, even human cannot understand human itself, from certain perspective. But the quality of succinctively interesting loop is to be taken seriously. The point now is, what type of construct, even logic, would be sufficient of taking the understanding, and will it make uses of the looped behaviors?} By that, we then argue superficially that anything that relies on the machine cannot model the human existence and conscience itself. There are some assumptions thereof in the argument: - Existences and the state of the world are in fact, modelled in mathematics, for one way or another. This is to facilitate the use of formal system in the argument. Everything is a set of rules, in which things operates. - A machine per its definition, cybernetical machines are of all expressed by the single principle that it is born out of a formal system itself. - Truth is the finite quantity that exists in such formal system. - The mind is an entity of which is inherently different from the logic of formal system. Those fundamental, overlapping assumptions make up the bulk of the Gödelian argument, from the surface. &nbsp;</p>
+<p>However, is that true of all the merit? <a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;It turns out, however, the Godelian argument has various proponents and opponents, and there are arguments of it being false. See [Bringsjord, 2001] for such argument, but it can be simplified as this. The Godelian argument makes use of two assumptions: <span class="math inline">\(G(F')\)</span> is true for a Godelian statement, and <span class="math inline">\(F'\not\vdash G(F')\)</span> for <span class="math inline">\(F'\not \vdash G(F')\)</span> for <span class="math inline">\(F'\)</span> being “I am <span class="math inline">\(F\)</span>” with added semantic. Then, the statement on <span class="math inline">\(G(F')\)</span> is true is nothing but a <em>satisfaction</em> claim, of meta-mathematical assertion which can be reduced to <span class="math inline">\(\mathcal{I}\vDash G(F')\)</span> is true for given interpretation <span class="math inline">\(\mathcal{I}\)</span>. Thereby, there exists no contradiction thereof.</p></div></div></section>
+</section>
+<section id="the-well-end" class="level1">
+<h1>The, well, end</h1>
+<p>Last sections have been quite a mouthful, for what it is worth. We argued, and construct various philosophical perception on the <strong>concept of intelligence</strong> as we want. We also have a lot of time to diverge ourselves to the topic of philosophical and conceptual debate of the construct itself, as for the great mind came before what is written down. However, it is not all what we would actually want. And we are also uncertain of the idiotic choice made along the way.</p>
+<p>What we would want, in certain way or another, is an <em>operational philosophy</em> instead of the usual mundane philosophical debate one might deem as armchair discussions. By operational, means able to construct and create, try and test, and the principle that might want to follow as it is, even then those can be broken for new principle of a more powerful notion to take place. I have interest in the philosophical debate on higher ground - whether strong AI is sufficient, or the Godelian argument of the treatment of machine as fundamental logical axiomatization. But we simply know nothing. Not even one bit. Discussing with oneself, similar to talking against ourselves, does not guarantee the actual goal that the field or the study of quote, <em>artificial intelligence</em> even want - its creation. So before jumping in such term, we might want to do others than philosophy instead. It also seems futile to speak of the end by now when everything is barely started, about logic and the existence of convergence to the human intelligence. By far, we don’t even know if logic exists without human, many philosophical questions laid dormant simply because they are born out of thoughts - which in particular, pair no further than between dogs and cats with the realistic necessity. We might want to leave those thoughts.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ol type="1">
+<li>Intelligence: A Brief History. URL: https://www.researchgate.net/publication/242083221_Intelligence_A_Brief_History.</li>
+<li>Daniel Estrada, Rethinking machines: artificial intelligence be-yond the philosophy of mind - PhilPapers. URL: https://philpapers.org/rec/ESTRMA.</li>
+<li>D.-L. Birgitta. Artificial Consciousness: Misconception(s) of a Self-Fulfilling Prophecy. In B. Dresp, editor, Queios. 2023.</li>
+<li>Journal of Philosophy of Life Vol.13, No.1 (January 2023): 1-4</li>
+<li>S. Bringsjord and N. S. Govindarajulu. Artificial Intelligence. In E. N. Zalta and U. Nodelman, editors, The Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University, summer 2024 edition, 2024.</li>
+<li>S. E. of Philosophy. Definitions, n.d. URL: https://plato.stanford.edu/entries/definitions/.</li>
+<li>M. Morioka. Artificial Intelligence and Contemporary Philosophy</li>
+<li>S. Legg and M. Hutter. A Collection of Definitions of Intelligence, June 2007. URL: http://arxiv.org/abs/0706.3639</li>
+</ol>
+<hr>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/amane-fujimiya\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block">Amane Fujimiya</span></p>
+</div>   
+    <div class="nav-footer-center">
+<p><span class="faux-block"><a href="https://forms.gle/LBFx3sUqrD9LLLHb7/"></a></span></p>
+</div>
+    <div class="nav-footer-right">
+<p><span class="faux-block">Everything <a href="https://en.wikipedia.org/wiki/Public_domainl">PD</a>; <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.en/">CC0</a> fallback.</span></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
