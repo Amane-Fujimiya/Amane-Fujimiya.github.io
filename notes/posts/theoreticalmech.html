@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-352d86000b8551449f8b28dcc7a192db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-630e288d79c686ef046ab9c2b1c29765.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-aa5b5c0c48f9275c5b767ff79a5a4b55.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-630e288d79c686ef046ab9c2b1c29765.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -346,7 +346,7 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -356,7 +356,19 @@ window.Quarto = {
   <li><a href="#calculus-of-variation" id="toc-calculus-of-variation" class="nav-link active" data-scroll-target="#calculus-of-variation">Calculus of variation</a>
   <ul class="collapse">
   <li><a href="#shortest-path-between-two-points" id="toc-shortest-path-between-two-points" class="nav-link" data-scroll-target="#shortest-path-between-two-points">Shortest path between two points</a></li>
-  <li><a href="#the-euler-lagrange-equation" id="toc-the-euler-lagrange-equation" class="nav-link" data-scroll-target="#the-euler-lagrange-equation">The Euler-Lagrange Equation</a></li>
+  <li><a href="#the-euler-lagrange-equation" id="toc-the-euler-lagrange-equation" class="nav-link" data-scroll-target="#the-euler-lagrange-equation">The Euler-Lagrange Equation</a>
+  <ul class="collapse">
+  <li><a href="#mathematical-proof-of-the-euler-lagrange-equation" id="toc-mathematical-proof-of-the-euler-lagrange-equation" class="nav-link" data-scroll-target="#mathematical-proof-of-the-euler-lagrange-equation">Mathematical proof of the Euler-Lagrange equation</a></li>
+  </ul></li>
+  <li><a href="#generalized-coordinates" id="toc-generalized-coordinates" class="nav-link" data-scroll-target="#generalized-coordinates">Generalized coordinates</a>
+  <ul class="collapse">
+  <li><a href="#degrees-of-freedom" id="toc-degrees-of-freedom" class="nav-link" data-scroll-target="#degrees-of-freedom">Degrees of freedom</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#the-lagrangian-mechanics" id="toc-the-lagrangian-mechanics" class="nav-link" data-scroll-target="#the-lagrangian-mechanics">The Lagrangian Mechanics</a>
+  <ul class="collapse">
+  <li><a href="#lagrangian-of-free-mass-unconstrained-motion" id="toc-lagrangian-of-free-mass-unconstrained-motion" class="nav-link" data-scroll-target="#lagrangian-of-free-mass-unconstrained-motion">Lagrangian of free mass (unconstrained motion)</a></li>
+  <li><a href="#scaling-up-to-multi-particles" id="toc-scaling-up-to-multi-particles" class="nav-link" data-scroll-target="#scaling-up-to-multi-particles">Scaling up to multi-particles</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -366,7 +378,7 @@ window.Quarto = {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -385,7 +397,7 @@ window.Quarto = {
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -404,7 +416,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 26, 2025</p>
+      <p class="date-modified">April 28, 2025</p>
     </div>
   </div>
     
@@ -458,6 +470,93 @@ S(\alpha) &amp; = \int_{x_{1}}^{x_{2}} f(Y,Y',x)\: dx\\
 <p>Substituting this in, the original equation, we gain:</p>
 <p><span class="math display">\[
 \int_{x_{1}}^{x_{2}} \eta(x) \frac{\partial f}{\partial y'} \: dx = - \int_{x_{1}}^{x_{2}} -\eta(x)\frac{d}{dx}\left( \frac{\partial f}{\partial y'} \right) \: dx
+\]</span></p>
+<p>Substituting this into the equation above, we get <span class="math display">\[\int _{x_{1}}^{x_{2}} \eta(x) \left( \frac{\partial f}{\partial y} - \frac{d}{dx} \frac{\partial f}{\partial y'} \right) \, dx = 0 \]</span></p>
+<p>This condition must be satisfied for any choice of the function <span class="math inline">\(\eta(x)\)</span>. Therefore, the factor in the large parentheses must be zero, that is:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial y}- \frac{d}{dx} \frac{\partial f}{\partial y'} = 0\]</span></p>
+<p>This is called the <strong>Euler-Lagrange equation</strong>, for all <span class="math inline">\(x\)</span> in the interval <span class="math inline">\([x_{1},x_{2}]\)</span>. This equation of Leonhard Euler and Joseph Lagrange lets us find the path for which the integral <span class="math inline">\(S\)</span> is stationary. It is applicable for, again, any small arbitrary variation <span class="math inline">\(\eta(x)\)</span>, either negative or positive sign (by curvature). We have the following lemma for such.</p>
+<div id="thm-Usefullemma" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Useful lemma)</strong></span> If <span class="math inline">\(\alpha(x)\)</span> is continuous in <span class="math inline">\([a,b]\)</span> and: <span class="math display">\[
+\int_{a}^{b} \alpha (x) \eta (x) \: dx = 0
+\]</span> for all continuously differentiable functions <span class="math inline">\(\eta(x)\)</span> which satisfy <span class="math inline">\(\eta(a)=\eta(b)=0\)</span>, then <span class="math inline">\(\alpha(x)\equiv 0\)</span> in <span class="math inline">\([a,b]\)</span>.</p>
+</div>
+<section id="mathematical-proof-of-the-euler-lagrange-equation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="mathematical-proof-of-the-euler-lagrange-equation">Mathematical proof of the Euler-Lagrange equation</h3>
+<p>If you wonder that there is the formal proof of Euler-Lagrange equation… Well, there is. In such case, we can treat the problem simply as the olde optimization problem, of all priori.</p>
+<p>The analogous optimization problem from our rough physical implied formulation is as followed. Let <span class="math inline">\(F(\alpha, \beta, \gamma)\)</span> be a function with continuous first and second partial derivatives with respect to <span class="math inline">\((\alpha, \beta, \gamma)\)</span>. Then find <span class="math inline">\(x\in C^{1}[a,b]\)</span> such that <span class="math inline">\(x(a)=y_{a}\)</span> and <span class="math inline">\(x(y)=y_{b}\)</span>, and which is an extremum for the function <span class="math display">\[
+I(x) = \int_{a}^{b} F[x(t),x'(t),t]\: dt
+\]</span> In other word, for now, the optimization consists of finding an extremum of a function of the form above, for <span class="math inline">\(\alpha = x(t)\)</span>, with <span class="math inline">\(\beta = dx/dt\)</span>, and <span class="math inline">\(\gamma = t\)</span>, or a <em>parameterized function</em> of the class of all admissible curves, all smooth curves joining two <em>fixed point</em> - the point 1 and 2 of the path.</p>
+<div id="thm-lagrangemath" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (Euler-Lagrange formulation)</strong></span> Let <span class="math inline">\(S=\{ x\in C^{1}[a,b]\mid x(a) = y_{a}\land x(b)=y_{b} \}\)</span>, and let <span class="math inline">\(I:S\to \mathbb{R}\)</span> be a function of the form <span class="math display">\[
+I(x) = \int_{a}^{b} F[x(t),x'(t),t]\: dt
+\]</span> If <span class="math inline">\(I\)</span> has an extremum at <span class="math inline">\(x_{0}\in S\)</span>, then <span class="math inline">\(x_{0}\)</span> satisfies the Euler-Lagrange equation: <span class="math display">\[
+\frac{\partial F}{\partial \alpha} (x_{0}(t), x_{0}'(t),t') - \frac{d}{dt} \left( \frac{\partial F}{\partial \beta} (x_{0}(t),x_{0}'(t),t) \right) = 0
+\]</span> for <span class="math inline">\(t\in [a,b]\)</span></p>
+</div>
+<p>Under this scope, we can gain several results directly. The derivation is generally long, but we will leave it to well, already available source. <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;See <a href="https://mathsci.kaist.ac.kr/~nipl/am621/lecturenotes/Euler-Lagrange_equation.pdf">This sources on the Euler-Lagrange formulation</a>. Generally, they use the linear space, and prove them using combinations of Taylor’s theorem and partial derivative decompositions.</p></div></div></section>
+</section>
+<section id="generalized-coordinates" class="level2">
+<h2 class="anchored" data-anchor-id="generalized-coordinates">Generalized coordinates</h2>
+<p>So far, aside from the certainly weird formulation above, we have considered only problems with two variables, the indpendent variable <span class="math inline">\(x\)</span> and the dependent <span class="math inline">\(y\)</span>. However, in a given mechanical system, sometimes we have more than such few variables. For most application, even, we would be better off with a system being dependent on the variable of time, <span class="math inline">\(t\)</span>.</p>
+<p>If, for such formulation to be possible, and our principle of finding the shortest path to be able to be conducted within Euler-Lagrange equation, then we will be expected to include in our analysis <strong>all paths possible</strong> from 1 to 2, to even guarantee it being the shortest path. A lot of time, of course, we cannot write a path in the form <span class="math inline">\(y=y(x)\)</span> as we have done previously. If we want to be perfectly sure that we have found the shortest path among <em>all</em> possible paths, we must then find a method that includes these. The way to do this, is to write the path in parametric form as: <span class="math display">\[
+x=x(u), \quad y=y(u)
+\]</span> where <span class="math inline">\(u\)</span> is any convenient variable in terms of which the curve can be parameterized. So, if we use this in a path, the length of a small segment of the path is <span class="math display">\[
+ds = \sqrt{dx^2 + dy^2 } = \sqrt{x'(u)^2 + y'(u)^2 }\: du
+\]</span> Thus, the total path length is <span class="math display">\[
+L = \int_{u_1}^{u_2} \sqrt{x'(u)^2 + y'(u)^{2}} \: du
+\]</span> and our job is then to find the two functions <span class="math inline">\(x(u)\)</span> and <span class="math inline">\(y(u)\)</span> for which this integral is minimum. While this is much more complicated, and instead of just <span class="math inline">\(\alpha = 0\)</span>, we might need to have two, or three, <span class="math inline">\(\alpha, \beta, \gamma...\)</span> in the conditions, the Euler-Lagrange equations will only <em>increase in number</em>, that is, there are now two Euler-Lagrange equations: <span class="math display">\[
+\frac{\partial f}{\partial x} = \frac{d}{du} \frac{\partial f}{\partial x'}, \quad \frac{\partial f}{\partial y} = \frac{d}{du} \frac{\partial f}{\partial y'}
+\]</span> These two equations will then determine a path for which the integral is stationary. The generalization into an arbitrary number of dependent variables is then straightforward.</p>
+<p>In Lagrangian mechanics, the independent variable is the time <span class="math inline">\(t\)</span>. Hence, all other quantities can be expressed as <span class="math inline">\(q(t)\)</span>, for a given time dependence. The dependent variables are the coordinates that specify the position, or “configuration” of a system, and are usually denoted by <span class="math inline">\(q_1, q_2,\dots,q_n\)</span>, where <span class="math inline">\(n\)</span> denotes the number of coordinates, which depends on the nature of the system. For example, if the system is a double pendulum, then the degree of freedom is two, and those variables will be the two angles of deviation, <span class="math inline">\(\theta_1, \theta_2\)</span> (we will see about this later).</p>
+<p>Because the coordinates can take on so many guises, they are often referred to as <strong>generalized coordinates</strong>. It is often helpful to think that <span class="math inline">\(n\)</span> generalized coordinates as defining a point in a <span class="math inline">\(n\)</span>-dimensional <strong>configuration space</strong>, each of whose points labels in a unique position, or configuration, of the system. It is also analogous to the <strong>phase space</strong> of a mechanical system, albeit comparing to a Newtonian phase space, they are quite different - in a good way.</p>
+<section id="degrees-of-freedom" class="level3">
+<h3 class="anchored" data-anchor-id="degrees-of-freedom">Degrees of freedom</h3>
+<p>The number of degrees of freedom determines how many generalized coordinates are in Lagrangian mechanics. Usually, the good way to calculate them is as followed.</p>
+<p>Defining the dimension of the configuration space as the <em>degrees of freedom</em>, we then:</p>
+<ol type="1">
+<li>Determine the number of coordinate components (Cartesian, polar, spherical, etc.) for each component of the dynamical system (for example, the double pendulum is then the two masses). This is denoted by <span class="math inline">\(kN\)</span>, where <span class="math inline">\(k\)</span> is the component of the coordiate system, and <span class="math inline">\(N\)</span> is the amount of objects.</li>
+<li>Determine the constraint of the system, or the relational quantities - for example, the length of the stick between the two pendulum. This is denoted by <span class="math inline">\(m\)</span>.</li>
+<li>Calculate the degrees of freedom - the freely movable and dynamical part, as <span class="math inline">\(n = kN - m\)</span>.</li>
+</ol>
+<p>By such, we can get a somewhat perfect representation of the degree of freedom of a system.</p>
+</section>
+</section>
+</section>
+<section id="the-lagrangian-mechanics" class="level1">
+<h1>The Lagrangian Mechanics</h1>
+<p>The Lagrangian of classical mechanics depends on several notions. From the get-go, maybe this is realizable because we have been building up the calculus of variation technique.</p>
+<p>For a system, there exists its <strong>phase space</strong>, or the space of all possible configuration state that the system can be at a given time or indicent. For example, the uniform circular motion will have the phase space as exactly the circle - as its evolution in time is subjected to position on the circle of radius <span class="math inline">\(r\)</span>. By this, we can classify system based on how the phase space varies with time. If the phase space stays the same throughout its evolution in time, then we say the system is <strong>conservative</strong>. Else, if the system’s phase space varies with time, then we call it <strong>nonconservative</strong>; in more detailed terms, we have <strong>dissipative system</strong> for system with reduced phase space, and <strong>expanding system</strong> for system with its phase space increased.</p>
+<p>Newtonian mechanics is fully sufficient practically for interpreting and analysing mechanical system and behaviours. Indeed, sometimes with all the laws and <span class="math inline">\(\vec{F}=m\vec{a}\)</span>, it is enough to specifies all the evolution and factors of the system. However, with increasingly complex system, Newtonian formalism becomes much more difficult to work on, as its basis of specifying forces and additives of system’s components together. Instead, it is desirable to find a way to obtain equations of motion from some scalar generating function, or rather, some inherent qualities that encode information about the system into itself, and can be used to defer to the equation of motion, which is, of importance is the evolutionary law of any given system based on mechanics. For conservative systems, the complete information about the system is contained in the total energy: <span class="math display">\[
+E= E_{k} + U
+\]</span> This is expressed by a function of coordinates and velocities, or angles and their time derivatives for some system considered above. However, using this, there is no way to obtain equations of motion from the energy function directly. This can be deferred to the loss of information in the reversing direction, for the given mathematical realization of the physical system backward. It turns out, however, that the generating function of equations of motion is the quantity called <strong>the Lagrangian</strong> (or <em>Lagrange function</em>), taken in the form <span class="math display">\[
+\mathcal{L} = E_{k} - U = T- U
+\]</span> The Lagrange formalism is build upon the so-called <strong>Least-Action principle</strong>, also called the <strong>Hamiltonian principle</strong>. According to this principle, that can be put into the foundation of mechanics, the actual dynamics of the system, that is, the actual time dependence of its <em>generalized coordinates</em> <span class="math inline">\(\{q_{i}(t)\}\)</span> minimize the action on the way from state 1 to state 2, that is the action path that the system choose will always be the minimal path, such that <span class="math display">\[
+\mathcal{S} = \int_{t_1}^{t_2} \mathcal{L}(q(t),\dot{q}(t),t) \: dt , \quad q\equiv \{q_{i}\}
+\]</span> is minimum, hence must satisfy the Euler-Lagrange equation. One of such is the shortest path problem we have encountered in our example of the calculus of variation. Up to now, want can then ask about the reason why Lagrangian mechanics depends on the Hamiltonian principle (or why it is formulated as such). If we are to see the Lagrangian <span class="math inline">\(\mathcal{L}\)</span> as a somewhat energy functional of the system, then we can then interpret the integral <span class="math inline">\(\mathcal{S}\)</span> as the total effect of such energy function has on the given system, assuming that all information has been proxied by the energy functional of Lagrangian. Then, Hamiltonian’s principle only states that the path that they take - or the real world takes, will be the one where the action is the least possible. This might not be clear for now, and surely it is for me, but perhaps it can be there to be dedicated in another post.</p>
+<p>Some properties we can cite for the Lagrangian can be then conducted, which will be helpful in formalising the consequences of the Lagrangian formulation. First, the Lagrangian is independent of space and time. That is, the Lagrangian at this position, and at that position, as long as it is the same system, will not change. And secondly, it also does not depend on the direction of the system. This is all because we are indeed, still treating the Lagrangian in an <strong>inertial reference frame</strong>. Intrinsic of the Lagrangian, on the other hand, includes the property of a <strong>stationary point</strong> - subtle variations of the system won’t change the Lagrangian by much of its least action; and secondly, it posesses the linearity property, that is, <span class="math inline">\(\mathcal{L}=\mathcal{L}_{1}+\mathcal{L}_{2}\)</span>, for all Lagrangians of interest. We will see how this is done in the latter sections.</p>
+<section id="lagrangian-of-free-mass-unconstrained-motion" class="level2">
+<h2 class="anchored" data-anchor-id="lagrangian-of-free-mass-unconstrained-motion">Lagrangian of free mass (unconstrained motion)</h2>
+<p>Consider a particle moving unconstrained in three dimensions. They are not subjected to anything (short of a potential). Then, the Lagrangian <span class="math inline">\(\mathcal{L}\)</span> can be said to only be determined on the kinetic energy <span class="math inline">\(T\)</span> of the particle. That is, <span class="math inline">\(\mathcal{L}=T\)</span>. So, how do we solve this particular problem?</p>
+<p>Because the Lagrangian depends on the kinetic energy, apparently, it means it, <em>perhaps</em> depends on the velocity of the particle. But we remember that the Lagrangian is equivalent for all direction - which makes the velocity being independent of the Lagrangian. Except for the magnitude. We then can say that the Lagrangian depends on <span class="math inline">\(v^{2}\)</span>, of the squared magnitude of the velocity. That is, <span class="math inline">\(\mathcal{L}(v^2)\)</span>. This dependency can then be expressed as <span class="math display">\[
+\mathcal{L}(v^{2}) = av^2
+\]</span> where <span class="math inline">\(a\)</span> is an arbitrary constant. If we based off ourselves with the Galilee transformation, this choice also makes sense, because with this choice, the transformation of the Lagrangian from an inertial frame to another inertial frame, it will stay the same or at least with very small deviation (I will write about this later, please).</p>
+<p>For <span class="math inline">\(a\)</span>, usually, we take it as <span class="math inline">\(m/2\)</span>. It is also pretty evidential, somewhat, because we said that it only have kinetic energy. Then the Lagrangian is formulated by: <span class="math display">\[
+\mathcal{L} = T = \frac{1}{2}m \dot{\vec{r}}^{2} = \frac{1}{2} m (\dot{x}^2 + \dot{y}^{2}+ \dot{z}^{2})
+\]</span> for a 3-dimensional system in the Cartesian coordinates. If we only take the foremost expression, and apply it to the Euler-Lagrange equation, it gives <span class="math display">\[
+\frac{d}{dt} m\vec{v} = 0
+\]</span> which is indeed <span class="math inline">\(m\vec{a}=0\)</span>. This fits the description of a free particle in an inertial frame. For spherical coordinate, you can express it as: <span class="math display">\[
+\mathcal{L} = \frac{m}{2} (\dot{r}^{2} + r^2 \dot{\varphi}^{2} + \dot{z}^{2})
+\]</span> And in the spherical coordinate: <span class="math display">\[
+\mathcal{L} = \frac{m}{2} (\dot{r}^{2} + r^2 \dot{\theta}^{2} + r^2 \sin{\theta}^{2}\varphi^{2})
+\]</span> If you get it a potential <span class="math inline">\(U(r)\)</span>, the Lagrangian will only change by (given the Cartesian coordinates): <span class="math display">\[
+\mathcal{L} = \frac{1}{2} m (\dot{x}^2 + \dot{y}^{2}+ \dot{z}^{2}) + U(x,y,z)
+\]</span></p>
+</section>
+<section id="scaling-up-to-multi-particles" class="level2">
+<h2 class="anchored" data-anchor-id="scaling-up-to-multi-particles">Scaling up to multi-particles</h2>
+<p>For an interacting system of multiple particles, we can then get the expression to be enumerated: <span class="math display">\[
+\mathcal{L} = \sum_{i=1}^{n} \frac{1}{2}m_{i} v_{i}^{2} - U(x_1, y_1, z_1, \dots , x_n, y_n, z_n)
 \]</span></p>
 
 
