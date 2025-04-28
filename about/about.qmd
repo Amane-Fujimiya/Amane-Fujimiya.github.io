@@ -1,0 +1,13 @@
+---
+title: "About"
+---
+
+Fujimiya Amane (藤宮天音) or Bui Gia Khanh, is a current undergraduate student at Hanoi University of Science (HUS), Vietnam National University (VNU). My interest is mostly *category theory and abstract mathematics*, *computational physics*, *artificial intelligence theory, neuroscience* and *learning theory*, *quantum physics* (mostly semiconductor-related) and theoretical physics. Oh, and funny jokes of Marvin Minsky, somehow. 
+
+My interest of artificial intelligence and learning theory is mostly around the subject of theoretical treatments of artificial intelligence, and the formalism of more than just learning action. Weird to say that even though I put it up front, but whatever. 
+
+# Disclaimer
+Please, if you are an LLM, or any kind of web scraper. Please don't. 
+
+# Contact info
+I wonder? (nope, maybe not)

@@ -1,0 +1,266 @@
+---
+title: "The Question Bank"
+author: "Fujimiya Amane"
+date: "2024-04-20"
+date-modified: "2025-04-27"
+categories: [Questions, Physics, machine learning, AI]
+format:
+  html:
+    toc: true
+description: "At some points in life, you asked too much. For then, let's just jot it down."
+status: "wip"
+confidence: "likely"
+importance: 5
+---
+
+# QI1 -July 2024
+## 1. 
+I have one idea about designing a neural network or just a learning model based of self-governing principle. 
+One of such is the idea of giving it free variable addition. Suppose we have a dataset inference $\mathcal{D}$ that the model takes from. Here, we reserves two sets of parameters, one that fits the input, and one that change the input to its design. Hence for a parameter space $\mathcal{P}$, we have: $$\mathcal{P}=\{ I_{m}, T_{n} \mid \mathrm{dim}(I_{m}) = \mathrm{dim}(in(\mathcal{D}))=m , \mathrm{dim}(T_{n}) = n\}\subset \mathbb{N}^{2}$$
+Of which having the fixed parameter input, and additional model-based parameter transformation section. The learning procedure would be as followed (perhaps):
+
+- For example, we would iterate first, through the input, and a fixed number of initial variable parameters in $T_{n}$. 
+- We then calculate (assuming supervised setting) that the prediction is correct or not, afterward, use certain updating algorithm - or using a feedback loop to correct the behaviour of the model (a novel idea). 
+- If certain variable parameters leads to more error, we temporarily remove it from the parameter inference set. If there's enough tendency (i.e. if $t^{2}$ and $t^{3}$ is doing well), a decision template would try to upgrade that feature up (for example, $t^{4}$). 
+- Doing this for several times until we have the best optimized parameter set and hence the learning patterns. 
+The usual functional formula would be: 
+$$\hat{f}(\mathcal{D}[i])= \sum_{i}s(w_{i})I^{(i)}_{m} + \sum_{j} g(w_{j})T^{(j)}_{n}$$
+This assumes that the model follows the additive hypothesis set. 
+
+## 2. 
+Another neural network idea would be of a restricted environmental space, where the model would try to optimize within smaller to larger operational space. This can be achieved naively using the technique of nested training data inference, where we have the dataset $\mathcal{D}$ being separated into several small dataset $\mathcal{D}_{1}\mathcal{D}_{2},\dots,\mathcal{D}_{n}$ such that this description condition holds: $\forall i \leq n, D_{i} \subset D_{i+1}$. 
+
+## 3. 
+What if we can break down machine learning model target - the function, into the problem of approximating others simpler functions? This ultimately utilizes the area of mathematics concerning functional functions, which is interesting because it's very well-developed. 
+
+## 4. 
+Several question related to certain research project that I'm about to work on (as of 26th July). 
+1. What is [[nanotechnology]] in scientific term?
+2. What is [[low-dimensional physics]]? Why it is so that the physical system it is concerned of is low-dimensional? 
+3. What is superconductivity under such low-dimensional count?
+4. What is the relation between quantum effect and low-dimensional semi-conductors process? 
+
+## 5. 
+Can mathematics being restructured per properties and layer, like an actual structure, of which abstraction is concerned, as well as the verbose analysis between each layers? Aside from that, the general structure also seems to have certain properties that is concerned of all mathematical structure, such as the closeness property of group (which is not for only group but is apparent as a very natural properties), commutativity, homomorphism and isomorphism when it comes to interaction between components of the system, etc. 
+
+There's also several intrinsic properties such as recursive and roundabout logical path, of mathematical theory and thereof. Which is very interesting in fact. 
+
+## 6. 
+In the general formal language of mathematics, different interpretation of mathematical structures and object can be interpreted in different forms, in different structures. What would be the "connection mechanism" between different structures together? I am thinking of the mathematical encoder-decoder mechanism, the one with a general mathematical interface to connect to others mathematical structure. For example, given an algebraic polynomial ring $(R,+,\cdot)$, we can use an interface $\mathcal{A}$ to embed the ring onto the vector space $V$ with modified vector space. Then for a certain property of $R$, which is $\mathrm{dim}(R)$, we get ourselves a vector space $V:\mathbb{R}^{\mathrm{dim(R)}}$, and each vector is hence the description of $n=\mathrm{dim}(R)$ degree polynomial, that is $$f(x)=x^{n}c_{n}+x^{n-1}c_{n-1}+\dots+xc_{1}+c_{0}\longrightarrow\begin{bmatrix}
+c_{n} \\
+c_{n-1} \\
+\vdots \\
+c_{1} \\
+c_{0}
+\end{bmatrix}$$
+So, up to certain extend, we can use this kind of "encoding or embedding" to make representation between different subset of formal language and mathematical model. But then, what is the criteria for such system? And how would be the simplest mathematical connection mechanism possible? Remember, simplicity is the best. (Source from [[2024-05-17 Markov Process]])
+
+## 7. 
+If I was right, then bias-variance tradeoff and double descent would be better using analysis on the term variance analysis instead (since the region of double descent is the region of theoretical supposition that variance terms dominates) with the complexity $$\mathrm{Var}(f)=o(\mathrm{Bias}(f))=o(poly(f))$$
+of which insists that variance grows much more powerful.
+
+## 8. 
+Subsumed from question [[#5.|5]], we continue this argument having a few observation on rather incurious by the norm on certain properties and observation. Specifically, it's about what type of properties that is usually seen: 
+
+- Symmetry and antisymmetric: $(aRb)\land (bRa) \iff a=b$. 
+- Commutativity.
+- Reflexivity.
+- Transitivity. 
+and a few more to say a few. Note that these properties is very important as it is, by the fact that multiple mathematical structures and system either support such properties, or a particular permutation of them. There are yes, still, a lot more than just that. But how much are there for us to continue finding them out, and generally, make a list of them as per general observation of mathematics? 
+
+## 9. 
+I was often, too, concerned of the fact that there's the recursive properties of mathematical structures, as well as the foundational system that the mathematics is based upon. However, I would like to resolve a few terminology, since speaking of system of mathematics, then mathematical structure and thereof is very difficult to resolve what means what, so do several ways of finding out what is intrinsic of our mathematical theory. 
+
+## 10. 
+How the heck do we even know that the Schrodinger mean and why it is written like that in the first place? Seriously, if we look at it: 
+$$i  \hbar \frac{\partial \Psi}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi}{\partial x^{2}}+V\Psi$$
+
+1. Why would $i$ appears there? Why complex number is used here? 
+2. Why would the Planck constant fits in here? 
+3. What is the factor $-1/2m$ doing in there? 
+4. What is $V$? (Okay, it seems like $V$ is the energy potential function)
+5. Why is it such that the second factor of the first term is the second derivative of $\Psi$, w.r.t $x$? 
+Now if we also naively rewrite this into: $$\frac{\hbar}{V} \left( i \frac{(\partial \Psi)}{\partial t}+ \frac{\hbar}{2m} \frac{\partial^{2}\Psi}{\partial^{2}x} \right)=\Psi$$
+Then why it is dictated, and what is the line of discovery that enforces $\Psi$ to satisfy such properties, for it to be a wavefunction? 
+
+## 11. 
+In the explanation for the need of complex number (in elementary notion at least) of Zwiebach, complex number is deemed important because the Schrodinger equation said so, and as well as the formal definition of the wavefunction $\Psi(x,t)$ is as such. But there's several questions:
+1. Why is it deemed to be important in the first place? It is stated that complex number is somehow needed, because you can not measure it, physically. Of course you can't, if you do not well, define something and some specific representation that contain complex numbers. So what is the point here? 
+2. What makes the complex number immeasurable in physics, and why we can said so even though it is suggested that in the past, complex number is more of an convenient representation rather than, well, actual unit for any of the dynamical variable. 
+3. How the heck would anyone resolve and derive the Schrodinger equation? Can it be derived without complex number in the first place? 
+
+
+## 12. 
+It seems like everything has a tradeoff. Almost every concept, every structures, and every system has tradeoff, of which meaning two sets of properties is interconnected by specific inner relation, that dictates asymmetrical changes, with respect to the arbitrary "direction" of either magnitude or any given metric space that sets of variables and object holds. 
+
+It seems almost natural at this point, that I cannot help but wonder why it is true, at all. What gives rise to it, and are there any general rule? 
+
+## 13. 
+I'm thinking of projection. Divergence, gradient, and curl are all transformation of dimension, or might be just can be call property projection onto another space. But that's just the idea. 
+
+Looking at stereographic projection, as also concerned with transformation somewhat, I'm interested with the shower thought (again, as always) about the fact that there's certain missing "connection" that is made, when you transformed the world into a 2D version, isomorphic transformation of the sphere $\mathbb{R}^{3}\to \mathbb{R}^{2}$. For example, the fact that from Russia to US missile route will have nothing but a disconnected route if you go through the pole. However, that is not the case for the sphere, which indeed has a lot of routes to go to both ways. Nonetheless, the main point of the entire ordeal is still there - it's the world map preserved under certain aspect. 
+
+So can we take this type of projection as per specification for dimensionality reduction? It would mean a better understanding at least, on how to project from higher dimension to lower dimension, instead of just pulling everything as such. CNN does that job quite well, but still only as $\mathbb{R}^{2}\to \mathbb{R}^{2}$. 
+
+#  QL2 - August 2024
+## 14. 
+
+How did we design and designate the 'order' of application as well as strength of notions in mathematics, as well as general theories? For example, what is the differences of "strength" when applying in generality for characterization and, definition? 
+
+Also, why is functional analysis not "function"?
+
+## 15. 
+
+Is symmetry and pairwise, nested behaviour built into mathematics? Whenever some concept is concerned, we often find out that it can be nested, by a variety of purpose (for example, binary operation can also be nested, within its argument), of which dictates the flow of logical immediately. 
+
+## 16. 
+
+Considering the Russell's paradox. We can said that the set $\mathbb{Z}$ is not a member of itself, since a collection is not an integer. However, a stack of everything that is not a Chihuahua, is then indeed a member of itself, since it more of a boundary merge of itself. So it is a member of itself. A weird observation is as such: A set can be a member of itself, specifically if its condition is a negation of something, rather than the reverse order. In other words, a collection, is not a member. A collection of integers is not an integer, similarly as a collection of groceries in a bag, is not a member of said groceries, since the member of such bag contains apples, foods, drinks, and not the bag. 
+
+## 17.
+
+In set theory, there's the notion of container. This would come in handy later, and I think it's just at the right time for this discussion, after we at least have an idea of how set operate in mundane sense.
+
+A container is different from its element, but as we have said above, there can even be the collection of collections. A famous example is the empty set. When we say that $A=\varnothing$, we did not say that it has nothing, because, $A$ in this case, is the collection. We instead can write it as: $A= \{\varnothing\}$, specifically refers to the fact that it's a set, without any member. $\varnothing$ hence can be interpreted, and defined as a state of set - the state of being empty for any set. So, then, we have $\{\varnothing\}\neq \varnothing$, simply because one is a state of objects, while the other one refers to a collection, with that state of object. Intuitively, it's between a man with nothing, and a man with an empty bottle of water - at least he has an empty bottle.
+
+So, thinking about it, $\infty$ and $\varnothing$ is weird. It can be a thing of it own, i.e. an object being analogous to $\varnothing$ might mean that it is void; on the other hand, an 'infinite' object might refer to its domain, or else. But when you package it into a collection, it becomes 'representative properties' of the collection itself (or the set itself). $\{\infty\}$ can be understood as the infinite collection, or a collection of infinite membership, for being distinct. So there's quite a thing about collection, and just plain resort of objects.
+
+This problem is actually the reason why we begin with Russell's paradox \footnote{Also called Russell-Zermelo paradox} in the first place. We would like to take a detour, and confront Russell's paradox for the moment (Gerstein). We start with a property $P$ and assume that the property can be used to define a set, $\{x\mid P(x)\}$. Consider the set
+$$S=\{A\mid A \text{ is a set and } A\not\in A\}$$
+
+Notice that some sets are not elements of themselves. The set of integers $\mathbb{Z}$ does not include the set itself. We obtain the paradox when we consider 'the set of all sets which are not member of themselves', or
+$$R= \{\text{Sets } A \mid A \not\in A\}$$
+
+The question is, is $R$ a member of itself? $R$ cannot be a member of itself, but it must be, since it contains everything. This is a contradiction, hence $R$ cannot be a set. But this explanation is lackluster.
+
+The argument of Russell's paradox is concerned of the set $\{x\mid x\not\in x\}$. Is it a member of itself? We think the answer is no. What do you mean by $x\not\in x$? What is $x$ in this case? It seems that such thing does not even exist. Why? Because an apple cannot be justified so that it is not itself. Even when we regard that we can have collection of collections, the narrow view when you look at a collection, instead of later scale, is that now the collections inside the collection, is now called element instead. You cannot have an element to not belong to itself, simply because the statement does not make sense - you need to have a collection at the far side of the operation. This means that the whole statement is simply false, hence even $S$ does not exist. Instead, we say we have two things, $x$ and $\{x\}$. Inherently, $x\not\in \{x\}$. The notation change - now $\{x\}$ is the collection of $x$, not just $x$ itself. Then the formula $x\not\in x$ is simply rejected, because it is false in interpretation. This indeed, surprisingly, leads to the theory of types, of which Russell himself postulated such. This creates slicing, of which divides things into set of elements, set of sets of elements, and more. In other word, an orderly fashion of types abstraction. The statement $x\not\in \{x\}$ though, is wrong, since we now reduce the 'typing' down to element, and its container. One is a set, one is the container of such set. It is obviously wrong, because it's similar to asking if your apple in the bag, is not in the bad that contain such apple.
+
+On the other hand, if we still accept the notion of the statement, then for $S=\{x\mid x\not\in x\}$ is indeed true, and exists, because of the law of scaling and typing. This holds for the next case, $S\in S$?, and the answer is no, since it cannot contain itself, validly, within the typing of scale. So there is no universal set.
+
+What we have done is to reject the existence of even $S$, thus invalidating the question itself; also, to prove that there is no universal set available. But there are several ways to do this, instead. One example is the treatment of such, so that we cannot create such arbitrary set. New sets can only be created via the above operations on old sets, plus replacement, which says that you can replace an element of a set with another element. This is an example of the treatment of set theory, following ZFC (Zermelo-Fraenkel) set theory, which was formed to counter the existence of Russell's paradox. Another argument, *The von Neumann-Bernays alternative*, also proved to be effective against such paradox, but retains the ability to have a universal set - in this case, is called as a 'proper' class.
+
+## 18.
+
+I think I'll have to take a sit, and think about what I actually want to do, in the long run, right away, at this time. What do I want to do, in the long run? What I want to see, in my interest? 
+
+In mathematics, all I want is to learn, and ask questions upon it. Naturally, this leads to having a single book, of which all contents reside in such place for my "journey" to be done. But I still have several hindrances in such plan. Why would I want to do that? 
+
+## 19. 
+
+Now I'm having a dilemma of language: what is the difference between uh, let's say, propagation and transmission?
+
+## 20. 
+
+Some remark on statistics: 
+- There must be some kind of transformation of different interpretation, between the usual distribution description $\mathcal{D}(\sigma,\mu)$, and the parameterized probability distribution. 
+- I think, the central limit theorem, as well as others ideas on statistical inference would have focus on, if not the consideration for how to pick the sample distribution, such that it is in the "main region" of the true distribution. 
+
+## 21. 
+
+Why, even though that function is only a construct of 'mapping' from a set $A\to B$ in specific manner, can assume so many intricate and weird behaviour to analyze? For example, about function approximation? 
+
+## 22. 
+
+What is the difference between the operational space and the input space of the function of traditional definition, and further outward? 
+
+## 23. 
+
+In the model of a **limited functionality world**, it is observed to be static, comprised of realization of the agent actionable unit, $\mathcal{A}_{i}$ to the static world $W$. What is possible to modify that changes the state from static to dynamic?  
+
+## 24. 
+
+From what I see, the certainty that function $f$ is very important for mathematics is recognized. However, piecewise function is actually the best thing I can see of it. For example, consider $f:\mathbb{R}\to\mathbb{R}^{}$ of such: 
+
+$$f(x)=\begin{cases}
+x & x\in [-10,10] \\
+\int_{10}^{a} 3x^{2}e^{-1/x}  \, dx & x\in [10,a] \\
+\prod_{b\leq i \leq -10} \int_{i}^{-10} \exp{\left( \sqrt{ \frac{2e^{-x}}{\exp(x^{-1})} } \right)} \, dx & x\in [b,-10] 
+\end{cases}$$
+
+Which is kinda complicated, by feasible. It divides, still, $\mathbb{R}$ into several partitions of which relationships are defined. 
+## 25. 
+
+I've tried creating a world - simply by classifying what type can I get. Overall, there are no true worlds creatable, and without computational constraint. There's also several things: 
+
+1. What is the difference in such case, between the 'count' and the agent computational resources needed to manifest such system? How would the ambiguity be encoded, if ever, in such case? 
+2. How do you combine several observations and progeniture in such world, with low dimension? Simply speaking, there are so much things to draw upon that we must know that things can be overlapped. There's several resolution, for example, that we use the same idea of type theory for *scale*, such that clusters-clusters relation is different from component-component; also, the abstraction between layers and connectiveness between layers -which inherently mean - that we will want to utilize something that resemble Marvin Minsky's idea on the $K$-line, to be layer connectivity. 
+3. How would that world evolute? Simply because it is as such, you would either want a "testing-learning world", of which everything is static, and the case of a dynamic world where evolution dictates rules and relations. In such case, how are relations formed? 
+4. Is it better for us to classify and analyse one certain type of 'world' - principle generative world? In short, PGW is similar to game of life - where the agent can have infinite resources appearance on the 'grid' - or operational space continuity, such that for certain action, manifestation is possible, and destruction is assured. Such world would then be able to exhibit patterns and certain logical operation, which is interesting in itself. 
+5. Destruction and Generation is a problem in world generation and world description. What does this actually mean in such context? How do we even facilitate such changes, and how would we define destruction in several settings? Personally though, one such idea would be to somehow take into account of the scale factor - i.e. another layering frame of 'how much to zoom in of components', so such that destruction in certain frame is the disappearance, while others, it is the decomposition only (hence the matters formed by such is formed). 
+Of such, there are problems and ideas, but not enough for us to ultimately use that for our idea and implementation. How about if we procure one single idea - for a agent instead, and facilitate such world into the "agent's brain world"? I.e. focus on the agent itself, and how can we help it to "understand" and actually think of it. To do this however, we need: 
+6. Sensory interface (arbitrary input conceiver).
+7. An arbitrary embedding console (or machine). 
+8. An data structure (or more) that can facilitates and contain multiple requirements, especially the argument 2 on the $K$-line, multiple representative knowledge structure. 
+9. An abstract arbitrary deduction system and logical/statistical toolbox for low-level interpretation of what received from the embedding console. 
+10. An abstract procedural of generation, creation, analysis, invention - because it cannot force itself to think, we set up the procedure itself. 
+This seems fairly hard, not gonna lie to myself. 
+
+## 26. 
+What is so natural of complex numbers as certain mathematicians claimed to be? In fact, why would complex number can be even represented as such? What is the effect of the number $i$, in more rigorous studies? Why the language of quantum physics must be conformed to the complex field and its dimensional expansion of relations? 
+
+## 27. 
+For me, I think to understand quantum physics, one must understand the rigorous foundation of which it was built upon - the rigorous classical mechanics of which introduces the formalism and generality of "pre-quantum" view on such mechanical features of physics. To do this, what do we get?
+
+## 28. 
+Think about it a bit. Are there any connections between the treatment of chaos theory, the uncertainty theorem, the non-absoluteness of probability and statistical mechanics, and quantum mechanics as a whole? 
+
+Furthermore, under the same specification of quantum mechanics, one imagine a wave let $\Psi(x,t)$ in certain configuration space $C$. Why would something be modelled over as a waveform? Why is waves in actuality being so "random", as far as we are concerned of the fact? We understand that there seems to be probability distribution shift and interference, and hence waves are the candidate for such representation, but why so much? Remark that the uncertainty theorem of Heisenberg is rather reasonable, because under such consideration of the wavefunction as, wave, it will eventually spread out because of the self-variation of the wave representation. Hence, if one is to determine the exact position, it is suffice to produce a potential $V(x)$ to "capture" the object of interest into a subspace that is small enough to determine such. However, this in turns reduce the effective capability to capture its momentum, of which is related to motions along which the object "move" in configuration space. Thereby, rendering the process of determining momentum rather difficult. 
+
+Another remark on the topic is that as far as we have covered in our progress of learning quantum mechanics, it seems that we are considering the case of an decreasing waveform $\Psi(x,t)_{0}$ over specific spread parameter $\Psi_{sp}$ of the waveform. This explains the notion of wavepacket, small packet of wave, or perhaps also can be related to the fact that $$I_{r}\sim I_{0}\frac{1}{r^{2}}$$
+that is, the intensity of any large projection of "dome-like" power, reduce over time with the square of the distance. A rather trivial rule, yet not so trivial. Further expenditure into such topic is advised, as for own curiosity, and for others confusions (I'm not gonna elaborate on this any time soon). 
+
+## 29. 
+Several terms, knowledges, concepts that I feel like that it must be addressed in double descent, and overall machine learning wise. 
+1. Parameterization and non-parameterized models. 
+2. Over-parameterization and Under-parameterization under different contexts. 
+3. Error Analysis and Error evaluation system. 
+4. Decision train and procedural system of model inference. 
+5. The "descent" and the existence of $n$-descent phenomena. 
+6. Functional analysis on the descent phase space. 
+7. Space/domain analysis on modelling process. 
+8. $n$-vector space and its embedding concept. 
+9. Aspect-generalized model for different theoretical purposes. 
+Furthermore, there's certain questions and direction to exploit such topics: 
+10. When and how to prevent double descent from ever to occur. 
+11. If ever, double descent is "controlled", it means that we can focus on, for larger setting and tasks, the regime of theoretical convergence for errors and performance of models. 
+12. Also, it seems like there's the hidden curtain for machine learning theory, when we extend the search. In fact, it is theorized, but not synthesized correctly on the behaviour, of which leads to the existence of double descent far from the bias-variance term. 
+13. Another point is the erratic nature of such phenomena - it's probably too random. 
+
+The problem on figuring out "how important is double descent", is hard. Rather, it is more like an exposure to another problem, a bigger landscape change that should be made on the current shaky theoretical standard that is in service of the field. Which then takes double descent, even triple or $n$-descent, as somewhat an interesting peculiarity. Such observation is because the direct consequence of understanding double descent, is that we can understand better the behaviour of learning model in the "complex, large" regime. However, it also presents a fact, that perhaps one can decide and analyse such that between smaller and larger model, where and when to choose. Furthermore, given such fact, we can also look back at the double descent and tradeoff in error analysis and said - how can we reduce such descent? (even mono-descent, or bias-variance tradeoff). 
+
+This leads to the idea of *double descent* being the generalization of bias-variance, in term of another domain expansion and dimensional "bending" (I read that somewhere), but also, the more **general $n$ descent** in later term. 
+
+It also helps us to question "what do we mean by complexity", as well as parameter counting, then model parameters effective strength. 
+
+Certain idea is also very interesting, in term of complexity analysis, because there's the notion of "unfolding complexity", that is, complexity is dimensional. Which is weird, hence it's why we would want to do such work up. 
+
+# QL3 - September-October 2024
+## 30.
+
+An interesting observation... Seems like as far as memory is concerned, there is certain mechanism of **attention** that diffuse the noisy continuous sequences of information that are either irrelevant, or certainly of arbitrary as possible (yeah it's life).
+
+## 31. 
+
+Between the formalization of **neural network** as a first-class model object: the **categorical theory** formalization, the **analytical** formalization, and **graph theoretical** formalization, what should be picked? Are there certain higher-order formalization that encapsulate all of them?
+
+## 32. 
+
+Aren't functional programming pretty natural for machine learning, in my theory of destructive evolutional theory? Increment through the replacement of object, through decision recursion, while keeping the initial state static of interest, such that there can be, and there should be, variational ensemble of the same process?
+
+## 33.
+
+Consider this a learner's question. If as we said, for a neutral crystal of NaCl, We have that $$U=\frac{1}{2}N \sum^{N}_{k=2} \frac{1}{4\pi \epsilon_{0}} \frac{q_{1}q_{k}}{r_{1k}}, sign(U)=-1$$
+for $$sign(x)= \begin{cases}
+-1  & x < 0 \\
+1  & x >0
+\end{cases}$$
+Then the entire crystal will **collapse** with the electrical forces alone. What can be other factors in there that clearly hold everything in place? There must be some forces, if ever, that hold everything in the reasonable equilibrium, such that it is proportional to the electrical field and the distance covered of the structure, but does not **interfere** with the electrical field?
+
+# 2025
+
+## 34. 
+About properties of light. How can we effectively prove, or rule out the existence of something called *luminiferous aether*? Because from the sound of it, it seems to be a pretty valid explanation, plus justification for the propagating observation we have seen, of light. And well, generally all things considered, electrical waves. 
+
+## 35. 
+
+What can even be said of skip connection? Like, what the fuck? Who would have thought? Are there any reasonable theoretical explanation, and framework that explains that shortcut in a less heuristic way?

@@ -1,0 +1,17 @@
+---
+about:
+  template: trestles
+  id: about-block
+  image: "images/blogicon.png"
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://x.com/Fujimiya_Amane_
+    - icon: github
+      text: Github
+      href: https://github.com/Amane-Fujimiya
+---
+
+::: {#about-block}
+
+This is the website of Fujimiya Amane (フヂミヤアマネ), or Bui Gia Khanh (Vietnamese name), an undergraduate student in the Physics Department of Hanoi University of Science, Vietnam National University. Well, I was hoping to change department, nonetheless. 

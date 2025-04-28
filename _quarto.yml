@@ -1,0 +1,97 @@
+website:
+  title: "Amane in the Unknown"
+  description: "The journey to find the truth. Or whatever skewed version of it"
+  image: img/blog icon.jpg
+  site-url: https://amane-fujimiya.github.io/
+
+  favicon: img/favicon.ico
+  
+  # start of the navigation bar at the top of the website
+  navbar:
+    pinned: true
+    logo: /img/favicon.ico
+    
+    # your sub-pages
+    left:
+      - text: "Essays"
+        href: essays/index.qmd
+      - text: "Sketches"
+        href: sketches/index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Notes"
+        href: notes/index.qmd
+      - text: "Docs"
+        href: document/index.qmd
+      - text: "About"
+        href: about/about.qmd
+      - text: "Main"
+        href: main/index.qmd
+      - text: "Blogs"
+        href: blogs/index.qmd
+      # - text: "CV"
+      #   href: cv/index.qmd
+    
+    # your social media handles
+    right:
+      # - icon: wikipedia
+      #   href: 
+      # - icon: linkedin
+      #   href: https://www.linkedin.com/in/yuxi-liu-78b947277/
+      - icon: envelope
+        aria-label: email
+        href: "mailto:fujimiyaamane@outlook.com"  
+  
+  search: 
+    location: navbar
+    type: textbox
+  page-footer: 
+    left: |
+      <span class="faux-block">Amane Fujimiya</span>
+    center: |
+      <span class="faux-block"><a href="https://forms.gle/LBFx3sUqrD9LLLHb7/"></a></span>
+    right: |
+      <span class="faux-block">Everything <a href="https://en.wikipedia.org/wiki/Public_domainl">PD</a>; <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.en/">CC0</a> fallback.</span>
+  open-graph: true
+  twitter-card: true
+
+project:
+  type: website
+  output-dir: quarto_compiled
+  render:
+    - "index.qmd"
+    - "404.qmd"
+    - "essays/**/*.qmd"
+    - "docs/**/*.qmd"
+    - "sketches/**/*.qmd"
+    - "about/**/*.qmd"
+    - "projects/**/*.qmd"
+    - "notes/**/*.qmd"
+    - "main/**/*.qmd"
+    - "blogs/**/*.qmd"
+
+  preview: 
+    port: 22222
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    fontsize: 1.1em
+    theme: 
+      light: flatly
+      dark: darkly
+      # light: html/theme-light.scss
+      # dark: html/theme-dark.scss
+    toc: true
+    toc-location: left
+    code-tools: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true

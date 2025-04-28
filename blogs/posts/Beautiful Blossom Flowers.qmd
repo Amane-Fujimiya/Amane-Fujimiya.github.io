@@ -1,0 +1,16 @@
+---
+title: "Beautiful blossom flowers"
+author: "Fujimiya Amane"
+date: "2023-08-13"
+categories: [Blogs, daily]
+format:
+  html:
+    toc: true
+status: "wip"
+confidence: "unlikely"
+importance: 2
+---
+It's a beautiful day, today. Of the song that sang of winters, of the happiness rarely hides itself in those flowers' petals. My life, of which I do not proud of being full of happy memories, as one shall say about everyone's life, is a bit excessively happy for now. A sensation ones will forever endure everything to have it again. 
+
+Again (no pun intended), back on track. We have nothing today since it's Sunday. So, take a rest. 
+
