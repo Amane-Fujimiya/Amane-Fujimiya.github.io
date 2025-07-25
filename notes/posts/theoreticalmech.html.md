@@ -185,7 +185,7 @@ Some properties we can cite for the Lagrangian can be then conducted, which will
 
 Consider a particle moving unconstrained in three dimensions. They are not subjected to anything (short of a potential). Then, the Lagrangian $\mathcal{L}$ can be said to only be determined on the kinetic energy $T$ of the particle. That is, $\mathcal{L}=T$. So, how do we solve this particular problem? 
 
-Because the Lagrangian depends on the kinetic energy, apparently, it means it, *perhaps* depends on the velocity of the particle. But we remember that the Lagrangian is equivalent for all direction - which makes the velocity being independent of the Lagrangian. Except for the magnitude. We then can say that the Lagrangian depends on $v^{2}$, of the squared magnitude of the velocity. That is, $\mathcal{L}(v^2)$. This dependency can then be expressed as 
+We will begin this section with an alternative approach to forming the Lagrangian in this case. Hopefully, it still comes around to the above formation, just a bit not so out-of-context derivation as it is. Because the Lagrangian depends on the kinetic energy, apparently, it means it, *perhaps* depends on the velocity of the particle. But we remember that the Lagrangian is equivalent for all direction - which makes the velocity being independent of the Lagrangian. Except for the magnitude. We then can say that the Lagrangian depends on $v^{2}$, of the squared magnitude of the velocity. That is, $\mathcal{L}(v^2)$. This dependency can then be expressed as 
 $$
 \mathcal{L}(v^{2}) = av^2
 $$
@@ -211,13 +211,161 @@ If you get it a potential $U(r)$, the Lagrangian will only change by (given the 
 $$
 \mathcal{L} = \frac{1}{2} m (\dot{x}^2 + \dot{y}^{2}+ \dot{z}^{2}) + U(x,y,z)
 $$
+In general, it holds for all generalized coordinates. 
 
 ## Scaling up to multi-particles
 For an interacting system of multiple particles, we can then get the expression to be enumerated: 
 $$
 \mathcal{L} = \sum_{i=1}^{n} \frac{1}{2}m_{i} v_{i}^{2} - U(x_1, y_1, z_1, \dots , x_n, y_n, z_n)
 $$
+If we then write their Euler-Lagrange equations, we get: 
+$$
+m_{a} \frac{d \vec{v}_{a}}{dt} = \underbrace{\frac{\partial U}{\partial r_{a}} }_{\text{force vector }\vec{F}_{a}}
+$$
+where here we have to get $\vec{v}$ instead because the magnitude squared is cancelled out. It is also interestingly, the Lagrangian derivation form of the Newton's second law for multi-particle interactions of a system. If we do not wish to use Cartesian, then we can go for any generalized coordinate system, and the result will still hold. Note that our formulation is conducted in the **inertial reference frame**. For a generalized coordinate system, then, we can use a trick of which we express the generalized system into the Cartesian frame. That is, for particle $a$, 
 
+$$
+x_{a} = f_{a} (q_1 , q_2 , \dots, q_{S}), \quad \dot{x}_{a} = \sum_{k} \frac{\partial f_{a}}{\partial q_k}
+$$
+
+where $f_{a}$ is the respective transformation that gives the expression for $x_{a}$ from the generalized coordinate. Do this for all the axis $(x,y,z)$, for $f_{ax}, f_{ay}, f_{az}$. Recall the Lagrangian in Cartesian coordinate, then we have: 
+
+$$
+\begin{split}
+  \mathcal{L} & = \frac{1}{2} \sum^{n}_{i=1} m_{i} (\dot{x_{i}}^{2}+ \dot{y_{i}}^{2} + \dot{z_{i}}^{2}) - U(q_{1},\dots,q_{S})\\ 
+  & = \frac{1}{2}  \sum_{i=1}^{n} m_{i} \left[  \left(\sum_{k}\frac{\partial f_{ix}}{\partial q_{k}} \dot{q}_{k}\right)^{2} + \left(\sum_{k}\frac{\partial f_{iy}}{\partial q_{k}} \dot{q}_{k}\right)^{2} + \left(\sum_{k}\frac{\partial f_{iz}}{\partial q_{k}} \dot{q}_{k} \right)^{2} \right] - U(q_{1},\dots,q_{S})\\
+\end{split}
+$$
+
+Now, set each of the inner sum component as: 
+$$
+\frac{\partial f_{ix}}{\partial q_{k}} \dot{q}_{k} = a_{ik}, \quad \frac{\partial f_{iy}}{\partial q_{k}}\dot{q}_{k}  = b_{ik} ,\quad \frac{\partial f_{iz}}{\partial q_{k}}\dot{q}_{k}  = c_{ik}
+$$
+
+We reduce the sum to: 
+$$
+\begin{split}
+  \mathcal{L}  &= \frac{1}{2} \sum^{n}_{i=1} m_{i} \left[ \left( \sum_{k} a_{ik} \right)^{2} + \left( \sum_{k}b_{ik} \right)^{2} + \left( \sum_{k} c_{ik} \right)^{2} \right]- U(q_{1},\dots,q_{S})\\
+  & = \frac{1}{2} \sum^{n}_{i=1} m_{i} \left[ \sum_{k} a_{ik}^{2} + \sum_{k} b_{ik}^{2} + \sum_{k} c_{ik}^{2} + 2\sum_{k<j} a_{ik}a_{ij} + 2\sum_{k<j} b_{ik}b_{ij} + 2\sum_{k<j} c_{ik}c_{ij} \right]- U(q_{1},\dots,q_{S})\\
+\end{split}
+$$
+Up to this point, you can then realize that we can substitute back the terms $a_{ik},b_{ik},c_{ik}$ inside. Then, we have the following expansion: 
+$$
+\begin{align*}
+ & \sum_{k} a_{ik}^{2} = \sum_{k} \left( \frac{\partial f_{ix}}{\partial q_{k}} \right)^{2} \dot{q}_{k}^{2} \\
+ & \sum_{k} b_{ik}^{2} = \sum_{k} \left( \frac{\partial f_{iy}}{\partial q_{k}} \right)^{2} \dot{q}_{k}^{2} \\
+ &\sum_{k} c_{ik}^{2} = \sum_{k} \left( \frac{\partial f_{iz}}{\partial q_{k}} \right)^{2} \dot{q}_{k}^{2} \\
+ & \sum_{k<j} a_{ik}a_{ij} = \sum_{k<j} \left( \frac{\partial f_{ix}}{\partial q_{k}} \right)\left( \frac{\partial f_{ix}}{\partial q_{j}} \right) \dot{q}_{k} \dot{q}_{j}\\
+ & \sum_{k<j} b_{ik}b_{ij} = \sum_{k<j} \left( \frac{\partial f_{iy}}{\partial q_{k}} \right)\left( \frac{\partial f_{iy}}{\partial q_{j}} \right) \dot{q}_{k} \dot{q}_{j}\\
+ & \sum_{k<j} c_{ik}c_{ij} = \sum_{k<j} \left( \frac{\partial f_{iz}}{\partial q_{k}} \right)\left( \frac{\partial f_{iz}}{\partial q_{j}} \right) \dot{q}_{k} \dot{q}_{j}\\
+\end{align*}
+$$
+
+Substitute all of this into the tray, well..., for the kinetic energy $T$ of the lagrangian, we have: 
+$$
+\begin{split}
+  T 
+  & = \frac{1}{2} \sum_{i=1}^{n} m_{i} (\dot{x_{i}}^{2}+ \dot{y_{i}}^{2} + \dot{z_{i}}^{2}) \\
+  & =  \frac{1}{2}\sum_{i=1}^n m_i
+ \Biggl[
+   \sum_{k} \left(
+     \left(\frac{\partial f_{ix}}{\partial q_k}\right)^2
+     +\left(\frac{\partial f_{iy}}{\partial q_k}\right)^2
+     +\left(\frac{\partial f_{iz}}{\partial q_k}\right)^2
+   \right)\dot q_k^2 +\;2\sum_{ k < j }
+     \left(
+       \frac{\partial f_{ix}}{\partial q_k}\frac{\partial f_{ix}}{\partial q_j}
+       +\frac{\partial f_{iy}}{\partial q_k}\frac{\partial f_{iy}}{\partial q_j}
+       +\frac{\partial f_{iz}}{\partial q_k}\frac{\partial f_{iz}}{\partial q_j}
+     \right)\dot q_k\,\dot q_j
+ \Biggr]
+\end{split}
+$$
+Realize that you have two types of term, the diagonal terms where $k=j$ (since it is a square, so two repeated terms), and the non-diagonal terms, we can then group them together into a sum, that is: 
+$$
+T = \frac{1}{2}\sum_{k=1}^s\sum_{j=1}^s
+\sum_{i=1}^n m_i
+       \left(
+         \frac{\partial f_{ix}}{\partial q_k}\frac{\partial f_{ix}}{\partial q_j}
+        +\frac{\partial f_{iy}}{\partial q_k}\frac{\partial f_{iy}}{\partial q_j}
+        +\frac{\partial f_{iz}}{\partial q_k}\frac{\partial f_{iz}}{\partial q_j}
+       \right)
+     \dot q_k\,\dot q_j
+$$
+
+Now, we can simplify this form of the kinetic energy by considering a definite **metric** for the system. This is perhaps quite outlandish, suddenly, but simply speaking, now we are considering the metric space in which our particles, our system will operate. hence, consequentially, metric in this form will give us the relevant positional information, and the contributive mass of each particle subsequently. You can think about it as the contributing velocity, positional, and mass configuration of the system, in the generalized coordinate. You can reference this back to the original Cartesian/Descartes coordinate, though. Then, denote by $a_{jk}(q)$, we can set it as: 
+$$
+a_{jk} (q) = \sum_{i=1}^n m_i
+       \left(
+         \frac{\partial f_{ix}}{\partial q_k}\frac{\partial f_{ix}}{\partial q_j}
+        +\frac{\partial f_{iy}}{\partial q_k}\frac{\partial f_{iy}}{\partial q_j}
+        +\frac{\partial f_{iz}}{\partial q_k}\frac{\partial f_{iz}}{\partial q_j}
+       \right)
+$$
+and we call this the supposed **Lagrangian metric** for a multi-particle system. The system then is reduced to: 
+$$
+\mathcal{L} = \frac{1}{2}\sum_{k=1}^s\sum_{j=1}^s a_{kj}(q)\,\dot q_k\,\dot q_j -U(q_{1},\dots,q_{S}) = \frac{1}{2}\sum_{k,j}^s a_{kj}(q)\,\dot q_k\,\dot q_j -U(q_{1},\dots,q_{S})
+$$
+
+Which concludes our form of the Lagrangian. Under this form, however, also note that for a dynamical system of many particles, now $U$ might, in circumstances, depends on time. 
+
+# Examples
+Now, all of that is fun and good, but what happens if we try Lagrangian on real system, or at least problems? What can we get from it?
+
+## Pendulum and double pendulum (plane)
+Consider a system of pendulum of mass $m$, connected to a fixed point as origin by a rod of length $\ell$. This is the system of a pendulum. 
+
+![Illustration of the pendulum with a single mass $m$ and a rod of length $\ell$ connecting it.](img/expreise.png)
+
+Now, how can we find its Lagrangian? First, we notice that it has only one degree of freedom, that is $\theta$. Expressing the coordinate system, this time is the polar coordinate by Cartesian, we get: 
+
+$$
+\begin{cases}
+  x_{m} = \ell\sin{(\theta)}\\
+  y_{m} = \ell \cos{(\theta)}
+\end{cases}
+$$
+
+The kinetic energy is then 
+
+$$
+T = \frac{m}{2} (\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2})
+$$
+Subtituting in, 
+
+$$
+\begin{split}
+T 
+& = \frac{m}{2} \left[ \left( \frac{d}{dt} (\ell \cos{(\theta)}) \right)^{2} + \left( \frac{d}{dt} (\ell \cos{(\theta)}) \right)^{2} \right]  \\
+& = \frac{m \ell^{2}\dot{\theta}^{2}}{2}
+\end{split}
+$$
+
+Choose the origin at $O$ already (or we can denote it by $A$), then the potential energy $U$ is: 
+
+$$
+U = mgh = -m g\ell cos{(\theta)} 
+$$
+
+The Lagrangian is then of the form: 
+
+$$
+\mathcal{L} = T - V = \frac{m \ell^2 \dot{\theta}^{2}}{2} + mg\ell \cos{(\theta)}
+$$
+
+Solving the Euler-Lagrange equation on this system gives:
+
+$$
+m\ell^{2} \dot{\theta} + mgl\sin{(\theta)} = 0
+$$
+
+Solving this system for a double pendulum is as similar as it can get, too. It is only a tad bit difficult in the tedious nature of the system, since you now have to be more verbose of two masses. One of the misunderstanding I often meet with this kind of system consideration, is people unable to remember that potential energy $U$ depends only on **your position**, and not the factor *(like suddenly someone write $(m_1 + m_2)$ factor in $mg\ell$). So be careful of that one. 
+
+![Illustration of the double pendulum with two masses: $m_{1}$ and $m_2$, with their respective $\ell_{1}$ connecting the origin to $m_1$, and $\ell_{2}$ connecting $m_1$ to $m_2$.](img/doublependulum.png)
+
+# Reference
+
+Uh, too many to count. I still need to fill in though... no?
 
 [^3]: This comes from the derivation of the integration by part, for the endpoint already eliminated the first term, hence. 
 

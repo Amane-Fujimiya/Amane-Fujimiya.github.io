@@ -13,3 +13,4 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
+There are a lot of essays to talk about. Generally, they are reports or compilation of knowledge that I found feasible of not turning into a book of its own. Or, in some cases, general results that is not even worth it to do anything to it. 

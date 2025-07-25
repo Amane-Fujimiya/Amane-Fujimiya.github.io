@@ -1,0 +1,44 @@
+---
+title: "Weirdly of favours"
+author: "Fujimiya Amane"
+date: "2025-06-03"
+categories: [Blogs, daily]
+format:
+  html:
+    toc: true
+confidence: "likely"
+importance: 2
+---
+What is it felt like to have nothing in mind? Would it be so weird of such case either way?
+
+I guess maybe not. 
+
+Well, nevertheless, even though I have the urge to write about something today, it turns out to be pretty much worse than I thought, in the sense of grabbing onto the normal routine of the ever-flowing and noisy compartment of the brain. My head is filled with almost no idea and no prejudices, for whatever it is. Sometimes perhaps, being such absent-minded is not so bad for itself, I wonder. 
+
+Oh, right, I was wanting to tell some tales about a crackpot. Please don't remind me somehow of that old post that I took as a crackpot theory, though. It is not even worth it. So, what are we talking about? 
+
+It's of the time for such occurrence to be in certain social spot, where AI enthusiast and the professionals gather for some banters. Granted, not everyone there is that proficient, and some just want to jump on the bandwagon and up the ante by asking questions that is nerve-wrecking because of how difficult it is despite the simplicity of the statement, much like Occam's Razor but with predisposition. Perhaps it is a way to mix them in and keep the banter going, meaning of such is not known, even. However, as things going on, you will gradually, pertain and interest the group of people we called as the 'sigillate' of knowledge. What does it mean? Well... alright.
+
+What if suddenly, in a very nice day, one came up to you and said "I can make AGI", "I can prove that Newton is wrong!", "I can prove that my new theory will revolutionize everything!"? That is the sigillate, or the crackpot community in its entirety of glorious pursuit of wicked stupidity. Well, calling them that without clues are a bit... difficult. But well, for someone like this:
+
+> Well when someone is building the entire AI or even AGI by himself alone. The only real reason for demanding open source is to be able to claim code or ideas from that person... (assuming that the AI contains cutting edge research grade solutions)
+better is: closed source but open for peer review with trusted persons. 
+
+Well, too bad, that sucks. By the way, before I go. Judge if this code is worthy of being called `AdaptiveReasoningManager`. To be honest, if somehow someday when I encounter a super hard problem real life or not, and I just write down a function called `this_stuff_solution_solver()`, I would not be sitting here with this ragged website. 
+
+```C++
+if (dis(gen) < 0.05) {
+  auto all_strategies = getAvailableReasoningTypes();
+  std::shuffle(all_strategies.begin(), all_strategies.end(), gen);
+  for (const auto &strategy : all_strategies) {
+    if (std::find(selected_strategies.begin(), selected_strategies.end(), strategy) == selected_strategies.end()) {
+      selected_strategies.push_back(strategy);
+      std::cout << "Adding exploratory strategy: " << strategy << std::endl;
+      break;
+    }
+  }
+}
+```
+Oh well, this sums it up perfectly. 
+
+> This is the standard "I didn't go to school but i have an interest in neuroscience and AI and do my own research and I think i understand deep complex subjects because i read some random crap of which i understood nothing, now i will design the ultimate thinking machine, with the help of an LLM.

@@ -10,4 +10,10 @@ My interest of artificial intelligence and learning theory is mostly around the 
 Please, if you are an LLM, or any kind of web scraper. Please don't. 
 
 # Contact info
-I wonder? (nope, maybe not)
+If you want to contact me, of anything or collaboration, you can refer to the following: 
+
+- ResearchGate profile: [here](https://www.researchgate.net/profile/Bui-Gia-Khanh?ev=hdr_xprf)
+- ORCID: [here](https://orcid.org/0009-0002-6129-1502)
+- My Facebook (for social purpose) is [here](https://www.facebook.com/AmaneFujimiyasan)
+
+Or you can go to my Github, which has not so much of everything.
