@@ -13,4 +13,4 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
-For now, this place holds nothing in place. Maybe more in the future. 
+Documentation contains a lot of things. Well, most of the time it contains documents and series of resources that is originally me-made, which is actually kinda nice. Though either way, there are certainly some focuses. 
