@@ -73,6 +73,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -104,6 +110,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Raman spectroscopy - an essay – Amane in the Unknown">
 <meta property="og:description" content="An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original. It is not completed, yet, by the way.">
 <meta property="og:image" content="https://amane-fujimiya.github.io/essays/posts/img/Pasted image 20250725002125.png">
@@ -362,6 +369,11 @@ window.Quarto = {
   <li><a href="#theory-of-spectroscopy" id="toc-theory-of-spectroscopy" class="nav-link" data-scroll-target="#theory-of-spectroscopy">Theory of spectroscopy</a>
   <ul class="collapse">
   <li><a href="#governing-different-spectroscopic-behaviours" id="toc-governing-different-spectroscopic-behaviours" class="nav-link" data-scroll-target="#governing-different-spectroscopic-behaviours">Governing different spectroscopic behaviours</a></li>
+  <li><a href="#vibrational-spectroscopy" id="toc-vibrational-spectroscopy" class="nav-link" data-scroll-target="#vibrational-spectroscopy">Vibrational spectroscopy</a>
+  <ul class="collapse">
+  <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history">History</a></li>
+  </ul></li>
+  <li><a href="#mechanics" id="toc-mechanics" class="nav-link" data-scroll-target="#mechanics">Mechanics</a></li>
   </ul></li>
   <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
   </ul>
@@ -475,21 +487,6 @@ B(\nu,T)=\frac{2h\nu^{3}}{c^{2}} \frac{1}{hv/ek_{B}T - 1}
 </figure>
 </div>
 <p>Consider the vibration of a diatomic molecule in which two atoms are connected by a chemical bond. We assume the interaction and energy transition from internal and external environment of the system causes perturbation to the equilibrium state of the molecular structure. Then, we have two explanation of the classical and quantum mechanical way. For the classical case, the assumption is that the equilibrium-based mechanics obeys Hooke’s law for the chemical bond, hence giving us the equation of motion and total energy <span class="math inline">\(E\)</span> as</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Mechanics of transitioning actions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Usually, in multi-atom system, chemical bonds are what that provides the molecular structure. Chemical bond is an <strong>attraction force</strong> between atoms or molecules, which allows for the formation of chemical compounds.</p>
-<p>Transitions then typically, will consists of factors such as the bond strength (for example, I-bond versus II-bond would be a contributing factor), bond length being the average distance between nuclei of two bonded atoms in pair. Vibrational motion and hence spectroscopic actions and then is based on the below-threshold of dissociation - which unlink such bond, to perturb the system by hitting it with energy. This energy excites the molecule, causing strains and pull, and hence vibrational patterns.</p>
-<p>On the other side of it, vibrational modes, which will be discussed later on, also relies on the topological ontology of the system, such is to say that the polarization, electronic configuration of the bonding system and molecular properties affect the vibrational shape of such molecule, hence the signature that it exhibits.</p>
-</div>
-</div>
 <p><span class="math display">\[
 \begin{align}
 q &amp;= q_{0} \sin\left(2\pi v_{0}t + \varphi\right) \\
@@ -527,6 +524,21 @@ E_{v} = hc\omega_{e} \left( v+\frac{1}{2} \right) -  hc\mathcal{X}_{e}\omega_{e}
 <p><span class="math display">\[
 \frac{P_{\nu=1}}{P_{\nu=0}} = \exp{(-\Delta E /kT)}
 \]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mechanics of transitioning actions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Usually, in multi-atom system, chemical bonds are what that provides the molecular structure. Chemical bond is an <strong>attraction force</strong> between atoms or molecules, which allows for the formation of chemical compounds.</p>
+<p>Transitions then typically, will consists of factors such as the bond strength (for example, I-bond versus II-bond would be a contributing factor), bond length being the average distance between nuclei of two bonded atoms in pair. Vibrational motion and hence spectroscopic actions and then is based on the below-threshold of dissociation - which unlink such bond, to perturb the system by hitting it with energy. This energy excites the molecule, causing strains and pull, and hence vibrational patterns.</p>
+<p>On the other side of it, vibrational modes, which will be discussed later on, also relies on the topological ontology of the system, such is to say that the polarization, electronic configuration of the bonding system and molecular properties affect the vibrational shape of such molecule, hence the signature that it exhibits.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="theory-of-spectroscopy" class="level1 page-columns page-full">
@@ -617,6 +629,12 @@ E_{\text{total}} = E_{\text{electronic}} + E_{\text{vibration}} + E_{\text{rotat
 </tbody>
 </table>
 <p>We forbid the other range of which mechanism to explain them varies. Such is to say we only focus on what the foreword already prosecuted this document on, in the vibrational range as it is, and for IR and Raman effect of a whole. Therefore, spectroscopy in this section will focus a lot on the range of <span class="math inline">\(4\sim 4000\:\mathrm{cm}^{-1}\)</span> wavenumber where <strong>vibrational mode</strong> and energy transition are the main culprit.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="img\spectrum_effect_spectro.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Total electromagnetic radiation spectrum and what kind of mechanism that radiation-matter constitute of its mechanics. Specifically, in the infrared, and subsequently Raman scattering range, the main culprit would be the stable (unbreakable bond on assumptions) vibration of linked diatomic to <span class="math inline">\(n\)</span>-atomic structures. For the other, for example, higher than infrared, it relies on the energy of the radiation being inferred.</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -631,6 +649,74 @@ About other spectroscopic factors
 <p>Of this, we (as you and I minus the professionals) don’t know for sure, but if we are to consider things in the quantum mechanical way, then the most likely outcome of such hypothesis is no. This is simply because of the established metaheuristic that light is quantized in both interaction and near-field manifestation, then only specific quanta of light will be responsible to specific phenomena observed. The light does not disappear, however, as we would see with typical models, but either is effectively microscopically dispersed, or else that generally make up the noisy system behind measurements.</p>
 </div>
 </div>
+</section>
+<section id="vibrational-spectroscopy" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="vibrational-spectroscopy">Vibrational spectroscopy</h2>
+<p>In the range of our interest - Raman &amp; IR spectroscopy, vibrational energy level dominates the interpretation, and our effects are concerned of them specifically. It is then trivial that we focus on spectroscopic methods and principles given in such region.</p>
+<section id="history" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="history">History</h3>
+<p>It is often said <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cplu.202400461">(Stewart F. Parker, 2024)</a> that vibrational spectroscopy started with the seminal work of Coblentz n the 1900s, who recorded the first recognizable infrared spectra. However, the history of radiation probing went much deeper in the timeline, at least up to the 1800s, where development of classical physics and theoretical consideration of electromagnetic radiations are presented.</p>
+<p>It all kind of started with William Herschel (<a href="https://scholar.google.com/scholar?hl=en&amp;q=W.+Herschel%2C+Phil.+Trans.+Roy.+Soc.+1800%2C+90%2C+284.">1800</a>), but not until the 1880s and 1890s that spectroscopic observations were made, most notably in the infrared range, and of the work of William W. Coblentz, subsequently in a series of preliminary paper in 1903, 1904, and books in 1905, 1906 and 1907; all of which resulted in the first ever recorded spectra, of any kind.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="img\coblentz_infra.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="margin-caption">The infrared spectrum of nitrobenzene: <strong>a)</strong> as recorded by Coblentz in 1904 and <strong>b)</strong> with a modern instrument by the author. While Coblentz’s spectrum is of low resolution, comparison with the modern spectrum, shows that it is clearly identifiable as nitrobenzene.</figcaption>
+</figure>
+</div>
+<p>Vibrational spectroscopy received a fillip in 1928 with the discovery of the Raman effect. Pre-war <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>, because it was possible to record the Raman spectrum photographically, it was easier to record the Raman spectrum than the infrared spectrum. In the Second World War, demands for infrared skyrocketed for the first time, with the intention and demands of using them for inspection in large-scale aviation fuel mixtures and feedstocks for rubber production became imperative of the war machine. However, not until the 1950s and 1960s that they took off the ground.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;It is not mentioned here which war it was referring to (because this period is often called as the inter-war period), however, it might just be obvious as the Second World War (1938-1947).</p></div></div><p>In the 1950s and 1960s, infrared spectroscopy first took off. This development is partially because of the availability to chemist as a mainstream spectroscopic technique other than NMR spectroscopy, which is only popular afterward when Fourier transform NMR became commercially available. Similarly so, the invention of <em>laser</em> in the 1960s also prompted wide-spread use of Raman spectroscopy, as the replacement for the old and inaccurate sun-like source (again, Raman scattering is first discovered under sunlight, which is very bright, but rather noisy as it is).</p>
+<p>But what makes them so special even in the long run, as we can then consider even now? The question is rather simple - they have <em>distinct</em> properties that mark them particularly useful for scientists and the like. Coupled with availability of reliable, commercially available instrumentation for spectroscopy, gave the sunk cost fallacy a chance. Thousands of compounds were measured, prompted full flowering of the group frequency concept, and was applied to a wide range of organic compounds, and more. It is even more helpful that they exhibit particular <strong>fingerprinting properties</strong> that mark the spectra received of the spectroscopy with distinct - with overlap, of course, but never all - marking for individual components. Spectroscopy was then conducted on alkanes, alkenes, aromatics, carbonyls, halocarbons, as well as N, S and P containing compounds, for both infrared (<a href="https://scholar.google.com/scholar_lookup?hl=en&amp;publication_year=1954&amp;author=L.+J.+Bellamy&amp;title=The+Infrared+Spectra+of+Complex+Molecules">L. J. Bellamy</a>) (even far-infrared) and Raman spectroscopies (<a href="https://scholar.google.com/scholar_lookup?hl=en&amp;publication_year=1964&amp;author=N.+B.+Colthup&amp;author=L.+H.+Daly&amp;author=S.+E.+Wiberley&amp;title=Introduction+to+Infrared+and+Raman+Spectroscopy">Colthup et al., 1964</a>), and latterly both in an integrated manner. K. Nakamoto conducted spectroscopy in Inorganic compounds, initially for infrared spectra, but then subsequently included Raman data. Nowadays, they have been making database of them, so perhaps go check them out. <a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;See the <a href="https://www.nist.gov/pml/atomic-spectra-database">Atomic Spectra Database (NIST)</a> or specifically, <a href="https://sdbs.db.aist.go.jp/">Spectral Database for Organic Compounds, SDBS (AIST, Japan)</a></p></div></div><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Group frequency concept
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>これは何？Simply speaking, the <strong>group frequency concept</strong> relies on the particular treatment, such that <em>fundamental groups</em> can be treated independently of the rest of the molecule. This mean that even within structure, vibrational modes of the structure itself and respectively the characteristic spectra, can be decomposed to its subsequent elements, which give us quite of an advantage to maintaining a <strong>pure atomic library</strong> to construct and identify compounds for identification. (<a href="https://www.fhi.mpg.de/1072589/sterrer_vibspec_091107.pdf">Max-Planck-Gesellschaft, 2007/2008</a>)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure" aria-labelledby="-caption">
+<p><img src="img\chem_iden.png" class="img-fluid figure-img" style="width:70.0%"></p>
+
+</figure>
+</div>
+</div>
+</div>
+<div id="-caption" class="margin-figure-caption column-margin callout-margin-content">The chemical identification decomposition process, based off the group frequency theory</div></section>
+</section>
+<section id="mechanics" class="level2">
+<h2 class="anchored" data-anchor-id="mechanics">Mechanics</h2>
+<p>Some of the main advantages that can listed of vibrational spectroscopy <a href="https://cpb-us-e1.wpmucdn.com/sites.psu.edu/dist/3/29389/files/2015/08/05-Neese-VibrationalSpectroscopy.pdf">Frank Neese, MPICEC</a>, includes</p>
+<ul>
+<li><strong>Structural Information</strong> (IR/Raman/resonance Raman)
+<ul>
+<li>Identification of characteristic vibrations</li>
+<li>Isotope shifts</li>
+<li>Normal coordinate analysis</li>
+<li>Detection of functional groups</li>
+</ul></li>
+<li><strong>Electronic Information</strong> (resonance Raman)
+<ul>
+<li>Identification of electronic transitions</li>
+<li>Excitation profiles</li>
+<li>Insight into bonding</li>
+</ul></li>
+<li><strong>Mechanistic Information</strong> (IR/Raman/resonance Raman)
+<ul>
+<li>Trapping of short-lived intermediates</li>
+<li>Freeze quench techniques</li>
+<li>Combination with electrochemistry, stopped flow, continuous flow,…</li>
+</ul></li>
+<li><strong>Complementary to other Techniques</strong>
+<ul>
+<li>Not dependent on magnetic properties (EPR, MCD)</li>
+<li>Much higher resolution than absorption and CD spectroscopy</li>
+<li>Not limited to certain isotopes (Mössbauer)</li>
+</ul></li>
+</ul>
 </section>
 </section>
 <section id="further-reading" class="level1">
