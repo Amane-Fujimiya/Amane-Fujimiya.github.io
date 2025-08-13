@@ -354,9 +354,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#i.-optical-physics" id="toc-i.-optical-physics" class="nav-link" data-scroll-target="#i.-optical-physics">I. Optical physics</a>
+  <ul class="collapse">
+  <li><a href="#i.1.-ray-optics" id="toc-i.1.-ray-optics" class="nav-link" data-scroll-target="#i.1.-ray-optics">I.1. Ray optics</a>
   <ul class="collapse">
   <li><a href="#paraxial-rays." id="toc-paraxial-rays." class="nav-link" data-scroll-target="#paraxial-rays.">Paraxial rays.</a></li>
+  </ul></li>
   <li><a href="#i.2.-wave-optics" id="toc-i.2.-wave-optics" class="nav-link" data-scroll-target="#i.2.-wave-optics">I.2. Wave optics</a>
   <ul class="collapse">
   <li><a href="#waves---oscillation-and-vibration" id="toc-waves---oscillation-and-vibration" class="nav-link" data-scroll-target="#waves---oscillation-and-vibration">Waves - oscillation and vibration</a></li>
@@ -424,13 +428,19 @@ window.Quarto = {
 
 <p><strong>This is incomplete</strong>. I just update on the go.</p>
 <p>It’s been a while since there is anything happening on the frontal page. And, considering that I just have done a small essay on Raman spectroscopy, and the topic of optical physics, it’s a good thing to visit this topic a bit further than before.</p>
-<section id="introduction" class="level1 page-columns page-full">
+<section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>This article, or rather, the small post (not so small, however) will introduce certain topics on optical physics and its interaction with materials, the interpretation of such events, scattering and Raman scattering, and spectroscopic application of the exact jargon we just threw around there, and certain data-specific, machine learning approach - <em>coincidentally</em> my essay as well.</p>
-<p>Hopefully it’s will be nice and shiny. # I. Optical physics So, what is it about? The theory of optics, and whatever going on with <strong>lights</strong>, have various conjectures, theories and interpretation. At least to be familiar of one such, we might as well proceed with the simplest one - <em>ray optics</em>, and this, alongside <em>wave optics</em>, found the foundation of the discussion for modern optics.</p>
+<p>Hopefully it’s will be nice and shiny.</p>
+</section>
+<section id="i.-optical-physics" class="level1 page-columns page-full">
+<h1>I. Optical physics</h1>
+<p>So, what is it about? The theory of optics, and whatever going on with <strong>lights</strong>, have various conjectures, theories and interpretation. At least to be familiar of one such, we might as well proceed with the simplest one - <em>ray optics</em>, and this, alongside <em>wave optics</em>, found the foundation of the discussion for modern optics.</p>
 <p>One particular aspect of why rays and wave optics are easier than others comes from the fact that they are developed, and treated succinctly without the knowledge of electromagnetism. Of course, Maxwell was born in the 19th century and not earlier, so that is understandable. So, here, <em>light is not considered to be an electromagnetic phenomenon</em>.</p>
-<p>Afterward, we will discuss the formalism into electromagnetic effects by Maxwell, and the dilemma of the photoelectric effect - one such effect that changes the perception and interperation of what lights, and other matters to be. ## I.1. Ray optics</p>
-<p>While the nature of light is far more complex than one can simply make it out of such, the naive definition of light can be defined two-fold - a <em>dynamic container</em> of energy to specific configuration, and by the configuration, either wave-like behaviour, and particle-like observations. For ray optics, the most correct model of said treatment is caleld the <em>Corpuscular theory of light</em>, by Issac Newton and Pierre Gassendi (the first guy I know - everyone knows - the second… well not quite), where matter or light is made up of small particles called corpuscles (or ‘little particles’).</p>
+<p>Afterward, we will discuss the formalism into electromagnetic effects by Maxwell, and the dilemma of the photoelectric effect - one such effect that changes the perception and interpretation of what lights, and other matters to be.</p>
+<section id="i.1.-ray-optics" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="i.1.-ray-optics">I.1. Ray optics</h2>
+<p>While the nature of light is far more complex than one can simply make it out of such, the naive definition of light can be defined two-fold - a <em>dynamic container</em> of energy to <strong>specific</strong> configuration, and by the configuration, either wave-like behaviour, and particle-like observations. For ray optics, the most correct model of said treatment is caleld the <em>Corpuscular theory of light</em>, by Issac Newton and Pierre Gassendi (the first guy I know - everyone knows - the second… well not quite), where matter or light is made up of small particles called corpuscles (or ‘little particles’).</p>
 <blockquote class="blockquote">
 <p>Notice that by the above passage, we directly infer that, if you do not know by now, and to clarify, that light can be both waves, or streams of particles. As a wave, we can speed of the <strong>propagation speed</strong> of the wave <span class="math inline">\(\omega\)</span> as <span class="math inline">\(v(\omega)=\dot{x}=f\lambda\)</span> for <span class="math inline">\(\lambda\)</span> the wavelength. However, for ray optics, we consider only somewhat the particle case more.</p>
 </blockquote>
@@ -475,6 +485,7 @@ y_1 \\ y_1'
 \end{bmatrix} +\text{higher-order terms in } y_1, y_1'
 \]</span></p>
 <p>by Taylor-expanding the function. This is the <strong>paraxial approximation</strong>. The matrix of derivatives is the <strong>transfer matrix</strong> that represents the optical system in the paraxial approximation. Hence, we obtained an effective formalism for treating change of optical system.</p>
+</section>
 </section>
 <section id="i.2.-wave-optics" class="level2">
 <h2 class="anchored" data-anchor-id="i.2.-wave-optics">I.2. Wave optics</h2>

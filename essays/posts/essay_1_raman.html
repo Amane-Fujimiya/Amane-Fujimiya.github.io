@@ -8,7 +8,7 @@
 
 <meta name="author" content="Fujimiya Amane">
 <meta name="dcterms.date" content="2025-07-17">
-<meta name="description" content="An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original.">
+<meta name="description" content="An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original. It is not completed, yet, by the way.">
 
 <title>Raman spectroscopy - an essay – Amane in the Unknown</title>
 <style>
@@ -105,13 +105,13 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Raman spectroscopy - an essay – Amane in the Unknown">
-<meta property="og:description" content="An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original.">
+<meta property="og:description" content="An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original. It is not completed, yet, by the way.">
 <meta property="og:image" content="https://amane-fujimiya.github.io/essays/posts/img/Pasted image 20250725002125.png">
 <meta property="og:site_name" content="Amane in the Unknown">
 <meta property="og:image:height" content="139">
 <meta property="og:image:width" content="627">
 <meta name="twitter:title" content="Raman spectroscopy - an essay – Amane in the Unknown">
-<meta name="twitter:description" content="An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original.">
+<meta name="twitter:description" content="An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original. It is not completed, yet, by the way.">
 <meta name="twitter:image" content="https://amane-fujimiya.github.io/essays/posts/img/Pasted image 20250725002125.png">
 <meta name="twitter:image-height" content="139">
 <meta name="twitter:image-width" content="627">
@@ -353,17 +353,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-mechanics-of-lights" id="toc-the-mechanics-of-lights" class="nav-link active" data-scroll-target="#the-mechanics-of-lights">The mechanics of lights</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-subjects-mechanics" id="toc-the-subjects-mechanics" class="nav-link" data-scroll-target="#the-subjects-mechanics">The subject’s mechanics</a>
   <ul class="collapse">
   <li><a href="#molecular-spectra" id="toc-molecular-spectra" class="nav-link" data-scroll-target="#molecular-spectra">Molecular spectra</a></li>
   <li><a href="#vibration-and-diatomic-vibration" id="toc-vibration-and-diatomic-vibration" class="nav-link" data-scroll-target="#vibration-and-diatomic-vibration">Vibration and Diatomic vibration</a></li>
-  <li><a href="#origin-of-raman-spectra" id="toc-origin-of-raman-spectra" class="nav-link" data-scroll-target="#origin-of-raman-spectra">Origin of Raman Spectra</a></li>
   </ul></li>
-  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <li><a href="#theory-of-spectroscopy" id="toc-theory-of-spectroscopy" class="nav-link" data-scroll-target="#theory-of-spectroscopy">Theory of spectroscopy</a>
   <ul class="collapse">
-  <li><a href="#appendix-1.-raman-band-correlation" id="toc-appendix-1.-raman-band-correlation" class="nav-link" data-scroll-target="#appendix-1.-raman-band-correlation">Appendix 1. Raman band correlation</a></li>
-  <li><a href="#appendix-2---ir-band-correlation" id="toc-appendix-2---ir-band-correlation" class="nav-link" data-scroll-target="#appendix-2---ir-band-correlation">Appendix 2 - IR Band Correlation</a></li>
+  <li><a href="#governing-different-spectroscopic-behaviours" id="toc-governing-different-spectroscopic-behaviours" class="nav-link" data-scroll-target="#governing-different-spectroscopic-behaviours">Governing different spectroscopic behaviours</a></li>
   </ul></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
   </ul>
 </nav>
 </nav>
@@ -386,7 +386,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original.
+    An analytical essay about Raman spectroscopy, and perhaps a bit of IR. Mostly for reference, and definitely not original. It is not completed, yet, by the way.
   </div>
 </div>
 
@@ -410,7 +410,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 24, 2025</p>
+      <p class="date-modified">August 13, 2025</p>
     </div>
   </div>
     
@@ -421,24 +421,33 @@ window.Quarto = {
 </header>
 
 
+<section id="introduction" class="level1 page-columns page-full">
+<h1>Introduction</h1>
+<p>Physics in application is practically limitless. Well, it is because it is from real life, as per what is called a <strong>natural science</strong> of its core. And in such study, observation is one of the most important thing of investigation.</p>
+<p>What we have seen in the history of experimental and observational physics tell us that experiment sometimes has to be passive or indirect - using specific factors to study the system rather than intuitively “look” of it. Fundamentally, quantification and discrete analysis requires something more than just that - a proxy of which measurement can be conducted <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. In many cases, for example, catalysis, this is attributed to a technique called spectroscopy, or “investigation by light”.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;In fact, mass is an <strong>operational quantity</strong>, which means it is usually measured of certain proxy or property, then defined as such. Granted, Higgs boson and else give explanation to such by attribute it to a particle, but even in such explanation, what even gives Higgs boson being the boson?</p></div></div><p>In such sense, let us investigate, for now, the potency and what are there of spectroscopy, under two fundamental landscape (with the focus on the other one per usual) - <em>vibrational spectroscopy</em>, and <em>energy-level spectroscopy</em>, which use two different interpretation of the event happening in a material interaction using spectroscopic technique.</p>
+<hr>
 <p>As we all know, lights is a weird object. Inconsistent as it is, we can only observe it using two models: <em>wave</em> and <em>particle</em>, even so on quantum scale. And both of them offers us different way to model the two main type of interpretation of Raman scattering effect: <em>vibrational model</em> and <em>energy level transition</em> model.</p>
-<p>According to quantum mechanics, everything is <em>quantized</em>. That means even their state of energy is also quantized into <span class="math inline">\(n\)</span> levels, which can then be specified. Because of such quantization, electrons and photons has the same kind of energy level that is available to them, only in interaction with matters. For processes, ideally blackbody radiation, hot object emit photons of all energy, not just <span class="math inline">\(E=hf\)</span>. The probability of the energy spectrum, defined on <span class="math inline">\([0,\infty)\)</span> is governed by <strong>Planck’s black-body radiation law</strong>,</p>
+</section>
+<section id="the-subjects-mechanics" class="level1 page-columns page-full">
+<h1>The subject’s mechanics</h1>
+<p>According to quantum mechanics, everything is <em>quantized</em>. That means even their state of energy is also quantized into <span class="math inline">\(n\)</span> levels, which can then be specified. Because of <strong>such</strong> quantization, electrons and photons has the same kind of energy level that is available to them, only in interaction with matters. For processes, ideally blackbody radiation, hot object emit photons of all energy, not just <span class="math inline">\(E=hf\)</span>. The probability of the energy spectrum, defined on <span class="math inline">\([0,\infty)\)</span> is governed by <strong>Planck’s black-body radiation law</strong>,</p>
 <p><span class="math display">\[
 B(\nu,T)=\frac{2h\nu^{3}}{c^{2}} \frac{1}{hv/ek_{B}T - 1}
 \]</span></p>
 <p>where <span class="math inline">\(B\)</span> is the spectral radiance of the black-body, <span class="math inline">\(\nu\)</span> the frequency, <span class="math inline">\(T\)</span> the absolute temperature, <span class="math inline">\(k_{B}\)</span> as the <em>Boltzmann constant</em>, and <span class="math inline">\(c, h\)</span> are Planck and speed of light in the medium constants respectively. Using such law, we obtain the famous curve of black-body radiation that was used to refute the ultraviolet catastrophe.</p>
-<section id="the-mechanics-of-lights" class="level1 page-columns page-full">
-<h1>The mechanics of lights</h1>
-<p>It is only when interactions with matters and else that photon itself exhibits quantization and transitioning periods. Our interest lies in the structure of such interaction, with respect to a particular phenomenon between light and matter - <em>scattering</em>. Or more specifically, <strong>Raman scattering</strong> effect.</p>
-<section id="molecular-spectra" class="level2 page-columns page-full">
+<p>It is only when interactions with matters and else that photon itself exhibits quantization and transitioning periods. Our interest lies in the structure of such interaction, with respect to a particular phenomenon between light and matter - <em>scattering</em>, or absorption-diffraction (still interacting, but more specifically internally interactive). Or more specifically, <strong>Raman scattering</strong> effect, and what also constitute different effects of IR (infrared) spectroscopy. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Specifically of scattering effects, there are a lot of them. For example, see <a href="https://en.wikipedia.org/wiki/Brillouin_scattering">Brillouin scattering</a>, <a href="https://en.wikipedia.org/wiki/Compton_scattering">Compton scattering</a>, <a href="https://en.wikipedia.org/wiki/Mie_scattering">Mie scattering</a>, and <a href="https://en.wikipedia.org/wiki/Rayleigh_scattering">Rayleigh scattering</a>. As a fairly abnormal and not so well-known subset, see <a href="https://en.wikipedia.org/wiki/M%C3%B6ssbauer_effect">Mössbauer effect (fluorescence)</a> for comparison of events.</p></div></div><section id="molecular-spectra" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="molecular-spectra">Molecular spectra</h2>
 <p>Photon can be said to be an electromagnetic radiation travelling in a specific way. The electric field strength <span class="math inline">\(E\)</span> at a given time <span class="math inline">\(t\)</span> is expressed by <span class="math inline">\(E=E_{0}\cos{(2\pi vt)}\)</span>, where <span class="math inline">\(E_{0}\)</span> is the amplitude and <span class="math inline">\(v\)</span> is the frequency of radiation.</p>
-<p>The distance between two points of the same phase in successive waves is called the “wavelength”, <span class="math inline">\(\lambda\)</span>, which is measured in units such as <strong>angstrom</strong>, nanometer <span class="math inline">\((nm)\)</span>, millimicron <span class="math inline">\((m\mu)\)</span> , or centimeter <span class="math inline">\((cm)\)</span>. The <em>frequency</em>, is the number of waves in the distance light travels in one second, hence,</p>
+<p>The distance between two points of the same phase in successive waves is called the “wavelength”, <span class="math inline">\(\lambda\)</span>, which is measured in units such as <strong>angstrom</strong>, nanometre <span class="math inline">\((nm)\)</span>, millimicron <span class="math inline">\((m\mu)\)</span> , or centimetre <span class="math inline">\((cm)\)</span>. The <em>frequency</em>, is the number of waves in the distance light travels in one second, hence,</p>
 <p><span class="math display">\[v=\frac{c}{\lambda}\]</span></p>
-<p>where <span class="math inline">\(c\)</span> is the velocity of light (<span class="math inline">\(3\times_{1}0^{10}\mathrm{cm/s}\)</span>). Usually, in vibrational spectroscopy, we use the <em>wavenumber</em>, <span class="math inline">\(\tilde{v}\)</span>, defined by <span class="math display">\[\tilde{v}=\frac{v}{c}\]</span> The difference between <span class="math inline">\(v\)</span> and <span class="math inline">\(\tilde{v}\)</span> is obvious, the dimension is different of <span class="math inline">\(1/L\)</span>, or, in centimeter, is <span class="math inline">\((1/s)(cm/s)=1/cm\)</span>. Thence,</p>
+<p>where <span class="math inline">\(c\)</span> is the velocity of light (<span class="math inline">\(3\times_{1}0^{10}\mathrm{cm/s}\)</span>). Usually, in vibrational spectroscopy, we use the <em>wavenumber</em>, <span class="math inline">\(\tilde{v}\)</span>, defined by</p>
+<p><span class="math display">\[\tilde{v}=\frac{v}{c}\]</span></p>
+<p>The difference between <span class="math inline">\(v\)</span> and <span class="math inline">\(\tilde{v}\)</span> is obvious, the dimension is different of <span class="math inline">\(1/L\)</span>, or, in centimetre, is <span class="math inline">\((1/s)(cm/s)\)</span> or <span class="math inline">\(1/cm\)</span>. Thence,</p>
 <p><span class="math display">\[\tilde{v}=\frac{v}{c}=\frac{1}{\lambda}(\mathrm{cm}^{-1})\]</span></p>
 <p>As shown, the wavenumber <span class="math inline">\(\tilde{v}\)</span> and frequency <span class="math inline">\(v\)</span> are different parameters, yet are often used interchangeably. Thus, an expression such as frequency shift of <span class="math inline">\(30\mathrm{cm}^{-1}\)</span> is used conventionally by IR and Raman spectroscopists.</p>
-<p>If a molecule interacts with an electromagnetic field, a transfer of energy from the field to the molecule can occur if only when Bohr’s frequency condition is satisfied. Namely, <span class="math display">\[\Delta E=hv=h \frac{c}{\lambda}=hc \tilde{v}\]</span></p>
+<p>If a molecule interacts with an electromagnetic field, a <strong>transfer</strong> of energy from the field to the molecule can occur if only when Bohr’s frequency condition is satisfied. Namely, <span class="math display">\[\Delta E=hv=h \frac{c}{\lambda}=hc \tilde{v}\]</span></p>
 <p>Here, <em>quantization</em> is in effect, and <span class="math inline">\(\Delta E\)</span> is the difference in energy between two quantized states, <span class="math inline">\(h\)</span> is the Planck constant <span class="math inline">\((6.62\times 10^{-27}\mathrm{ergs\:s})\)</span>. Thus, <span class="math inline">\(\tilde{v}\)</span> is directly proportional to the energy of transition. As we then also see, other frequencies in the blackbody’s radiation would not trigger such transfer process, and either is absorbed in to the background radiation, or is entirely skipped, or, in wave mechanics, absorbed or destructed. Suppose that</p>
 <p><span class="math display">\[
 \Delta E=E_{2}-E_{1}
@@ -458,15 +467,21 @@ B(\nu,T)=\frac{2h\nu^{3}}{c^{2}} \frac{1}{hv/ek_{B}T - 1}
 </section>
 <section id="vibration-and-diatomic-vibration" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="vibration-and-diatomic-vibration">Vibration and Diatomic vibration</h2>
-<p>In general, matters at the molecular scale do indeed, vibrate. In general, <strong>vibration</strong> is defined to be the mechanical phenomenon whereby oscillations occur about the equilibrium point, and is inherently a classical phenomenon. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. And more of such, is that in general, vibration act is considered of system from two (diatomic) or more molecules.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;See <a href="https://physics.stackexchange.com/questions/667944/does-a-single-atom-vibrate">this post</a>, which also discusses the mechanics of single-atom vibration. The link also gives an explanation that the interpretation of quantum mechanics, as well as observations, permits vibration in the sense of probability fluctuation, but not actually phonon. However, it is actually is the molecular vibration of the atom itself, that correlates, in the single atom case, to phonon modes - which is the vibrational mechanics of many-atom case. However, in such case, the vibration system is so small, plus their cause is now not molecular bonding and electronic structure, but rather the atomic structure between subparticles (so, something like <a href="https://physics.stackexchange.com/questions/184243/is-molecular-vibration-just-phonon-modes-for-a-single-molecule">this</a>)</p></div></div><p>Consider the vibration of a diatomic molecule in which two atoms are connected by a chemical bond. We assume the interaction and energy transition from internal and external environment of the system causes perturbation to the equilibrium state of the molecular structure. Then, we have two explanation of the classical and quantum mechanical way. For the classical case, the assumption is that the equilibrium-based mechanics obeys Hooke’s law for the chemical bond, hence giving us the equation of motion and total energy <span class="math inline">\(E\)</span> as</p>
+<p>In general, matters at the molecular scale do indeed, vibrate. In general, <strong>vibration</strong> is defined to be the mechanical phenomenon whereby oscillations occur about the equilibrium point, and is inherently a classical phenomenon. <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. And more of such, is that in general, vibration act is considered of system from two (diatomic) or more molecules.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;See <a href="https://physics.stackexchange.com/questions/667944/does-a-single-atom-vibrate">this post</a>, which also discusses the mechanics of single-atom vibration. The link also gives an explanation that the interpretation of quantum mechanics, as well as observations, permits vibration in the sense of probability fluctuation, but not actually phonon. However, it is actually is the molecular vibration of the atom itself, that correlates, in the single atom case, to phonon modes - which is the vibrational mechanics of many-atom case. However, in such case, the vibration system is so small, plus their cause is now not molecular bonding and electronic structure, but rather the atomic structure between subparticles (so, something like <a href="https://physics.stackexchange.com/questions/184243/is-molecular-vibration-just-phonon-modes-for-a-single-molecule">this</a>)</p></div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="img\vibrational_diatomic.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">The model of the vibration of a diatomic molecule in which two atoms are connected by a chemical bond. Taken from <strong>Introductory Raman Spectroscopy, Second Edition</strong> - John R. Ferraro (et al.)</figcaption>
+</figure>
+</div>
+<p>Consider the vibration of a diatomic molecule in which two atoms are connected by a chemical bond. We assume the interaction and energy transition from internal and external environment of the system causes perturbation to the equilibrium state of the molecular structure. Then, we have two explanation of the classical and quantum mechanical way. For the classical case, the assumption is that the equilibrium-based mechanics obeys Hooke’s law for the chemical bond, hence giving us the equation of motion and total energy <span class="math inline">\(E\)</span> as</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Mechanics of such transitioning actions
+Mechanics of transitioning actions
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -496,746 +511,144 @@ q &amp;= q_{0} \sin\left(2\pi v_{0}t + \varphi\right) \\
 <p>Which gives us the following set of eigenvalues (energy) and eigenfunctions: <span class="math display">\[
 E_{v} = hv \left(v+ \frac{1}{2}\right)= h c \tilde{v}\left(v+ \frac{1}{2}\right), \quad \psi_v = \frac{\left( \alpha / \pi \right)^{1/4}}{\sqrt{2^v \, v!}} \, e^{-\alpha q^2 / 2} \, H_v\left( \sqrt{\alpha} \, q \right)
 \]</span></p>
-<p>where <span class="math inline">\(H_{\alpha}\)</span> is a Hermite polynomial of the <span class="math inline">\(v\)</span>th degree. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The use of Hermite polynomial is fairly classic of an approximation.</p></div></div><p>What can we say about those results? The quantum mechanical frequency and classical frequency, which is fairly different from each other, even though they are the same in frequency and such, relies on several key treatments.</p>
+<p>where <span class="math inline">\(H_{\alpha}\)</span> is a Hermite polynomial of the <span class="math inline">\(v\)</span>th degree. <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;The use of Hermite polynomial is fairly classic of an approximation. Other types of polynomial can be used, for example, the <a href="https://en.wikipedia.org/wiki/Chebyshev_polynomials">Chebyshev polynomial</a> for sine-like periodic system.</p></div></div><p>What can we say about those results? The quantum mechanical frequency and classical frequency, which is fairly different from each other, even though they are the same in frequency and such, relies on several key treatments.</p>
 <p>First, the classical treatment treat <span class="math inline">\(E=0\)</span> when <span class="math inline">\(q\)</span> is zero, while quantum mechanics treat at that point <span class="math inline">\(E=1/2hv\)</span> (zero point energy). Secondly, the energy of such a vibrator can change continuously in classical mechanics, of which we have been discussed in the continuity problem of photonic subject. In quantum mechanics, the energy change of such system can only be in range of <span class="math inline">\(hv\)</span> quantization, which is reasonable considering our assumption of inter-molecular interaction filtering. Thirdly, the vibration is confined within the parabola in classical mechanics, however, in quantum mechanics such can be absent, for the tunnel effect to potentially exists in practice.</p>
 <p>Furthermore, <span class="math inline">\(hv\)</span> is an idealization. In practice, atomic molecular potential different is approximated by the <strong>Morse potential</strong> function, which is</p>
 <p><span class="math display">\[
 V = D_{e}(1-e^{-\beta q})^{2}
 \]</span></p>
-<p>Here, <span class="math inline">\(D_{e}\)</span> is the dissociation energy and <span class="math inline">\(\beta\)</span> is a measure of the curvature at the bottom of the potential well.</p>
+<p>Here, <span class="math inline">\(D_{e}\)</span> is the dissociation energy and <span class="math inline">\(\beta\)</span> is a measure of the curvature at the bottom of the potential well. If the Schrödinger equation is solved with this potential, the eigenvalues are then</p>
+<p><span class="math display">\[
+E_{v} = hc\omega_{e} \left( v+\frac{1}{2} \right) -  hc\mathcal{X}_{e}\omega_{e} \left( v+\frac{1}{2} \right)^{2} + \dots
+\]</span></p>
+<p>where <span class="math inline">\(\omega_{e}\)</span> is the wavenumber corrected for anharmonicity, and <span class="math inline">\(\mathcal{X}_{e}\omega_{e}\)</span> indicates the magnitude of anharmonicity.</p>
 <p>According to quantum mechanics, in addition, we would most likely see transition involving <span class="math inline">\(\Delta \nu = \pm 1\)</span>, but not usually <span class="math inline">\(\Delta \nu = \pm n\)</span> for <span class="math inline">\(n\neq 1\)</span>, for <span class="math inline">\(\nu\)</span> the energy level. Coincidentally, such transition appears most strongly both in IR and Raman spectra. This is expected from the Maxwell-Boltzmann distribution, which state the population for <span class="math inline">\(\nu=1,\nu =0\)</span> state as</p>
 <p><span class="math display">\[
 \frac{P_{\nu=1}}{P_{\nu=0}} = \exp{(-\Delta E /kT)}
 \]</span></p>
 </section>
-<section id="origin-of-raman-spectra" class="level2">
-<h2 class="anchored" data-anchor-id="origin-of-raman-spectra">Origin of Raman Spectra</h2>
 </section>
-</section>
-<section id="appendix" class="level1">
-<h1>Appendix</h1>
-<section id="appendix-1.-raman-band-correlation" class="level2">
-<h2 class="anchored" data-anchor-id="appendix-1.-raman-band-correlation">Appendix 1. Raman band correlation</h2>
-<table class="caption-top table">
+<section id="theory-of-spectroscopy" class="level1 page-columns page-full">
+<h1>Theory of spectroscopy</h1>
+<p>The following section then will dive into the main theory of spectroscopy, in a sense. Specifically however, most of its content would be left of dealing with Raman and IR spectroscopy, <em>mainly</em> because we are indeed dealing with them and not the other that much. And further down the road for them being the more practical, higher scale, much better ergonomic subjectively, and perhaps important of all easier to interpret, to a given sense. Nevertheless, again, justifying different spectroscopic effects, and their subsequent spectroscopy, would be one of our main concern.</p>
+<section id="governing-different-spectroscopic-behaviours" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="governing-different-spectroscopic-behaviours">Governing different spectroscopic behaviours</h2>
+<p>Let us now turn our attention to the spectroscopic system that we will be considering of. By default, spectroscopy’s definition is fairly broad - it basically indicts on the action of lights acting on matter and observation thereof that can then be extracted from such. Using such analysis, we can deduce a variety of properties, including its electronic, vibrational, rotational, electronic and nuclear spin states and energies. Those then can be deduced again, to explain fundamental phenomena, for example, IR absorption behaviours <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;See <a href="https://ocw.mit.edu/courses/5-35-introduction-to-experimental-chemistry-fall-2012/3f54ecef6f159a0a11dd60251491e075_MIT5_35F12_Mod1_Background.pdf">here</a></p></div></div><p>Before we go further, let us really dig into what those mean, and what can then be said to constitute the <em>energy</em> and <em>state</em> of the system. Because we are taking the approach of shining light, which is of pure energy, into matter, the copulative subjects that is connected will be the change in energy, and what then constitutes the change of state for a given state space, at least according to quantum mechanical interpretation of physical events in microscopic scale.</p>
+<p>The <strong>energy system</strong> of molecules or matters can be said to be separated into <em>sub-systems</em>. Each subsystem contributes to the total energy,</p>
+<p><span class="math display">\[
+E_{\text{total}} = E_{\text{electronic}} + E_{\text{vibration}} + E_{\text{rotation}} + E_{\text{e spin orientation}} + E_{\text{nuclear spin orientation}} + E_{\text{translation}} + \epsilon
+\]</span></p>
+<p>where <span class="math inline">\(\epsilon\)</span> is a kind of noisy contribution of negligible effects. Using such energy model, we can then effectively probe it for energy transition system observed for a particular subject.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="img\spectrum_e_spectro.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">A portion of the electromagnetic spectrum showing the relationship of the vibrational infrared to other types of radiation. Taken from <strong>Introduction to Spectroscopy </strong>, Donald L. Pavia et al.</figcaption>
+</figure>
+</div>
+<p>Each of those effects are fairly fundamental, but can almost be fundamentally separated in observations and explanations. Simply speaking, while scattering, absorption, fluorescence, and light interaction phenomena are fairly detrimental, the spectrum range that they are conducted in gives the mechanical explanation behind it, with marginal error given to other phenomena, often attributed as noisy measures, similar to how <span class="math inline">\(\epsilon\)</span> is treated. As such, for example, if we are to act on the range of <span class="math inline">\(\sim[400,4000]\mathrm{cm}^{-1}\)</span>, then the main governing action will be mainly vibrational transition of all the energy level contribution. While the mechanics is different (Raman scattering of virtual state excitation) and IR absorption (real vibrational state populated), the range that indict their interaction is of the vibrational system.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="img\light_phenomena_diagram.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Lights and what can then be constituted of different interaction phenomena perceived. Notice here we only highlight 4 main regions: <span class="math inline">\(r\)</span> for rotational, <span class="math inline">\(v\)</span> for vibrational, <span class="math inline">\(e\)</span> for electronic and <span class="math inline">\((n,m)\)</span> for nuclear-magnetic factors. Illustrative only.</figcaption>
+</figure>
+</div>
+<p>Commonly seen in any typical spectroscopic system are a variety of disturbance-based ‘electives’:</p>
+<ul>
+<li><span class="math inline">\(\gamma\)</span>-ray spectroscopy: Rearrangement of elementary particles in nucleus.</li>
+<li><span class="math inline">\(\mathrm{X}\)</span>-ray: Transition of inner electrons in atoms.</li>
+<li><span class="math inline">\(\mathrm{UV}\)</span>-Visible: Transition of valance electrons.</li>
+<li>Raman &amp; Infrared: Vibrational transitions.</li>
+<li>Microwave: Rotational transitions.</li>
+<li>ESR (Electron spin resonance): electron spin transition (energy) in magnetic field (external).</li>
+<li>NMR (Nuclear magnetic resonance): Nuclear spin transitions in magnetic field.</li>
+</ul>
+<p>Of this, perhaps it is better to classify them to some particular culprit of the photonic energy that inflicts and smashes upon the molecular structure itself - <span class="math inline">\((E,\lambda, v)\)</span>-tuple. <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;Raman spectroscopy typically uses visible/NIR excitation light but detects vibrational energy shifts — those vibrational shifts lie in the same energy range as IR vibrational transitions (so Raman shifts correspond to modes in the IR range even though the probe light is visible/NIR).</p></div><div id="fn7"><p><sup>7</sup>&nbsp;Spectroscopy in this region is particularly troublesome. Furthermore, the table will need some reworks, since the sources pointing to such direction is usually not so known forward (i.e.&nbsp;unverified)</p></div></div><table class="caption-top table">
 <colgroup>
-<col style="width: 35%">
+<col style="width: 48%">
+<col style="width: 8%">
 <col style="width: 42%">
-<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Wavenumber Range (cm⁻¹)</th>
-<th>Approximate Group</th>
-<th>Intensity</th>
+<th><span class="math inline">\((E,\ \lambda,\ \tilde{\nu})\)</span> (approx.)</th>
+<th>Spectral region</th>
+<th>Typical transitions / what it probes</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>100–210</td>
-<td>Lattice vibrations</td>
-<td>Strong</td>
+<td><span class="math inline">\((\gtrsim 10^{5}\ \text{eV},\ \lesssim 0.01\ \text{nm},\ \gtrsim 10^{8}\ \text{cm}^{-1})\)</span></td>
+<td><strong>Gamma rays</strong></td>
+<td>Nuclear energy transitions (nuclear level excitations, decay)</td>
 </tr>
 <tr class="even">
-<td>150–430</td>
-<td>Xmetal-O</td>
-<td>Strong</td>
+<td><span class="math inline">\((10^{2}\text{–}10^{5}\ \text{eV},\ 0.01\text{–}10\ \text{nm},\ 10^{6}\text{–}10^{8}\ \text{cm}^{-1})\)</span></td>
+<td><strong>X-rays</strong></td>
+<td>Inner-shell / core electron transitions, core-level ionization (XAS, XPS)</td>
 </tr>
 <tr class="odd">
-<td>250–400</td>
-<td>C-C aliphatic chain</td>
-<td>Strong</td>
+<td><span class="math inline">\((3\text{–}124\ \text{eV},\ 10\text{–}400\ \text{nm},\ 2.5\times10^{3}\text{–}10^{6}\ \text{cm}^{-1})\)</span></td>
+<td><strong>Ultraviolet (UV)</strong></td>
+<td>Valence electronic transitions, photochemistry, strong electronic absorption</td>
 </tr>
 <tr class="even">
-<td>295–340</td>
-<td>Se-Se</td>
-<td>Strong</td>
+<td><span class="math inline">\((1.65\text{–}3.10\ \text{eV},\ 400\text{–}750\ \text{nm},\ 13{,}300\text{–}25{,}000\ \text{cm}^{-1})\)</span></td>
+<td><strong>Visible</strong></td>
+<td>Valence electronic transitions (UV–Vis spectroscopy, color; excitons)</td>
 </tr>
 <tr class="odd">
-<td>425–550</td>
-<td>S-S</td>
-<td>Strong</td>
+<td><span class="math inline">\((\sim 10^{-3}\text{–}1.7\ \text{eV},\ 0.7\ \mu\text{m}\text{–}100\ \mu\text{m},\ 10\text{–}14{,}000\ \text{cm}^{-1})\)</span></td>
+<td><strong>Infrared (IR)</strong></td>
+<td>Molecular vibrations and rovibrational bands (mid-IR ~400–4000 cm⁻¹ is the typical vibrational zone)</td>
 </tr>
 <tr class="even">
-<td>460–550</td>
-<td>Si-O-Si</td>
-<td>Strong</td>
+<td><span class="math inline">\((\sim 10^{-6}\text{–}10^{-2}\ \text{eV},\ 0.1\ \text{mm}\text{–}10\ \text{mm},\ 0.1\text{–}10\ \text{cm}^{-1})\)</span></td>
+<td><strong>Microwave / mm</strong></td>
+<td>Molecular rotational transitions (pure rotation, rotational fine structure); some ESR / spin transitions</td>
 </tr>
 <tr class="odd">
-<td>490–660</td>
-<td>C-I</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>505–700</td>
-<td>C-Br</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>550–790</td>
-<td>C-Cl</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>580–680</td>
-<td>C=S</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>630–1250</td>
-<td>C-C aliphatic chains</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>670–780</td>
-<td>C-S</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>720–800</td>
-<td>C-F</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>800–950</td>
-<td>C-O-C</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>910–960</td>
-<td>Carboxylic acid dimer</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>990–1100</td>
-<td>Aromatic rings</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>1010–1095</td>
-<td>Si-O-C</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>1010–1095</td>
-<td>Si-O-Si</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>1020–1225</td>
-<td>C=S</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>1025–1060</td>
-<td>Sulfonic acid</td>
-<td>Very weak</td>
-</tr>
-<tr class="odd">
-<td>1050–1210</td>
-<td>Sulfonamide</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>1050–1210</td>
-<td>Sulfone</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1120–1190</td>
-<td>Si-O-C</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>1145–1240</td>
-<td>Sulfonic acid</td>
-<td>Very weak</td>
-</tr>
-<tr class="odd">
-<td>1315–1435</td>
-<td>Carboxylate salt</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>1320–1350</td>
-<td>Nitro</td>
-<td>Very strong</td>
-</tr>
-<tr class="odd">
-<td>1355–1385</td>
-<td>C-CH₃</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>1365–1450</td>
-<td>Aromatic azo</td>
-<td>Very strong</td>
-</tr>
-<tr class="odd">
-<td>1405–1455</td>
-<td>CH₂</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>1405–1455</td>
-<td>CH₃</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>1450–1505</td>
-<td>Aromatic ring</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>1535–1600</td>
-<td>Nitro</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1540–1590</td>
-<td>Aliphatic azo</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>1550–1610</td>
-<td>Aromatic/hetero ring</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>1550–1700</td>
-<td>Amide</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>1600–1710</td>
-<td>Ketone</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1610–1740</td>
-<td>Carboxylic acid</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>1625–1680</td>
-<td>C=C</td>
-<td>Very strong</td>
-</tr>
-<tr class="odd">
-<td>1630–1665</td>
-<td>C=N</td>
-<td>Very strong</td>
-</tr>
-<tr class="even">
-<td>1690–1720</td>
-<td>Urethane</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1710–1725</td>
-<td>Aldehyde</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>1710–1745</td>
-<td>Ester</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1730–1750</td>
-<td>Aliphatic ester</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>1735–1790</td>
-<td>Lactone</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1740–1830</td>
-<td>Anhydride</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>1745–1780</td>
-<td>Acid chloride</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>2020–2100</td>
-<td>Isothiocyanate</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>2070–2250</td>
-<td>Alkyne</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>2080–2150</td>
-<td>Si-H</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>2090–2170</td>
-<td>Isonitrile</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>2100–2170</td>
-<td>Thiocyanate</td>
-<td>Very weak</td>
-</tr>
-<tr class="even">
-<td>2110–2160</td>
-<td>Azide</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>2200–2230</td>
-<td>Aromatic nitrile</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>2200–2280</td>
-<td>Diazonium salt</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>2220–2260</td>
-<td>Nitrile</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>2230–2270</td>
-<td>Isocyanate</td>
-<td>Very weak</td>
-</tr>
-<tr class="odd">
-<td>2290–2420</td>
-<td>P-H</td>
-<td>Very weak</td>
-</tr>
-<tr class="even">
-<td>2530–2610</td>
-<td>Thiol</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>2680–2740</td>
-<td>Aldehyde</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>2750–2800</td>
-<td>N-CH₃</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>2770–2830</td>
-<td>CH₂</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>2780–2830</td>
-<td>Aldehyde</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>2790–2850</td>
-<td>O-CH₃</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>2810–2960</td>
-<td>C-CH₃</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>2870–3100</td>
-<td>Aromatic C-H</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>2880–3530</td>
-<td>OH</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>2900–2940</td>
-<td>CH₂</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>2980–3020</td>
-<td>CH=CH</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>3010–3080</td>
-<td>=CH₂</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>3150–3480</td>
-<td>Amide</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>3150–3480</td>
-<td>Amine</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>3200–3400</td>
-<td>Phenol</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>3210–3250</td>
-<td>Alcohol</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>3250–3300</td>
-<td>Alkyne</td>
-<td>Very weak</td>
+<td><span class="math inline">\((\sim 10^{-9}\text{–}10^{-6}\ \text{eV},\ \gtrsim 1\ \text{m},\ \lesssim 0.1\ \text{cm}^{-1})\)</span></td>
+<td><strong>Radio / RF</strong></td>
+<td>Nuclear spin and hyperfine transitions (NMR), very low-energy hyperfine lines</td>
 </tr>
 </tbody>
 </table>
+<p>We forbid the other range of which mechanism to explain them varies. Such is to say we only focus on what the foreword already prosecuted this document on, in the vibrational range as it is, and for IR and Raman effect of a whole. Therefore, spectroscopy in this section will focus a lot on the range of <span class="math inline">\(4\sim 4000\:\mathrm{cm}^{-1}\)</span> wavenumber where <strong>vibrational mode</strong> and energy transition are the main culprit.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+About other spectroscopic factors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Previously, we have shown a formula of contributions for energy system of a molecular system. In further sections or related studies we should also see the <em>background noise</em> one typically see during process of data acquisition. Would this effectively factor out that the background noise, aside from <span class="math inline">\(\epsilon\)</span>, can be attributed to other energy level transition of different mechanisms?</p>
+<p>Of this, we (as you and I minus the professionals) don’t know for sure, but if we are to consider things in the quantum mechanical way, then the most likely outcome of such hypothesis is no. This is simply because of the established metaheuristic that light is quantized in both interaction and near-field manifestation, then only specific quanta of light will be responsible to specific phenomena observed. The light does not disappear, however, as we would see with typical models, but either is effectively microscopically dispersed, or else that generally make up the noisy system behind measurements.</p>
+</div>
+</div>
 </section>
-<section id="appendix-2---ir-band-correlation" class="level2">
-<h2 class="anchored" data-anchor-id="appendix-2---ir-band-correlation">Appendix 2 - IR Band Correlation</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 60%">
-<col style="width: 18%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Wavenumber Range (cm⁻¹)</th>
-<th>Group/Bond</th>
-<th>Intensity</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>150–600</td>
-<td>lattice vibrations, M–O, Se–Se, S–S, X–metal–O (e.g.&nbsp;Si–O–Si, S–S…)</td>
-<td>Strong (fingerprint)</td>
-</tr>
-<tr class="even">
-<td>650–500</td>
-<td>C–I stretch</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>700–600</td>
-<td>C–Br stretch</td>
-<td>Medium</td>
-</tr>
-<tr class="even">
-<td>840–600</td>
-<td>C–Cl stretch</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>1000–1400</td>
-<td>C–F stretch</td>
-<td>Medium–strong</td>
-</tr>
-<tr class="even">
-<td>1000–1225</td>
-<td>C–C aliphatic chains</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1000–1225</td>
-<td>C=C (aromatic ring)</td>
-<td>Weak–medium</td>
-</tr>
-<tr class="even">
-<td>1000–1225</td>
-<td>Si–O–C</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>1000–1225</td>
-<td>C–O–C (ethers)</td>
-<td>Strong–medium</td>
-</tr>
-<tr class="even">
-<td>1200–1000</td>
-<td>Carboxylate salt (COO–)</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1315–1435</td>
-<td>C–CH₃ (–CH₃ rock, alkane)…</td>
-<td>Medium</td>
-</tr>
-<tr class="even">
-<td>1360–1290</td>
-<td>N–O symmetric stretch (nitro)</td>
-<td>Weak–medium</td>
-</tr>
-<tr class="odd">
-<td>1550–1475</td>
-<td>N–O asymmetric stretch (nitro)</td>
-<td>Medium–strong</td>
-</tr>
-<tr class="even">
-<td>1550–1610</td>
-<td>aromatic/hetero ring C=C stretch</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>1600–1475</td>
-<td>aromatic C–H bend/oop (rings)</td>
-<td>Medium</td>
-</tr>
-<tr class="even">
-<td>1660–1640</td>
-<td>C=C stretch (alkenes)</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>1685–1665</td>
-<td>C=C stretch (α,β‑unsaturated)</td>
-<td>Medium</td>
-</tr>
-<tr class="even">
-<td>1625–1680</td>
-<td>C=C (strong conjugation)</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>999–1100</td>
-<td>aromatic ring overtones/fingerprints</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>1000–1100</td>
-<td>C–N (sulfonamide), C–S (thioethers)</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>1025–1060</td>
-<td>sulfonic acid (–SO₃H)</td>
-<td>Weak–very weak</td>
-</tr>
-<tr class="even">
-<td>1050–1210</td>
-<td>sulfonamide/–sulfone (S=O stretch)</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1145–1240</td>
-<td>sulfonic acid (S=O stretch)</td>
-<td>Very weak</td>
-</tr>
-<tr class="even">
-<td>1320–1350</td>
-<td>aromatic azo (–N=N–)</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>1540–1590</td>
-<td>aliphatic azo (–N=N–)</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>3150–3480</td>
-<td>N–H stretch (amines, amides)</td>
-<td>Medium–strong</td>
-</tr>
-<tr class="odd">
-<td>1640–1560</td>
-<td>amide I (C=O stretch)</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>1560–1515</td>
-<td>amide II (N–H bend)</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>3200–3400</td>
-<td>phenol O–H stretch</td>
-<td>Broad, medium</td>
-</tr>
-<tr class="even">
-<td>3400–3250</td>
-<td>alcohol O–H stretch (H‑bonded)</td>
-<td>Broad, strong</td>
-</tr>
-<tr class="odd">
-<td>3640–3610</td>
-<td>alcohol/phenol O–H (free)</td>
-<td>Sharp, strong</td>
-</tr>
-<tr class="even">
-<td>3210–3250</td>
-<td>alcohol O–H (free)</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>3200–3400</td>
-<td>amine N–H stretch</td>
-<td>Medium</td>
-</tr>
-<tr class="even">
-<td>3330–3270</td>
-<td>≡C–H stretch (terminal alkyne)</td>
-<td>Sharp, strong</td>
-</tr>
-<tr class="odd">
-<td>2000–2100</td>
-<td>C≡C stretch (alkynes)</td>
-<td>Variable</td>
-</tr>
-<tr class="even">
-<td>2200–2240</td>
-<td>C≡N stretch (nitriles)</td>
-<td>Medium, sharp</td>
-</tr>
-<tr class="odd">
-<td>2275–2250</td>
-<td>N=C=O stretch (isocyanates)</td>
-<td>Strong, broad</td>
-</tr>
-<tr class="even">
-<td>2100–2170</td>
-<td>N–C≡S (thiocyanate)</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>2110–2160</td>
-<td>azide (N₃)</td>
-<td>Medium</td>
-</tr>
-<tr class="even">
-<td>2020–2100</td>
-<td>isothiocyanate (–N=C=S)</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>1550–1700</td>
-<td>C=O stretches (amide, ester, acid…)</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>1750–1735</td>
-<td>aliphatic ester (C=O)</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>1745–1780</td>
-<td>acid chloride (C=O)</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>1735–1790</td>
-<td>lactone (C=O)</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>1740–1830</td>
-<td>anhydride (C=O)</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>1710–1725</td>
-<td>aldehyde (C=O)</td>
-<td>Medium–weak</td>
-</tr>
-<tr class="odd">
-<td>1710–1745</td>
-<td>ester (C=O)</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>1720–1700</td>
-<td>ketone (C=O)</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>1760–1690</td>
-<td>carboxylic acid (C=O)</td>
-<td>Broad, strong</td>
-</tr>
-<tr class="even">
-<td>2850–2750</td>
-<td>aldehyde C–H stretch</td>
-<td>Weak–medium</td>
-</tr>
-<tr class="odd">
-<td>3000–2850</td>
-<td>C–H stretch (alkanes, CH₂, CH₃)</td>
-<td>Strong</td>
-</tr>
-<tr class="even">
-<td>2870–3100</td>
-<td>aromatic C–H stretch</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>3090–3000</td>
-<td>=CH₂ stretch (alkene)</td>
-<td>Medium</td>
-</tr>
-<tr class="even">
-<td>2980–3020</td>
-<td>CH=CH stretch</td>
-<td>Medium</td>
-</tr>
-<tr class="odd">
-<td>2750–2800</td>
-<td>–CH₃ (aldehyde)</td>
-<td>Weak</td>
-</tr>
-<tr class="even">
-<td>2770–2830</td>
-<td>CH₂ (alkane)</td>
-<td>Strong</td>
-</tr>
-<tr class="odd">
-<td>2790–2850</td>
-<td>O–CH₃ (ethers)</td>
-<td>Medium</td>
-</tr>
-<tr class="even">
-<td>2530–2600</td>
-<td>S–H stretch (thiol)</td>
-<td>Weak</td>
-</tr>
-<tr class="odd">
-<td>2020–2100</td>
-<td>alkyne (C≡C)</td>
-<td>Variable</td>
-</tr>
-<tr class="even">
-<td>2080–2150</td>
-<td>Si–H stretch</td>
-<td>Moderate</td>
-</tr>
-<tr class="odd">
-<td>2090–2170</td>
-<td>isonitrile (–N≡C)</td>
-<td>Moderate</td>
-</tr>
-<tr class="even">
-<td>3250–3300</td>
-<td>≡C–H (alkyne)</td>
-<td>Sharp, strong</td>
-</tr>
-</tbody>
-</table>
-
-
-
 </section>
+<section id="further-reading" class="level1">
+<h1>Further reading</h1>
+<ul>
+<li><p>Peter F. Bernath — <em>Spectra of Atoms and Molecules</em> (not recommend somehow)</p></li>
+<li><p><a href="https://archive.org/details/molecularspectra032774mbp">Gerhard Herzberg — <em>Molecular Spectra and Molecular Structure</em></a></p></li>
+<li><p><a href="https://archive.org/details/microwavemolecul0000gord">Walter Gordy &amp; Robert L. Cook — <em>Microwave Molecular Spectra</em></a></p></li>
+<li><p><a href="https://store.doverpublications.com/products/9780486162317">C. H. Townes &amp; A. L. Schawlow — <em>Microwave Spectroscopy</em></a></p></li>
+<li><p><a href="https://ocw.mit.edu/courses/5-80-small-molecule-spectroscopy-and-dynamics-fall-2008/pages/lecture-notes/">MIT OpenCourseWare — <em>5.80 Small-Molecule Spectroscopy and Dynamics</em> — lecture notes &amp; supplements</a></p></li>
+<li><p><a href="https://www.ir.ethz.ch/handbook/MQ332_Albert%20Keppler%20Albert%20Hollenstein%20et%20al%20Bearbeitet.pdf">ETH Zürich — <em>Fundamentals of Rotation–Vibration Spectra</em></a></p></li>
+<li><p><a href="https://www.nist.gov/pml/molecular-microwave-spectral-databases">NIST — Molecular Microwave / Rotational Spectral Databases</a></p></li>
+<li><p><a href="https://cdms.astro.uni-koeln.de/">CDMS (Cologne Database for Molecular Spectroscopy)</a></p></li>
+<li><p><a href="https://hitran.org/">HITRAN — high-resolution molecular spectroscopic database and documentation</a></p></li>
+</ul>
+
+
+
 </section>
 
 
