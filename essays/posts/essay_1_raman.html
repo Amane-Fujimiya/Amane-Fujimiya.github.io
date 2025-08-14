@@ -373,7 +373,11 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history">History</a></li>
   </ul></li>
-  <li><a href="#mechanics" id="toc-mechanics" class="nav-link" data-scroll-target="#mechanics">Mechanics</a></li>
+  <li><a href="#mechanics" id="toc-mechanics" class="nav-link" data-scroll-target="#mechanics">Mechanics</a>
+  <ul class="collapse">
+  <li><a href="#advantages" id="toc-advantages" class="nav-link" data-scroll-target="#advantages">Advantages</a></li>
+  <li><a href="#classical-model" id="toc-classical-model" class="nav-link" data-scroll-target="#classical-model">Classical model</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
   </ul>
@@ -687,8 +691,11 @@ Group frequency concept
 </div>
 <div id="-caption" class="margin-figure-caption column-margin callout-margin-content">The chemical identification decomposition process, based off the group frequency theory</div></section>
 </section>
-<section id="mechanics" class="level2">
+<section id="mechanics" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="mechanics">Mechanics</h2>
+<p>Alright. Enough talking. Let’s get into it.</p>
+<section id="advantages" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="advantages">Advantages</h3>
 <p>Some of the main advantages that can listed of vibrational spectroscopy <a href="https://cpb-us-e1.wpmucdn.com/sites.psu.edu/dist/3/29389/files/2015/08/05-Neese-VibrationalSpectroscopy.pdf">Frank Neese, MPICEC</a>, includes</p>
 <ul>
 <li><strong>Structural Information</strong> (IR/Raman/resonance Raman)
@@ -717,6 +724,110 @@ Group frequency concept
 <li>Not limited to certain isotopes (Mössbauer)</li>
 </ul></li>
 </ul>
+<p>Which leaves a lot to analyze and utilize. So, well, let’s begin, shall we? Mind you that it is not so perfect as it can be though. But anyway.</p>
+<hr>
+<p>We have introduced this for a preliminary purpose in previous section, specifically <a href="#the-subjects-mechanics">this section</a> with the molecular vibrational structure, but here, we would like to advance and reiterate on that view. However, let us clarify about a few things. Firstly, of the term <em>vibration</em> - what does it mean?</p>
+<p>In <strong>molecular spectroscopy</strong>, of which we are doing right now, <em>vibration</em> means periodic changes in the relative position of the atoms in the molecule - the bond lengths and angles oscillate around equilibrium. It is hence intrinsic of diatomic to polyatomic molecules to have such vibrational behaviour. Of course, single molecule can vibrate, but it is then not vibrational modes, but rather energy transitions or atomic emission/absorption instead, which is very different <a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>. So, two or more it is, and is related to vibrations without bond-breaking.</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;In fact, quantum mechanics suggest that at absolute zero (<span class="math inline">\(0\:\mathrm{K}\)</span>), the molecule still vibrate <em>a little bit</em>, which is then called <strong>zero-point motion</strong>.</p></div><div id="fn11"><p><sup>11</sup>&nbsp;This also mean, and then will further imply, that vibrational motion of such cloud can give information about the chemical bond of the molecular structure, hammering and vibrational states be damned.</p></div></div><p>Secondly, in what sense should we treat the total effect of the entire system of interest? More specifically, is the <em>entire system</em> perturbed by spectroscopy, or only a componental effect is considered? Is it a chain reaction instead of the entire system being perturbed? The answer is rather simple, but need to clarify - within assumption, we consider the <em>spectroscopic behaviours</em> to be resulted from total structure itself. This is directly linked to the <strong>electron cloud</strong>, which ties to the entire molecule/structure of itself, of sufficient scale. <a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+</section>
+<section id="classical-model" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="classical-model">Classical model</h3>
+<p>Now, let us return to our mechanics. Vibrational system is often resolved by oscillation equations. In such case, there exists two fundamental models - the classical and the quantum mechanical one. Let us examine the classical model first.</p>
+<p>Classical mechanics, if used correctly, can give us certainly functional and practical model in explaining vibrational mechanics <a href="https://iopscience.iop.org/article/10.1149/1.2430134">(E. Bright et al., 1955-1980)</a> to a given approximation.</p>
+<p>A simplified model can then be developed, before adding in any additional sequences. The specification of the model involves certain parameters such as <em>size</em>, stiffness of valence bonds, etc.., which can be varied within limits set by other types of experimental evidence, until the best agreement with experiment is obtained.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>What it is / how used</th>
+<th style="text-align: right;">Typical magnitude / example range (units)</th>
+<th>References (where commonly used / discussed)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(R_e,\ \{\theta_e\}\)</span></td>
+<td>Nuclear coordinates at electronic PES minimum <a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>; starting point for harmonic expansion.</td>
+<td style="text-align: right;">Bond lengths: <strong>0.7–2.0 Å</strong>; bond angles: <strong>0–180°</strong>.</td>
+<td><a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a>, <a href="https://archive.org/details/molecularspectra032774mbp">Herzberg (Vol. I)</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu\)</span></td>
+<td>Effective mass for a given vibrational coordinate (diatomics) or pairwise masses in normal-mode construction.</td>
+<td style="text-align: right;"><strong>0.5–200 amu</strong> (expressed in atomic mass units); convert to kg for <span class="math inline">\(k=\mu\omega^2\)</span>.</td>
+<td><a href="https://ocw.mit.edu/courses/5-61-physical-chemistry-fall-2007/095a9e4c50ae3e84637933b0c6a65461_lecture35.pdf">MIT OCW – vibrational lecture</a></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega_e\)</span> (or <span class="math inline">\(\tilde{\nu}_e\)</span>)</td>
+<td>Harmonic vibrational frequency (spectroscopists often use <span class="math inline">\(\tilde{\nu}_e=\omega_e/2\pi c\)</span> in cm⁻¹).</td>
+<td style="text-align: right;"><strong>~50 – 4000 cm⁻¹</strong> (rotational modes ≪ 100 cm⁻¹; light-atom stretches at top end). Example: C=O ~1700 cm⁻¹.</td>
+<td><a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a>, <a href="https://archive.org/details/molecularspectra032774mbp">Herzberg</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(k\)</span></td>
+<td>Harmonic force constant (second derivative of PES along coordinate); related to <span class="math inline">\(\omega\)</span> by <span class="math inline">\(k=\mu\omega^2\)</span>.</td>
+<td style="text-align: right;">Order <strong>10–10³ N·m⁻¹</strong> (often reported in mdyn·Å⁻¹ in older literature). Use <span class="math inline">\(\omega\)</span> + <span class="math inline">\(\mu\)</span> to compute <span class="math inline">\(k\)</span>.</td>
+<td><a href="https://store.doverpublications.com/products/9780486162317">Townes &amp; Schawlow</a>, <a href="https://archive.org/details/microwavemolecul0000gord">Gordy &amp; Cook</a></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x_e,\ y_e,\ x_{kl}\)</span> (anharmonic constants)</td>
+<td>Corrections to harmonic levels; appear in Dunham/Morse expansions; control overtones/combination bands.</td>
+<td style="text-align: right;"><span class="math inline">\(x_e\)</span> typically <strong>10⁻³ – 10⁻²</strong>; <span class="math inline">\(\omega_e x_e\)</span> often <strong>1 – 100 cm⁻¹</strong>.</td>
+<td><a href="https://archive.org/details/molecularspectra032774mbp">Herzberg</a>, <a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B_e\)</span></td>
+<td>Rotational constant; determines rotational spacing (spectroscopic units usually cm⁻¹).</td>
+<td style="text-align: right;"><strong>~0.1 – 10 cm⁻¹</strong>. Example: CO <span class="math inline">\(B_e\approx 1.93\ \text{cm}^{-1}\)</span>.</td>
+<td><a href="https://archive.org/details/microwavemolecul0000gord">Gordy &amp; Cook</a>, <a href="https://www.nist.gov/pml/molecular-microwave-spectral-databases">NIST databases</a></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(D\)</span></td>
+<td>Centrifugal distortion constant (next-order rotational correction, accounts for bond stretching with rotation).</td>
+<td style="text-align: right;"><strong>~10⁻⁸ – 10⁻³ cm⁻¹</strong> depending on mass and rotational constant.</td>
+<td><a href="https://archive.org/details/microwavemolecul0000gord">Gordy &amp; Cook</a>, <a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\dfrac{\partial\mu}{\partial Q}\)</span></td>
+<td>Dipole derivative: controls IR intensity (transition moment ≈ derivative of molecular dipole along normal coordinate).</td>
+<td style="text-align: right;">Typical order <strong>0.01 – 1.0 D·Å⁻¹</strong> (Debye per Å) — mode-dependent; zero for IR-inactive modes by symmetry.</td>
+<td><a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a>, <a href="https://chem.libretexts.org/">LibreTexts – IR theory</a></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\dfrac{\partial\alpha}{\partial Q}\)</span></td>
+<td>Polarizability derivative: controls Raman intensity (how the polarizability tensor changes with mode coordinate).</td>
+<td style="text-align: right;">Typical order <strong>10⁻³ – 1 Å³·Å⁻¹</strong> (or expressed per mass-weighted coordinate) — strongly mode &amp; molecule dependent.</td>
+<td><a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a>, <a href="https://ocw.mit.edu/courses/5-61-physical-chemistry-fall-2007/095a9e4c50ae3e84637933b0c6a65461_lecture35.pdf">MIT OCW notes</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\langle i|\mu|f\rangle\)</span></td>
+<td>Transition dipole / transition moment; determines absolute line strength for absorption.</td>
+<td style="text-align: right;">Units: Debye·Å (or integrated intensity). Values vary widely; stronger bands ≫ weaker bands by orders of magnitude.</td>
+<td><a href="https://archive.org/details/molecularspectra032774mbp">Herzberg</a>, <a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathrm{FC}\)</span> (Franck–Condon factors)</td>
+<td>Overlap integrals between vibrational wavefunctions in different electronic states; control vibronic intensities and resonance Raman enhancement.</td>
+<td style="text-align: right;">Dimensionless 0–1; strong vibronic transitions often have FC ~0.1–1 for favored bands.</td>
+<td><a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a>, <a href="https://archive.org/details/molecularspectra032774mbp">Herzberg</a></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Gamma\)</span></td>
+<td>Line broadening / linewidth: homogeneous (natural, collisional) + inhomogeneous (Doppler, site disorder).</td>
+<td style="text-align: right;">Gas-phase high-resolution: <strong>10⁻³ – 10⁻¹ cm⁻¹</strong>; condensed phase / liquids: <strong>1 – 100 cm⁻¹</strong>.</td>
+<td><a href="https://hitran.org/">HITRAN docs</a>, <a href="https://www.nist.gov/pml/molecular-microwave-spectral-databases">NIST</a></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(T\)</span></td>
+<td>Temperature: sets Boltzmann populations; affects relative intensities (anti-Stokes vs Stokes, rotational envelopes).</td>
+<td style="text-align: right;">Typical lab/atmospheric: <strong>10 – 1000 K</strong>; astro work may be ≪10 K or ≫1000 K.</td>
+<td><a href="https://hitran.org/">HITRAN</a>, <a href="https://www.amazon.com/Spectra-Atoms-Molecules-Peter-Bernath/dp/019775449X">Bernath</a></td>
+</tr>
+</tbody>
+</table>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;The abbreviation stands for <strong>potential energy surface</strong>, in which the term is also called as the <a href="https://goldbook.iupac.org/terms/view/ET07031">Equilibrium geometry</a>, typically referred to of the <a href="https://en.wikipedia.org/wiki/Energy_profile_%28chemistry%29">Chemical energy profile</a> of a certain system.</p></div></div><p>A lot of them refers to factors that usually is controlled or considered in nuclear factors resonances, et cetera. However, certain factor, like dipole and polarization factor, are some of those main parameters to control and contemplate.</p>
+<p>After specified such parameters, we then attain the structure of the underlying subject of inhibition.</p>
+</section>
 </section>
 </section>
 <section id="further-reading" class="level1">
