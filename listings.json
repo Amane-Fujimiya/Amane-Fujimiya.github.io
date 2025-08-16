@@ -2,6 +2,7 @@
   {
     "listing": "/blogs/index.html",
     "items": [
+      "/blogs/posts/Leibniz_Optimism.html",
       "/blogs/posts/questioning_AI.html",
       "/blogs/posts/nothingtoday.html",
       "/blogs/posts/What goes up, must go down. For le bomb.html",
@@ -26,10 +27,9 @@
       "/blogs/posts/The Fog of Life.html",
       "/blogs/posts/A new beginning.html",
       "/blogs/posts/Black Rose of Death.html",
-      "/blogs/posts/Cleaning.html",
-      "/blogs/posts/Leibniz_Optimism.html",
       "/blogs/posts/MathGM.html",
-      "/blogs/posts/Physics_trick.html"
+      "/blogs/posts/Physics_trick.html",
+      "/blogs/posts/Cleaning.html"
     ]
   },
   {
