@@ -57,3 +57,132 @@ section.footnotes,
     position: static;
   }
 }
+
+p strong, li strong {
+  color: #ca5404;
+  font-weight: 800;
+}
+
+:root {
+  --teal-italic: #2392a8;
+}
+
+/* Global rule: make emphasis show as desaturated teal (normal weight italic) */
+em, i, .italic {
+  color: var(--teal-italic);
+  font-style: italic;
+  font-weight: 400; /* keep italics from becoming heavy */
+}
+
+
+/* If text is both bold and italic, prefer the bold color/weight (so bold orange still wins) */
+strong em, b em, em strong, em b, strong i, b i, i strong, i b {
+  color: inherit;       /* inherit color from the strong/b element */
+  font-weight: inherit; /* inherit the strong weight */
+}
+
+
+/* ------------------------------------------------------------------ */
+
+/* darkreader-approx — robust version for Quarto */
+
+/* tunables */
+:root {
+  --dr-hue: 180deg;
+  --dr-overlay: 0.06;
+  --accent-orange: #d35400;
+  --accent-teal:   #2C9AB0;
+}
+
+/* global transform when toggled */
+html.darkreader,
+html[data-theme="light"].darkreader,
+:root.theme-light.darkreader {
+  filter: invert(100%) hue-rotate(var(--dr-hue)) !important;
+  -webkit-filter: invert(100%) hue-rotate(var(--dr-hue)) !important;
+}
+
+/* restore natural colors for images/media */
+html.darkreader img,
+html.darkreader picture,
+html.darkreader video,
+html.darkreader canvas,
+html.darkreader svg,
+html.darkreader iframe,
+html.darkreader object {
+  filter: invert(100%) hue-rotate(var(--dr-hue)) !important;
+  -webkit-filter: invert(100%) hue-rotate(var(--dr-hue)) !important;
+  background: transparent !important;
+}
+
+/* keep code blocks untouched */
+html.darkreader pre,
+html.darkreader pre code,
+html.darkreader code,
+html.darkreader kbd,
+html.darkreader samp {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* force accent colors back */
+html.darkreader a, html.darkreader a * {
+  filter: invert(100%) hue-rotate(var(--dr-hue)) !important;
+  color: var(--link-color) !important;
+  text-decoration-color: currentColor !important;
+}
+
+html.darkreader strong,
+html.darkreader b,
+html.darkreader .orange-strong {
+  filter: invert(100%) hue-rotate(var(--dr-hue)) !important;
+  color: var(--accent-orange) !important;
+  font-weight: 800 !important;
+}
+
+html.darkreader em,
+html.darkreader i,
+html.darkreader .italic {
+  filter: invert(100%) hue-rotate(var(--dr-hue)) !important;
+  color: var(--accent-teal) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+
+/* subtle overlay */
+html.darkreader::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(0,0,0,var(--dr-overlay)) !important;
+  z-index: 9999 !important;
+}
+
+/* explicit opt-out */
+html.darkreader [data-darkreader-ignore] {
+  filter: none !important;
+  -webkit-filter: none !important;
+  color: inherit !important;
+  background: inherit !important;
+}
+
+/* Force sidenotes / margin notes to wrap within their column */
+.margin, 
+.margin-caption, 
+.margin-sidebar, 
+.sidenote, 
+.margin-note, 
+.margin-footnote {
+  max-width: 100% !important;   /* don’t let it exceed container */
+  overflow-wrap: break-word;    /* break long words */
+  word-wrap: break-word;        /* legacy support */
+  white-space: normal !important; /* allow text wrapping */
+  font-size: 0.9em; /* optional: shrink font slightly */
+  line-height: 1.3; /* improve readability in narrow margins */
+}
+
+html
+{
+  filter: invert(0%) hue-rotate(180deg) brightness(92%) contrast(85%);
+}
