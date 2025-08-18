@@ -186,3 +186,12 @@ html
 {
   filter: invert(0%) hue-rotate(180deg) brightness(92%) contrast(85%);
 }
+
+
+/* only target margin captions when the figure is inside a callout */
+.callout .quarto-figure.margin-caption .caption {
+  position: relative !important;
+  transform: translateY(-9.8cm); /* try -0.8em, adjust to taste */
+  z-index: 6;
+}
+
