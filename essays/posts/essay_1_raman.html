@@ -377,6 +377,10 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#advantages" id="toc-advantages" class="nav-link" data-scroll-target="#advantages">Advantages</a></li>
   <li><a href="#classical-model" id="toc-classical-model" class="nav-link" data-scroll-target="#classical-model">Classical model</a></li>
+  <li><a href="#harmonic-oscillator" id="toc-harmonic-oscillator" class="nav-link" data-scroll-target="#harmonic-oscillator">Harmonic oscillator</a></li>
+  <li><a href="#anharmonicity-oscillator" id="toc-anharmonicity-oscillator" class="nav-link" data-scroll-target="#anharmonicity-oscillator">Anharmonicity oscillator</a></li>
+  <li><a href="#vibrations-of-polyatomic-molecules" id="toc-vibrations-of-polyatomic-molecules" class="nav-link" data-scroll-target="#vibrations-of-polyatomic-molecules">Vibrations of Polyatomic Molecules</a></li>
+  <li><a href="#the-normal-mode-oscillation" id="toc-the-normal-mode-oscillation" class="nav-link" data-scroll-target="#the-normal-mode-oscillation">The normal mode oscillation</a></li>
   <li><a href="#quantum-theory" id="toc-quantum-theory" class="nav-link" data-scroll-target="#quantum-theory">Quantum theory</a></li>
   </ul></li>
   </ul></li>
@@ -911,15 +915,70 @@ Classical interpretation alternatives (The Lorentz oscillator / Drude–Lorentz 
 </div>
 </div>
 <div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;Our main source is <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Time_Dependent_Quantum_Mechanics_and_Spectroscopy_%28Tokmakoff%29/12%3A_Time-domain_Description_of_Spectroscopy/12.01%3A_A_Classical_Description_of_Spectroscopy">here</a>, which take its historical foundation from Lorentz (1892), Drude (1893) and Kubo (1957).</p></div></div><hr>
-<p>Based from the theory, we can say that classical treatment focus on the <em>oscillatory</em> interpretation, and thereby attribute the standard behaviours to <em>normal/non-normal vibrational modes</em> of harmonic/anharmonic oscillation or displacement. Of such, the theoretical (classical) treatment requires several concepts, such as <strong>normal coordinate</strong>, <strong>oscillatory degeneracy solution</strong>, <strong>superimposition</strong> interpretation, and the development of explaining them in terms of a <em>selection rule</em>. We have to be very careful, though, because this is where classical and quantum mechanical interpretation clashes with each other. <a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn18"><p><sup>18</sup>&nbsp;This remains a fact, more so because usually, quantum mechanical development came in two phase - either <em>classical mechanics with quantum flavour</em>, out to <em>fully developed quantum physics</em>.</p></div></div><hr>
+<p>Based from the theory, we can say that classical treatment focus on the <em>oscillatory</em> interpretation, and thereby attribute the standard behaviours to <em>normal/non-normal vibrational modes</em> of harmonic/anharmonic oscillation or displacement. Of such, the theoretical (classical) treatment requires several concepts, such as <strong>normal coordinate</strong>, <strong>anharmonicity</strong>, <strong>oscillatory degeneracy solution</strong>, <strong>superimposition</strong> interpretation, and the development of explaining them in terms of a <em>selection rule</em>. We have to be very careful, though, because this is where classical and quantum mechanical interpretation clashes with each other. <a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn18"><p><sup>18</sup>&nbsp;This remains a fact, more so because usually, quantum mechanical development came in two phase - either <em>classical mechanics with quantum flavour</em>, out to <em>fully developed quantum physics</em>.</p></div></div></section>
 </section>
+<section id="harmonic-oscillator" class="level3">
+<h3 class="anchored" data-anchor-id="harmonic-oscillator">Harmonic oscillator</h3>
+<p>Another way to obtain such result of approximating the vibration model to be harmonic, is to, as we said above, analyze the Hooke linear system harmonic. A harmonic oscillator in this case can be defined as a mass point of mass <span class="math inline">\(m\)</span>, which is acted upon by a force <span class="math inline">\(F\)</span> proportional to the distance <span class="math inline">\(x\)</span> from the equilibrium position and directed toward the equilibrium position, per usual. Hence, we have</p>
+<p><span class="math display">\[
+F = - kx = m \frac{d^{2}x}{dt^{2}} \to x = x_{0}\sin{(\omega_{vib}(t)+\phi)}
+\]</span> where <span class="math inline">\(\omega_{vib}\)</span> is the vibrational frequency, given by <span class="math inline">\(\omega_{vib}=\sqrt{k/m}\)</span>, <span class="math inline">\(x_{0}\)</span> the amplitude of the vibration, and <span class="math inline">\(\phi\)</span> is the phase constant depending on the initial conditions. This aligns with our upper section.</p>
+<p>Since the force is the negative derivation of the potential energy <span class="math inline">\(V\)</span>, hence the potential energy of the harmonic oscillator would be</p>
+<p><span class="math display">\[
+F = - \frac{\partial V}{\partial x} = -kx \implies V = \frac{1}{2} kx^{2} = \frac{1}{2}m\omega^{2}_{vib}x^{2}
+\]</span> From this, we can therefore define a harmonic oscillator as a system whose potential energy is proportional to the square of the distance from its equilibrium position, and is hence a parabola.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/parabolic_potential.png" class="img-fluid figure-img"></p>
+<figcaption>Classical illustration of the energy level and potential energy of a harmonically approximated system</figcaption>
+</figure>
+</div>
+<p>From such analysis, the conclusion is made,</p>
+<blockquote class="blockquote">
+<p>The restoring force exerted by the two atoms of a molecule on each other when they are displaced from their equilibrium position is, at least approximately, proportional to the change of internuclear distance. If we assume that this relation holds exactly, it follows immediately that the atoms in the molecules will execute harmonic vibrations when they are left to themselves after being displaced from their equilibrium positions.</p>
+</blockquote>
+<p>For the first atom with mass <span class="math inline">\(m_{1}\)</span> and of the second atom with mass <span class="math inline">\(m_{2}\)</span>,</p>
+<p><span class="math display">\[
+m_{1} \frac{d^{2}r_{1}}{dt^{2}} = -k (r-r_{e}), \quad m_{2} \frac{d^{2}r_{2}}{dt^{2}} = - (r-r_{e})
+\]</span> where <span class="math inline">\(r\)</span> is the internuclear distance of the two atoms, and <span class="math inline">\(r_{e}\)</span> being the equilibrium internuclear distance, we can obtain</p>
+<p><span class="math display">\[
+\frac{m_{1}m_{2}}{m_{1}+m_{2}} \frac{d^{2}r}{dt^2} = -k (r-r_{e})
+\]</span> which is calculated into the following formula, using the reduced mass <span class="math inline">\(\mu\)</span>:</p>
+<p><span class="math display">\[
+\mu \frac{d^{2}(r-r_{e})}{dt^{2}} = -k(r-r_{e}), \quad \mu = \frac{m_{1}m_{2}}{m_{1}+m_{2}}
+\]</span> Which looks exactly the same as our derivation of the harmonic mode. This can then be extended to polyatomic structure, however there must be certain notions to explore and modify based on such structure. The classical vibrational frequency <span class="math inline">\(\nu_{vib}\)</span> of the molecule is then of</p>
+<p><span class="math display">\[
+\nu_{vib} = \frac{\omega_{vib}}{2\pi} = \frac{1}{2\pi} \sqrt{\frac{k}{\mu}}
+\]</span> In this particular model, only one vibrational frequency is possible, for the exchange of the amplitude being variation of any desired value.</p>
+</section>
+<section id="anharmonicity-oscillator" class="level3">
+<h3 class="anchored" data-anchor-id="anharmonicity-oscillator">Anharmonicity oscillator</h3>
+<p>Simple harmonic oscillator system (including later on the quantum harmonic system) does not predict, or take into account the <em>bond dissociation</em> of molecular structure. Due to the spacing assumption of the symmetric parabolic structure, all energy transitions occur at the same frequency, but experimentally, many line overtones compared to the uniform separation. This is encoded by what is then called the <strong>anharmonicity oscillator curve</strong>, or the <strong>Morse curve</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/anharmonic_morse.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>The Morse curve: the energy of a diatomic molecule undergoing anharmonic extensions and compressions.</figcaption>
+</figure>
+</div>
+<p>A purely empirical expression with fits this curve to a good approximation is derived by P. M. Morse (hence the name), and is called the <em>Morse function</em>:</p>
+<p><span class="math display">\[
+E = D_{eq}\left[ 1 - \exp{a(r_{eq}-r)} \right]^{2} \approx 2\alpha D_{e}^{1/2} \left[ (n+1/2) - (n+1/2)^{2} \frac{\alpha}{2D_{e}^{1/2}}\right]
+\]</span> where <span class="math inline">\(a\)</span> is a constant for a particular molecule and <span class="math inline">\(D_{eq}\)</span> is the dissociation energy. This curve works for both classical and quantum models.</p>
+</section>
+<section id="vibrations-of-polyatomic-molecules" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="vibrations-of-polyatomic-molecules">Vibrations of Polyatomic Molecules</h3>
+<p>As with the previously discussed diatomic model, in diatomic molecules, vibration occurs only along the chemical bond connecting the nuclei <a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;In case you are wondering. Yes, such stretching and swinging indeed creates variational dipole moment, especially for heterogenous diatomic molecule (take <span class="math inline">\(\mathrm{HCL}\)</span> or <span class="math inline">\(\mathrm{CO}\)</span>) for example.</p></div></div></section>
+<section id="the-normal-mode-oscillation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="the-normal-mode-oscillation">The normal mode oscillation</h3>
+<hr>
 <section id="electromagnetic-field-oscillation-classical-raman" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="electromagnetic-field-oscillation-classical-raman">Electromagnetic field oscillation (classical Raman)</h4>
 <p>For Raman spectroscopy, one arguably good approximation can be achieved. Here, we use the effect of <em>electromagnetic radiation theory</em> to study such action.</p>
 <div class="page-columns page-full"><blockquote class="blockquote">
-<p>According to the classical theory of electromagnetic radiation, electric and magnetic fields oscillating at a given frequency are able to give out electromagnetic radiation of the same frequency. One could use electromagnetic radiation theory to explain light scattering phenomena. <a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></p>
-</blockquote><div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;See <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_%28Physical_and_Theoretical_Chemistry%29/Spectroscopy/Vibrational_Spectroscopy/Raman_Spectroscopy/Raman%3A_Theory">here</a>. A lot of the full derivations in this section are also from here. For further classical treatment of Raman spectroscopy, including semi-classical, this <a href="https://inis.iaea.org/records/g198w-d6p74">paper</a> is one particular example.</p></div></div></div>
+<p>According to the classical theory of electromagnetic radiation, electric and magnetic fields oscillating at a given frequency are able to give out electromagnetic radiation of the same frequency. One could use electromagnetic radiation theory to explain light scattering phenomena. <a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a></p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn20"><p><sup>20</sup>&nbsp;See <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_%28Physical_and_Theoretical_Chemistry%29/Spectroscopy/Vibrational_Spectroscopy/Raman_Spectroscopy/Raman%3A_Theory">here</a>. A lot of the full derivations in this section are also from here. For further classical treatment of Raman spectroscopy, including semi-classical, this <a href="https://inis.iaea.org/records/g198w-d6p74">paper</a> is one particular example.</p></div></div></div>
 <p>For a lot of systems, we take only the induced electric dipole moment <span class="math inline">\(\mu\)</span> in the consideration. The dipole moment which is induced by the electric field <span class="math inline">\(\mathbf{E}\)</span> could be expressed by the power series</p>
 <p><span class="math display">\[
 \mu = \underbrace{\alpha \mathbf{E}}_{\mu^{(1)}} + \underbrace{\frac{1}{2} \beta \mathbf{E}\mathbf{E}}_{\mu^{(2)}} + \underbrace{\frac{1}{6} \gamma \mathbf{E}\mathbf{E}\mathbf{E}}_{\mu^{(3)}} + \dots
