@@ -1016,6 +1016,175 @@ E = D_{eq}\left[ 1 - \exp{a(r_{eq}-r)} \right]^{2} \approx 2\alpha D_{e}^{1/2} \
 </section>
 <section id="the-normal-mode-oscillation" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="the-normal-mode-oscillation">The normal mode oscillation</h3>
+<p>We will provide a classical analysis on normal mode oscillation. If we are lucky enough to cover this cleanly, I think it would be enough to justify of a possible approximation on how vibrational spectra will work, partially so to speak. Of course, this will not be sufficient for larger and more complex molecular structure. For such, we have to resort to group theory’s aid to solve such problem more effectively so.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/normal_mode_illus1.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Please, let it be like this. By the way, this is the infrared spectrum of air. This spectrum is the background scan from an FT-IR spectrometer.</figcaption>
+</figure>
+</div>
+<p>For a molecule the <span class="math inline">\((x,y,z)\)</span> coordinates of each atom must be specified. The coordinates are denoted <span class="math inline">\((x_1, y_1, z_1)\)</span> and so on. Extension of this notation to positions and equilibrium positions for that atom and we gain the matrix representation (for readability, please):</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+  X_{1} &amp; Y_{1}&amp; Z_{1} &amp; x_1 &amp; y_1 &amp;　z_1\\
+  X_{2} &amp; Y_{2}&amp; Z_{2} &amp; x_1 &amp; y_1 &amp;　z_1\\
+  \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+  X_{i} &amp; Y_{i}&amp; Z_{i} &amp; x_1 &amp; y_1 &amp;　z_1
+\end{bmatrix}
+=
+\begin{bmatrix}
+  X_{1} &amp; Y_{1}&amp; Z_{1} &amp; (X_{1}-X_{1,eq}) &amp; (Y_{1}-Y_{1,eq}) &amp;　Z_{1}-Z_{1,eq}\\
+  X_{2} &amp; Y_{2}&amp; Z_{2} &amp; (X_{2}-X_{2,eq}) &amp; (Y_{2}-Y_{2,eq}) &amp;　Z_{2}-Z_{2,eq}\\
+  \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+  X_{i} &amp; Y_{i}&amp; Z_{i} &amp; (X_{i}-X_{i,eq}) &amp; (Y_{i}-Y_{1,eq}) &amp;　Z_{i}-Z_{1,eq}
+\end{bmatrix}
+\]</span> where <span class="math inline">\(X_{i,eq}\)</span> and the other coordinates respective descriptions are the equilibrium position from atom <span class="math inline">\(i\)</span>. For example, if <span class="math inline">\(x_1, y_1, z_1\)</span> are all zero, then atom 1 is at its equilibrium position. Molecular mechanics or molecular orbital calculations are used to find the potential energy of the molecule as a function of the position of each atom, hence, <span class="math display">\[
+V(x_{1},y_{1},z_{1},x_{2},y_{2},z_{2},\dots,x_{N},y_{N},z_{N})
+\]</span> is the correct expression for this. We can use the second derivative of the potential energy to calculate the force constants, by <span class="math inline">\(k=d^{2}V/dt^{2}\)</span> in the standard harmonic oscillator result. However, there are now <span class="math inline">\(3N\times 3N\)</span> possible second derivatives and their corresponding force constants. For example,</p>
+<p><span class="math display">\[
+\frac{\partial^{2}V}{\partial x_{1}^{2}} = k_{xx}^{11}
+\]</span> which is the change of the force on atom 1, in the <span class="math inline">\(x\)</span>-direction when you move atom 1 in the <span class="math inline">\(x\)</span>-direction. Similarly, <span class="math display">\[
+\frac{\partial^{2}V}{\partial x_{1}\partial y_{2}} = k_{xy}^{12}
+\]</span> is the change of the force on atom 1 in the <span class="math inline">\(x\)</span>-direction when you move atom 2 in the <span class="math inline">\(y\)</span>-direction. For a diatomic consideration, we have the following table.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Expression</th>
+<th>Notation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\dfrac{\partial^2 V}{\partial x_1^2} = k_{xx}^{11}\)</span></td>
+<td><span class="math inline">\(k_{xx}^{11}\)</span></td>
+<td>same atom same direction</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\dfrac{\partial^2 V}{\partial y_1^2} = k_{yy}^{11}\)</span></td>
+<td><span class="math inline">\(k_{yy}^{11}\)</span></td>
+<td>same atom same direction</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\dfrac{\partial^2 V}{\partial x_1 \partial y_1} = k_{xy}^{11}\)</span></td>
+<td><span class="math inline">\(k_{xy}^{11}\)</span></td>
+<td>same atom different directions</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\dfrac{\partial^2 V}{\partial x_1 \partial x_2} = k_{xx}^{12}\)</span></td>
+<td><span class="math inline">\(k_{xx}^{12}\)</span></td>
+<td>different atom same direction</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\dfrac{\partial^2 V}{\partial x_1 \partial y_2} = k_{xy}^{12}\)</span></td>
+<td><span class="math inline">\(k_{xy}^{12}\)</span></td>
+<td>different atom and direction</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/normal_mode_illus2.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Figures for illustration of different terms and second derivative</figcaption>
+</figure>
+</div>
+<p>These force constants are not the force constants for individual bonds, they are force constants for the motion of a single atom subject to all its neighbours, whether directly bonded or not. The complete list of these force constants is called the <strong>Hessian form matrix</strong>, which is a <span class="math inline">\(3N\times 3N\)</span> matrix. It can be illustrated like the following long form,</p>
+<p><span class="math display">\[
+4\pi^{2} \nu^{2}
+\begin{bmatrix}
+m_{1} &amp; 0   &amp; 0   &amp;        &amp;        &amp;        \\
+0   &amp; m_{1} &amp; 0   &amp;        &amp;        &amp;        \\
+0   &amp; 0   &amp; m_{1} &amp;        &amp;        &amp;        \\
+    &amp;     &amp;     &amp; \ddots &amp;        &amp;        \\
+    &amp;     &amp;     &amp;        &amp; m_{N} &amp; 0      \\
+    &amp;     &amp;     &amp;        &amp; 0     &amp; m_{N}
+\end{bmatrix}
+\begin{bmatrix}
+x_{1} \\ y_{1} \\ z_{1} \\
+\vdots \\
+x_{N} \\ y_{N} \\ z_{N}
+\end{bmatrix}
+=
+\begin{bmatrix}
+k_{xx}^{11} &amp; k_{xy}^{11} &amp; k_{xz}^{11} &amp; k_{xx}^{12} &amp; k_{xy}^{12} &amp; \cdots &amp; k_{xz}^{1N} \\
+k_{yx}^{11} &amp; k_{yy}^{11} &amp; k_{yz}^{11} &amp; k_{yx}^{12} &amp; k_{yy}^{12} &amp; \cdots &amp; k_{yz}^{1N} \\
+k_{zx}^{11} &amp; k_{zy}^{11} &amp; k_{zz}^{11} &amp; k_{zx}^{12} &amp; k_{zy}^{12} &amp; \cdots &amp; k_{zz}^{1N} \\
+k_{xx}^{21} &amp; k_{xy}^{21} &amp; k_{xz}^{21} &amp; k_{xx}^{22} &amp; k_{xy}^{22} &amp; \cdots &amp; k_{xz}^{2N} \\
+k_{yx}^{21} &amp; k_{yy}^{21} &amp; k_{yz}^{21} &amp; k_{yx}^{22} &amp; k_{yy}^{22} &amp; \cdots &amp; k_{yz}^{2N} \\
+\vdots      &amp; \vdots      &amp; \vdots      &amp; \vdots      &amp; \vdots      &amp; \ddots &amp; \vdots      \\
+k_{zx}^{N1} &amp; k_{zy}^{N1} &amp; k_{zz}^{N1} &amp; k_{zx}^{N2} &amp; k_{zy}^{N2} &amp; \cdots &amp; k_{zz}^{NN}
+\end{bmatrix}
+\begin{bmatrix}
+x_{1} \\ y_{1} \\ z_{1} \\
+\vdots \\
+x_{N} \\ y_{N} \\ z_{N}
+\end{bmatrix}
+\]</span></p>
+<p>where the right-hand sides of the above equation simply state that the total force on atom <span class="math inline">\(i\)</span> is the sum of the forces of all the atoms on atom <span class="math inline">\(i\)</span>. In addition, we need <span class="math inline">\((x,y,z)\)</span> triple for each of those force for each atom. Hence, there are total of <span class="math inline">\(3N\times 3N\)</span> terms.</p>
+<p>How can we use this to determine somewhat the normal mode of the system? Let us take an example on <span class="math inline">\(\mathrm{CO}_{2}\)</span>, which is a good example of a symmetrical linear triatomic.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/internuke.png" class="img-fluid figure-img"></p>
+<figcaption>A symmetrical triatomic molecule with vibrations limited along the internuclear axis.</figcaption>
+</figure>
+</div>
+<p>Because we have limited the vibrations to the x-axis, which is the internuclear axis, this model will provide the symmetric and asymmetric stretching modes, the general formula then reduces to</p>
+<p><span class="math display">\[
+\begin{align}
+  -4\pi^2 \nu^2 m_1 x_1 &amp;= -k_{xx}^{11} x_1 - k_{xx}^{12} x_2 - k_{xx}^{13} x_3\\
+-4\pi^2 \nu^2 m_2 x_2 &amp;= -k_{xx}^{21} x_1 - k_{xx}^{22} x_2 - k_{xx}^{23} x_3\\
+-4\pi^2 \nu^2 m_3 x_3 &amp;= -k_{xx}^{31} x_1 - k_{xx}^{32} x_2 - k_{xx}^{33} x_3
+\end{align}
+\]</span></p>
+<p>since we only need to keep the x-terms. Several numerical techniques are available to solve linear sets of simultaneous equations such as this. Conventionally, however, the problem is simplified by converting to mass weighted coordinates, for example:</p>
+<p><span class="math display">\[
+\tilde{x}_1 = \sqrt{m_1}\, x_1 \quad\quad \tilde{x}_2 = \sqrt{m_2}\, x_2 \quad , \; \text{etc.}
+\]</span></p>
+<p>and mass weighted force constants:</p>
+<p><span class="math display">\[
+\tilde{k}_{xx}^{12} = \frac{k_{xx}^{12}}{\sqrt{m_1}\sqrt{m_2}}
+\]</span> In the new mass weighted coordinates, the equation becomes</p>
+<p><span class="math display">\[
+\begin{align}
+  -4\pi^2 \nu^2 \tilde{x}_1 &amp;= -\tilde{k}_{xx}^{11} \tilde{x}_1 - \tilde{k}_{xx}^{12} \tilde{x}_2 - \tilde{k}_{xx}^{13} \tilde{x}_3\\
+  -4\pi^2 \nu^2 \tilde{x}_2 &amp;= -\tilde{k}_{xx}^{21} \tilde{x}_1 - \tilde{k}_{xx}^{22} \tilde{x}_2 - \tilde{k}_{xx}^{23} \tilde{x}_3\\
+  -4\pi^2 \nu^2 \tilde{x}_3 &amp;= -\tilde{k}_{xx}^{31} \tilde{x}_1 - \tilde{k}_{xx}^{32} \tilde{x}_2 - \tilde{k}_{xx}^{33} \tilde{x}_3
+\end{align}
+\]</span></p>
+<p>For example, we can show that the first equation is equivalent to the earlier one, by substituting the definitions:</p>
+<p><span class="math display">\[
+-4\pi^2 \nu^2 \sqrt{m_1}\, x_1
+= -\frac{k_{xx}^{11}}{\sqrt{m_1}\sqrt{m_1}} \sqrt{m_1}\, x_1
+   -\frac{k_{xx}^{12}}{\sqrt{m_1}\sqrt{m_2}} \sqrt{m_2}\, x_2
+   -\frac{k_{xx}^{13}}{\sqrt{m_1}\sqrt{m_3}} \sqrt{m_3}\, x_3
+\]</span></p>
+<p>Cancelling mass terms and multiplying both sides by <span class="math inline">\(\sqrt{m_1}\)</span> recovers the earlier form. The system is most easily written in the equivalent matrix form for readability (really so):</p>
+<p><span class="math display">\[
+-\begin{bmatrix}
+\dfrac{k_{xx}^{11}}{\sqrt{m_1}\sqrt{m_1}} &amp; \dfrac{k_{xx}^{12}}{\sqrt{m_1}\sqrt{m_2}} &amp; \dfrac{k_{xx}^{13}}{\sqrt{m_1}\sqrt{m_3}} \\
+\dfrac{k_{xx}^{21}}{\sqrt{m_2}\sqrt{m_1}} &amp; \dfrac{k_{xx}^{22}}{\sqrt{m_2}\sqrt{m_2}} &amp; \dfrac{k_{xx}^{23}}{\sqrt{m_2}\sqrt{m_3}} \\
+\dfrac{k_{xx}^{31}}{\sqrt{m_3}\sqrt{m_1}} &amp; \dfrac{k_{xx}^{32}}{\sqrt{m_3}\sqrt{m_2}} &amp; \dfrac{k_{xx}^{33}}{\sqrt{m_3}\sqrt{m_3}}
+\end{bmatrix}
+\begin{bmatrix}
+\tilde{x}_1 \\
+\tilde{x}_2 \\
+\tilde{x}_3
+\end{bmatrix}
+=
+-4\pi^2 \nu^2
+\begin{bmatrix}
+\tilde{x}_1 \\
+\tilde{x}_2 \\
+\tilde{x}_3
+\end{bmatrix}
+\]</span></p>
+<p>The mass weighted force constants give a symmetric matrix. In other words, the corresponding off diagonal elements are equal. The last equation is then a basic linear algebraical eigenvalue-eigenvector equation. The eigenvalues are the negative of the squared normal mode frequencies. The eigenvectors are the mass weighted normal coordinate displacements. The matrix of force constants is the matrix of the second derivative of the potential energy, or the Hessian. Energy minimization techniques also use this to minimize the energy of all the atoms in the molecule.</p>
+<p>Nevertheless, in a sense, such formulation is valid for the vibrational patterns of simple molecule. In essence, we now moved down from the geometrical interpretation and what not to have a solid formulation technique for solving this kind of problem, at least in classical sense.</p>
 <hr>
 <section id="electromagnetic-field-oscillation-classical-raman" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="electromagnetic-field-oscillation-classical-raman">Electromagnetic field oscillation (classical Raman)</h4>
@@ -1052,6 +1221,7 @@ E = D_{eq}\left[ 1 - \exp{a(r_{eq}-r)} \right]^{2} \approx 2\alpha D_{e}^{1/2} \
 </section>
 <section id="quantum-theory" class="level3">
 <h3 class="anchored" data-anchor-id="quantum-theory">Quantum theory</h3>
+<p>TBH. Please help.</p>
 </section>
 </section>
 </section>

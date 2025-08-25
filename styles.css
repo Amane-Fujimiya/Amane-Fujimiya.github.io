@@ -195,3 +195,9 @@ html
   z-index: 6;
 }
 
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: block;
+}
