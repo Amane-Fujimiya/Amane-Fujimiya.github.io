@@ -459,7 +459,14 @@
     "href": "essays/posts/old_essay.html",
     "title": "Old essay, repository",
     "section": "",
-    "text": "Okay. This will be enough for now. Only for now. (I will come back later)"
+    "text": "Okay. This will be enough for now. Only for now. (I will come back later). Welcome to the repository of old essays and writings. I will simply put them into a list and organize it just as usual, so don’t worry."
+  },
+  {
+    "objectID": "essays/posts/old_essay.html#files",
+    "href": "essays/posts/old_essay.html#files",
+    "title": "Old essay, repository",
+    "section": "Files",
+    "text": "Files\n\nThe notion of proof: A exploratory writing (more like a show of thought) on the topic of, well, proof and formalism of mathematical language.\nOld theoretical document: An old book from the day long gone (more like a year ago at 2025) about theoretical stuff and ideas. Oh, it also includes an inquiry of probabilistic nature of the world.\nOn mathematical simulation: An old idea and exploratory writing on mathematical simulation (when I was very enthusiastic about it).\nResearch topic summarization: Slide used for research topic ‘research’ summarization (basically finding topics).\nMedical physics and machine learning application: While the name said medical, it is more to be identified as an inquiry on any biological usage and classical machine learning approachable techniques.\nDeep learning and Raman spectroscopy - An analysis: Well, a thought out deep learning survey on Raman spectroscopy and some typical applications."
   },
   {
     "objectID": "essays/index.html",
