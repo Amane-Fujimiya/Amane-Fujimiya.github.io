@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.28">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,18 +70,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../img/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-c8b544e1eab81f7563542c0a8b71d1e9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-45e8e462cd760eca75dbd85b13f1b7a2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-45e8e462cd760eca75dbd85b13f1b7a2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-45e8e462cd760eca75dbd85b13f1b7a2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-352d86000b8551449f8b28dcc7a192db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f32056887478411742b0f7415af8c186.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-51ce2a46fcf08f6a3324b97cdd048543.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f32056887478411742b0f7415af8c186.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -129,7 +130,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -174,7 +175,7 @@ window.Quarto = {
         toggleBodyColorMode(bsSheetEl);
       }
     }
-    window.setColorSchemeToggle = (alternate) => {
+    const setColorSchemeToggle = (alternate) => {
       const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
@@ -207,7 +208,7 @@ window.Quarto = {
       }
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
-      window.setColorSchemeToggle(alternate)
+      setColorSchemeToggle(alternate)
       // Hack to workaround the fact that safari doesn't
       // properly recolor the scrollbar when toggling (#1455)
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
@@ -247,7 +248,7 @@ window.Quarto = {
     const isFileUrl = () => {
       return window.location.protocol === 'file:';
     }
-    window.hasAlternateSentinel = () => {
+    const hasAlternateSentinel = () => {
       let styleSentinel = getColorSchemeSentinel();
       if (styleSentinel !== null) {
         return styleSentinel === "alternate";
@@ -275,7 +276,7 @@ window.Quarto = {
       const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
       const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
       let newTheme = '';
-      if(darkModeDefault) {
+      if(authorPrefersDark) {
         newTheme = isAlternate ? baseTheme : alternateTheme;
       } else {
         newTheme = isAlternate ? alternateTheme : baseTheme;
@@ -298,20 +299,22 @@ window.Quarto = {
         changeGiscusTheme();
       }
     };
-    const darkModeDefault = false;
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
       // Read the current dark / light value
-      let toAlternate = !window.hasAlternateSentinel();
+      let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
-    if (window.hasAlternateSentinel()) {
+    if (hasAlternateSentinel()) {
       toggleColorMode(true);
     } else {
       toggleColorMode(false);
@@ -324,7 +327,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../img/favicon.ico" alt="" class="navbar-logo">
+    <img src="../../img/favicon.ico" alt="" class="navbar-logo light-content">
+    <img src="../../img/favicon.ico" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Amane in the Unknown</span>
@@ -469,7 +473,7 @@ val_{i} \longrightarrow \text{original value} \\
 <section id="binning" class="level1">
 <h1>Binning</h1>
 <p>Binning refers to the act of separating non-linear data and relationship in to “bins” of which contain mostly, linear relation. Hence, we can use linear algebra and make the model learn depends on each bin. What does that mean? It means for each bin, i.e different situation, different set of scenarios, then the model can learn from it the mathematical relationship for each specific bin. ![[Pasted image 20240121160334.png]] For that, we can see that we can make it into equal bins: ![[Pasted image 20240121160415.png]] Instead of having one floating-point feature, we now have 11 distinct boolean features (<code>LatitudeBin1</code>,&nbsp;<code>LatitudeBin2</code>, …,&nbsp;<code>LatitudeBin11</code>). Having 11 separate features is somewhat inelegant, so let’s unite them into a single 11-element vector. Doing so will enable us to represent latitude 37.4 as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++ code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>latitude_vec<span class="op">[</span><span class="dv">11</span><span class="op">]</span> <span class="op">=</span> <span class="op">[</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c++ code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>latitude_vec<span class="op">[</span><span class="dv">11</span><span class="op">]</span> <span class="op">=</span> <span class="op">[</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="scrubbing" class="level1">
 <h1>Scrubbing</h1>
@@ -507,7 +511,7 @@ val_{i} \longrightarrow \text{original value} \\
       a.appendChild(i);
       window.document.body.appendChild(a);
     }
-    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -557,13 +561,14 @@ val_{i} \longrightarrow \text{original value} \\
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Fujimiya Amane">
-<meta name="dcterms.date" content="2021-05-14">
-<meta name="description" content="While most of this barely scratch the surface, it is a good starting point.">
+<meta name="dcterms.date" content="2025-09-27">
+<meta name="description" content="An inquiry of the basic concept that contradicts the universality objective of learning theory. The article is imcomplete by the way">
 
-<title>Old notes on overfitting – Amane in the Unknown</title>
+<title>Is it really no free lunch? – Amane in the Unknown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -112,17 +132,13 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Old notes on overfitting – Amane in the Unknown">
-<meta property="og:description" content="While most of this barely scratch the surface, it is a good starting point.">
-<meta property="og:image" content="https://amane-fujimiya.github.io/images/Pasted image 20231202225452.png">
+<meta property="og:title" content="Is it really no free lunch? – Amane in the Unknown">
+<meta property="og:description" content="An inquiry of the basic concept that contradicts the universality objective of learning theory. The article is imcomplete by the way">
+<meta property="og:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
 <meta property="og:site_name" content="Amane in the Unknown">
-<meta property="og:image:height" content="561">
-<meta property="og:image:width" content="562">
-<meta name="twitter:title" content="Old notes on overfitting – Amane in the Unknown">
-<meta name="twitter:description" content="While most of this barely scratch the surface, it is a good starting point.">
-<meta name="twitter:image" content="https://amane-fujimiya.github.io/images/Pasted image 20231202225452.png">
-<meta name="twitter:image-height" content="561">
-<meta name="twitter:image-width" content="562">
+<meta name="twitter:title" content="Is it really no free lunch? – Amane in the Unknown">
+<meta name="twitter:description" content="An inquiry of the basic concept that contradicts the universality objective of learning theory. The article is imcomplete by the way">
+<meta name="twitter:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -364,8 +380,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-ml-fine-print" id="toc-the-ml-fine-print" class="nav-link active" data-scroll-target="#the-ml-fine-print">The ML fine print</a></li>
-  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#understanding-no-free-lunch" id="toc-understanding-no-free-lunch" class="nav-link active" data-scroll-target="#understanding-no-free-lunch">Understanding no-free-lunch</a></li>
   </ul>
 </nav>
 </nav>
@@ -379,16 +394,16 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Old notes on overfitting</h1>
+<h1 class="title">Is it really no free lunch?</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Computer sciences</div>
+    <div class="quarto-category">Blog</div>
     <div class="quarto-category">machine learning</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    While most of this barely scratch the surface, it is a good starting point.
+    An inquiry of the basic concept that contradicts the universality objective of learning theory. The article is imcomplete by the way
   </div>
 </div>
 
@@ -405,7 +420,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 14, 2021</p>
+      <p class="date">September 27, 2025</p>
     </div>
   </div>
   
@@ -417,80 +432,26 @@ window.Quarto = {
 </header>
 
 
-<p>Overfitting in machine learning, as well as statistic and data science, is when the predicting model is too complex, hence it is inefficient of gaining or adapting to newer data and cases.</p>
-<p><strong>Generalization</strong>&nbsp;refers to your model’s ability to adapt properly to new, previously unseen data, drawn from the same distribution as the one used to create the model. If the model is overfitting, it is unable to adapt that much, and the same goes for the opposite, which is underfitting.</p>
-<p>Generally, we say the model is <strong>overfitting</strong> if the ratio of <span class="math display">\[\frac{\text{complexity of the model}}{\text{training set size}}\]</span> is too high, and <strong>underfitting</strong> if that is too low.</p>
-<p>Let’s take an example.</p>
-<p>Suppose you have a situation that the task is to distinguish between sick (blue) and healthy (orange) tree.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../..\images/Pasted image 20231202225452.png" class="img-fluid figure-img"></p>
-<figcaption>Picture</figcaption>
-</figure>
-</div>
-<p>Now, we have a model that can separate quite accurate with low loss:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../..\images/Pasted image 20231202225623.png" class="img-fluid figure-img"></p>
-<figcaption>P1</figcaption>
-</figure>
-</div>
-<p>But this is when the data is quite discrete, and have low noise. Now we observe that when adding new data into the pool, the model pretty much adapt poorly to the new data:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../..\images/Pasted image 20231202225723.png" class="img-fluid figure-img"></p>
-<figcaption>P1</figcaption>
-</figure>
-</div>
-<p>We can see there are many tress left behind, or being mis-categorized. So why this is happening?</p>
-<blockquote class="blockquote">
-<p><strong>The Peril of Overfitting</strong> Overfitting, in a nutshell, means take into account&nbsp;<strong>too much</strong>&nbsp;information from your data and/or prior knowledge, and use it in a model. To make it more straightforward, consider the following example: you’re hired by some scientists to provide them with a model to predict the growth of some kind of plants. The scientists have given you information collected from their work with such plants throughout a whole year, and they shall continuously give you information on the future development of their plantation.</p>
-<p>So, you run through the data received, and build up a model out of it. Now suppose that, in your model, you considered just as many characteristics as possible to always find out the exact behavior of the plants you saw in the initial dataset. Now, as the production continues, you’ll always take into account those characteristics, and will produce very&nbsp;<em>fine-grained</em>&nbsp;results. However, if the plantation eventually suffer from some seasonal change, the results you will receive may fit your model in such a way that your predictions will begin to fail (either saying that the growth will slow down, while it shall actually speed up, or the opposite).</p>
-<p>Apart from being unable to detect such small variations, and to usually classify your entries incorrectly, the&nbsp;<em>fine-grain</em>&nbsp;on the model, i.e., the great amount of variables, may cause the processing to be too costly. Now, imagine that your data is already complex. Overfitting your model to the data not only will make the classification/evaluation very complex, but will most probably make you error the prediction over the slightest variation you may have on the input.</p>
-</blockquote>
-<p>Essentially:</p>
-<ul>
-<li>We want the balance between fitting the data well and having the model simple as possible.</li>
-<li>Overfitting is the event happens because of the overcomplexity of a model, to a given extend and given training data, that let it be inefficient and poorly adaptable to newer, never-before-seen situations.</li>
-<li>Intuitively, machine learning is the study that conforms and in true realization, of learning from patterns. Because of this, we are finding the probability distribution of specific situations, or different cases of the same problem and have to learn to predict and do the task for all unforeseeable cases. Hence, a training data set is insufficient to prepare for unlimited amount of special, edge cases and others. If the model fits too well, me might conceive this as being unreliable to new data and overall handling.</li>
-<li>Similarly, underfitting - meaning the model does not fit the training data set enough, means the same.</li>
-</ul>
-<p>Another example of underfitting and overfitting is shown:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../..\images/Pasted image 20231202232232.png" class="img-fluid figure-img"></p>
-<figcaption>P1</figcaption>
-</figure>
-</div>
-<p>Hence, a principle in machine learning is, the modern of Ockham’s: &gt; <strong>Principle of modelling</strong> &gt; The less complex an ML model, the more likely that a good empirical result is not just due to the peculiarities of the sample.</p>
-<p>In modern day, <strong>statistical learning theory</strong> is the field that resolves this problem. From this, we concluded of the <strong>generalization bounds</strong>. Of this bound, we see that the model’s ability to generalize to new data is based on 2 main factors:</p>
-<p><span class="math display">\[
-\text{Generalizing ability} \longrightarrow
-\begin{cases}
-\text{model complexity} \\
-\text{training data's performances}
-\end{cases}
-\]</span></p>
-<p>To examine and get the model ready for unforeseeable data, we divide the training data into: - Training set: to train the model. - Test set: to test the model.</p>
-<p>Intuitively, this is when you learn from school, then doing homework and test.</p>
-<section id="the-ml-fine-print" class="level1">
-<h1>The ML fine print</h1>
-<p>In generalization, we have the following assumption:</p>
-<ol type="1">
-<li>Examples are <strong>independent</strong> and <strong>identical</strong> from a normal distribution. That means examples do not influence each other, and all of them is to a single situation faced (either finding stuff, or doing something, without any other side purpose that is redundant).</li>
-<li>The distribution is <strong>stationary</strong> - it does not change with time, that ensure the future is certain of patterns.</li>
-<li>We drew examples from partitions from the same distribution.</li>
-</ol>
-<p>In practice, violation exists, often for a specific purpose, and when we violate them, the first step is to always look at the metric. ___</p>
-</section>
-<section id="reference" class="level1">
-<h1>Reference</h1>
-<p>https://developers.google.com/machine-learning/crash-course/generalization/peril-of-overfitting https://datascience.stackexchange.com/questions/61/why-is-overfitting-bad-in-machine-learning https://www.ibm.com/topics/overfitting</p>
+<p>Of anything, we are typically concerned of creating a universal framework - for example, in a meeting of which we require the unification of voices and resolution; of mathematics where category theory and a lot of others try to unify mathematics under the singular lens; or in physics, there exists the quest for the theory of universal physical law, of which the standard model almost, almost claims such title in the process. The same is true for learning theory. Specifically, it is the question as to ask, “Will there ever be a universal learner <span class="math inline">\(\mathcal{L}\)</span> that will be able to approximate everything, to a given degree of correctness?”. The villain in such story, is then, the <strong>no-free-lunch</strong> theorem. (see <span class="citation" data-cites="980896">(<a href="#ref-980896" role="doc-biblioref">Ho and Pepyne 2001</a>)</span>, <span class="citation" data-cites="wolpert1997no">(<a href="#ref-wolpert1997no" role="doc-biblioref">Wolpert and Macready 1997</a>)</span>, and <span class="citation" data-cites="wolpert2005coevolutionary">(<a href="#ref-wolpert2005coevolutionary" role="doc-biblioref">Wolpert and Macready 2005</a>)</span>).</p>
+<section id="understanding-no-free-lunch" class="level1">
+<h1>Understanding no-free-lunch</h1>
+<p>No-free-lunch on itself is a troublesome notion requiring understanding of sort. Okay, well,</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-980896" class="csl-entry" role="listitem">
+Ho, Yu-Chi, and D. L. Pepyne. 2001. <span>“Simple Explanation of the No Free Lunch Theorem of Optimization.”</span> In <em>Proceedings of the 40th IEEE Conference on Decision and Control (Cat. No.01CH37228)</em>, 5:4409–4414 vol.5. <a href="https://doi.org/10.1109/CDC.2001.980896">https://doi.org/10.1109/CDC.2001.980896</a>.
+</div>
+<div id="ref-wolpert1997no" class="csl-entry" role="listitem">
+Wolpert, David H, and William G Macready. 1997. <span>“No Free Lunch Theorems for Optimization.”</span> <em>IEEE Transactions on Evolutionary Computation</em> 1 (1): 67–82.
+</div>
+<div id="ref-wolpert2005coevolutionary" class="csl-entry" role="listitem">
+———. 2005. <span>“Coevolutionary Free Lunches.”</span> <em>IEEE Transactions on Evolutionary Computation</em> 9 (6): 721–35.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

@@ -7,35 +7,18 @@
 }
 
 /* common footnote / reference selectors (broad coverage) */
-.footnotes,
-.footnotes-list,
-aside.footnotes,
-.ol.footnotes,
-div.footnotes,
-section.footnotes,
-.references,
-.reference-list,
-.reference-list--margin {
-  position: absolute;
-  right: 2rem;       /* distance from container right edge — tune */
-  top: 1.25rem;      /* vertical placement — tune */
-  width: 24%;
-  max-width: 320px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0.6rem;   /* optional */
-  background: transparent;
-  z-index: 5;
-}
 
-/* ensure individual footnote items don't force extra height (if present) */
+
+/* ensure individual footnote items don't force extra height (if present) 
 .footnotes li,
 .footnotes-list li,
 .reference-list li {
   margin: 0 0 0.5rem 0;
 }
+  */
 
 /* mobile fallback — keep normal flow on small screens to avoid overlap */
+/*
 @media (max-width: 900px) {
   .footnotes,
   .footnotes-list,
@@ -57,7 +40,7 @@ section.footnotes,
     position: static;
   }
 }
-
+*/
 p strong, li strong {
   color: #ca5404;
   font-weight: 800;
@@ -200,4 +183,17 @@ html
   overflow-y: hidden;
   white-space: nowrap;
   display: block;
+}
+
+/* Fix citation display */
+.citation {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* If citations in margin are overlapping */
+.margin-caption, .margin-ref {
+    font-size: 0.85em;
+    line-height: 1.2;
+    word-break: break-word;
 }

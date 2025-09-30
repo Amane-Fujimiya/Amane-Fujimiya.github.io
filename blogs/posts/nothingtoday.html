@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.28">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,18 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../img/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-c8b544e1eab81f7563542c0a8b71d1e9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-45e8e462cd760eca75dbd85b13f1b7a2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-45e8e462cd760eca75dbd85b13f1b7a2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-45e8e462cd760eca75dbd85b13f1b7a2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-352d86000b8551449f8b28dcc7a192db.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-88fab889d9a1503e3790e0b15abd5104.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f32056887478411742b0f7415af8c186.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-51ce2a46fcf08f6a3324b97cdd048543.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f32056887478411742b0f7415af8c186.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -144,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         toggleBodyColorMode(bsSheetEl);
       }
     }
-    window.setColorSchemeToggle = (alternate) => {
+    const setColorSchemeToggle = (alternate) => {
       const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
@@ -177,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       }
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
-      window.setColorSchemeToggle(alternate)
+      setColorSchemeToggle(alternate)
       // Hack to workaround the fact that safari doesn't
       // properly recolor the scrollbar when toggling (#1455)
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
@@ -217,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     const isFileUrl = () => {
       return window.location.protocol === 'file:';
     }
-    window.hasAlternateSentinel = () => {
+    const hasAlternateSentinel = () => {
       let styleSentinel = getColorSchemeSentinel();
       if (styleSentinel !== null) {
         return styleSentinel === "alternate";
@@ -245,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
       const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
       let newTheme = '';
-      if(darkModeDefault) {
+      if(authorPrefersDark) {
         newTheme = isAlternate ? baseTheme : alternateTheme;
       } else {
         newTheme = isAlternate ? alternateTheme : baseTheme;
@@ -268,20 +269,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         changeGiscusTheme();
       }
     };
-    const darkModeDefault = false;
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
       // Read the current dark / light value
-      let toAlternate = !window.hasAlternateSentinel();
+      let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
-    if (window.hasAlternateSentinel()) {
+    if (hasAlternateSentinel()) {
       toggleColorMode(true);
     } else {
       toggleColorMode(false);
@@ -294,7 +297,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../img/favicon.ico" alt="" class="navbar-logo">
+    <img src="../../img/favicon.ico" alt="" class="navbar-logo light-content">
+    <img src="../../img/favicon.ico" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Amane in the Unknown</span>
@@ -412,7 +416,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Well when someone is building the entire AI or even AGI by himself alone. The only real reason for demanding open source is to be able to claim code or ideas from that person… (assuming that the AI contains cutting edge research grade solutions) better is: closed source but open for peer review with trusted persons.</p>
 </blockquote>
 <p>Well, too bad, that sucks. By the way, before I go. Judge if this code is worthy of being called <code>AdaptiveReasoningManager</code>. To be honest, if somehow someday when I encounter a super hard problem real life or not, and I just write down a function called <code>this_stuff_solution_solver()</code>, I would not be sitting here with this ragged website.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++ code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>dis<span class="op">(</span>gen<span class="op">)</span> <span class="op">&lt;</span> <span class="fl">0.05</span><span class="op">)</span> <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c++ code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>dis<span class="op">(</span>gen<span class="op">)</span> <span class="op">&lt;</span> <span class="fl">0.05</span><span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">auto</span> all_strategies <span class="op">=</span> getAvailableReasoningTypes<span class="op">();</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">std::</span>shuffle<span class="op">(</span>all_strategies<span class="op">.</span>begin<span class="op">(),</span> all_strategies<span class="op">.</span>end<span class="op">(),</span> gen<span class="op">);</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="at">const</span> <span class="kw">auto</span> <span class="op">&amp;</span>strategy <span class="op">:</span> all_strategies<span class="op">)</span> <span class="op">{</span></span>
@@ -422,7 +426,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Oh well, this sums it up perfectly.</p>
 <blockquote class="blockquote">
 <p>This is the standard “I didn’t go to school but i have an interest in neuroscience and AI and do my own research and I think i understand deep complex subjects because i read some random crap of which i understood nothing, now i will design the ultimate thinking machine, with the help of an LLM.</p>
@@ -445,7 +449,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       a.appendChild(i);
       window.document.body.appendChild(a);
     }
-    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -495,13 +499,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
