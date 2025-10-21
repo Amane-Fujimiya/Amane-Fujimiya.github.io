@@ -35,18 +35,11 @@
     ]
   },
   {
-    "listing": "/notes/index.html",
-    "items": [
-      "/notes/posts/theoreticalmech.html",
-      "/notes/posts/fallacy.html",
-      "/notes/posts/Raman_spec.html",
-      "/notes/posts/The question bank.html",
-      "/notes/posts/Old_note_on_overfitting.html",
-      "/notes/posts/playground_note.html"
-    ]
+    "listing": "/projects/index.html",
+    "items": []
   },
   {
-    "listing": "/documents/index.html",
+    "listing": "/sketches/index.html",
     "items": []
   },
   {
@@ -57,12 +50,20 @@
     ]
   },
   {
-    "listing": "/sketches/index.html",
+    "listing": "/documents/index.html",
     "items": []
   },
   {
-    "listing": "/projects/index.html",
-    "items": []
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/posts/einsteintein.html",
+      "/notes/posts/theoreticalmech.html",
+      "/notes/posts/fallacy.html",
+      "/notes/posts/Raman_spec.html",
+      "/notes/posts/The question bank.html",
+      "/notes/posts/Old_note_on_overfitting.html",
+      "/notes/posts/playground_note.html"
+    ]
   },
   {
     "listing": "/main/index.html",
