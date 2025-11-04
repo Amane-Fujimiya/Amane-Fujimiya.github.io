@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Fujimiya Amane">
+<meta name="dcterms.date" content="2025-11-01">
+<meta name="description" content="To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?">
 
-<title>Documentation – Amane in the Unknown</title>
+<title>The infrastructure of building contents – Amane in the Unknown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../img/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -73,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-categories','listing-description','listing-reading-time','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -140,17 +112,17 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Documentation – Amane in the Unknown">
-<meta property="og:description" content="The journey to find the truth. Or whatever skewed version of it">
-<meta property="og:image" content="https://amane-fujimiya.github.io/documents/img/blog icon.jpg">
+<meta property="og:title" content="The infrastructure of building contents – Amane in the Unknown">
+<meta property="og:description" content="To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?">
+<meta property="og:image" content="https://amane-fujimiya.github.io/blogs/img/blog icon.jpg">
 <meta property="og:site_name" content="Amane in the Unknown">
-<meta name="twitter:title" content="Documentation – Amane in the Unknown">
-<meta name="twitter:description" content="The journey to find the truth. Or whatever skewed version of it">
-<meta name="twitter:image" content="https://amane-fujimiya.github.io/documents/img/blog icon.jpg">
+<meta name="twitter:title" content="The infrastructure of building contents – Amane in the Unknown">
+<meta name="twitter:description" content="To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?">
+<meta name="twitter:image" content="https://amane-fujimiya.github.io/blogs/img/blog icon.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="floating nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -315,7 +287,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -342,7 +314,7 @@ window.Quarto = {
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../documents/index.html" aria-current="page"> 
+    <a class="nav-link" href="../documents/index.html"> 
 <span class="menu-text">Document</span></a>
   </li>  
   <li class="nav-item">
@@ -381,68 +353,89 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Documentation</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-body">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-main-documents" id="toc-the-main-documents" class="nav-link active" data-scroll-target="#the-main-documents">The main documents</a></li>
-  <li><a href="#planned" id="toc-planned" class="nav-link" data-scroll-target="#planned">Planned</a></li>
+  <li><a href="#the-editing-format" id="toc-the-editing-format" class="nav-link active" data-scroll-target="#the-editing-format">The editing format</a></li>
+  <li><a href="#the-web-hosting1" id="toc-the-web-hosting1" class="nav-link" data-scroll-target="#the-web-hosting1">The web-hosting</a></li>
+  <li><a href="#for-the-web-hosting-right-now-my-only-solution-aside-from-hostinger-or-any-kind-of-web-hosting-service-is-either-gitlab-pages-github-pages-or-netlify.-kinda-bad-to-have-them-all-there-to-be-honest-but-no-idea-what-to-do-then." id="toc-for-the-web-hosting-right-now-my-only-solution-aside-from-hostinger-or-any-kind-of-web-hosting-service-is-either-gitlab-pages-github-pages-or-netlify.-kinda-bad-to-have-them-all-there-to-be-honest-but-no-idea-what-to-do-then." class="nav-link" data-scroll-target="#for-the-web-hosting-right-now-my-only-solution-aside-from-hostinger-or-any-kind-of-web-hosting-service-is-either-gitlab-pages-github-pages-or-netlify.-kinda-bad-to-have-them-all-there-to-be-honest-but-no-idea-what-to-do-then.">For the web hosting, right now my only solution aside from <code>Hostinger</code> or any kind of web hosting service is either GitLab Pages, GitHub Pages, or, Netlify. Kinda bad to have them all there to be honest, but no idea what to do then.</a></li>
   </ul>
 </nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The infrastructure of building contents</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Blog</div>
+    <div class="quarto-category">website</div>
+    <div class="quarto-category">trivia</div>
+  </div>
+  </div>
 
-
-
-
-<p>Previously of its versions, documentation contains a lot of things. Well, most of the time it contains documents and series of resources that is originally me-made, which is actually kinda nice. Generally I would treat this as a repository for stuff that either I have done, or simply stay there of impotency, or simply there as its sole purpose of presentation. Well, certainly it is.</p>
-<p>For the new version, it is where I do my own reorganization of different contents, and the clusters of website and constituent purpose-dependent space where I organize my content of. Think of it as subdivision specialization, but currently without a correct notion for controlling and organizing them. Indeed, the facility, wide and large, is numerous, but then we have to organize them here to reveal what is said about the current infrastructure; and whether I have crossed the storage limit of the landlord.</p>
-<section id="the-main-documents" class="level2">
-<h2 class="anchored" data-anchor-id="the-main-documents">The main documents</h2>
-<p>The main documentation site for now, is obviously this site on its own, <a href="https://amane-fujimiya.github.io/">my personal website</a>. The research hub in which contents will be written down would be organized in <a href="https://amane-fujimiya.github.io/Research/">this research sub-partition</a> under the domain. For now, it is also the main hub of operations.</p>
-<p>For main projects, we have the now-postponed <a href="https://amane-fujimiya.github.io/ML_Aneurysm">Neural Network (re)Design</a> document. For other in-progress works, we have a few options, bust most of them are and will be hosted on either <code>eigenmane</code> GitHub, mainly <a href="eigenmane.github.io">this domain (to be deployed)</a> and for completeness, <a href="https://github.com/Eigenmane/Neural">this repository</a> for a neuroscience topic preparation.</p>
-<p>Other documentation flavours would be preferable to be published onto <code>Netlify</code>. Specifically, with the domain intrinsic of Netlify, and using their own free plan (might be upgraded later on), for example, the <a href="https://physics-companion.netlify.app/">Physics Companion</a> where I retain certain amount of lecture notes and material preparation.</p>
-</section>
-<section id="planned" class="level2">
-<h2 class="anchored" data-anchor-id="planned">Planned</h2>
-<p>For planned content, I am exploring options regarding the use of forums, <code>XWiki</code>, and so on infrastructures, for example, lifting myself out of primitive notion and start using <code>Docker</code>, They are there, for the purpose to host a new <em>knowledge sharing and organization</em> idea that I have in mind, and also for <em>documentation</em> of knowledge and projects, much similar to CV and others. Further on, using that, we can also use the infrastructures for hosting frameworks and further research framework that would be detrimental in advancing the theory that is in mind.</p>
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
+<div>
+  <div class="description">
+    To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?
+  </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Fujimiya Amane </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>So, I am in the stage of having the need to figure out what is there of the logistic to support for the growing cluster of works. Like, really a whole lot and also because of the paranoia of running out of space. Yes, it is indeed the case here, because I am operating on the free-range, which, arguably, is not so great, but there is nothing I can do because my wallet is inhabited not by money but flies. So, per usual, it is a problem worth considering alternatives or migration choices and thereof which contended me to write this article. Furthermore, is the choice of building the website, collaboration frameworks, different online systems with good exposure and stable systems, and so on. All of which ultimately helps in configuring those that we desire to work on. Then that is what we are going to do.</p>
+<section id="the-editing-format" class="level2">
+<h2 class="anchored" data-anchor-id="the-editing-format">The editing format</h2>
+<p>In general, we do not use <code>HTML</code> in writing plain online content any more. Of course, many faculties still use plain edited and UNIX-based bare-bones website template, of which is still applicable and acceptable by all means, but is not so much of an offering of convenience and logistical ease for people whose writing in question is hosted on such. Thereby, the majority of website, both modern style text and academic mathematical writing, are written in a much more comfortable, sometimes complex or simple but with more functions of which can be used extensively. Such is to say <code>markdown</code> syntax format, <code>php</code> custom-design format, or <code>wikitext</code>, the markup language that empowers MediaWiki and subsequently, Wikipedia. Those are the modern file formats that are usually done within which contents are written in, often with fairly intuitive way of formatting on its own, and is indeed, fairly convenient to write.</p>
+<p>Such is also the same even if you want to host website content, but in text-formatted complete file instead. This comes as a tradeoff - between dynamic system and rendering like website, web-based browser’s renderers, and so on; versus the concrete, independent and often static visual sketch of static files. The latter is often in the form of, previously, <code>.doc</code> files for Microsoft document files, or <code>PDF</code>, if you want pre-rendered, <code>SVG</code> vector format. Tough, at of now, MS Word kind of sucks, especially when it comes to mathematics (I hate writing maths on it), so usually, we use <span class="math inline">\(\LaTeX\)</span> instead. Which is fairly convenient.</p>
+<p>Will there be new format? I am not so sure. There exists a camp of which grew distaste of <span class="math inline">\(\LaTeX\)</span>, but hate MS Word, and they created prototypes, of which for example, <a href="https://typst.app/universe">Typst</a>. Other than such, many exists, but they are simply not within my knowledge. So, maybe I would have to look further outward it seems. To add in there, I also recently discovered <code>mdbook</code>, <code>d2lbook</code> which is <a href="https://book.d2l.ai/install.html">kinda nice</a>, though unfortunately lads whose use Windows would be crying (or use WSL lad), and <code>Franklin.jl</code>. Go check that out.</p>
+</section>
+<section id="the-web-hosting1" class="level2">
+<h2 class="anchored" data-anchor-id="the-web-hosting1">The web-hosting<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<p>Web hosting is another problem, of which, taken of such inquiry, is fairly interesting. There are services for that, and there are frameworks of which deliberately would help you to transition from being a blockhead into a full working system. Such is true for system like Jupyter Notebooks and its different support, for example, on <em>GitHub Action</em> procedure and hosting. Similarly, is Quarto, with <code>.qmd</code> being another flavour of Markdown, which offers an entire pipeline in one go. Then there is <code>Hugo</code>, and so on, of which offers you exotic features or templates, though it does not have prescribed pipeline like Quarto. And, yes, of all static website system, there is Jekyll, the original (perhaps), written in Ruby, system for creating static website. Which is good, I suppose.</p>
+<p>You can also go the fundamental way, for example, Pandoc for conversion of contents to HTML format, but other than that, we jump onto the bandwagon of established dynamic system. For my purpose, that is often <code>Mediawiki</code>, with their system of which fuelled, as said, Wikipedia, and also a lot of good templates like <a href="https://scioly.org/">this one</a>. The advantage ranges, but they are superb for creating a wiki system of which is both simple and kind of powerful, with matured system and support, templates and extensions, and so on. Oh, and also theme too, even though I would like the <a href="https://www.modernwiki.app/">Modern theme</a> in Chrome extension more than that. The other side of such argument is then <code>XWiki</code>, of which is <a href="https://www.xwiki.org/xwiki/bin/view/Main/WebHome">good enough, so much so that Lenovo used them</a>, which is quite a stretch.</p>
+</section>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;It would just be static, really.</p></div></div><section id="for-the-web-hosting-right-now-my-only-solution-aside-from-hostinger-or-any-kind-of-web-hosting-service-is-either-gitlab-pages-github-pages-or-netlify.-kinda-bad-to-have-them-all-there-to-be-honest-but-no-idea-what-to-do-then." class="level2">
+<h2 class="anchored" data-anchor-id="for-the-web-hosting-right-now-my-only-solution-aside-from-hostinger-or-any-kind-of-web-hosting-service-is-either-gitlab-pages-github-pages-or-netlify.-kinda-bad-to-have-them-all-there-to-be-honest-but-no-idea-what-to-do-then.">For the web hosting, right now my only solution aside from <code>Hostinger</code> or any kind of web hosting service is either GitLab Pages, GitHub Pages, or, Netlify. Kinda bad to have them all there to be honest, but no idea what to do then.</h2>
+<p>Alright, that is all for now. Get lost, everyone. Me, too, included.</p>
+
+
+</section>
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
