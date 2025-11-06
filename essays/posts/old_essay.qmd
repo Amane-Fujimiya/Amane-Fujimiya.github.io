@@ -1,0 +1,23 @@
+---
+title: "Old essay, repository"
+author: "Fujimiya Amane"
+date: "2025-09-01"
+categories: [Essay, repository]
+format:
+  html:
+    toc: true
+description: "I don't have much word to say. Are there even any for a person to judge his past?"
+status: "done"
+confidence: "likely"
+importance: 5
+---
+
+Okay. This will be enough for now. Only for now. (I will come back later). Welcome to the repository of old essays and writings. I will simply put them into a list and organize it just as usual, so don't worry. 
+
+## Files
+1. [The notion of proof](/pdf/02_Article.pdf): A exploratory writing (more like a show of thought) on the topic of, well, proof and formalism of mathematical language. 
+2. [Old theoretical document](/pdf/old_docs.pdf): An old book from the day long gone (more like a year ago at 2025) about theoretical stuff and ideas. Oh, it also includes an inquiry of probabilistic nature of the world. 
+3. [On mathematical simulation](/pdf/math_simu_idea.pdf): An old idea and exploratory writing on mathematical simulation (when I was very enthusiastic about it). 
+4. [Research topic summarization](/pdf/research_topic_sum.pdf): Slide used for research topic 'research' summarization (basically finding topics).
+5. [Medical physics and machine learning application](/pdf/medical_presentation1.pdf): While the name said medical, it is more to be identified as an inquiry on any biological usage and classical machine learning approachable techniques. 
+6. [Deep learning and Raman spectroscopy - An analysis](/pdf/slide_deep_learning_essay.pdf): Well, a thought out deep learning survey on Raman spectroscopy and some typical applications. 

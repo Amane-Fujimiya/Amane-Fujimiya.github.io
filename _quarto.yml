@@ -17,8 +17,8 @@ website:
         href: projects/index.qmd
       - text: "Notes"
         href: notes/index.qmd
-      - text: "Docs"
-        href: document/index.qmd
+      - text: "Document"
+        href: documents/index.qmd
       - text: "Main"
         href: main/index.qmd
       - text: "Blogs"
@@ -62,7 +62,7 @@ project:
     - "index.qmd"
     - "404.qmd"
     - "essays/**/*.qmd"
-    - "docs/**/*.qmd"
+    - "documents/**/*.qmd"
     - "sketches/**/*.qmd"
     - "about/**/*.qmd"
     - "projects/**/*.qmd"
@@ -81,6 +81,7 @@ execute:
 
 format:
   html:
+    css: /styles.css
     fontsize: 1.1em
     theme: 
       light: flatly
@@ -92,6 +93,14 @@ format:
     code-tools: false
     code-link: true
     anchor-sections: true
-    fig-cap-location: margin
+    fig-cap-location: bottom
     reference-location: margin
+    reference-links: true
+    citation-location: document
     footnotes-hover: true
+    highlight-style: monokai
+
+editor:
+  render-on-save: true
+comments:
+  hypothesis: true

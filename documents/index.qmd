@@ -1,0 +1,30 @@
+---
+title: "Documentation"
+listing:
+  date-format: iso
+  contents: posts
+  fields: [image, title, categories, description, reading-time,
+           date]
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+Previously of its versions, documentation contains a lot of things. Well, most of the time it contains documents and series of resources that is originally me-made, which is actually kinda nice. Generally I would treat this as a repository for stuff that either I have done, or simply stay there of impotency, or simply there as its sole purpose of presentation. Well, certainly it is. 
+
+For the new version, it is where I do my own reorganization of different contents, and the clusters of website and constituent purpose-dependent space where I organize my content of. Think of it as subdivision specialization, but currently without a correct notion for controlling and organizing them. Indeed, the facility, wide and large, is numerous, but then we have to organize them here to reveal what is said about the current infrastructure; and whether I have crossed the storage limit of the landlord. 
+
+## The main documents
+
+The main documentation site for now, is obviously this site on its own, [my personal website](https://amane-fujimiya.github.io/). The research hub in which contents will be written down would be organized in [this research sub-partition](https://amane-fujimiya.github.io/Research/) under the domain. For now, it is also the main hub of operations. 
+
+For main projects, we have the now-postponed [Neural Network (re)Design](https://amane-fujimiya.github.io/ML_Aneurysm) document. For other in-progress works, we have a few options, bust most of them are and will be hosted on either `eigenmane` GitHub, mainly [this domain (to be deployed)](eigenmane.github.io) and for completeness, [this repository](https://github.com/Eigenmane/Neural) for a neuroscience topic preparation. 
+
+Other documentation flavours would be preferable to be published onto `Netlify`. Specifically, with the domain intrinsic of Netlify, and using their own free plan (might be upgraded later on), for example, the [Physics Companion](https://physics-companion.netlify.app/) where I retain certain amount of lecture notes and material preparation.
+
+## Planned
+
+For planned content, I am exploring options regarding the use of forums, `XWiki`, and so on infrastructures, for example, lifting myself out of primitive notion and start using `Docker`, They are there, for the purpose to host a new *knowledge sharing and organization* idea that I have in mind, and also for *documentation* of knowledge and projects, much similar to CV and others. Further on, using that, we can also use the infrastructures for hosting frameworks and further research framework that would be detrimental in advancing the theory that is in mind.

@@ -2,3 +2,4 @@
 /.vscode/
 /.site/
 quarto_compiled/
+**/*.quarto_ipynb

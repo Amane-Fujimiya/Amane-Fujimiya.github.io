@@ -1,0 +1,35 @@
+---
+title: "The Leibnizian Optimism"
+author: "Fujimiya Amane"
+date: "2025-08-16"
+date-modified: "2025-08-17"
+categories: [Blog, philosophy]
+format:
+  html:
+    toc: true
+description: "An inquiry of an omnibenevolent concept."
+status: "done"
+confidence: "high"
+importance: 4
+---
+
+What do we call optimism of? Is it the blind and unquestioned ignorant of the misery of life, or it is only an interpretation of thoughts, to help the mortal man in living, of such that to defies the thinking of "living is not worth it" in classical pessimism? In one way, Leibnizian optimism works on, to be the thesis - best of all possible worlds. To the outline, Leibnizian optimism follows the following line of thoughts: 
+
+1. God is omnipotent, omniscient, and omnibenevolent;
+2. God created the existing world;
+3. God could have created a different world or none at all (i.e., there are other possible worlds);
+4. Because God is omnipotent and omniscient, he knew which possible world was the best and was able to create it, and, because he is omnibenevolent, he chose to create that world;
+5. Therefore, the existing world, the one that God created, is the best of all possible worlds.
+
+Against the claim that, because the number of possible worlds is [infinite](https://www.merriam-webster.com/dictionary/infinite), there is no single possible world that is best (for any given good world, there will always be another world that is better), Leibniz argued that, if there were no best possible world, then God would not have had a [sufficient reason](https://www.britannica.com/topic/principle-of-sufficient-reason) to create one world rather than another, and so he would not have created any world at all. But he did create a world, the existing one, which therefore must be the best possible.
+
+Against the claim that the existing world is not the best of all possible worlds because it is easy to imagine a world that has less evil in it, Leibniz argued that it is questionable whether a world with less evil really is imaginable. Because of the interconnectedness of events, it could be that any world that does not contain the evil of the existing world would necessarily contain other, greater forms of evil. Furthermore, it could be that the existing world, despite the evident evil in it, is actually the best possible according to a divine standard of goodness that differs from ordinary [conceptions](https://www.merriam-webster.com/dictionary/conceptions) of that notion.
+
+
+Sounds like a great dose of optimism for the day, should it be? Yeah it should be so.
+
+___
+
+# Reference
+[Philosophy - Britannica - Best of all possible worlds](https://www.britannica.com/topic/best-of-all-possible-worlds)
+[Why Optimists are Idiots - Unsolicited Advice (Youtube)](https://www.youtube.com/watch?v=pay96GQbdxs)

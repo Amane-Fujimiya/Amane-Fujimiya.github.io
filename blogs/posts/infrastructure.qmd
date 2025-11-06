@@ -1,0 +1,36 @@
+---
+title: "The infrastructure of building contents"
+author: "Fujimiya Amane"
+date: "2025-11-01"
+categories: [Blogs, website, trivia]
+format:
+  html:
+    toc: true
+description: "To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?"
+status: "done"
+---
+
+So, I am in the stage of having the need to figure out what is there of the logistic to support for the growing cluster of works. Like, really a whole lot and also because of the paranoia of running out of space. Yes, it is indeed the case here, because I am operating on the free-range, which, arguably, is not so great, but there is nothing I can do because my wallet is inhabited not by money but flies. So, per usual, it is a problem worth considering alternatives or migration choices and thereof which contended me to write this article. Furthermore, is the choice of building the website, collaboration frameworks, different online systems with good exposure and stable systems, and so on. All of which ultimately helps in configuring those that we desire to work on. Then that is what we are going to do. 
+
+## The editing format
+
+In general, we do not use `HTML` in writing plain online content any more. Of course, many faculties still use plain edited and UNIX-based bare-bones website template, of which is still applicable and acceptable by all means, but is not so much of an offering of convenience and logistical ease for people whose writing in question is hosted on such. Thereby, the majority of website, both modern style text and academic mathematical writing, are written in a much more comfortable, sometimes complex or simple but with more functions of which can be used extensively. Such is to say `markdown` syntax format, `php` custom-design format, or `wikitext`, the markup language that empowers MediaWiki and subsequently, Wikipedia. Those are the modern file formats that are usually done within which contents are written in, often with fairly intuitive way of formatting on its own, and is indeed, fairly convenient to write. 
+
+Such is also the same even if you want to host website content, but in text-formatted complete file instead. This comes as a tradeoff - between dynamic system and rendering like website, web-based browser's renderers, and so on; versus the concrete, independent and often static visual sketch of static files. The latter is often in the form of, previously, `.doc` files for Microsoft document files, or `PDF`, if you want pre-rendered, `SVG` vector format. Tough, at of now, MS Word kind of sucks, especially when it comes to mathematics (I hate writing maths on it), so usually, we use $\LaTeX$ instead. Which is fairly convenient. 
+
+Will there be new format? I am not so sure. There exists a camp of which grew distaste of $\LaTeX$, but hate MS Word, and they created prototypes, of which for example, [Typst](https://typst.app/universe). Other than such, many exists, but they are simply not within my knowledge. So, maybe I would have to look further outward it seems. To add in there, I also recently discovered `mdbook`, `d2lbook` which is [kinda nice](https://book.d2l.ai/install.html), though unfortunately lads whose use Windows would be crying (or use WSL lad), and `Franklin.jl`. Go check that out. 
+
+## The web-hosting[^1]
+
+[^1]: It would just be static, really. 
+
+Web hosting is another problem, of which, taken of such inquiry, is fairly interesting. There are services for that, and there are frameworks of which deliberately would help you to transition from being a blockhead into a full working system. Such is true for system like Jupyter Notebooks and its different support, for example, on *GitHub Action* procedure and hosting. Similarly, is Quarto, with `.qmd` being another flavour of Markdown, which offers an entire pipeline in one go. Then there is `Hugo`, and so on, of which offers you exotic features or templates, though it does not have prescribed pipeline like Quarto. And, yes, of all static website system, there is Jekyll, the original (perhaps), written in Ruby, system for creating static website. Which is good, I suppose. 
+
+You can also go the fundamental way, for example, Pandoc for conversion of contents to HTML format, but other than that, we jump onto the bandwagon of established dynamic system. For my purpose, that is often `Mediawiki`, with their system of which fuelled, as said, Wikipedia, and also a lot of good templates like [this one](https://scioly.org/). The advantage ranges, but they are superb for creating a wiki system of which is both simple and kind of powerful, with matured system and support, templates and extensions, and so on. Oh, and also theme too, even though I would like the [Modern theme](https://www.modernwiki.app/) in Chrome extension more than that. The other side of such argument is then `XWiki`, of which is [good enough, so much so that Lenovo used them](https://www.xwiki.org/xwiki/bin/view/Main/WebHome), which is quite a stretch. 
+
+For the web hosting, right now my only solution aside from `Hostinger` or any kind of web hosting service is either GitLab Pages, GitHub Pages, or, Netlify. Kinda bad to have them all there to be honest, but no idea what to do then. 
+
+
+---
+
+Alright, that is all for now. Get lost, everyone. Me, too, included. 

@@ -18,15 +18,17 @@ It's been a while since there is anything happening on the frontal page. And, co
 This article, or rather, the small post (not so small, however) will introduce certain topics on optical physics and its interaction with materials, the interpretation of such events, scattering and Raman scattering, and spectroscopic application of the exact jargon we just threw around there, and certain data-specific, machine learning approach - *coincidentally* my essay as well. 
 
 Hopefully it's will be nice and shiny.
+
 # I. Optical physics
 So, what is it about? The theory of optics, and whatever going on with **lights**, have various conjectures, theories and interpretation. At least to be familiar of one such, we might as well proceed with the simplest one - *ray optics*, and this, alongside *wave optics*, found the foundation of the discussion for modern optics. 
 
 One particular aspect of why rays and wave optics are easier than others comes from the fact that they are developed, and treated succinctly without the knowledge of electromagnetism. Of course, Maxwell was born in the 19th century and not earlier, so that is understandable. So, here, *light is not considered to be an electromagnetic phenomenon*.
 
-Afterward, we will discuss the formalism into electromagnetic effects by Maxwell, and the dilemma of the photoelectric effect - one such effect that changes the perception and interperation of what lights, and other matters to be. 
+Afterward, we will discuss the formalism into electromagnetic effects by Maxwell, and the dilemma of the photoelectric effect - one such effect that changes the perception and interpretation of what lights, and other matters to be. 
+
 ## I.1. Ray optics
 
-While the nature of light is far more complex than one can simply make it out of such, the naive definition of light can be defined two-fold - a *dynamic container* of energy to specific configuration, and by the configuration, either wave-like behaviour, and particle-like observations. For ray optics, the most correct model of said treatment is caleld the *Corpuscular theory of light*, by Issac Newton and Pierre Gassendi (the first guy I know - everyone knows - the second... well not quite), where matter or light is made up of small particles called corpuscles (or 'little particles'). 
+While the nature of light is far more complex than one can simply make it out of such, the naive definition of light can be defined two-fold - a *dynamic container* of energy to **specific** configuration, and by the configuration, either wave-like behaviour, and particle-like observations. For ray optics, the most correct model of said treatment is caleld the *Corpuscular theory of light*, by Issac Newton and Pierre Gassendi (the first guy I know - everyone knows - the second... well not quite), where matter or light is made up of small particles called corpuscles (or 'little particles'). 
 
 
 > Notice that by the above passage, we directly infer that, if you do not know by now, and to clarify, that light can be both waves, or streams of particles. As a wave, we can speed of the **propagation speed** of the wave $\omega$ as $v(\omega)=\dot{x}=f\lambda$ for $\lambda$ the wavelength. However, for ray optics, we consider only somewhat the particle case more.

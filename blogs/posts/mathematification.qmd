@@ -1,0 +1,43 @@
+---
+title: "The dilemma of mathematification in machine learning"
+author: "Fujimiya Amane"
+date: "2025-08-29"
+categories: [Blog, machine learning]
+format:
+  html:
+    toc: true
+description: "What, separates physics, and reality? Or more so, what separate the perception of one's particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?"
+status: "done"
+confidence: "likely"
+importance: 5
+---
+
+The road to work on machine learning is long and tedious, and, of course, full of maths. Beginning by working on the preliminaries of which machine learning interpretations are often based on - the mathematics of probability, linear algebra for computation, calculus and convex optimization, topology for analysis, Hilbert space, halfspaces, convergence theories, analysis using concentration inequalities, and whatnot. Have you ever question why there is so *much maths*?
+
+That is the question that I have, not because I personally dislike mathematics in fields, but of the scepticism when someone try just justify something, or describe something in mathematical terms - how much of it is true, how much of it is superficial, and how much of it actually works? 
+
+# Mathiness and, consequence (?)
+
+Mathematics is famous of its nature of being rather 'correct on basis of proofs'. It is hailed as concrete, as basically impervious once built, its theorem can be considered true and based of the mathematical language as fact, so on and so forth. Such is the nature of the field and its role, partake in companion of the subject description of itself as the language of quantified abstraction. Nevertheless, still, a lot of people still overestimate the power of mathematics, and sometime misleadingly use it under various means. What can this be? For pure mathematics, such can be said of the restricting cases that would be easy to spot; or rather, failed theorems that made use of false assumptions, false line of logic, or simply false in its analytical solution of the proof. However, for those fields that apply mathematics to conform the field onto a description, such effort can sometimes be overwhelmingly exhaustive and strenuous. 
+
+It would be wise of us to state not our own thought, but rather start with an echo chamber first. Whether we can break it, depends on how the interpretation lies. As such, [Zachary C. Lipton, Jacob Steinhardt (2018)](https://arxiv.org/abs/1807.03341) has our back. 
+
+> [...] Mathiness manifests in several ways: First, some papers abuse mathematics to convey technical depth—to bulldoze rather than to clarify. Spurious theorems are common culprits, inserted into papers to lend authoritativeness to empirical results, even when the theorem’s conclusions do not actually support the main claims of the paper. We (JS) are guilty of this in [70], where a discussion of “staged strong Doeblin chains” has limited relevance to the proposed learning algorithm, but might confer a sense of theoretical depth to readers. 
+
+Have you ever thought of being overwhelmed of sometime, the insanity amount of cross-field mathematical formulation, and in some sense, a feeling of over-analysis? There exist such occurrence, and to say them being of rarity is doubtful the least. [The Adam optimizer paper](https://arxiv.org/abs/1412.6980) is often cited under such regard - for it to state of a theorem on regret convergence guarantee of stochastic convex setting which later found to be false. Of course, there exists in no circumstances that mathematics is there to be 'false' in some sense. However, such is to say the need or feeling of researcher to deliberately want to reduce their solution, analysis, to formal proofs and of formalization that showcases theoretical depth, sometimes if not usually, backfires. 
+
+> A second issue is claims that are neither clearly formal nor clearly informal. For example, [18] argues that the difficulty in optimizing neural networks stems not from local minima but from saddle points. As one piece of evidence, the work cites a statistical physics paper [9] on Gaussian random fields and states that in high dimensions “all local minima [of Gaussian random fields] are likely to have an error very close to that of the global minimum” (a similar statement appears in the related work of [12]). This appears to be a formal claim, but absent a specific theorem it is difficult to verify the claimed result or to determine its precise content. Our understanding is that it is partially a numerical claim that the gap is small for typical settings of the problem parameters, as opposed to a claim that the gap vanishes in high dimensions. A formal statement would help clarify this. We note that the broader interesting point in [18] that minima tend to have lower loss than saddle points is more clearly stated and empirically tested.
+
+*Theorems* are mainstay of a particular theory, treated either mathematically or copulatively of text description. Nevertheless, misuses or sometime the arrogance of researchers, on established knowledge or not, similar to how memory distortion, hindsight bias, or in the more social scale, the Mandela effect work against such reality. This costs dearly, often not so realized. But perhaps contributes to the number of Q4 papers. 
+
+> Finally, some papers invoke theory in overly broad ways, or make passing references to theorems with dubious pertinence. For instance, the no free lunch theorem is commonly invoked as a justification for using heuristic methods without guarantees, even though the theorem does not formally preclude guaranteed learning procedures.
+
+**No-free-lunch** is famous - particularly because of its statement. As for all thing, as mathematics was struck down by Gödel of its own non-universality of its framework, machine learning, well, has its own version. Such is so unfortunate that no one has been able to ground physicist of the same ground. It is of no surprise that people will misunderstand such, or blinded of their own to justify on what matters of their view. 
+
+## Exemplary on economics
+
+Without sufficient expertise, one can still look into that fact that it is not a *unique, wild, unknown* problem. Economics also has this problem too, and is far more vocal of such. Specifically, of the scope of my brain aneurysm, [Paul Romer, 2015](https://paulromer.net/mathiness/Mathiness.pdf) and [Lars P. Syll, 2024](https://larspsyll.wordpress.com/2024/05/23/post-real-economics-a-severe-case-of-mathiness/) indicated such problem in the field of economics. Well, suffice to say at least in economics, maths only observes and predict the after effect of reality; most often time, events is not mathematical. To a degree. Nevertheless, such problem is open to the eye, and yet none probed such question, for something that needs application and empirical to be useful, and not static objects on a mathematician's paper sheet. 
+
+# In the end
+
+Nothing can be changed, that much is to say. The traction is still there, and more and more will continue down the path. What I said upfront is not the upset of the mathematician. Nor it will be only for them, as physicists somehow also made way to treat machine learning system as a statistical physical system on its own, of which while effective, is often far-fetch - like someone comparing a dog and a cat - they look the same, act the same, same features, but you can still make it as dogs and cats. What I would say, though, is that we might, in hindsight, forgot something that we might as well suffice to remember. Physics is not mathematics because it is physics. Maybe machine learning is also not mathematics because it is, learning, too. 

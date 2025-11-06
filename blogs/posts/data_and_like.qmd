@@ -1,0 +1,115 @@
+---
+title: "On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions"
+author: "Fujimiya Amane (Bui Gia Khanh)"
+date: "2025-08-29"
+categories: [Blog, machine learning]
+format:
+  html:
+    toc: true
+description: "The idea for a data-aware bound. Or at least the basis of such"
+status: "not done yet"
+confidence: "likely"
+importance: 5
+---
+
+Recently, as I rediscovered the section on statistical learning theory, I stumbled across the old notion of the PAC-bound and other concentrated modelling bound. Perhaps for completeness, let us recite such verse of which establishes the theorem and its according results. 
+
+::: {#def-definition_PAC}
+
+## PAC-learning
+
+A concept class $C$ is said to be PAC-learnable if there exists an algorithm $\mathcal{A}$ and a polynomial function $poly(\cdot,\cdot,\cdot,\cdot)$ such that for any $\epsilon>0$ and $1>\delta>0$, for all distribution $D$ on $\mathcal{X}$ and for any target concept $c\in C$, the following holds for any sample size $m\geq poly(  1/\epsilon , 1/\delta,n,size(c))$: 
+
+$$
+\underset{S\sim D^{m}}{\operatorname{Pr}}[R(h_{S})\leq \epsilon]\geq 1-\delta
+$$
+
+
+If $\mathcal{A}$ further run in $poly(  1/\epsilon , 1/\delta,n,size(c))$, then $C$ is said to be efficiently PAC-learnable. When such algorithm $\mathcal{A}$ exists, it is called a PAC-learning algorithm for $C$. 
+
+:::
+
+::: {.callout-note}
+
+## The arbitrary $\mathcal{H}$
+
+Note that the notion of $\mathcal{H}$ and $\mathcal{C}$ is deliberately arbitrary. Of such, would usually be defined explicitly and thus ground both the representation space, and the capacity in arbitrary proposition of $h\in \mathcal{F}=\{\mathcal{H},\mathcal{C}\}$. 
+
+:::
+
+Looking at it, I can't help but wonder why it is so restricted. Granted, it has its own merit of the properties of interest, the $size(c)$ argument of the arbitrary representation, structural system, and so on, but on the same time. It is outdated and infeasible. Indeed, the bound generally looks as 
+
+$$
+R(h_{S})\leq \frac{1}{m}\left( \log{\lvert \mathcal{H} \rvert }+\log{\frac{1}{\delta}} \right)
+$$
+
+For $m$ the naive sample complexity, and so on. It is rather difficult to think of such. What can such measure be, and would it create something out of it?
+
+## The might possibly be, data measure
+
+In a dataset, per usual, it would be interesting (for a later bound), to focus on certain properties of which we can clearly see the difference between the *dataset* and the *observable spaces*, plus the *actual concept* itself. In a controlled experiment, that is, it would be very helpful to figure this out. 
+
+Let us assume the following as preliminary for the discussion. In our setting, we have two polars: the *white box* of which in its simplest form, we have the explicit functional model $y=F(x;\theta)$ for any kind of descriptions $\theta$. The other polar is the *probabilistic domain*, i.e. *black-box*, of which $y\sim P(Y\mid X)$. Notice the subtle change here, that now $y$ is supposed to be of a different abstraction. We say that the measure action in between $y$ and the system relationship is the *system action* $A_{S}$. Hence, we have either, 
+$$
+yA_{S}x\to f(x;\theta), \quad \text{or} \quad yA_{S}x\to \mathcal{S}[\mathbb{P}(Y\mid X)]
+$$
+for $\mathcal{S}[\mathbb{P}(Y\mid X)]$ the notion of *sampling* - observing randomly on the basis of said probability without any knowledge but the parameter. If such sampling process is with control parameter, then from the optimization perspective, we would have $\mathcal{S}[\mathbb{P}(Y\mid X,\theta_{\mathcal{S}})]$, for $\theta_{\mathcal{S}}$ to be distinguished from $\theta$. In the case $\theta_{\mathcal{S}}\approx \theta$, we say that the system is indeed of a *white-transition*. 
+
+What does the probability in the black-box case represents here? In essence, $\mathbb{P}(Y,X)$ comes in two forms: the probability that certain $Y$ appears with the setting $X$, the probability that $X$ is the basis on the course of which the outcome is $Y$. Per usual notion, this is interconnected. If, for a dynamical system in which the basis space $X$ is random, i.e. you know it behaves like this, but cannot start the starting point of examination point in-order or dense, then the probability $\mathbb{P}(Y\mid X)$ is in effect. On the mechanistic side, this means that there is the construct $c(X)$, but the factor of which determines the dataset is $X$. Additionally, in such process (of which we will have to have a look into the procedural interpretation of this entire chain of action), there exists $Y\gets c(X)+\epsilon$ intrinsic of certain measurements, hence, we have $\mathbb{P}(Y\mid X)$ to also approximate $\mathbb{P}(Y,X,\epsilon)$ as irreducible in some cases. If such knowledge is removed, then $\mathbb{P}(Y,X)$ is fully in effect. Such transition is there and will still be there. 
+
+We would leave this here for justification as the state it is, since there exists this fact or rather observation, that is rather dubious of the system. You **cannot** move a deterministic system into probabilistic then back, given enough disturbance and thereof. Indeed, we can simply create a prototypical function 
+$$
+\mathcal{R}: F\to P,\quad \quad \mathcal{R}[F](A) = \int_{\Theta} \mathbf{1}\{F(x;\theta)\in A\}\mmu (d\theta)
+$$
+for the pure probabilistic pure setting $(\Omega, \mathcal{F},\mathbb{P})$ of the probability measure, where $\mu\subset \mathcal{F}$, and $A\in (\mathcal{Y}\mid \mathcal{X})$, of which the observation space is conditioned on $\mathcal{Y}$. If not, i.e. the observation space possible is arbitrarily dense, then we would simply have unconditioned $\mathcal{Y}$, thus the white-box case. However, even not under no information at all, every concept must meet certain limit on the basis and the resultant action itself. Now, you can do this. But there exists **no sufficient way** to return from $P$ back to $F$, except the same operation in reversal, into an infinite-range space. However, this is not feasible if $\epsilon$ acts up, and in certain case, for any $\epsilon>0$, $\mathcal{R}^{-1}$ would simply be a mere approximation, and under such sense we would have to redefine what is meant by such inverse function. This corresponds to the limit 
+$$
+\lim_{\epsilon \to 0} \mathcal{R}_{\epsilon}^{-1}[\mathcal{R}[F]]=F, \quad || \mathcal{R}^{-1}_{\epsilon}[\mathcal{R}[F]] - F || \to \infty
+$$
+One then, can be considered fairly nice to do the act of borrowing from the idea of quantum mechanics, the idea of backtracking error, i.e. the correlation operator $[\mathcal{R},\mathcal{R}^{-1}]$. This would be an interesting direction of research, but we have to define what the hell happens. 
+## The working around in merry go around
+
+Now, forget the above passage, if we assume the dataset is the basis, and with probabilistic information (i.e. the lowest state of information one can achieve, aside from being blind). What can we do to examine the system? 
+
+### Coverage measure
+Suppose we have the same probability measure. Then, for $\mathcal{S}\in \Sigma$ is the support of the distribution. That is, the place in which the $\sigma$-algebra is in effect. Then, $\mathcal{S}_{n}=\mathrm{supp}(D_{n})$ as the $n$-finite region of $\Sigma$. The natural definition then would be 
+$$
+C_{n}= \frac{P(\mathcal{S}_{n})}{P(\mathcal{S})}
+$$
+or rather, the space in which the dataset touched upon of the probabilistic space. This definition can be fairly practical, so that we can actually use Monte-Carlo for this. More concretely, however, the coverage on $\mathbb{R}^{m}$ embedded space can be considered as 
+$$
+C_{n}=\frac{\mathbb{E}_{m}[ \mathsf{PDF}_{d}(\mathcal{S}_{n}) ]}{\mathbb{E}_{m}[ \mathsf{PDF}(\mathcal{S}) ]}, \quad \mathsf{PDF}_{d}(\mathcal{S}_{n}) = \{\mathcal{D}_{i}(\mu, \nu)\}
+$$
+Where $\mathcal{D}$ is the point-density assignment for the probabilistic measure taken on by the dataset. Per usual, for the *least* amount of assumption possible, $\mathbb{E}_{m}[ \mathsf{PDF}(\mathcal{S}) ]\approx \mathcal{U}(l,h)$ of uniform distribution, or simply the p.d.f of the true distribution. Again this is fairly easy with normalization score. Then, 
+$$
+\lim_{n\to \infty} C_{n} = 1
+$$
+as per our assumption of such coverage. This is based on the assumption that each $n$ is distinct, entirely. Such is to prevent discrete points overlap, and kind of solves the issue with density. If $C_{n}<1$, the dataset does not cover the entire conceptual space. 
+### Density measure $\rho_{n}$
+
+Now, we wrested with the density function above. Such can be resolved fairly nice if we have: 
+$$
+\rho_{n} = \int_{\Theta}\min{[|\mathcal{D}|,1]}p(x)dx
+$$
+for $p(x)$ the true density, and the customized empirical density distribution basis - here $|\mathcal{D}|$ simply defines an operation for the absolute density value on such density probability mass function. This then measures how much of the true density is matched by empirical density, like a convolution. Kinda rough, but again, it is a patchwork. 
+### Stability measure
+The natural choice for a stability measure is as, for $S_{n}$ denoted of such, 
+$$
+S_{n} = 1- \mathbb{E}[d(\mathcal{D}_{i},\mathcal{D}_{j})], \quad i\ne j
+$$
+then for $S_{n}\to 1$, the dataset is indeed stable enough as it is. There can be many ways to define $d(\cdot, \cdot)$, but generally, it is through the description. Another natural choice would be to just measure the dataset points itself, which is already the *variance*. 
+
+---
+
+There are more to be of, for example, measure consistency or probability correspondence, of which either defined anew, or use KB-divergence is okayish, and so on. But either way, this created a fairly succinct picture on what to take of the dataset, not as just mundane i.i.d. Alright, good luck, lads. 
+
+For citation (*man* if there is any):
+
+```bibtex
+@misc{khanhmane2025r,
+  author       = {Bui Gia Khanh (Fujimiya Amane)},
+  title        = {On the idea of the Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic--Probabilistic Transitions},
+  year         = {2025},
+  howpublished = {https://amane-fujimiya.github.io/blogs/},
+  note         = {Blog post}
+}
+```

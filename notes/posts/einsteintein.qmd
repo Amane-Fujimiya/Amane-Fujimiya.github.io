@@ -1,0 +1,208 @@
+---
+title: "Einstein's equation of relativity (for toddlers)"
+author: "Fujimiya Amane"
+date: "2025-10-20"
+categories: [Notes, physics]
+format:
+  html:
+    toc: true
+description: "I don't really know, but, I need something fairly done well. Well, it is well-done either way. I would like it to be stir-fried."
+status: "done"
+confidence: "likely"
+importance: 5
+---
+
+
+This is just, as it is, a simple path of proving the Einstein's mass-energy equivalence formula, famously written in its simple form, $E = \sqrt{m^{2}c^4 + (pc)^{2}}$ or by $E = mc^{2}$, which is one of the founding stones of relativistic physics. Written to fit mostly undergraduate or high school level of physics understanding, the article encompassed several multitudes toward making simplification and real-situational systems. Oh and by the way, this is just to hide my own, well, procrastination by the way. 
+
+___
+
+## I. Revise on important equations for the Einstein's equation
+
+We will begin with some remark on important equations and resource to start the proofs' derivation and explanation.
+
+### Einstein's mass-velocity equation
+
+According to Einstein, the mass of a body is not constant. In relativity, mass depends on the velocity of the body, which is formulated as: 
+$$
+\begin{equation}
+    m = \frac{m_{0}}{\sqrt{1 - \frac{v^{2}}{c^{2}}}} = m_{0} \left( \frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}\right)
+\end{equation}
+$$
+where $v$ is the magnitude of the velocity of the body, $c$ is the speed of light in vacuum and $m_{0}$ is the rest mass of the body. The factor apart from $m_{0}$ is called the Lorentz factor $\gamma$, defined as: 
+$$
+\begin{equation*}
+    \gamma ={\frac {1}{\sqrt {1-{\frac {v^{2}}{c^{2}}}}}}={\frac {1}{\sqrt {1-\beta ^{2}}}}={\frac {dt}{d\tau }}
+\end{equation*}
+$$
+in which $v$ is the relative velocity between inertial reference frames, $c$ is the speed of light in a vacuum, $\beta$ is the ratio of $v$ to $c$, $t$ is time and $\tau$ is the proper time for an observer (measuring time intervals in the observer's own frame). The expression appears in several equations in special relativity, and is derived from Lorentz Transformation method. Such name originated from the Dutch physicist Hendrik Antoon Lorentz (1853-1928) after its frequent appearance in  Lorentzian electrodynamics.
+
+The proof of this equation can be explained as follows:
+
+#### Proof. 
+We now imagine an inertial system where, an observer 1 sits directly on Earth, at a stationary point, neglecting the rotation of Earth as a factor. An asteroid goes directly to where the observer is directly situated at, with velocity $v$ much smaller than the speed of light $c$, and crashes onto that position after an interval $\Delta t$. This creates a deformation impact on the planet at the specific point, and this impact is proportional to the momentum of the asteroid, which is: 
+$$
+\begin{equation*}
+    p = mu
+\end{equation*}
+$$
+where $u$ is the magnitude of the asteroid's velocity, $p$ is its momentum, and $m$ is its rest mass.
+
+In another point in space, a spacecraft travel perpendicular to the path of the asteroid with a defined velocity as being relativistic, or relativistic velocity of $v = kc, k \in \mathbf{Z^{+}}$. The observer 2 inside this spacecraft will feel the impact time longer, indicates the velocity of the asteroid over a fixed distance smaller. This is caused because of the time dilation, which is defined as
+$$
+\begin{equation*}
+    \Delta t' = \frac{\Delta t}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}
+\end{equation*}
+$$
+
+where $\Delta t$ is the velocity from observer 1, $\Delta t'$ is the measured velocity from observer 2, v is the magnitude of the relativistic velocity of the spacecraft, and c is the speed of light in vacuum space ($c = 299,792,458\:ms^{-1}$).
+
+The asteroid's velocity is measured as:
+$$
+\begin{equation*}
+    u = \frac{ds}{dt}
+\end{equation*}
+$$
+and the asteroid's velocity from the spacecraft is: 
+$$
+\begin{equation*}
+    u' = \frac{ds}{dt'} = u\left(\sqrt{1 - \frac{v^{2}}{c^{2}}} \right)
+\end{equation*}
+$$
+Applying the time dilation into the equation. Nevertheless, the impact will stay the same for both observers, meaning for any inertial system, momentum stays the same. This can only happen if when velocity decreases, mass increases. There we have the comet momentum observed from the spacecraft is: 
+$$
+\begin{equation*}
+    p' = m'u'
+\end{equation*}
+$$
+where $p'$ is the relativistic momentum, $m'$ is the relativistic mass, and $v'$ is the relativistic velocity in the inertial frame of the spacecraft. Because the momentum is the same, thus: 
+$$
+\begin{align*}
+    p &= p' \\
+    mu &= m'u' \\
+    m' &= m\frac{u}{u'} \\
+    m' &= m\frac{u}{u \sqrt{1 - \frac{v^{2}}{c^{2}}}} \\
+    m' &= m\frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}} \\
+\end{align*}
+$$
+Thus, the proof is concluded.
+___ 
+
+## II. Einstein's Law of Motion
+
+The force and acceleration on a body of constant rest mass for it to enter the relativistic boundary are related by the equation:
+$$
+\begin{equation}
+    F = \frac{m_{0}\textbf{a}}{\left(1 - \frac{v^{2}}{c^{2}}\right)^{2/3}}
+\end{equation}
+$$
+where $F$ is the force on the body, $a$  is the acceleration that is caused or induced from the force, $v$ is the magnitude of the velocity of the body, and $m_{0}$ is its rest mass.
+
+From the equation, it is clearly seen that, the Lorentz factor if the velocity $v$ is small only causes minor changes to  the original equation, which is the Newton's law of motion. This indicates that under the relativistic velocity, Newton's law holds with great accuracy. Only until the speed of the point mass reach a substantial factor of the speed of light in vacuum space (i.e. $kc\:m/s, 0.1 < k \leqslant 1$) that the relativistic effect might be shown. 
+
+#### Proof.
+We begin with the restatement of the Newton's second law of motion: 
+
+The total force applied on a body is equal to the derivative with respect to time of the linear momentum of the body:
+$$
+    \begin{equation}
+        F = \frac{d}{dt}(m\textbf{v}) = m\textbf{a}
+    \end{equation}
+$$
+In relativistic situation, the mass of an object is defined by Einstein's mass-velocity equation (see section 1). Substitute it into Newton's equation yields:
+$$
+    \begin{equation*}
+        F = \frac{d}{dt}\left(\frac{m_{0}\textbf{v}}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}\right)
+    \end{equation*}
+$$
+Differentiate the RHS of the equation: 
+$$
+    \begin{equation*}
+        \begin{split}
+            \frac{d}{dt}\left(\frac{m_{0}\textbf{v}}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}\right) & = m_{0}\frac{d}{dv}\left(\frac{\textbf{v}}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}\right) \frac{dv}{dt} \\
+            & = \mathbf{a}\left(\frac{\sqrt {1-\frac{v^2}{c^2}}-\frac{v}{2}\frac{1}{\sqrt{1 -\frac{v^2}{c^2}}}\frac{-2 v}{c^2}} {1 -\frac{v^2}{c^2}}\right) \\
+            & = \mathbf{a}\left(\frac{c^2\left(1-\frac{v^2}{c^2}\right)+v^{2}}{c^2\left(1-\frac{v^2}{c^2}\right)^{3/2}}\right) \\
+            & = \mathbf{a}\left(\frac{1}{\left(1 -\frac{v^2}{c^2}\right)}\right)^{3/2}
+        \end{split}
+    \end{equation*}
+$$
+Therefore, we arrive at the form: 
+$$
+    \begin{equation*}
+        F = \frac{m_{0}\textbf{a}}{\left(1 - \frac{v^{2}}{c^{2}}\right)^{2/3}}
+    \end{equation*}
+$$
+Thus, the proof is concluded.
+
+___
+
+## III. Einstein's Mass-Energy Equation
+Einstein's mass-energy equation, well-known as mass-energy equivalence equation, is an equation that connects both energy and mass together, indicates that energy and mass is the same and obey the same rule. In this proof, we will restrict it, to the part of the body to be at rest, meaning $p^2 = 0$, thus we will calculate it in its simple form, not $E^2=(mc^2)^2+(pc)^2$. 
+
+In general, the equation is stated as below: 
+
+>The energy imparted to a body to cause that body to move causes the body to increase in mass by a value M as given by the equation:
+>$$
+>    \begin{equation}
+>        E = Mc^{2}
+>    \end{equation}
+>$$
+
+where $c$ is the speed of light. A proof to this simplified notion can be considered, as below. 
+
+#### Proof.
+
+We remark that from Einstein's Law of Motion in relativistic system: 
+$$
+\begin{equation*}
+    F = \frac{m_{0}\textbf{a}}{\left(1 - \frac{v^{2}}{c^{2}}\right)^{3/2}}
+\end{equation*}
+$$
+Without loss of generality, we assume that the body is at rest, placed in the origin of the Cartesian plane $\mathbb{R}^2$. For simplification, we will treat the acceleration $a$ as a scalar quantity. Then we have: 
+$$
+\begin{equation*}
+    a = \frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt} = v\frac{dv}{dx}
+\end{equation*}
+$$
+Then, with energy is formulated as: 
+$$
+\begin{equation*}
+    E_{\text{k}}=\int _{0}^{t}\mathbf {F} \cdot d\mathbf {x} =\int _{0}^{t}\mathbf {v} \cdot d(m\mathbf {v} )=\int _{0}^{t}d\left({\frac {mv^{2}}{2}}\right)={\frac {mv^{2}}{2}}
+\end{equation*}
+$$
+We then have:
+$$
+\begin{equation*}
+    \begin{split}
+        E & = m_{0} \int_{0}^{x} \frac{a}{\left(1 - \frac{v^{2}}{c^{2}}\right)^{\frac{3}{2}}} dx \\ 
+        & = m_{0} \int_{0}^{v} \frac{v}{\left(1 - \frac{v^{2}}{c^{2}}\right)^{\frac{3}{2}}} dv \\
+        & = m_{0} \left(-\frac{c^2}{2}\right) \int_{0}^{v} \left(1 - \frac{v^{2}}{c^{2}}\right)^{-\frac{3}{2}} \cdot \left(-\frac{2v}{c^2}\right) dv \\
+    \end{split}
+\end{equation*}
+$$
+Set:
+$$
+\begin{equation*}
+    \left(1 - \frac{v^2}{c^2}\right) = u \longrightarrow -\frac{2v}{c^2} = du
+\end{equation*}
+$$
+Therefore: 
+$$
+    \begin{align*}
+        E & = m_{0} \left(-\frac{c^2}{2}\right) \int_{0}^{v} u^{-\frac{3}{2}} du \\
+        & = \left[m_{0}c^{2}\left(1 - \frac{v^{2}}{c^{2}}\right)^{-\frac{1}{2}}\right]_{0}^{v} \\
+        & = m_{0}c^{2} \left(\frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}} - 1\right) \\
+        & = c^{2} \left(\frac{m_{0}}{\sqrt{1 - \frac{v^{2}}{c^{2}}}} - m_{0}\right) \\
+        & = c^{2} (m - m_{0}) \\
+        & = mc^2
+    \end{align*}
+$$
+The proof is concluded evidently. 
+
+## References
+
+- George F. Simmons: Differential Equations: Miscellaneous Problems for Chapter 2: Problem 32 (b) (1972)
+- George F. Simmons: Calculus Gems: Chapter B.7: A Simple Approach to $E=Mc^2$ (1992)
+- David Nelson: The Penguin Dictionary of Mathematics: Entry: Einstein's equation (2008)
+
+Others, well, pick 'em yourself.
