@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Fujimiya Amane">
+<meta name="author" content="Fujimiya Amane (Bui Gia Khanh)">
 <meta name="dcterms.date" content="2025-08-29">
-<meta name="description" content="What, separates physics, and reality? Or more so, what separate the perception of one’s particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?">
+<meta name="description" content="The idea for a data-aware bound. Or at least the basis of such">
 
-<title>The dilemma of mathematification in machine learning – Amane in the Unknown</title>
+<title>On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions – Amane in the Unknown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -81,14 +116,43 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="The dilemma of mathematification in machine learning – Amane in the Unknown">
-<meta property="og:description" content="What, separates physics, and reality? Or more so, what separate the perception of one’s particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?">
+<meta property="og:title" content="On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions – Amane in the Unknown">
+<meta property="og:description" content="The idea for a data-aware bound. Or at least the basis of such">
 <meta property="og:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
 <meta property="og:site_name" content="Amane in the Unknown">
-<meta name="twitter:title" content="The dilemma of mathematification in machine learning – Amane in the Unknown">
-<meta name="twitter:description" content="What, separates physics, and reality? Or more so, what separate the perception of one’s particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?">
+<meta name="twitter:title" content="On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions – Amane in the Unknown">
+<meta name="twitter:description" content="The idea for a data-aware bound. Or at least the basis of such">
 <meta name="twitter:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -331,11 +395,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mathiness-and-consequence" id="toc-mathiness-and-consequence" class="nav-link active" data-scroll-target="#mathiness-and-consequence">Mathiness and, consequence (?)</a>
+  <li><a href="#the-might-possibly-be-data-measure" id="toc-the-might-possibly-be-data-measure" class="nav-link active" data-scroll-target="#the-might-possibly-be-data-measure">The might possibly be, data measure</a>
   <ul class="collapse">
-  <li><a href="#exemplary-on-economics" id="toc-exemplary-on-economics" class="nav-link" data-scroll-target="#exemplary-on-economics">Exemplary on economics</a></li>
+  <li><a href="#coverage-measure" id="toc-coverage-measure" class="nav-link" data-scroll-target="#coverage-measure">Coverage measure</a></li>
   </ul></li>
-  <li><a href="#in-the-end" id="toc-in-the-end" class="nav-link" data-scroll-target="#in-the-end">In the end</a></li>
   </ul>
 </nav>
 </nav>
@@ -349,7 +412,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The dilemma of mathematification in machine learning</h1>
+<h1 class="title">On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Blog</div>
     <div class="quarto-category">machine learning</div>
@@ -358,7 +421,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    What, separates physics, and reality? Or more so, what separate the perception of one’s particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?
+    The idea for a data-aware bound. Or at least the basis of such
   </div>
 </div>
 
@@ -368,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Fujimiya Amane </p>
+             <p>Fujimiya Amane (Bui Gia Khanh) </p>
           </div>
   </div>
     
@@ -387,34 +450,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The road to work on machine learning is long and tedious, and, of course, full of maths. Beginning by working on the preliminaries of which machine learning interpretations are often based on - the mathematics of probability, linear algebra for computation, calculus and convex optimization, topology for analysis, Hilbert space, halfspaces, convergence theories, analysis using concentration inequalities, and whatnot. Have you ever question why there is so <em>much maths</em>?</p>
-<p>That is the question that I have, not because I personally dislike mathematics in fields, but of the scepticism when someone try just justify something, or describe something in mathematical terms - how much of it is true, how much of it is superficial, and how much of it actually works?</p>
-<section id="mathiness-and-consequence" class="level1">
-<h1>Mathiness and, consequence (?)</h1>
-<p>Mathematics is famous of its nature of being rather ‘correct on basis of proofs’. It is hailed as concrete, as basically impervious once built, its theorem can be considered true and based of the mathematical language as fact, so on and so forth. Such is the nature of the field and its role, partake in companion of the subject description of itself as the language of quantified abstraction. Nevertheless, still, a lot of people still overestimate the power of mathematics, and sometime misleadingly use it under various means. What can this be? For pure mathematics, such can be said of the restricting cases that would be easy to spot; or rather, failed theorems that made use of false assumptions, false line of logic, or simply false in its analytical solution of the proof. However, for those fields that apply mathematics to conform the field onto a description, such effort can sometimes be overwhelmingly exhaustive and strenuous.</p>
-<p>It would be wise of us to state not our own thought, but rather start with an echo chamber first. Whether we can break it, depends on how the interpretation lies. As such, <a href="https://arxiv.org/abs/1807.03341">Zachary C. Lipton, Jacob Steinhardt (2018)</a> has our back.</p>
-<blockquote class="blockquote">
-<p>[…] Mathiness manifests in several ways: First, some papers abuse mathematics to convey technical depth—to bulldoze rather than to clarify. Spurious theorems are common culprits, inserted into papers to lend authoritativeness to empirical results, even when the theorem’s conclusions do not actually support the main claims of the paper. We (JS) are guilty of this in [70], where a discussion of “staged strong Doeblin chains” has limited relevance to the proposed learning algorithm, but might confer a sense of theoretical depth to readers.</p>
-</blockquote>
-<p>Have you ever thought of being overwhelmed of sometime, the insanity amount of cross-field mathematical formulation, and in some sense, a feeling of over-analysis? There exist such occurrence, and to say them being of rarity is doubtful the least. <a href="https://arxiv.org/abs/1412.6980">The Adam optimizer paper</a> is often cited under such regard - for it to state of a theorem on regret convergence guarantee of stochastic convex setting which later found to be false. Of course, there exists in no circumstances that mathematics is there to be ‘false’ in some sense. However, such is to say the need or feeling of researcher to deliberately want to reduce their solution, analysis, to formal proofs and of formalization that showcases theoretical depth, sometimes if not usually, backfires.</p>
-<blockquote class="blockquote">
-<p>A second issue is claims that are neither clearly formal nor clearly informal. For example, [18] argues that the difficulty in optimizing neural networks stems not from local minima but from saddle points. As one piece of evidence, the work cites a statistical physics paper [9] on Gaussian random fields and states that in high dimensions “all local minima [of Gaussian random fields] are likely to have an error very close to that of the global minimum” (a similar statement appears in the related work of [12]). This appears to be a formal claim, but absent a specific theorem it is difficult to verify the claimed result or to determine its precise content. Our understanding is that it is partially a numerical claim that the gap is small for typical settings of the problem parameters, as opposed to a claim that the gap vanishes in high dimensions. A formal statement would help clarify this. We note that the broader interesting point in [18] that minima tend to have lower loss than saddle points is more clearly stated and empirically tested.</p>
-</blockquote>
-<p><em>Theorems</em> are mainstay of a particular theory, treated either mathematically or copulatively of text description. Nevertheless, misuses or sometime the arrogance of researchers, on established knowledge or not, similar to how memory distortion, hindsight bias, or in the more social scale, the Mandela effect work against such reality. This costs dearly, often not so realized. But perhaps contributes to the number of Q4 papers.</p>
-<blockquote class="blockquote">
-<p>Finally, some papers invoke theory in overly broad ways, or make passing references to theorems with dubious pertinence. For instance, the no free lunch theorem is commonly invoked as a justification for using heuristic methods without guarantees, even though the theorem does not formally preclude guaranteed learning procedures.</p>
-</blockquote>
-<p><strong>No-free-lunch</strong> is famous - particularly because of its statement. As for all thing, as mathematics was struck down by Gödel of its own non-universality of its framework, machine learning, well, has its own version. Such is so unfortunate that no one has been able to ground physicist of the same ground. It is of no surprise that people will misunderstand such, or blinded of their own to justify on what matters of their view.</p>
-<section id="exemplary-on-economics" class="level2">
-<h2 class="anchored" data-anchor-id="exemplary-on-economics">Exemplary on economics</h2>
-<p>Without sufficient expertise, one can still look into that fact that it is not a <em>unique, wild, unknown</em> problem. Economics also has this problem too, and is far more vocal of such. Specifically, of the scope of my brain aneurysm, <a href="https://paulromer.net/mathiness/Mathiness.pdf">Paul Romer, 2015</a> and <a href="https://larspsyll.wordpress.com/2024/05/23/post-real-economics-a-severe-case-of-mathiness/">Lars P. Syll, 2024</a> indicated such problem in the field of economics. Well, suffice to say at least in economics, maths only observes and predict the after effect of reality; most often time, events is not mathematical. To a degree. Nevertheless, such problem is open to the eye, and yet none probed such question, for something that needs application and empirical to be useful, and not static objects on a mathematician’s paper sheet.</p>
-</section>
-</section>
-<section id="in-the-end" class="level1">
-<h1>In the end</h1>
-<p>Nothing can be changed, that much is to say. The traction is still there, and more and more will continue down the path. What I said upfront is not the upset of the mathematician. Nor it will be only for them, as physicists somehow also made way to treat machine learning system as a statistical physical system on its own, of which while effective, is often far-fetch - like someone comparing a dog and a cat - they look the same, act the same, same features, but you can still make it as dogs and cats. What I would say, though, is that we might, in hindsight, forgot something that we might as well suffice to remember. Physics is not mathematics because it is physics. Maybe machine learning is also not mathematics because it is, learning, too.</p>
+<p>Recently, as I rediscovered the section on statistical learning theory, I stumbled across the old notion of the PAC-bound and other concentrated modelling bound. Perhaps for completeness, let us recite such verse of which establishes the theorem and its according results.</p>
+<div id="def-definition_PAC" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (PAC-learning)</strong></span> A concept class <span class="math inline">\(C\)</span> is said to be PAC-learnable if there exists an algorithm <span class="math inline">\(\mathcal{A}\)</span> and a polynomial function <span class="math inline">\(poly(\cdot,\cdot,\cdot,\cdot)\)</span> such that for any <span class="math inline">\(\epsilon&gt;0\)</span> and <span class="math inline">\(1&gt;\delta&gt;0\)</span>, for all distribution <span class="math inline">\(D\)</span> on <span class="math inline">\(\mathcal{X}\)</span> and for any target concept <span class="math inline">\(c\in C\)</span>, the following holds for any sample size <span class="math inline">\(m\geq poly(  1/\epsilon , 1/\delta,n,size(c))\)</span>:</p>
+<p><span class="math display">\[
+\underset{S\sim D^{m}}{\operatorname{Pr}}[R(h_{S})\leq \epsilon]\geq 1-\delta
+\]</span></p>
+<p>If <span class="math inline">\(\mathcal{A}\)</span> further run in <span class="math inline">\(poly(  1/\epsilon , 1/\delta,n,size(c))\)</span>, then <span class="math inline">\(C\)</span> is said to be efficiently PAC-learnable. When such algorithm <span class="math inline">\(\mathcal{A}\)</span> exists, it is called a PAC-learning algorithm for <span class="math inline">\(C\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The arbitrary <span class="math inline">\(\mathcal{H}\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that the notion of <span class="math inline">\(\mathcal{H}\)</span> and <span class="math inline">\(\mathcal{C}\)</span> is deliberately arbitrary. Of such, would usually be defined explicitly and thus ground both the representation space, and the capacity in arbitrary proposition of <span class="math inline">\(h\in \mathcal{F}=\{\mathcal{H},\mathcal{C}\}\)</span>.</p>
+</div>
+</div>
+<p>Looking at it, I can’t help but wonder why it is so restricted. Granted, it has its own merit of the properties of interest, the <span class="math inline">\(size(c)\)</span> argument of the arbitrary representation, structural system, and so on, but on the same time. It is outdated and infeasible. Indeed, the bound generally looks as</p>
+<p><span class="math display">\[
+R(h_{S})\leq \frac{1}{m}\left( \log{\lvert \mathcal{H} \rvert }+\log{\frac{1}{\delta}} \right)
+\]</span></p>
+<p>For <span class="math inline">\(m\)</span> the naive sample complexity, and so on. It is rather difficult to think of such. What can such measure be, and would it create something out of it?</p>
+<section id="the-might-possibly-be-data-measure" class="level2">
+<h2 class="anchored" data-anchor-id="the-might-possibly-be-data-measure">The might possibly be, data measure</h2>
+<p>In a dataset, per usual, it would be interesting (for a later bound), to focus on certain properties of which we can clearly see the difference between the <em>dataset</em> and the <em>observable spaces</em>, plus the <em>actual concept</em> itself. In a controlled experiment, that is, it would be very helpful to figure this out.</p>
+<p>Let us assume the following as preliminary for the discussion. In our setting, we have two polars: the <em>white box</em> of which in its simplest form, we have the explicit functional model <span class="math inline">\(y=F(x;\theta)\)</span> for any kind of descriptions <span class="math inline">\(\theta\)</span>. The other polar is the <em>probabilistic domain</em>, i.e.&nbsp;<em>black-box</em>, of which <span class="math inline">\(y\sim P(Y\mid X)\)</span>. Notice the subtle change here, that now <span class="math inline">\(y\)</span> is supposed to be of a different abstraction. We say that the measure action in between <span class="math inline">\(y\)</span> and the system relationship is the <em>system action</em> <span class="math inline">\(A_{S}\)</span>. Hence, we have either, <span class="math display">\[
+yA_{S}x\to f(x;\theta), \quad \text{or} \quad yA_{S}x\to \mathcal{S}[\mathbb{P}(Y\mid X)]
+\]</span> for <span class="math inline">\(\mathcal{S}[\mathbb{P}(Y\mid X)]\)</span> the notion of <em>sampling</em> - observing randomly on the basis of said probability without any knowledge but the parameter. If such sampling process is with control parameter, then from the optimization perspective, we would have <span class="math inline">\(\mathcal{S}[\mathbb{P}(Y\mid X,\theta_{\mathcal{S}})]\)</span>, for <span class="math inline">\(\theta_{\mathcal{S}}\)</span> to be distinguished from <span class="math inline">\(\theta\)</span>. In the case <span class="math inline">\(\theta_{\mathcal{S}}\approx \theta\)</span>, we say that the system is indeed of a <em>white-transition</em>.</p>
+<p>What does the probability in the black-box case represents here? In essence, <span class="math inline">\(\mathbb{P}(Y,X)\)</span> comes in two forms: the probability that certain <span class="math inline">\(Y\)</span> appears with the setting <span class="math inline">\(X\)</span>, the probability that <span class="math inline">\(X\)</span> is the basis on the course of which the outcome is <span class="math inline">\(Y\)</span>. Per usual notion, this is interconnected. If, for a dynamical system in which the basis space <span class="math inline">\(X\)</span> is random, i.e.&nbsp;you know it behaves like this, but cannot start the starting point of examination point in-order or dense, then the probability <span class="math inline">\(\mathbb{P}(Y\mid X)\)</span> is in effect. On the mechanistic side, this means that there is the construct <span class="math inline">\(c(X)\)</span>, but the factor of which determines the dataset is <span class="math inline">\(X\)</span>. Additionally, in such process (of which we will have to have a look into the procedural interpretation of this entire chain of action), there exists <span class="math inline">\(Y\gets c(X)+\epsilon\)</span> intrinsic of certain measurements, hence, we have <span class="math inline">\(\mathbb{P}(Y\mid X)\)</span> to also approximate <span class="math inline">\(\mathbb{P}(Y,X,\epsilon)\)</span> as irreducible in some cases. If such knowledge is removed, then <span class="math inline">\(\mathbb{P}(Y,X)\)</span> is fully in effect. Such transition is there and will still be there.</p>
+<p>We would leave this here for justification as the state it is, since there exists this fact or rather observation, that is rather dubious of the system. You <strong>cannot</strong> move a deterministic system into probabilistic then back, given enough disturbance and thereof. Indeed, we can simply create a prototypical function <span class="math display">\[
+\mathcal{R}: F\to P,\quad \quad \mathcal{R}[F](A) = \int_{\Theta} \mathbf{1}\{F(x;\theta)\in A\}\mmu (d\theta)
+\]</span> for the pure probabilistic pure setting <span class="math inline">\((\Omega, \mathcal{F},\mathbb{P})\)</span> of the probability measure, where <span class="math inline">\(\mu\subset \mathcal{F}\)</span>, and <span class="math inline">\(A\in (\mathcal{Y}\mid \mathcal{X})\)</span>, of which the observation space is conditioned on <span class="math inline">\(\mathcal{Y}\)</span>. If not, i.e.&nbsp;the observation space possible is arbitrarily dense, then we would simply have unconditioned <span class="math inline">\(\mathcal{Y}\)</span>, thus the white-box case. However, even not under no information at all, every concept must meet certain limit on the basis and the resultant action itself. Now, you can do this. But there exists <strong>no sufficient way</strong> to return from <span class="math inline">\(P\)</span> back to <span class="math inline">\(F\)</span>, except the same operation in reversal, into an infinite-range space. However, this is not feasible if <span class="math inline">\(\epsilon\)</span> acts up, and in certain case, for any <span class="math inline">\(\epsilon&gt;0\)</span>, <span class="math inline">\(\mathcal{R}^{-1}\)</span> would simply be a mere approximation, and under such sense we would have to redefine what is meant by such inverse function. This corresponds to the limit <span class="math display">\[
+\lim_{\epsilon \to 0} \mathcal{R}_{\epsilon}^{-1}[\mathcal{R}[F]]=F, \quad || \mathcal{R}^{-1}_{\epsilon}[\mathcal{R}[F]] - F || \to \infty
+\]</span> One then, can be considered fairly nice to do the act of borrowing from the idea of quantum mechanics, the idea of backtracking error, i.e.&nbsp;the correlation operator <span class="math inline">\([\mathcal{R},\mathcal{R}^{-1}]\)</span>. This would be an interesting direction of research, but we have to define what the hell happens. ## The working around in merry go around</p>
+<p>Now, forget the above passage, if we assume the dataset is the basis, and with probabilistic information (i.e.&nbsp;the lowest state of information one can achieve, aside from being blind). What can we do to examine the system?</p>
+<section id="coverage-measure" class="level3">
+<h3 class="anchored" data-anchor-id="coverage-measure">Coverage measure</h3>
+<p>Suppose we have the same probability measure. Then, for <span class="math inline">\(\mathcal{S}\in \Sigma\)</span> is the support of the distribution. That is, the place in which the <span class="math inline">\(\sigma\)</span>-algebra is in effect. Then, <span class="math inline">\(\mathcal{S}_{n}=\mathrm{supp}(D_{n})\)</span> as the <span class="math inline">\(n\)</span>-finite region of <span class="math inline">\(\Sigma\)</span>. The natural definition then would be <span class="math display">\[
+C_{n}= \frac{P(\mathcal{S}_{n})}{P(\mathcal{S})}
+\]</span> or rather, the space in which the dataset touched upon of the probabilistic space. This definition can be fairly practical, so that we can actually use Monte-Carlo for this. More concretely, however, the coverage on <span class="math inline">\(\mathbb{R}^{m}\)</span> embedded space can be considered as <span class="math display">\[
+C_{n}=\frac{\mathbb{E}_{m}[ \mathsf{PDF}_{d}(\mathcal{S}_{n}) ]}{\mathbb{E}_{m}[ \mathsf{PDF}(\mathcal{S}) ]}, \quad \mathsf{PDF}_{d}(\mathcal{S}_{n}) = \{\mathcal{D}_{i}(\mu, \nu)\}
+\]</span> Where <span class="math inline">\(\mathcal{D}\)</span> is the point-density assignment for the probabilistic measure taken on by the dataset. Per usual, for the <em>least</em> amount of assumption possible, <span class="math inline">\(\mathbb{E}_{m}[ \mathsf{PDF}(\mathcal{S}) ]\approx \mathcal{U}(l,h)\)</span> of uniform distribution, or simply the p.d.f of the true distribution. Again this is fairly easy with normalization score. Then, <span class="math display">\[
+\lim_{n\to \infty} C_{n} = 1
+\]</span> as per our assumption of such coverage. This is based on the assumption that each <span class="math inline">\(n\)</span> is distinct, entirely. Such is to prevent discrete points overlap, and kind of solves the issue with density. If <span class="math inline">\(C_{n}&lt;1\)</span>, the dataset does not cover the entire conceptual space. ### Density measure <span class="math inline">\(\rho_{n}\)</span></p>
+<p>Now, we wrested with the density function above. Such can be resolved fairly nice if we have: <span class="math display">\[
+\rho_{n} = \int_{\Theta}\min{[|\mathcal{D}|,1]}p(x)dx
+\]</span> for <span class="math inline">\(p(x)\)</span> the true density, and the customized empirical density distribution basis - here <span class="math inline">\(|\mathcal{D}|\)</span> simply defines an operation for the absolute density value on such density probability mass function. This then measures how much of the true density is matched by empirical density, like a convolution. Kinda rough, but again, it is a patchwork. ### Stability measure The natural choice for a stability measure is as, for <span class="math inline">\(S_{n}\)</span> denoted of such, <span class="math display">\[
+S_{n} = 1- \mathbb{E}[d(\mathcal{D}_{i},\mathcal{D}_{j})], \quad i\ne j
+\]</span> then for <span class="math inline">\(S_{n}\to 1\)</span>, the dataset is indeed stable enough as it is. There can be many ways to define <span class="math inline">\(d(\cdot, \cdot)\)</span>, but generally, it is through the description. Another natural choice would be to just measure the dataset points itself, which is already the <em>variance</em>.</p>
+<hr>
+<p>There are more to be of, for example, measure consistency or probability correspondence, of which either defined anew, or use KB-divergence is okayish, and so on. But either way, this created a fairly succinct picture on what to take of the dataset, not as just mundane i.i.d. Alright, good luck, lads.</p>
+<p>For citation (<em>man</em> if there is any):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">khanhmane2025r</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>       = {Bui Gia Khanh (Fujimiya Amane)},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>        = {On the idea of the Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic--Probabilistic Transitions},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>         = {2025},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">howpublished</span> = {https://amane-fujimiya.github.io/blogs/},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span>         = {Blog post}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

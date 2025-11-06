@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Fujimiya Amane">
-<meta name="dcterms.date" content="2025-08-29">
-<meta name="description" content="What, separates physics, and reality? Or more so, what separate the perception of one’s particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?">
+<meta name="dcterms.date" content="2025-11-01">
+<meta name="description" content="To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?">
 
-<title>The dilemma of mathematification in machine learning – Amane in the Unknown</title>
+<title>The infrastructure of building contents – Amane in the Unknown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,19 +81,48 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="The dilemma of mathematification in machine learning – Amane in the Unknown">
-<meta property="og:description" content="What, separates physics, and reality? Or more so, what separate the perception of one’s particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?">
+<meta property="og:title" content="The infrastructure of building contents – Amane in the Unknown">
+<meta property="og:description" content="To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?">
 <meta property="og:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
 <meta property="og:site_name" content="Amane in the Unknown">
-<meta name="twitter:title" content="The dilemma of mathematification in machine learning – Amane in the Unknown">
-<meta name="twitter:description" content="What, separates physics, and reality? Or more so, what separate the perception of one’s particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?">
+<meta name="twitter:title" content="The infrastructure of building contents – Amane in the Unknown">
+<meta name="twitter:description" content="To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?">
 <meta name="twitter:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="floating nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -331,11 +360,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mathiness-and-consequence" id="toc-mathiness-and-consequence" class="nav-link active" data-scroll-target="#mathiness-and-consequence">Mathiness and, consequence (?)</a>
-  <ul class="collapse">
-  <li><a href="#exemplary-on-economics" id="toc-exemplary-on-economics" class="nav-link" data-scroll-target="#exemplary-on-economics">Exemplary on economics</a></li>
-  </ul></li>
-  <li><a href="#in-the-end" id="toc-in-the-end" class="nav-link" data-scroll-target="#in-the-end">In the end</a></li>
+  <li><a href="#the-editing-format" id="toc-the-editing-format" class="nav-link active" data-scroll-target="#the-editing-format">The editing format</a></li>
+  <li><a href="#the-web-hosting1" id="toc-the-web-hosting1" class="nav-link" data-scroll-target="#the-web-hosting1">The web-hosting</a></li>
   </ul>
 </nav>
 </nav>
@@ -344,21 +370,22 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The dilemma of mathematification in machine learning</h1>
+<h1 class="title">The infrastructure of building contents</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Blog</div>
-    <div class="quarto-category">machine learning</div>
+    <div class="quarto-category">Blogs</div>
+    <div class="quarto-category">website</div>
+    <div class="quarto-category">trivia</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    What, separates physics, and reality? Or more so, what separate the perception of one’s particular problem, from chaging the landscape to fit the map, or changing the map to fit the land?
+    To host websites, to build public repository, wikis, and so on, we need the logistical side of it. Of such, what the hell can be do, and what is available?
   </div>
 </div>
 
@@ -375,7 +402,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 29, 2025</p>
+      <p class="date">November 1, 2025</p>
     </div>
   </div>
   
@@ -387,35 +414,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The road to work on machine learning is long and tedious, and, of course, full of maths. Beginning by working on the preliminaries of which machine learning interpretations are often based on - the mathematics of probability, linear algebra for computation, calculus and convex optimization, topology for analysis, Hilbert space, halfspaces, convergence theories, analysis using concentration inequalities, and whatnot. Have you ever question why there is so <em>much maths</em>?</p>
-<p>That is the question that I have, not because I personally dislike mathematics in fields, but of the scepticism when someone try just justify something, or describe something in mathematical terms - how much of it is true, how much of it is superficial, and how much of it actually works?</p>
-<section id="mathiness-and-consequence" class="level1">
-<h1>Mathiness and, consequence (?)</h1>
-<p>Mathematics is famous of its nature of being rather ‘correct on basis of proofs’. It is hailed as concrete, as basically impervious once built, its theorem can be considered true and based of the mathematical language as fact, so on and so forth. Such is the nature of the field and its role, partake in companion of the subject description of itself as the language of quantified abstraction. Nevertheless, still, a lot of people still overestimate the power of mathematics, and sometime misleadingly use it under various means. What can this be? For pure mathematics, such can be said of the restricting cases that would be easy to spot; or rather, failed theorems that made use of false assumptions, false line of logic, or simply false in its analytical solution of the proof. However, for those fields that apply mathematics to conform the field onto a description, such effort can sometimes be overwhelmingly exhaustive and strenuous.</p>
-<p>It would be wise of us to state not our own thought, but rather start with an echo chamber first. Whether we can break it, depends on how the interpretation lies. As such, <a href="https://arxiv.org/abs/1807.03341">Zachary C. Lipton, Jacob Steinhardt (2018)</a> has our back.</p>
-<blockquote class="blockquote">
-<p>[…] Mathiness manifests in several ways: First, some papers abuse mathematics to convey technical depth—to bulldoze rather than to clarify. Spurious theorems are common culprits, inserted into papers to lend authoritativeness to empirical results, even when the theorem’s conclusions do not actually support the main claims of the paper. We (JS) are guilty of this in [70], where a discussion of “staged strong Doeblin chains” has limited relevance to the proposed learning algorithm, but might confer a sense of theoretical depth to readers.</p>
-</blockquote>
-<p>Have you ever thought of being overwhelmed of sometime, the insanity amount of cross-field mathematical formulation, and in some sense, a feeling of over-analysis? There exist such occurrence, and to say them being of rarity is doubtful the least. <a href="https://arxiv.org/abs/1412.6980">The Adam optimizer paper</a> is often cited under such regard - for it to state of a theorem on regret convergence guarantee of stochastic convex setting which later found to be false. Of course, there exists in no circumstances that mathematics is there to be ‘false’ in some sense. However, such is to say the need or feeling of researcher to deliberately want to reduce their solution, analysis, to formal proofs and of formalization that showcases theoretical depth, sometimes if not usually, backfires.</p>
-<blockquote class="blockquote">
-<p>A second issue is claims that are neither clearly formal nor clearly informal. For example, [18] argues that the difficulty in optimizing neural networks stems not from local minima but from saddle points. As one piece of evidence, the work cites a statistical physics paper [9] on Gaussian random fields and states that in high dimensions “all local minima [of Gaussian random fields] are likely to have an error very close to that of the global minimum” (a similar statement appears in the related work of [12]). This appears to be a formal claim, but absent a specific theorem it is difficult to verify the claimed result or to determine its precise content. Our understanding is that it is partially a numerical claim that the gap is small for typical settings of the problem parameters, as opposed to a claim that the gap vanishes in high dimensions. A formal statement would help clarify this. We note that the broader interesting point in [18] that minima tend to have lower loss than saddle points is more clearly stated and empirically tested.</p>
-</blockquote>
-<p><em>Theorems</em> are mainstay of a particular theory, treated either mathematically or copulatively of text description. Nevertheless, misuses or sometime the arrogance of researchers, on established knowledge or not, similar to how memory distortion, hindsight bias, or in the more social scale, the Mandela effect work against such reality. This costs dearly, often not so realized. But perhaps contributes to the number of Q4 papers.</p>
-<blockquote class="blockquote">
-<p>Finally, some papers invoke theory in overly broad ways, or make passing references to theorems with dubious pertinence. For instance, the no free lunch theorem is commonly invoked as a justification for using heuristic methods without guarantees, even though the theorem does not formally preclude guaranteed learning procedures.</p>
-</blockquote>
-<p><strong>No-free-lunch</strong> is famous - particularly because of its statement. As for all thing, as mathematics was struck down by Gödel of its own non-universality of its framework, machine learning, well, has its own version. Such is so unfortunate that no one has been able to ground physicist of the same ground. It is of no surprise that people will misunderstand such, or blinded of their own to justify on what matters of their view.</p>
-<section id="exemplary-on-economics" class="level2">
-<h2 class="anchored" data-anchor-id="exemplary-on-economics">Exemplary on economics</h2>
-<p>Without sufficient expertise, one can still look into that fact that it is not a <em>unique, wild, unknown</em> problem. Economics also has this problem too, and is far more vocal of such. Specifically, of the scope of my brain aneurysm, <a href="https://paulromer.net/mathiness/Mathiness.pdf">Paul Romer, 2015</a> and <a href="https://larspsyll.wordpress.com/2024/05/23/post-real-economics-a-severe-case-of-mathiness/">Lars P. Syll, 2024</a> indicated such problem in the field of economics. Well, suffice to say at least in economics, maths only observes and predict the after effect of reality; most often time, events is not mathematical. To a degree. Nevertheless, such problem is open to the eye, and yet none probed such question, for something that needs application and empirical to be useful, and not static objects on a mathematician’s paper sheet.</p>
+<p>So, I am in the stage of having the need to figure out what is there of the logistic to support for the growing cluster of works. Like, really a whole lot and also because of the paranoia of running out of space. Yes, it is indeed the case here, because I am operating on the free-range, which, arguably, is not so great, but there is nothing I can do because my wallet is inhabited not by money but flies. So, per usual, it is a problem worth considering alternatives or migration choices and thereof which contended me to write this article. Furthermore, is the choice of building the website, collaboration frameworks, different online systems with good exposure and stable systems, and so on. All of which ultimately helps in configuring those that we desire to work on. Then that is what we are going to do.</p>
+<section id="the-editing-format" class="level2">
+<h2 class="anchored" data-anchor-id="the-editing-format">The editing format</h2>
+<p>In general, we do not use <code>HTML</code> in writing plain online content any more. Of course, many faculties still use plain edited and UNIX-based bare-bones website template, of which is still applicable and acceptable by all means, but is not so much of an offering of convenience and logistical ease for people whose writing in question is hosted on such. Thereby, the majority of website, both modern style text and academic mathematical writing, are written in a much more comfortable, sometimes complex or simple but with more functions of which can be used extensively. Such is to say <code>markdown</code> syntax format, <code>php</code> custom-design format, or <code>wikitext</code>, the markup language that empowers MediaWiki and subsequently, Wikipedia. Those are the modern file formats that are usually done within which contents are written in, often with fairly intuitive way of formatting on its own, and is indeed, fairly convenient to write.</p>
+<p>Such is also the same even if you want to host website content, but in text-formatted complete file instead. This comes as a tradeoff - between dynamic system and rendering like website, web-based browser’s renderers, and so on; versus the concrete, independent and often static visual sketch of static files. The latter is often in the form of, previously, <code>.doc</code> files for Microsoft document files, or <code>PDF</code>, if you want pre-rendered, <code>SVG</code> vector format. Tough, at of now, MS Word kind of sucks, especially when it comes to mathematics (I hate writing maths on it), so usually, we use <span class="math inline">\(\LaTeX\)</span> instead. Which is fairly convenient.</p>
+<p>Will there be new format? I am not so sure. There exists a camp of which grew distaste of <span class="math inline">\(\LaTeX\)</span>, but hate MS Word, and they created prototypes, of which for example, <a href="https://typst.app/universe">Typst</a>. Other than such, many exists, but they are simply not within my knowledge. So, maybe I would have to look further outward it seems. To add in there, I also recently discovered <code>mdbook</code>, <code>d2lbook</code> which is <a href="https://book.d2l.ai/install.html">kinda nice</a>, though unfortunately lads whose use Windows would be crying (or use WSL lad), and <code>Franklin.jl</code>. Go check that out.</p>
 </section>
-</section>
-<section id="in-the-end" class="level1">
-<h1>In the end</h1>
-<p>Nothing can be changed, that much is to say. The traction is still there, and more and more will continue down the path. What I said upfront is not the upset of the mathematician. Nor it will be only for them, as physicists somehow also made way to treat machine learning system as a statistical physical system on its own, of which while effective, is often far-fetch - like someone comparing a dog and a cat - they look the same, act the same, same features, but you can still make it as dogs and cats. What I would say, though, is that we might, in hindsight, forgot something that we might as well suffice to remember. Physics is not mathematics because it is physics. Maybe machine learning is also not mathematics because it is, learning, too.</p>
+<section id="the-web-hosting1" class="level2">
+<h2 class="anchored" data-anchor-id="the-web-hosting1">The web-hosting<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<p>Web hosting is another problem, of which, taken of such inquiry, is fairly interesting. There are services for that, and there are frameworks of which deliberately would help you to transition from being a blockhead into a full working system. Such is true for system like Jupyter Notebooks and its different support, for example, on <em>GitHub Action</em> procedure and hosting. Similarly, is Quarto, with <code>.qmd</code> being another flavour of Markdown, which offers an entire pipeline in one go. Then there is <code>Hugo</code>, and so on, of which offers you exotic features or templates, though it does not have prescribed pipeline like Quarto. And, yes, of all static website system, there is Jekyll, the original (perhaps), written in Ruby, system for creating static website. Which is good, I suppose.</p>
+<p>You can also go the fundamental way, for example, Pandoc for conversion of contents to HTML format, but other than that, we jump onto the bandwagon of established dynamic system. For my purpose, that is often <code>Mediawiki</code>, with their system of which fuelled, as said, Wikipedia, and also a lot of good templates like <a href="https://scioly.org/">this one</a>. The advantage ranges, but they are superb for creating a wiki system of which is both simple and kind of powerful, with matured system and support, templates and extensions, and so on. Oh, and also theme too, even though I would like the <a href="https://www.modernwiki.app/">Modern theme</a> in Chrome extension more than that. The other side of such argument is then <code>XWiki</code>, of which is <a href="https://www.xwiki.org/xwiki/bin/view/Main/WebHome">good enough, so much so that Lenovo used them</a>, which is quite a stretch.</p>
+<p>For the web hosting, right now my only solution aside from <code>Hostinger</code> or any kind of web hosting service is either GitLab Pages, GitHub Pages, or, Netlify. Kinda bad to have them all there to be honest, but no idea what to do then.</p>
+<hr>
+<p>Alright, that is all for now. Get lost, everyone. Me, too, included.</p>
 
 
 </section>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;It would just be static, really.</p></div></div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
