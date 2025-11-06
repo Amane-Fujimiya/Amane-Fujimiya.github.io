@@ -2,9 +2,9 @@
   {
     "listing": "/blogs/index.html",
     "items": [
+      "/blogs/posts/data_and_like.html",
       "/blogs/posts/infrastructure.html",
       "/blogs/posts/no_free_lunch.html",
-      "/blogs/posts/data_and_like.html",
       "/blogs/posts/mathematification.html",
       "/blogs/posts/Leibniz_Optimism.html",
       "/blogs/posts/questioning_AI.html",
