@@ -395,9 +395,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-might-possibly-be-data-measure" id="toc-the-might-possibly-be-data-measure" class="nav-link active" data-scroll-target="#the-might-possibly-be-data-measure">The might possibly be, data measure</a>
+  <li><a href="#the-might-possibly-be-data-measure" id="toc-the-might-possibly-be-data-measure" class="nav-link active" data-scroll-target="#the-might-possibly-be-data-measure">The might possibly be, data measure</a></li>
+  <li><a href="#the-working-around-in-merry-go-around" id="toc-the-working-around-in-merry-go-around" class="nav-link" data-scroll-target="#the-working-around-in-merry-go-around">The working around in merry go around</a>
   <ul class="collapse">
   <li><a href="#coverage-measure" id="toc-coverage-measure" class="nav-link" data-scroll-target="#coverage-measure">Coverage measure</a></li>
+  <li><a href="#density-measure-rho_n" id="toc-density-measure-rho_n" class="nav-link" data-scroll-target="#density-measure-rho_n">Density measure <span class="math inline">\(\rho_{n}\)</span></a></li>
+  <li><a href="#stability-measure" id="toc-stability-measure" class="nav-link" data-scroll-target="#stability-measure">Stability measure</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -487,7 +490,10 @@ yA_{S}x\to f(x;\theta), \quad \text{or} \quad yA_{S}x\to \mathcal{S}[\mathbb{P}(
 \mathcal{R}: F\to P,\quad \quad \mathcal{R}[F](A) = \int_{\Theta} \mathbf{1}\{F(x;\theta)\in A\}\mmu (d\theta)
 \]</span> for the pure probabilistic pure setting <span class="math inline">\((\Omega, \mathcal{F},\mathbb{P})\)</span> of the probability measure, where <span class="math inline">\(\mu\subset \mathcal{F}\)</span>, and <span class="math inline">\(A\in (\mathcal{Y}\mid \mathcal{X})\)</span>, of which the observation space is conditioned on <span class="math inline">\(\mathcal{Y}\)</span>. If not, i.e.&nbsp;the observation space possible is arbitrarily dense, then we would simply have unconditioned <span class="math inline">\(\mathcal{Y}\)</span>, thus the white-box case. However, even not under no information at all, every concept must meet certain limit on the basis and the resultant action itself. Now, you can do this. But there exists <strong>no sufficient way</strong> to return from <span class="math inline">\(P\)</span> back to <span class="math inline">\(F\)</span>, except the same operation in reversal, into an infinite-range space. However, this is not feasible if <span class="math inline">\(\epsilon\)</span> acts up, and in certain case, for any <span class="math inline">\(\epsilon&gt;0\)</span>, <span class="math inline">\(\mathcal{R}^{-1}\)</span> would simply be a mere approximation, and under such sense we would have to redefine what is meant by such inverse function. This corresponds to the limit <span class="math display">\[
 \lim_{\epsilon \to 0} \mathcal{R}_{\epsilon}^{-1}[\mathcal{R}[F]]=F, \quad || \mathcal{R}^{-1}_{\epsilon}[\mathcal{R}[F]] - F || \to \infty
-\]</span> One then, can be considered fairly nice to do the act of borrowing from the idea of quantum mechanics, the idea of backtracking error, i.e.&nbsp;the correlation operator <span class="math inline">\([\mathcal{R},\mathcal{R}^{-1}]\)</span>. This would be an interesting direction of research, but we have to define what the hell happens. ## The working around in merry go around</p>
+\]</span> One then, can be considered fairly nice to do the act of borrowing from the idea of quantum mechanics, the idea of backtracking error, i.e.&nbsp;the correlation operator <span class="math inline">\([\mathcal{R},\mathcal{R}^{-1}]\)</span>. This would be an interesting direction of research, but we have to define what the hell happens.</p>
+</section>
+<section id="the-working-around-in-merry-go-around" class="level2">
+<h2 class="anchored" data-anchor-id="the-working-around-in-merry-go-around">The working around in merry go around</h2>
 <p>Now, forget the above passage, if we assume the dataset is the basis, and with probabilistic information (i.e.&nbsp;the lowest state of information one can achieve, aside from being blind). What can we do to examine the system?</p>
 <section id="coverage-measure" class="level3">
 <h3 class="anchored" data-anchor-id="coverage-measure">Coverage measure</h3>
@@ -497,10 +503,17 @@ C_{n}= \frac{P(\mathcal{S}_{n})}{P(\mathcal{S})}
 C_{n}=\frac{\mathbb{E}_{m}[ \mathsf{PDF}_{d}(\mathcal{S}_{n}) ]}{\mathbb{E}_{m}[ \mathsf{PDF}(\mathcal{S}) ]}, \quad \mathsf{PDF}_{d}(\mathcal{S}_{n}) = \{\mathcal{D}_{i}(\mu, \nu)\}
 \]</span> Where <span class="math inline">\(\mathcal{D}\)</span> is the point-density assignment for the probabilistic measure taken on by the dataset. Per usual, for the <em>least</em> amount of assumption possible, <span class="math inline">\(\mathbb{E}_{m}[ \mathsf{PDF}(\mathcal{S}) ]\approx \mathcal{U}(l,h)\)</span> of uniform distribution, or simply the p.d.f of the true distribution. Again this is fairly easy with normalization score. Then, <span class="math display">\[
 \lim_{n\to \infty} C_{n} = 1
-\]</span> as per our assumption of such coverage. This is based on the assumption that each <span class="math inline">\(n\)</span> is distinct, entirely. Such is to prevent discrete points overlap, and kind of solves the issue with density. If <span class="math inline">\(C_{n}&lt;1\)</span>, the dataset does not cover the entire conceptual space. ### Density measure <span class="math inline">\(\rho_{n}\)</span></p>
+\]</span> as per our assumption of such coverage. This is based on the assumption that each <span class="math inline">\(n\)</span> is distinct, entirely. Such is to prevent discrete points overlap, and kind of solves the issue with density. If <span class="math inline">\(C_{n}&lt;1\)</span>, the dataset does not cover the entire conceptual space.</p>
+</section>
+<section id="density-measure-rho_n" class="level3">
+<h3 class="anchored" data-anchor-id="density-measure-rho_n">Density measure <span class="math inline">\(\rho_{n}\)</span></h3>
 <p>Now, we wrested with the density function above. Such can be resolved fairly nice if we have: <span class="math display">\[
 \rho_{n} = \int_{\Theta}\min{[|\mathcal{D}|,1]}p(x)dx
-\]</span> for <span class="math inline">\(p(x)\)</span> the true density, and the customized empirical density distribution basis - here <span class="math inline">\(|\mathcal{D}|\)</span> simply defines an operation for the absolute density value on such density probability mass function. This then measures how much of the true density is matched by empirical density, like a convolution. Kinda rough, but again, it is a patchwork. ### Stability measure The natural choice for a stability measure is as, for <span class="math inline">\(S_{n}\)</span> denoted of such, <span class="math display">\[
+\]</span> for <span class="math inline">\(p(x)\)</span> the true density, and the customized empirical density distribution basis - here <span class="math inline">\(|\mathcal{D}|\)</span> simply defines an operation for the absolute density value on such density probability mass function. This then measures how much of the true density is matched by empirical density, like a convolution. Kinda rough, but again, it is a patchwork.</p>
+</section>
+<section id="stability-measure" class="level3">
+<h3 class="anchored" data-anchor-id="stability-measure">Stability measure</h3>
+<p>The natural choice for a stability measure is as, for <span class="math inline">\(S_{n}\)</span> denoted of such, <span class="math display">\[
 S_{n} = 1- \mathbb{E}[d(\mathcal{D}_{i},\mathcal{D}_{j})], \quad i\ne j
 \]</span> then for <span class="math inline">\(S_{n}\to 1\)</span>, the dataset is indeed stable enough as it is. There can be many ways to define <span class="math inline">\(d(\cdot, \cdot)\)</span>, but generally, it is through the description. Another natural choice would be to just measure the dataset points itself, which is already the <em>variance</em>.</p>
 <hr>
