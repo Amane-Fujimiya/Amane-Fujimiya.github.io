@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Fujimiya Amane (Bui Gia Khanh)">
-<meta name="dcterms.date" content="2025-11-07">
-<meta name="description" content="The idea for a data-aware bound. Or at least the basis of such">
+<meta name="author" content="Fujimiya Amane">
+<meta name="dcterms.date" content="2025-12-11">
+<meta name="description" content="Just a thought">
 
-<title>On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions – Amane in the Unknown</title>
+<title>The map and the math – Amane in the Unknown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -116,43 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions – Amane in the Unknown">
-<meta property="og:description" content="The idea for a data-aware bound. Or at least the basis of such">
+<meta property="og:title" content="The map and the math – Amane in the Unknown">
+<meta property="og:description" content="Just a thought">
 <meta property="og:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
 <meta property="og:site_name" content="Amane in the Unknown">
-<meta name="twitter:title" content="On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions – Amane in the Unknown">
-<meta name="twitter:description" content="The idea for a data-aware bound. Or at least the basis of such">
+<meta name="twitter:title" content="The map and the math – Amane in the Unknown">
+<meta name="twitter:description" content="Just a thought">
 <meta name="twitter:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -391,19 +327,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#the-might-possibly-be-data-measure" id="toc-the-might-possibly-be-data-measure" class="nav-link active" data-scroll-target="#the-might-possibly-be-data-measure">The might possibly be, data measure</a></li>
-  <li><a href="#the-working-around-in-merry-go-around" id="toc-the-working-around-in-merry-go-around" class="nav-link" data-scroll-target="#the-working-around-in-merry-go-around">The working around in merry go around</a>
-  <ul class="collapse">
-  <li><a href="#coverage-measure" id="toc-coverage-measure" class="nav-link" data-scroll-target="#coverage-measure">Coverage measure</a></li>
-  <li><a href="#density-measure-rho_n" id="toc-density-measure-rho_n" class="nav-link" data-scroll-target="#density-measure-rho_n">Density measure <span class="math inline">\(\rho_{n}\)</span></a></li>
-  <li><a href="#stability-measure" id="toc-stability-measure" class="nav-link" data-scroll-target="#stability-measure">Stability measure</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -415,16 +339,17 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions</h1>
+<h1 class="title">The map and the math</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Blog</div>
-    <div class="quarto-category">machine learning</div>
+    <div class="quarto-category">philosophy</div>
+    <div class="quarto-category">math</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    The idea for a data-aware bound. Or at least the basis of such
+    Just a thought
   </div>
 </div>
 
@@ -434,14 +359,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Fujimiya Amane (Bui Gia Khanh) </p>
+             <p>Fujimiya Amane </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 7, 2025</p>
+      <p class="date">December 11, 2025</p>
     </div>
   </div>
   
@@ -453,83 +378,13 @@ window.Quarto = {
 </header>
 
 
-<p>Recently, as I rediscovered the section on statistical learning theory, I stumbled across the old notion of the PAC-bound and other concentrated modelling bound. Perhaps for completeness, let us recite such verse of which establishes the theorem and its according results.</p>
-<div id="def-definition_PAC" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (PAC-learning)</strong></span> A concept class <span class="math inline">\(C\)</span> is said to be PAC-learnable if there exists an algorithm <span class="math inline">\(\mathcal{A}\)</span> and a polynomial function <span class="math inline">\(poly(\cdot,\cdot,\cdot,\cdot)\)</span> such that for any <span class="math inline">\(\epsilon&gt;0\)</span> and <span class="math inline">\(1&gt;\delta&gt;0\)</span>, for all distribution <span class="math inline">\(D\)</span> on <span class="math inline">\(\mathcal{X}\)</span> and for any target concept <span class="math inline">\(c\in C\)</span>, the following holds for any sample size <span class="math inline">\(m\geq poly(  1/\epsilon , 1/\delta,n,size(c))\)</span>:</p>
-<p><span class="math display">\[
-\underset{S\sim D^{m}}{\operatorname{Pr}}[R(h_{S})\leq \epsilon]\geq 1-\delta
-\]</span></p>
-<p>If <span class="math inline">\(\mathcal{A}\)</span> further run in <span class="math inline">\(poly(  1/\epsilon , 1/\delta,n,size(c))\)</span>, then <span class="math inline">\(C\)</span> is said to be efficiently PAC-learnable. When such algorithm <span class="math inline">\(\mathcal{A}\)</span> exists, it is called a PAC-learning algorithm for <span class="math inline">\(C\)</span>.</p>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>The arbitrary <span class="math inline">\(\mathcal{H}\)</span>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Note that the notion of <span class="math inline">\(\mathcal{H}\)</span> and <span class="math inline">\(\mathcal{C}\)</span> is deliberately arbitrary. Of such, would usually be defined explicitly and thus ground both the representation space, and the capacity in arbitrary proposition of <span class="math inline">\(h\in \mathcal{F}=\{\mathcal{H},\mathcal{C}\}\)</span>.</p>
-</div>
-</div>
-<p>Looking at it, I can’t help but wonder why it is so restricted. Granted, it has its own merit of the properties of interest, the <span class="math inline">\(size(c)\)</span> argument of the arbitrary representation, structural system, and so on, but on the same time. It is outdated and infeasible. Indeed, the bound generally looks as</p>
-<p><span class="math display">\[
-R(h_{S})\leq \frac{1}{m}\left( \log{\lvert \mathcal{H} \rvert }+\log{\frac{1}{\delta}} \right)
-\]</span></p>
-<p>For <span class="math inline">\(m\)</span> the naive sample complexity, and so on. It is rather difficult to think of such. What can such measure be, and would it create something out of it?</p>
-<section id="the-might-possibly-be-data-measure" class="level2">
-<h2 class="anchored" data-anchor-id="the-might-possibly-be-data-measure">The might possibly be, data measure</h2>
-<p>In a dataset, per usual, it would be interesting (for a later bound), to focus on certain properties of which we can clearly see the difference between the <em>dataset</em> and the <em>observable spaces</em>, plus the <em>actual concept</em> itself. In a controlled experiment, that is, it would be very helpful to figure this out.</p>
-<p>Let us assume the following as preliminary for the discussion. In our setting, we have two polars: the <em>white box</em> of which in its simplest form, we have the explicit functional model <span class="math inline">\(y=F(x;\theta)\)</span> for any kind of descriptions <span class="math inline">\(\theta\)</span>. The other polar is the <em>probabilistic domain</em>, i.e.&nbsp;<em>black-box</em>, of which <span class="math inline">\(y\sim P(Y\mid X)\)</span>. Notice the subtle change here, that now <span class="math inline">\(y\)</span> is supposed to be of a different abstraction. We say that the measure action in between <span class="math inline">\(y\)</span> and the system relationship is the <em>system action</em> <span class="math inline">\(A_{S}\)</span>. Hence, we have either, <span class="math display">\[
-yA_{S}x\to f(x;\theta), \quad \text{or} \quad yA_{S}x\to \mathcal{S}[\mathbb{P}(Y\mid X)]
-\]</span> for <span class="math inline">\(\mathcal{S}[\mathbb{P}(Y\mid X)]\)</span> the notion of <em>sampling</em> - observing randomly on the basis of said probability without any knowledge but the parameter. If such sampling process is with control parameter, then from the optimization perspective, we would have <span class="math inline">\(\mathcal{S}[\mathbb{P}(Y\mid X,\theta_{\mathcal{S}})]\)</span>, for <span class="math inline">\(\theta_{\mathcal{S}}\)</span> to be distinguished from <span class="math inline">\(\theta\)</span>. In the case <span class="math inline">\(\theta_{\mathcal{S}}\approx \theta\)</span>, we say that the system is indeed of a <em>white-transition</em>.</p>
-<p>What does the probability in the black-box case represents here? In essence, <span class="math inline">\(\mathbb{P}(Y,X)\)</span> comes in two forms: the probability that certain <span class="math inline">\(Y\)</span> appears with the setting <span class="math inline">\(X\)</span>, the probability that <span class="math inline">\(X\)</span> is the basis on the course of which the outcome is <span class="math inline">\(Y\)</span>. Per usual notion, this is interconnected. If, for a dynamical system in which the basis space <span class="math inline">\(X\)</span> is random, i.e.&nbsp;you know it behaves like this, but cannot start the starting point of examination point in-order or dense, then the probability <span class="math inline">\(\mathbb{P}(Y\mid X)\)</span> is in effect. On the mechanistic side, this means that there is the construct <span class="math inline">\(c(X)\)</span>, but the factor of which determines the dataset is <span class="math inline">\(X\)</span>. Additionally, in such process (of which we will have to have a look into the procedural interpretation of this entire chain of action), there exists <span class="math inline">\(Y\gets c(X)+\epsilon\)</span> intrinsic of certain measurements, hence, we have <span class="math inline">\(\mathbb{P}(Y\mid X)\)</span> to also approximate <span class="math inline">\(\mathbb{P}(Y,X,\epsilon)\)</span> as irreducible in some cases. If such knowledge is removed, then <span class="math inline">\(\mathbb{P}(Y,X)\)</span> is fully in effect. Such transition is there and will still be there.</p>
-<p>We would leave this here for justification as the state it is, since there exists this fact or rather observation, that is rather dubious of the system. You <strong>cannot</strong> move a deterministic system into probabilistic then back, given enough disturbance and thereof. Indeed, we can simply create a prototypical function <span class="math display">\[
-\mathcal{R}: F\to P,\quad \quad \mathcal{R}[F](A) = \int_{\Theta} \mathbf{1}\{F(x;\theta)\in A\}\mu (d\theta)
-\]</span> for the pure probabilistic pure setting <span class="math inline">\((\Omega, \mathcal{F},\mathbb{P})\)</span> of the probability measure, where <span class="math inline">\(\mu\subset \mathcal{F}\)</span>, and <span class="math inline">\(A\in (\mathcal{Y}\mid \mathcal{X})\)</span>, of which the observation space is conditioned on <span class="math inline">\(\mathcal{Y}\)</span>. If not, i.e.&nbsp;the observation space possible is arbitrarily dense, then we would simply have unconditioned <span class="math inline">\(\mathcal{Y}\)</span>, thus the white-box case. However, even not under no information at all, every concept must meet certain limit on the basis and the resultant action itself. Now, you can do this. But there exists <strong>no sufficient way</strong> to return from <span class="math inline">\(P\)</span> back to <span class="math inline">\(F\)</span>, except the same operation in reversal, into an infinite-range space. However, this is not feasible if <span class="math inline">\(\epsilon\)</span> acts up, and in certain case, for any <span class="math inline">\(\epsilon&gt;0\)</span>, <span class="math inline">\(\mathcal{R}^{-1}\)</span> would simply be a mere approximation, and under such sense we would have to redefine what is meant by such inverse function. This corresponds to the limit <span class="math display">\[
-\lim_{\epsilon \to 0} \mathcal{R}_{\epsilon}^{-1}[\mathcal{R}[F]]=F, \quad || \mathcal{R}^{-1}_{\epsilon}[\mathcal{R}[F]] - F || \to \infty
-\]</span> One then, can be considered fairly nice to do the act of borrowing from the idea of quantum mechanics, the idea of backtracking error, i.e.&nbsp;the correlation operator <span class="math inline">\([\mathcal{R},\mathcal{R}^{-1}]\)</span>. This would be an interesting direction of research, but we have to define what the hell happens.</p>
-</section>
-<section id="the-working-around-in-merry-go-around" class="level2">
-<h2 class="anchored" data-anchor-id="the-working-around-in-merry-go-around">The working around in merry go around</h2>
-<p>Now, forget the above passage, if we assume the dataset is the basis, and with probabilistic information (i.e.&nbsp;the lowest state of information one can achieve, aside from being blind). What can we do to examine the system?</p>
-<section id="coverage-measure" class="level3">
-<h3 class="anchored" data-anchor-id="coverage-measure">Coverage measure</h3>
-<p>Suppose we have the same probability measure. Then, for <span class="math inline">\(\mathcal{S}\in \Sigma\)</span> is the support of the distribution. That is, the place in which the <span class="math inline">\(\sigma\)</span>-algebra is in effect. Then, <span class="math inline">\(\mathcal{S}_{n}=\mathrm{supp}(D_{n})\)</span> as the <span class="math inline">\(n\)</span>-finite region of <span class="math inline">\(\Sigma\)</span>. The natural definition then would be <span class="math display">\[
-C_{n}= \frac{P(\mathcal{S}_{n})}{P(\mathcal{S})}
-\]</span> or rather, the space in which the dataset touched upon of the probabilistic space. This definition can be fairly practical, so that we can actually use Monte-Carlo for this. More concretely, however, the coverage on <span class="math inline">\(\mathbb{R}^{m}\)</span> embedded space can be considered as <span class="math display">\[
-C_{n}=\frac{\mathbb{E}_{m}[ \mathsf{PDF}_{d}(\mathcal{S}_{n}) ]}{\mathbb{E}_{m}[ \mathsf{PDF}(\mathcal{S}) ]}, \quad \mathsf{PDF}_{d}(\mathcal{S}_{n}) = \{\mathcal{D}_{i}(\mu, \nu)\}
-\]</span> Where <span class="math inline">\(\mathcal{D}\)</span> is the point-density assignment for the probabilistic measure taken on by the dataset. Per usual, for the <em>least</em> amount of assumption possible, <span class="math inline">\(\mathbb{E}_{m}[ \mathsf{PDF}(\mathcal{S}) ]\approx \mathcal{U}(l,h)\)</span> of uniform distribution, or simply the p.d.f of the true distribution. Again this is fairly easy with normalization score. Then, <span class="math display">\[
-\lim_{n\to \infty} C_{n} = 1
-\]</span> as per our assumption of such coverage. This is based on the assumption that each <span class="math inline">\(n\)</span> is distinct, entirely. Such is to prevent discrete points overlap, and kind of solves the issue with density. If <span class="math inline">\(C_{n}&lt;1\)</span>, the dataset does not cover the entire conceptual space.</p>
-</section>
-<section id="density-measure-rho_n" class="level3">
-<h3 class="anchored" data-anchor-id="density-measure-rho_n">Density measure <span class="math inline">\(\rho_{n}\)</span></h3>
-<p>Now, we wrested with the density function above. Such can be resolved fairly nice if we have: <span class="math display">\[
-\rho_{n} = \int_{\Theta}\min{[|\mathcal{D}|,1]}p(x)dx
-\]</span> for <span class="math inline">\(p(x)\)</span> the true density, and the customized empirical density distribution basis - here <span class="math inline">\(|\mathcal{D}|\)</span> simply defines an operation for the absolute density value on such density probability mass function. This then measures how much of the true density is matched by empirical density, like a convolution. Kinda rough, but again, it is a patchwork.</p>
-</section>
-<section id="stability-measure" class="level3">
-<h3 class="anchored" data-anchor-id="stability-measure">Stability measure</h3>
-<p>The natural choice for a stability measure is as, for <span class="math inline">\(S_{n}\)</span> denoted of such, <span class="math display">\[
-S_{n} = 1- \mathbb{E}[d(\mathcal{D}_{i},\mathcal{D}_{j})], \quad i\ne j
-\]</span> then for <span class="math inline">\(S_{n}\to 1\)</span>, the dataset is indeed stable enough as it is. There can be many ways to define <span class="math inline">\(d(\cdot, \cdot)\)</span>, but generally, it is through the description. Another natural choice would be to just measure the dataset points itself, which is already the <em>variance</em>.</p>
-<hr>
-<p>There are more to be of, for example, measure consistency or probability correspondence, of which either defined anew, or use KB-divergence is okayish, and so on. But either way, this created a fairly succinct picture on what to take of the dataset, not as just mundane i.i.d. Alright, good luck, lads.</p>
-<p>For citation (<em>man</em> if there is any):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">khanhmane2025r</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>       = {Bui Gia Khanh (Fujimiya Amane)},</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>        = {On the idea of the Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic--Probabilistic Transitions},</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>         = {2025},</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">howpublished</span> = {https://amane-fujimiya.github.io/blogs/},</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span>         = {Blog post}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>What, to be of mathematics?</p>
+<p>Where life is chaotic as it is, in which we are of the flesh and meat, observe and feel life with eyes and ears, or feeling and touches, we inherently develop what to make sense of such, particularly painful of time, yet beautiful and perhaps deceptive. That is why we resorted to create the language of mathematics, of which the first ever action in the history of such is to struct barebone, stripping down the physical epiphany of what to observe of. Such is then also abstraction, and thus the undeniably deceptive, beautiful, incomprehensible beauty of such language breathen forth onto human as it is. But so is the perception, incomplete, inconsistent as once Gödel brought down the Icarus’s wing of the total theory, our maths is simply, forgotten of its origin, a model. A model of reality so effective, that our mortality believes in its ability to explain, as to be the map on which the landscape can be deceptively naive of the observant. So is what I want to say of the theory of modelling, to be the main central line in which I am also developing anew, lest of the arrogance to quicken myself of pace toward the great shoulder of the old age. Where we are stuck of interpretation. Perhaps we need a shift in focus.</p>
+<p>Toward such, what gives? Why is mathematics rather descriptive? Such question can be answered not through logic or arguments but through history, where one knows of arithmetics but not group theory, where knowledges were articulated of geometry in simple terms, of the Euclidean or else in different corners of the ancient worlds, full of mystery from the far-away land on which every single thinkers of the time, distances apart, converge to a singular description. Thus is the descriptive nature of mathematics, born out of its primitive form as a tool, a tool of which taken forth by those same people to describe what cannot be done otherwise, of the restraints in which have to be resolved, of the imagination that strips physical limitation altogether in its first grand step, where one can imagine the utopia of a million apples, instead of such a handful basket. So is the abstraction at first layer. We often forget such virtue.</p>
+<p>Grateful of such, mathematics then can also be realized to be not so objective as it is. Similar to those sketches should be available of this page (or rather blog post sections), one can indeed see that we have no clue, lest of no guarantee, that the world is static, that our views are invariant of changes or indeed being global and baseline as it is. For it to be relative, of which the anthropology of humanity forces upon itself, so is that mathematics is a construct of human, it bears marks of such limitation and flesh and soul. Sometimes, lamenting is possible, then <em>abstraction</em> is the most powerful tool, but also the most arcane and unintelligible one of our arsenal. Such is to say no one understand infinity - many claims of such, but none - not even seasoned mathematicians, can do that, simply because we cannot fathom the scale in which adding more zeros moves the entirety of the meaning, or the scale in which we are not familiar of. So is continuity, so is discrete and continuous, and many more.</p>
+<p>That is not to say we cannot try. Not to say we are useless, but rather it is to say the Everest is forever high, but if one did not dare to climb the first step, one should be ashamed to not try, rather than try and slip. A painful lesson, a slippage, is better than never to climb the Tower of Babel. Participating in its collapse is, in a sense, a beautiful thing.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
