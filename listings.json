@@ -1,42 +1,8 @@
 [
   {
-    "listing": "/main/index.html",
-    "items": []
-  },
-  {
-    "listing": "/notes/index.html",
-    "items": [
-      "/notes/posts/einsteintein.html",
-      "/notes/posts/theoreticalmech.html",
-      "/notes/posts/fallacy.html",
-      "/notes/posts/Raman_spec.html",
-      "/notes/posts/The question bank.html",
-      "/notes/posts/Old_note_on_overfitting.html",
-      "/notes/posts/playground_note.html"
-    ]
-  },
-  {
-    "listing": "/documents/index.html",
-    "items": []
-  },
-  {
-    "listing": "/essays/index.html",
-    "items": [
-      "/essays/posts/old_essay.html",
-      "/essays/posts/essay_1_raman.html"
-    ]
-  },
-  {
-    "listing": "/sketches/index.html",
-    "items": []
-  },
-  {
-    "listing": "/projects/index.html",
-    "items": []
-  },
-  {
     "listing": "/blogs/index.html",
     "items": [
+      "/blogs/posts/Nihilism.html",
       "/blogs/posts/Sadness.html",
       "/blogs/posts/math.html",
       "/blogs/posts/God_and_the_world.html",
@@ -73,5 +39,81 @@
       "/blogs/posts/Physics_trick.html",
       "/blogs/posts/Cleaning.html"
     ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": []
+  },
+  {
+    "listing": "/sketches/index.html",
+    "items": []
+  },
+  {
+    "listing": "/essays/index.html",
+    "items": [
+      "/essays/posts/old_essay.html",
+      "/essays/posts/essay_1_raman.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blogs/posts/Nihilism.html",
+      "/blogs/posts/Sadness.html",
+      "/blogs/posts/math.html",
+      "/blogs/posts/God_and_the_world.html",
+      "/blogs/posts/data_and_like.html",
+      "/blogs/posts/infrastructure.html",
+      "/blogs/posts/no_free_lunch.html",
+      "/blogs/posts/mathematification.html",
+      "/blogs/posts/Leibniz_Optimism.html",
+      "/blogs/posts/questioning_AI.html",
+      "/blogs/posts/nothingtoday.html",
+      "/blogs/posts/What goes up, must go down. For le bomb.html",
+      "/blogs/posts/Bob.html",
+      "/blogs/posts/Kram.html",
+      "/blogs/posts/Navis.html",
+      "/blogs/posts/statlearn.html",
+      "/blogs/posts/Arithmetics.html",
+      "/blogs/posts/ex.html",
+      "/blogs/posts/Overconfidence, Liability.html",
+      "/blogs/posts/Keep the dream to stay - for whenever it be the truth.html",
+      "/blogs/posts/Vini, Viti ,Vinci. Le Champagne.html",
+      "/blogs/posts/Molten Hearth, Devious Plan.html",
+      "/blogs/posts/Harbinger of Truth.html",
+      "/blogs/posts/Moon Shines, Reflective Memories.html",
+      "/blogs/posts/Artificial, of man, of creatures. What shall be call is not.html",
+      "/blogs/posts/Hardship lifetime, happiness..html",
+      "/blogs/posts/A mild insertion of reality check.html",
+      "/blogs/posts/Beautiful Blossom Flowers.html",
+      "/blogs/posts/Flower of the Fallen.html",
+      "/blogs/posts/Song of the Death.html",
+      "/blogs/posts/The Fog of Life.html",
+      "/blogs/posts/A new beginning.html",
+      "/blogs/posts/Black Rose of Death.html",
+      "/blogs/posts/MathGM.html",
+      "/blogs/posts/Physics_trick.html",
+      "/blogs/posts/Cleaning.html"
+    ]
+  },
+  {
+    "listing": "/documents/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/posts/einsteintein.html",
+      "/notes/posts/theoreticalmech.html",
+      "/notes/posts/fallacy.html",
+      "/notes/posts/Raman_spec.html",
+      "/notes/posts/The question bank.html",
+      "/notes/posts/Old_note_on_overfitting.html",
+      "/notes/posts/playground_note.html"
+    ]
+  },
+  {
+    "listing": "/main/index.html",
+    "items": []
   }
 ]
