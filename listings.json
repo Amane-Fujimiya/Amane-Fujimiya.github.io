@@ -41,19 +41,20 @@
     ]
   },
   {
-    "listing": "/projects/index.html",
-    "items": []
-  },
-  {
-    "listing": "/sketches/index.html",
-    "items": []
-  },
-  {
-    "listing": "/essays/index.html",
+    "listing": "/notes/index.html",
     "items": [
-      "/essays/posts/old_essay.html",
-      "/essays/posts/essay_1_raman.html"
+      "/notes/posts/einsteintein.html",
+      "/notes/posts/theoreticalmech.html",
+      "/notes/posts/fallacy.html",
+      "/notes/posts/Raman_spec.html",
+      "/notes/posts/The question bank.html",
+      "/notes/posts/Old_note_on_overfitting.html",
+      "/notes/posts/playground_note.html"
     ]
+  },
+  {
+    "listing": "/documents/index.html",
+    "items": []
   },
   {
     "listing": "/index.html",
@@ -97,23 +98,10 @@
     ]
   },
   {
-    "listing": "/documents/index.html",
-    "items": []
-  },
-  {
-    "listing": "/notes/index.html",
+    "listing": "/essays/index.html",
     "items": [
-      "/notes/posts/einsteintein.html",
-      "/notes/posts/theoreticalmech.html",
-      "/notes/posts/fallacy.html",
-      "/notes/posts/Raman_spec.html",
-      "/notes/posts/The question bank.html",
-      "/notes/posts/Old_note_on_overfitting.html",
-      "/notes/posts/playground_note.html"
+      "/essays/posts/old_essay.html",
+      "/essays/posts/essay_1_raman.html"
     ]
-  },
-  {
-    "listing": "/main/index.html",
-    "items": []
   }
 ]
