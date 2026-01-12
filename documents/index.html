@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../img/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -73,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-categories','listing-description','listing-reading-time','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -109,35 +78,6 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Documentation – Amane in the Unknown">
@@ -371,13 +311,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-page-right">
       <h1 class="title">Documentation</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-body">
+  <div class="quarto-title-meta column-page-right">
 
       
     
@@ -399,10 +339,10 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-right" id="quarto-document-content">
 
 
 
@@ -413,24 +353,30 @@ window.Quarto = {
 <p>For the new version, it is where I do my own reorganization of different contents, and the clusters of website and constituent purpose-dependent space where I organize my content of. Think of it as subdivision specialization, but currently without a correct notion for controlling and organizing them. Indeed, the facility, wide and large, is numerous, but then we have to organize them here to reveal what is said about the current infrastructure; and whether I have crossed the storage limit of the landlord.</p>
 <section id="the-main-documents" class="level2">
 <h2 class="anchored" data-anchor-id="the-main-documents">The main documents</h2>
-<p>The main documentation site for now, is obviously this site on its own, <a href="https://amane-fujimiya.github.io/">my personal website</a>. The research hub in which contents will be written down would be organized in <a href="https://amane-fujimiya.github.io/Research/">this research sub-partition</a> under the domain. For now, it is also the main hub of operations.</p>
-<p>For main projects, we have the now-postponed <a href="https://amane-fujimiya.github.io/ML_Aneurysm">Neural Network (re)Design</a> document. For other in-progress works, we have a few options, bust most of them are and will be hosted on either <code>eigenmane</code> GitHub, mainly <a href="eigenmane.github.io">this domain (to be deployed)</a> and for completeness, <a href="https://github.com/Eigenmane/Neural">this repository</a> for a neuroscience topic preparation.</p>
-<p>Other documentation flavours would be preferable to be published onto <code>Netlify</code>. Specifically, with the domain intrinsic of Netlify, and using their own free plan (might be upgraded later on), for example, the <a href="https://physics-companion.netlify.app/">Physics Companion</a> where I retain certain amount of lecture notes and material preparation.</p>
+<ul>
+<li><a href="https://amane-fujimiya.github.io/">Main website</a>.</li>
+<li><a href="https://amane-fujimiya.github.io/Research/">Research Frontloader</a>.</li>
+<li><a href="https://aml_reposition_sub_centre.gitlab.io/AML_Reposition_Sub-Main/">AML Deployment Section</a> with smaller linked delegation.</li>
+</ul>
+<p>The main documentation site for now, is obviously this site on its own, <a href="https://amane-fujimiya.github.io/">my personal website</a>. The research hub in which contents will be written down would be organized in <a href="https://amane-fujimiya.github.io/Research/">this research sub-partition</a> under the domain. There is also <a href="https://aml_reposition_sub_centre.gitlab.io/AML_Reposition_Sub-Main/">AML</a> as a deployment central zone, holding everything together (almost so).</p>
+<p>For main projects, we have the now-postponed <a href="https://amane-fujimiya.github.io/ML_Aneurysm">Neural Network (re)Design</a> document (<em>I will soon migrate it over to</em> <code>GitLab</code>). For other in-progress works, we have a few options, bust most of them are and will be hosted on either <code>eigenmane</code> GitHub, mainly <a href="eigenmane.github.io">this domain (to be deployed)</a> and for completeness, <a href="https://github.com/Eigenmane/Neural">this repository</a> for a neuroscience topic preparation. That said, as of 2026, it has been migrated to GitLab.</p>
+<p>Other documentation flavours would be preferable to be published onto <code>GitLab</code> or <code>Netlify</code>. Specifically, with the domain intrinsic of Netlify, and using their own free plan (might be upgraded later on). THough, I would say that I use Netlify for hosting contents or files rather than works or public organization.</p>
 </section>
 <section id="planned" class="level2">
 <h2 class="anchored" data-anchor-id="planned">Planned</h2>
-<p>For planned content, I am exploring options regarding the use of forums, <code>XWiki</code>, and so on infrastructures, for example, lifting myself out of primitive notion and start using <code>Docker</code>, They are there, for the purpose to host a new <em>knowledge sharing and organization</em> idea that I have in mind, and also for <em>documentation</em> of knowledge and projects, much similar to CV and others. Further on, using that, we can also use the infrastructures for hosting frameworks and further research framework that would be detrimental in advancing the theory that is in mind.</p>
-
+<p>For planned content, I am exploring options regarding the use of forums, <code>XWiki</code>, and so on infrastructures, for example, lifting myself out of primitive notion and start using <code>Docker</code>, They are there, for the purpose to host a new <em>knowledge sharing and organization</em> idea that I have in mind, and also for <em>documentation</em> of knowledge and projects, much similar to CV and others. Further on, using that, we can also use the infrastructures for hosting frameworks and further research framework that would be detrimental in advancing the theory that is in mind. That is:</p>
+<ul>
+<li>A presentation website.</li>
+<li>A <code>XWiki</code> website infrastructures, plus a software-domain deployment of a research network (?) for collaboration, I guess? Right now it is a hurdle because of research communication between fields or so is rather hard at a distance.</li>
+<li>A CV website and PDF-generation option for offline uses, or legacy stuff.</li>
+<li>The, tech-stack and tools I want to use that is not available elsewhere.</li>
+</ul>
+<p>Not too much, but the list can always go wider.</p>
 
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
