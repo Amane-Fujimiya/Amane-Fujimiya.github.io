@@ -1,14 +1,8 @@
 [
   {
-    "listing": "/essays/index.html",
+    "listing": "/blogs/index.html",
     "items": [
-      "/essays/posts/old_essay.html",
-      "/essays/posts/essay_1_raman.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
+      "/blogs/posts/Warbuilding.html",
       "/blogs/posts/newyear_2026.html",
       "/blogs/posts/desperate_plea.html",
       "/blogs/posts/fly me to the moon.html",
@@ -63,8 +57,9 @@
     ]
   },
   {
-    "listing": "/blogs/index.html",
+    "listing": "/index.html",
     "items": [
+      "/blogs/posts/Warbuilding.html",
       "/blogs/posts/newyear_2026.html",
       "/blogs/posts/desperate_plea.html",
       "/blogs/posts/fly me to the moon.html",
@@ -104,6 +99,13 @@
       "/blogs/posts/MathGM.html",
       "/blogs/posts/Physics_trick.html",
       "/blogs/posts/Cleaning.html"
+    ]
+  },
+  {
+    "listing": "/essays/index.html",
+    "items": [
+      "/essays/posts/old_essay.html",
+      "/essays/posts/essay_1_raman.html"
     ]
   }
 ]
