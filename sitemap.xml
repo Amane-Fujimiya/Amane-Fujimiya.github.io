@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/statlearn.html</loc>
-    <lastmod>2025-04-27T08:54:45.370Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/tidbit_existentialism.html</loc>
+    <lastmod>2026-02-20T10:02:52.218Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/nothingtoday.html</loc>
-    <lastmod>2025-06-03T16:02:48.419Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/questioning_AI.html</loc>
+    <lastmod>2025-06-25T08:30:51.143Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/newyear_2026.html</loc>
-    <lastmod>2026-01-02T09:00:24.217Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/no_free_lunch.html</loc>
+    <lastmod>2025-11-01T03:54:39.396Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/math.html</loc>
-    <lastmod>2025-12-10T15:50:57.063Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/mathematification.html</loc>
+    <lastmod>2025-11-05T05:21:25.312Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/fly me to the moon.html</loc>
-    <lastmod>2026-02-09T14:59:36.001Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/infrastructure.html</loc>
+    <lastmod>2025-11-04T19:09:44.273Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/desperate_plea.html</loc>
-    <lastmod>2025-12-30T06:03:00.224Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/ex.html</loc>
+    <lastmod>2025-04-27T08:48:45.688Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/What goes up, must go down. For le bomb.html</loc>
-    <lastmod>2025-04-27T08:45:22.885Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/data_and_like.html</loc>
+    <lastmod>2025-12-11T03:40:18.148Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/Warbuilding2.html</loc>
+    <lastmod>2026-02-20T10:00:52.504Z</lastmod>
   </url>
   <url>
     <loc>https://amane-fujimiya.github.io/blogs/posts/Vini, Viti ,Vinci. Le Champagne.html</loc>
@@ -197,27 +201,31 @@
     <lastmod>2026-02-09T08:43:26.726Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/data_and_like.html</loc>
-    <lastmod>2025-12-11T03:40:18.148Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/What goes up, must go down. For le bomb.html</loc>
+    <lastmod>2025-04-27T08:45:22.885Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/ex.html</loc>
-    <lastmod>2025-04-27T08:48:45.688Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/desperate_plea.html</loc>
+    <lastmod>2025-12-30T06:03:00.224Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/infrastructure.html</loc>
-    <lastmod>2025-11-04T19:09:44.273Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/fly me to the moon.html</loc>
+    <lastmod>2026-02-09T14:59:36.001Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/mathematification.html</loc>
-    <lastmod>2025-11-05T05:21:25.312Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/math.html</loc>
+    <lastmod>2025-12-10T15:50:57.063Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/no_free_lunch.html</loc>
-    <lastmod>2025-11-01T03:54:39.396Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/newyear_2026.html</loc>
+    <lastmod>2026-01-02T09:00:24.217Z</lastmod>
   </url>
   <url>
-    <loc>https://amane-fujimiya.github.io/blogs/posts/questioning_AI.html</loc>
-    <lastmod>2025-06-25T08:30:51.143Z</lastmod>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/nothingtoday.html</loc>
+    <lastmod>2025-06-03T16:02:48.419Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amane-fujimiya.github.io/blogs/posts/statlearn.html</loc>
+    <lastmod>2025-04-27T08:54:45.370Z</lastmod>
   </url>
 </urlset>

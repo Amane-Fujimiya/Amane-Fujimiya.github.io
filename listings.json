@@ -2,6 +2,8 @@
   {
     "listing": "/blogs/index.html",
     "items": [
+      "/blogs/posts/Warbuilding2.html",
+      "/blogs/posts/tidbit_existentialism.html",
       "/blogs/posts/Warbuilding.html",
       "/blogs/posts/newyear_2026.html",
       "/blogs/posts/desperate_plea.html",
@@ -59,6 +61,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/blogs/posts/Warbuilding2.html",
+      "/blogs/posts/tidbit_existentialism.html",
       "/blogs/posts/Warbuilding.html",
       "/blogs/posts/newyear_2026.html",
       "/blogs/posts/desperate_plea.html",
