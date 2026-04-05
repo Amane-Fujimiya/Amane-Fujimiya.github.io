@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Fujimiya Amane">
-<meta name="dcterms.date" content="2026-02-27">
+<meta name="dcterms.date" content="2026-04-06">
 
-<title>God, and the origin world – Amane in the Unknown</title>
+<title>The warbuilding guide to interstellar warfare - Melbridge Evaluation A – Amane in the Unknown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,15 +80,48 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="God, and the origin world – Amane in the Unknown">
+<meta property="og:title" content="The warbuilding guide to interstellar warfare - Melbridge Evaluation A – Amane in the Unknown">
 <meta property="og:description" content="The journey to find the truth. Or whatever skewed version of it">
-<meta property="og:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
+<meta property="og:image" content="https://amane-fujimiya.github.io//images/wargaming.png">
 <meta property="og:site_name" content="Amane in the Unknown">
-<meta name="twitter:title" content="God, and the origin world – Amane in the Unknown">
+<meta property="og:image:height" content="888">
+<meta property="og:image:width" content="1480">
+<meta name="twitter:title" content="The warbuilding guide to interstellar warfare - Melbridge Evaluation A – Amane in the Unknown">
 <meta name="twitter:description" content="The journey to find the truth. Or whatever skewed version of it">
-<meta name="twitter:image" content="https://amane-fujimiya.github.io/blogs/posts/img/blog icon.jpg">
+<meta name="twitter:image" content="https://amane-fujimiya.github.io//images/wargaming.png">
+<meta name="twitter:image-height" content="888">
+<meta name="twitter:image-width" content="1480">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -318,7 +351,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-question" id="toc-the-question" class="nav-link active" data-scroll-target="#the-question">The question</a></li>
+  <li><a href="#cchc150-doctrinal-shift-and-battle-barge-reorganization---document-class-mnl-subtype-a-priority-r1-civpri-d-time-class-ox-iii-2088-approved" id="toc-cchc150-doctrinal-shift-and-battle-barge-reorganization---document-class-mnl-subtype-a-priority-r1-civpri-d-time-class-ox-iii-2088-approved" class="nav-link active" data-scroll-target="#cchc150-doctrinal-shift-and-battle-barge-reorganization---document-class-mnl-subtype-a-priority-r1-civpri-d-time-class-ox-iii-2088-approved">CCHC150, Doctrinal shift and Battle Barge reorganization - Document class M/N/L, subtype A, Priority R1, CIVPRI-D, Time class OX-III-2088, Approved</a>
+  <ul class="collapse">
+  <li><a href="#pre-melbridge" id="toc-pre-melbridge" class="nav-link" data-scroll-target="#pre-melbridge">Pre-Melbridge</a></li>
+  <li><a href="#melbridge" id="toc-melbridge" class="nav-link" data-scroll-target="#melbridge">Melbridge</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -332,10 +369,10 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">God, and the origin world</h1>
+<h1 class="title">The warbuilding guide to interstellar warfare - Melbridge Evaluation A</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Blog</div>
-    <div class="quarto-category">daily</div>
+    <div class="quarto-category">Writing</div>
   </div>
   </div>
 
@@ -353,10 +390,16 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 27, 2026</p>
+      <p class="date">April 6, 2026</p>
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">April 6, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -365,17 +408,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Over the time, I walked back to the past to see of the naive me, writing and pondering of those worlds outside, of the voices in such endless breath, innocent, unrefined but fiery. Such is also where I saw of which the issue that the old self happened to come across. The position on <em>God and such origin</em>.</p>
-<p>Specifically, what was on the table on which the monograph plays on? Perhaps, it might just be as simple as to question,</p>
-<blockquote class="blockquote">
-<p>What makes of the anthropological origin of god. Of which of the far-away land there exists various versions of said entity, plural than singular, through the looking glass, what is the answer?</p>
-</blockquote>
-<p>Maybe perhaps, such is a futile topic. I may have to search up the memories holding the answer. Or maybe not, as I would have to extend the essay further out.</p>
-<section id="the-question" class="level1">
-<h1>The question</h1>
-<p>Toward the notion of god, we need several alignment questions to aim for before making any analysis, because such is rather so large and so ingrained into the language of natural Homo sapiens, that it would seem so natural that we will say ‘oh god’, and such thereof, even if it is a learned pattern than most. Thus, justification would have to be made on the baseline of <em>what are those questions that we answer</em> in certainty, or uncertain of such conclusion. This is determined, for my own method, from the nature of the dogma on divinity itself.</p>
+<section id="cchc150-doctrinal-shift-and-battle-barge-reorganization---document-class-mnl-subtype-a-priority-r1-civpri-d-time-class-ox-iii-2088-approved" class="level2">
+<h2 class="anchored" data-anchor-id="cchc150-doctrinal-shift-and-battle-barge-reorganization---document-class-mnl-subtype-a-priority-r1-civpri-d-time-class-ox-iii-2088-approved">CCHC150, Doctrinal shift and Battle Barge reorganization - Document class M/N/L, subtype A, Priority R1, CIVPRI-D, Time class OX-III-2088, Approved</h2>
+<p>This report is designated <em>unformatted</em> and <em>non-standard</em> by any template. To follow this decision, please refers to CCHC150ex for clarification, and CSHC-1140-RP/M report.</p>
+<p>RINALAB and HIGHCOM, alongside Edinburgh Military Research Task Force authored and researched the following decision and doctrinal change to naval and ground force complement, approved by SHC in entirety for application, effective listed in CCHC150AC. Further information about the specific doctrinal implementation resides in CCHC150DD; specific research papers and white papers are listed in CCHC150RE series, and the preceding documents in attachment, totalling ten (10) documents in specificity.</p>
+<p>After the Melbridge collapse, the doctrine of Blitzkrieg-on-manifold (BoM) was proven to be ineffective against highly maneuver, non-orbital <span class="math inline">\(\Delta v\)</span> operational fleets and components. There has been calls, most often from CIVGOV and elements of the Chamber of Strategic Analysis (CSA, Mumbai and De Paul), to either revise, which they deemed impossible, or replace the tactics in its entirety. We acknowledge their concerns and of which the perceived and observed cases for obsolescence of the doctrine are detrimental to further operational tempo of the prolonged campaign. However, the picture between pre-Melbridge, inter-Melbridge and post-Melbridge to the first two years of the total war (in which we call it as the Western War), have shown us enough diverging evidences on which such is not the case, and the picture is more nuanced. Furthermore, as we enter the tenth year of active mobilization, such suggests the third options in all, as to re-frame the segments into a <em>multi-doctrine, reactive flexibility</em> system inherently within decision template but retain operational and unorthodox improvision. The following observations support such argument, setting in accordance to the same timeline as stated.</p>
+<section id="pre-melbridge" class="level3">
+<h3 class="anchored" data-anchor-id="pre-melbridge">Pre-Melbridge</h3>
+<p>During this period of which the Melbridge defensive line has not been activated due-crisis, BoM essentially copulated and completed several critical missions underlying its purpose. First, it is now recognized that some of the enemy maneuver and choice of attack, including circumvention toward the Proxima packet, in which we now know that the reason being available preferable corridors of sensor-invisible traversal, resulted from BoM capacities and sweep velocity equipped to outward garrison and frequent standing fleet activities. Reports in 2080, CCNV560 (reused), identified approximately two-hundred, seventy six (276) hulls of all specified types of warship classifications, in-identical signature to the adversary assets taken from the aftermath of the Earth attack vector, suggesting a trade-off between operational mass safety and stealthy but pathological pathways. This suggested and supported the hypothesis that the first initial strike of the Melbridge and furthermore Proxima incident was deliberately a choice of strategic probing, with intentional sacrificial tactics to preserve cohesion in SIGINT counter-detection. In specific details, seventy five (75) of stated vessel wrecks are found in various positions destroyed or disabled during the conflict or before it, by certain factors, while the remaining two hundred and one (201) large mass wrecks stretched across a very specific pathway toward Proxima Centauri itself.</p>
+<p>Furthermore, as noted in CCSD-771, Eridani Scientific Research detachment discovered an identical pod and ship structures, with armed configuration and combat-worthy pre-destruction capability. In which, the presences of mass concentration is without <em>biological traces or residue</em>, suggesting that part of the adversary’s tactic relies on <em>mass stabilization</em> during high-intensity and dangerous passage, and optimization supported by automation of crew-served warships itself. If REDFOR had been contented with full-operational attack, said assets would have been much quicker in proceeding to the Inner system, though the effectiveness of Melbridge at that point would be questionable at best.</p>
+<p>Decisions are still being made to process this corridor. However, because of their immense size, amounting two exactly 354,440 with 14.77 deviation tons in total mass per each, it is much more preferable to study them. The highlight in this analysis shows that despite their role as the perceived mass stabilization method, their armament are rather particularly complete and standard to their configuration, with similar-scale battleship-dreadnaught capacities and components, suggesting non-trivial and often non-specialized roles for such tactical decision. Hence, it is suggested to study them while simultaneously monitor nearby assets penetrations.</p>
+</section>
+<section id="melbridge" class="level3">
+<h3 class="anchored" data-anchor-id="melbridge">Melbridge</h3>
+<p>During the main phase of the Proxima crisis and between Melbridge activation then its collapse, the picture of BoM doctrine changed depends on its utilization positional coverage. The Melbridge defensively is focused on <em>gravity well capture</em>. We acknowledged that REDFOR does not know about this ability, as they were slowed down by fourteen (14) hours despite rapid advancement before contact. The architecture of the defensive line can be explained as the following.</p>
+<p>Each <strong>Gravity Well Projector</strong> (GWP) is a <em>weak-field, long-range</em>, non-relativistic coupling generator, with <span class="math inline">\(r\)</span>-designed <em>deflective radius domain</em> that functions as a <span class="math inline">\(\rho\)</span>-strength passive shielding from mass-based attack as matter beam or projectiles. Here, we can say that <span class="math display">\[
+\rho=\frac{GM}{r_{in}}+ \frac{K}{r_{in}^{2}}, \quad \rho_{\mathrm{WF}} =  - \frac{1}{14.9}\frac{GM}{r_{out}} - \frac{\Phi(\mathbf{q})}{2q\mathbf{M}}
+\]</span> where <span class="math inline">\(\mathbf{M}\)</span> is the <strong>Messenfield factor</strong> of interacting <span class="math inline">\(q\)</span>-particle used for forward weak-field amplification. Here, <span class="math inline">\(\Phi(\mathbf{q})\)</span> is simply the momentum-factor design potential, in which encodes the specific type for <em>high momentum resistance</em> and potential control metric propagator. Specific details should be referred to CCMD-44 for their design philosophy and parameter controls, however the purpose here is explicit, and its success in the current operational assessment is rather positive as substantially effective. To handle the <em>relativistic angle of attack</em>, employment of the <strong>Relativistic Counter-move Projector</strong> (RCP) was utilized throughout. The mechanics of RCP follows the deliberate potential design such that <span class="math display">\[
+\rho_{rv} \sim \frac{2q\mathbf{M}^{1/2}}{\Phi(\mathbf{q})} + \left( \frac{1}{\sqrt{ 1-v^{2}/c^{2} }} - 1 \right)\left( \frac{A}{r} + \frac{B}{r^{2}}\right)
+\]</span> The two parameters <span class="math inline">\(A,B\)</span> here are often designed specifically under technical conditions. For Melbridge, this was set such that the net force flips sign at <span class="math inline">\(r=r_{0}=0.012AU\)</span> in particular. Within this picture, the defensive line, particularly across 40AU, is configured between four (4) operational layers, each occupying across 10AU. Using such, in between said layer are the side effect of the weak-field deflections and so on, being <em>gravitational anchors</em> for deployed assets rotation of the defensive line, most often <em>High Mobility Static Assets</em> (HMSA), and protection fleets. The structural condition for the GWP-RCP defensive line is governed by the amount of each, typically within 3:1 ratio <em>spatial distance cluster</em> stretches toward a specified interception angle. By empirical expectation, the density <span class="math inline">\(\xi\)</span> of the defensive posture would be usually be <span class="math display">\[
+\xi = \alpha_{0}\frac{(3\mathrm{GWP}+1\mathrm{RCP})}{4000} \approx 170.5 \pm 4.5
+\]</span> clusters in general, for <span class="math inline">\(100\mathrm{AU}\)</span> width and <span class="math inline">\(40\mathrm{AU}\)</span> depth. The reserve of Melbridge Military Installation that supply the defensive line presuppose optimal coverage of 1200AU, in which of asset replacements that can stretch to 1900AU effectively. This is under the position of <em>budgetary interception angle predetermination</em>, where even in void space, ships would often prefer pathways that lead them to saddle points or gravitational advantageous positions or corridors, of which Melbridge asteroid mega-belt is the natural barrier of. However, as we have known from the breach itself, force profile deliberately scattered Melbridge posture into <strong>radial coverage</strong>. By then, while HMSA was pushed from reserve to maintain identical density, the number of GWP-RCP per 100AU reduces to around 24, meaning they are <em>understrength</em> for their operational area. Hence, that require patching identifiable holes in the weak field because of their resonance and interference and particle spread by using naval assets, alongside repositioning HMSA under lowered mooring condition.</p>
+<p>However, this also paralyze the naval force, as BoM was specified for high speed, superior-<span class="math inline">\(\Delta v\)</span>, long-burn warfare, but now fixed to an unintended roles as coverage for both HMSA short-range and blockage for the GWP-RCP reduced effectiveness. This is partially why the defensive line fails, as each roles were inverted and subsequently directed such that their density is not guaranteed, their replacement are not available by radial spread condition, and their response time is constrained. However, a consequence of this deliberately was identified and utilized by SHC immediately after the breach, such is to say since the adversary only penetrated one (1) vector, and some four (4) vectors of attack from some what similar angle, force depletion is not even and only a small section of the defensive line was ineffective, though substantially so. This is one of the reason why later decision to hold the defensive line is possible, as if again, the mass stabilization tactical decision was not decided upon, the resultant action would be the almost destruction of the defensive line and nearby assets desperately needed for the subsequent pincer movement to natural gravitational well on Earth and the Core Solar System.</p>
+<p>Another indirect consequence can be extrapolated from such. The purpose of the GWP-RCP system is ultimately two fold:</p>
+<ul>
+<li>To stop <em>relativistic penetration</em> and <em>interaction advantage</em>, holding of such regime of interception.</li>
+<li>To stop <em>non-relativistic path-progression</em> and large-concentration or saturation assault, alongside <em>mobility advantage</em> degradation. Furthermore, jump mechanics takes into account gravitational source, hence functioning also as <em>jump interdiction</em> in addition to natural source.</li>
+</ul>
+<p>The lateral coverage of Melbridge asteroid belts helped substantially in such regard with jump interdiction, thus reducing the battlespace to one domain only. As of current report, there exists no other methods to close down jump domain battlespace, of which we know REDFOR has no restriction thereof. On the gravitational axis, determination of path-reduction from REDFOR means they have to, under penetrative inferencing, rely on <em>path tracing</em> determined by GWP, and constrained by both budgetary cost overrun in critical regions of the field, and RCP restriction. This means determining GRAVINT from their movement and effective dynamics, which was then used heavily in forward designing Earth gravity well strategy itself. We acknowledge this as intelligence success of the platform.</p>
+<p>The same result, however, differed in other relevant contexts, specifically during the retreat of the adversary throughout. During blackout, standing fleet and elements of garrisons or sector forces encountered broad, <em>push-pressure offensives</em>, mainly identified to characterize a diversion from the tactical retreat made from the Core Sector. While such is assessed as unnecessary, as we did not have enough communication and coordination to mount any specifically capable counteroffensive, the context of such broad theatre defensive postures remain particularly interesting. A comprehensive report is present, by CCNCM-774 of CENTCOM special authorization force, hence in this document, we would present only some of the notable examples where BoM is still a feasible approach.</p>
+<ol type="1">
+<li>In Sector 16, a large assault was conducted in the border system of NGC-2362-V “Atlantius”, Sector Fleet 4/A, <strong>Battlegroup A, B</strong> was in contact with a full-strength, E-class expeditionary combat fleet from REDFOR. From 0017 during first contact to 2400+5 of the fifth day, Battlegroup A, B successfully employed BoM to divert part of the now known as autonomous units toward a naturally <em>magnetic region</em> of the <em>cluster weather pathology</em>, rendering them temporary ineffective, while picking on the main elements of the combat fleet using high-speed, large <span class="math inline">\(\Delta v\)</span> maneuver around the trapped mass, essentially creating a semi-artificial gravitational advantage. Using such alongside high-speed maneuver, Battlegroup A and B can tolerate the immense jump-capability, upon realization that they are not suitable for pathological weather intervention, and with a 15 minutes delay between jump patterns in its highest tempo.</li>
+<li>In Named Sector Rhodes, a sizable force, suspected naval detachment of unknown reason, B-class multi-purpose ground-capable, interplanetary pulse-equipped assets attacked the Celestial Cluster B of NGC-2255-VII ACD concentrations, grid <span class="math inline">\((112,-20,0)\)</span>. Rhodes Sector Fleet, Detachment B1, B4, AAC1, ADV5, and A1 intercepted and defended, from 0019 to 1940+19, core element of ACD, assets around 2255-VII-A and B main celestial complex, and <em>static assets deployment modules</em> under experimental design phase, which as said time where in Phase IV of the deployment cycle. During such encounter, core elements of Series-B detachment at presence utilized <strong>gravitational orbital phase interception</strong>, by utilize themselves in ordering of a makeshift dynamic-orbit orbital defence cluster surrounding multiple planets. Because of their ineffectiveness in firepower, under the rationale that their onboard capacity can reliable reach sufficient range, coordination with ground assets for relay and logistical support was made of an effort. The strategy devised by operable command of such is as followed: under realization that the corridor of the celestial bodies are in fact, trustable targets for REDFOR from OFFOR conditional engagement, local GRPCOM assets set up remote energy and matter-projectile support beacon to orbital flight path. Interception patches on orbital plane with depth 400km, deviation from normal axis 230km, such transfer system gives B-detachments enough time to super-charge one of their unit fire asset, targeting four (4) time to the adversary’s fleet. After such, either changing orbit, or accelerating on <span class="math inline">\(\Delta_{t}(\Delta v)\)</span> condition of nominally 40% difference, then repeat for every engagement. Within such, firing window gives each celestial orbit 15 strikes per 24-hour standard day, coming from record at least twelve (12) facing orbits. REDFOR was noted to be constrained tactically to engaging planetary assets, but doing so require GRPTEL sufficient enough to gauge ground assets counter capacity. Under such, static fleet state risks attack corridor from the remaining forces, which were settled to only thin down and degrade effectiveness of REDFOR core detachments. Within 19 days approximately in total, only seven (7) orbital detachment failed to retain effectiveness, and one planetary concentration was rendered inoperable, however the outcome apparently stretched local REDFOR assets logistics, thus prompted deliberate retreats.</li>
+<li>Deep-space engagement also highlighted specific counter-motion noted by BoM, specifically if there exists <em>anchored mass</em>. In specificity, CENTCOM, M88+14 (Melbridge Day 88, post-day 14), from 0502 to 1200+25, <strong>Special Operation Fleet H</strong>, A-class dense battlefleet engaged a superior force, class AA-B-M (Support type B, M Messenfield-active classification force, i.e.&nbsp;field-manipulable force). Situation at initial indicated forced engagement, as Messenfield manipulating assets of OPFOR inhibited all effective escape path, alongside with suboptimal <span class="math inline">\(\Delta v\)</span> of larger assets of the battlefleet itself. Under such realization and constrained decision, the goal of BoM here under field admiral is again noted as <em>attritional engagement</em>. As suggested, all large concentration assets, such as BB-120, BB-22 Ancherfield (designated 4th Fleet, Special Detachment order) disable all but one (1) each of their configured large scale <strong>Extremely Long-Range Strike Package</strong> (ELRSP) module, and directed such to OPFOR formation. In doing so, EES (Electronic Emission Signature, scale-R1000) of large assets increased significantly, operating reported 5% from self-ejection of energy uncontrolled release (i.e.&nbsp;imploding explosive self-neutralization). Simultaneously, more agile assets conducted similar action vector as Rhodes engagement, reference point toward core mass battleships, and conduct battleship-conduit-based dynamic supply patch, rear attack. In doing so, from telemetry and navigational data acquired post belium suggested that OPFOR risk assessment did not render solution to neutering ELRSP feasible, as the encapsulation of Messenfield area risks mutual collapse. In doing so, OPFOR also rendered themselves their jump-capacity ineffective, which even if activated in the envelope, dynamic assets already cover local-range fire on their own and coordinated concentrated strike relay. Eventually, at 1000+25, OPFOR released Special Operation Fleet H with 45% attrition rate, with exchange rate for 55%. However, core assets were operable, and later intervened of factors toward the defensive pushes in adjacent sectors.</li>
+</ol>
+<p>What such motivated is that BoM is essentially a <em>theoretical thinking framework</em> for doctrinal adoption, thence high-<span class="math inline">\(\Delta v\)</span> maneuver emphasis is the resultant on application, and should be redefined by <em>context-dependent strategic adoption</em> instead. Such is also the justification on operational record conducted, to transition to a multi-doctrine decision system, and a tangible <em>adhering, opposite doctrine</em> that support BoM, as the battle barge class (BBG) utilization.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
