@@ -1,14 +1,8 @@
 [
   {
-    "listing": "/essays/index.html",
+    "listing": "/blogs/index.html",
     "items": [
-      "/essays/posts/old_essay.html",
-      "/essays/posts/essay_1_raman.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
+      "/blogs/posts/Insufficiency.html",
       "/blogs/posts/Warbuilding3.html",
       "/blogs/posts/God_and_the_world.html",
       "/blogs/posts/Warbuilding2.html",
@@ -67,8 +61,9 @@
     ]
   },
   {
-    "listing": "/blogs/index.html",
+    "listing": "/index.html",
     "items": [
+      "/blogs/posts/Insufficiency.html",
       "/blogs/posts/Warbuilding3.html",
       "/blogs/posts/God_and_the_world.html",
       "/blogs/posts/Warbuilding2.html",
@@ -112,6 +107,13 @@
       "/blogs/posts/MathGM.html",
       "/blogs/posts/Physics_trick.html",
       "/blogs/posts/Cleaning.html"
+    ]
+  },
+  {
+    "listing": "/essays/index.html",
+    "items": [
+      "/essays/posts/old_essay.html",
+      "/essays/posts/essay_1_raman.html"
     ]
   }
 ]
