@@ -2,6 +2,8 @@
   {
     "listing": "/blogs/index.html",
     "items": [
+      "/blogs/posts/fascism.html",
+      "/blogs/posts/Rust_first.html",
       "/blogs/posts/Insufficiency.html",
       "/blogs/posts/Warbuilding3.html",
       "/blogs/posts/God_and_the_world.html",
@@ -63,6 +65,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/blogs/posts/fascism.html",
+      "/blogs/posts/Rust_first.html",
       "/blogs/posts/Insufficiency.html",
       "/blogs/posts/Warbuilding3.html",
       "/blogs/posts/God_and_the_world.html",
