@@ -1,7 +1,7 @@
 ---
-title: "On the idea of a Measure-Theoretic Completeness of Datasets and the Irreversibility of Mechanistic–Probabilistic Transitions"
+title: "On the idea of a measure-theoretic completeness of datasets and the irreversibility of mechanistic–probabilistic transitions"
 author: "Fujimiya Amane (Bui Gia Khanh)"
-date: "2025-08-29"
+date: "2025-11-07"
 categories: [Blog, machine learning]
 format:
   html:
@@ -59,18 +59,20 @@ What does the probability in the black-box case represents here? In essence, $\m
 
 We would leave this here for justification as the state it is, since there exists this fact or rather observation, that is rather dubious of the system. You **cannot** move a deterministic system into probabilistic then back, given enough disturbance and thereof. Indeed, we can simply create a prototypical function 
 $$
-\mathcal{R}: F\to P,\quad \quad \mathcal{R}[F](A) = \int_{\Theta} \mathbf{1}\{F(x;\theta)\in A\}\mmu (d\theta)
+\mathcal{R}: F\to P,\quad \quad \mathcal{R}[F](A) = \int_{\Theta} \mathbf{1}\{F(x;\theta)\in A\}\mu (d\theta)
 $$
 for the pure probabilistic pure setting $(\Omega, \mathcal{F},\mathbb{P})$ of the probability measure, where $\mu\subset \mathcal{F}$, and $A\in (\mathcal{Y}\mid \mathcal{X})$, of which the observation space is conditioned on $\mathcal{Y}$. If not, i.e. the observation space possible is arbitrarily dense, then we would simply have unconditioned $\mathcal{Y}$, thus the white-box case. However, even not under no information at all, every concept must meet certain limit on the basis and the resultant action itself. Now, you can do this. But there exists **no sufficient way** to return from $P$ back to $F$, except the same operation in reversal, into an infinite-range space. However, this is not feasible if $\epsilon$ acts up, and in certain case, for any $\epsilon>0$, $\mathcal{R}^{-1}$ would simply be a mere approximation, and under such sense we would have to redefine what is meant by such inverse function. This corresponds to the limit 
 $$
 \lim_{\epsilon \to 0} \mathcal{R}_{\epsilon}^{-1}[\mathcal{R}[F]]=F, \quad || \mathcal{R}^{-1}_{\epsilon}[\mathcal{R}[F]] - F || \to \infty
 $$
-One then, can be considered fairly nice to do the act of borrowing from the idea of quantum mechanics, the idea of backtracking error, i.e. the correlation operator $[\mathcal{R},\mathcal{R}^{-1}]$. This would be an interesting direction of research, but we have to define what the hell happens. 
+One then, can be considered fairly nice to do the act of borrowing from the idea of quantum mechanics, the idea of backtracking error, i.e. the correlation operator $[\mathcal{R},\mathcal{R}^{-1}]$. This would be an interesting direction of research, but we have to define what the hell happens.
+
 ## The working around in merry go around
 
 Now, forget the above passage, if we assume the dataset is the basis, and with probabilistic information (i.e. the lowest state of information one can achieve, aside from being blind). What can we do to examine the system? 
 
 ### Coverage measure
+
 Suppose we have the same probability measure. Then, for $\mathcal{S}\in \Sigma$ is the support of the distribution. That is, the place in which the $\sigma$-algebra is in effect. Then, $\mathcal{S}_{n}=\mathrm{supp}(D_{n})$ as the $n$-finite region of $\Sigma$. The natural definition then would be 
 $$
 C_{n}= \frac{P(\mathcal{S}_{n})}{P(\mathcal{S})}
@@ -84,6 +86,7 @@ $$
 \lim_{n\to \infty} C_{n} = 1
 $$
 as per our assumption of such coverage. This is based on the assumption that each $n$ is distinct, entirely. Such is to prevent discrete points overlap, and kind of solves the issue with density. If $C_{n}<1$, the dataset does not cover the entire conceptual space. 
+
 ### Density measure $\rho_{n}$
 
 Now, we wrested with the density function above. Such can be resolved fairly nice if we have: 
@@ -91,6 +94,7 @@ $$
 \rho_{n} = \int_{\Theta}\min{[|\mathcal{D}|,1]}p(x)dx
 $$
 for $p(x)$ the true density, and the customized empirical density distribution basis - here $|\mathcal{D}|$ simply defines an operation for the absolute density value on such density probability mass function. This then measures how much of the true density is matched by empirical density, like a convolution. Kinda rough, but again, it is a patchwork. 
+
 ### Stability measure
 The natural choice for a stability measure is as, for $S_{n}$ denoted of such, 
 $$

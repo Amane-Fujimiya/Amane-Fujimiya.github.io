@@ -1,0 +1,575 @@
+---
+title: "The warbuilding guide to interstellar warfare"
+author: "Fujimiya Amane"
+image: /images/wargaming.png
+date: "2026-02-07"
+date-modified: "2026-02-09"
+categories: [Blog, Writing]
+format:
+  html:
+    fontsize: 0.7em
+    toc: true
+status: "done"
+confidence: "likely"
+importance: 1
+---
+Star Trek, to Star Wars; from Battlestar Galactica, to sci-fi military world-building. From fictions to fictions, we have been trying to depict wars, depicting military structures, and depicting different kind of command structure, or institution. While stories of such, and their focus on the individuals, the actors, the heroes, and so on, are fantastic and spectacular, they fail in one certain aspect. The depiction of *survival*, the depiction of an organic system, the depiction of existence of a typical institution. The depiction at most, of **constraints**, within those parameters, without magic, without Deus ex machina, without god-giving grace. Boiling down to technical domain, everything simply sounds *fake*. Intents, personalities, individuals leakage in places where one expects actual order. Coldness in wrong tensor, personal in wrong consequence. Such is the failing grace of what can be observed from latent media or fictions of which we have seen, though one can forbid such incompleteness and focus on the things they did best - drawing out a world of fiction and stories related to the actors. But we want a different thing. So let us try doing that, this time, through a kind of story: The cold, hard, monotonic facet of reports. 
+
+# The timeline
+
+The timeline of this is rather simple, and I take particular freedom of intersection in which to write the stories while interacting with it in `Aurora 4x`. You know, the game in which you are basically NORAD UI, with spreadsheet. Fortunately, it gives you far more than it should of the freedom permitted, and we might as well utilize that to great effect. The timeline will be clarified later, and we for now will interface with it directly. 
+
+## Phase I
+
+In lore, phase I is where we would say, options and operations are standing, and effectively, implicitly, *peacetime*. We assume the interstellar empire to be a **constitutional monarchy**, with Senate, High Council, Civilian Oversight Committees, and Supreme High Command, or `HIGHCOM` separately on particular lower-order directive framing. Reorganization starts from 2050, and the world is with accelerated tech, meaning they are far more advanced than we are currently right now to reach this level by then. 
+
+:::{.callout-note}
+
+### CCHC035, On army reorganization, training and standing order - Document class M, subtype A/G/L/R, Priority R0, CIVPRI-A, Time class OX-II-2050, Approved. Overriding CCHC024, CCHC017, CCGF012, CCCV1194, CCSN-1423
+Under order and FGGL-4453 of Military Administrative Oversight, High Council, Secretary of State, and Her Royal Highness Mirei, approved by Senate, SHC and administrative command of High Council, `SECCOM`, `PODCOM`, and *`CENTCOM`* issue emergency revision of `PODCOM`.
+
+Effective immediately, of effect of absolute priority, reorganize `PODCOM` under the command of newly formed `GRPCOM`, for priority `R1`, sector defence `R3`, orbital garrison `R2`. Reassign `PODCOM` to `R4`. Naval assets of `PODCOM` re-adjust to `CORECOM-C`.
+
+Per Parliament's mandate, SHC decides to detach Royal Consulate Joint Force and Royal Orbital Command to Royal Military High Command. Further administration is not permitted. 
+
+Standing order is as followed. Secure Sector V of `Europa-A` under reorganized 149th Division, with support from the 24th, 1193th and 76th Regiments, Sector Command A, on arrival in expected three Earth weeks. All garrison expects reorganization and static shift of logistics, no further emergency. 
+
+End. 
+
+SHC, PODCOM,
+
+Central Command Headquarter, London,
+
+Earth.
+
+:::
+
+By 2053, we have another topic on naval reorganization. Of course, the ground force would not be able to organize in such manner that fast, so we expect also, a tail-heavy, thin-tower hierarchy of ground force across command, with PODCOM dominating in logistics. But let's see why `CCHC035` is required. From what we can infer,
+
+- The civilization does not require ground assets far more than garrison, and so on. That is why it is reorganized into institutionalized `PODCOM`, standing for Planetary, Orbital Defence Command, handling both planetary and orbital security near natural mass concentrations, i.e. planets, comets, mining colonies, moons, and so on. 
+- Before this, `RCJF` and `ROC` are two operational commands under special designation, under `PODCOM`. Their classification is thus by law, lower by one priority, for `PODCOM` being `R1`, they would be `R2` and below. Freeing this options means a majority of Senate and Crown request for elevation and independent of central government, which, implies *something must have happened*, because it is politically costly, though not impossible, but the cost is often irreversible within such institutional monarchy system. 
+- The scope also changed. As said, `PODCOM` used to handle only 'coursework' on planetary support. In such, we can say the system implies *fear of coup d'tat*, such that naval asset in deep space, which heavily relies on logistics, to be not independent of planetary governance, hence civilians, to be unable to act against the civilian government without two-way cost. Thus, implies the change stems from certain knowledge of condition for the political structure to acknowledge elevation of force creation, so is to create effective ground force after abolition from a rather complicated history pre-unification. 
+
+Such can be said why the directive is formed. However, this move is organizational heavy, thus bring about the next issue, "On naval reorganization and standing order", due February 2053. 
+
+:::{.callout-note}
+
+# CCHC044, On naval reorganization and standing order - Document class M, subtype A, Priority R0, CIVPRI-A, Time class OX-I-2053, Immediate, Approved
+
+Our expected mode of operation hinges on the objective of Blitzkrieg-on-manifold, i.e. flexible and legible force projection or throughput, without lethality compromise on fundamental force purpose. Such is why to satisfy both home and expansion purpose, general command staff under Supreme High Command and SECCOM will be reorganized as minimal of the following administration:
+
+1. `CENTCOM`: Central Command will host active, non-static task forces or expeditionary, or special operation force accumulation tasked by either SHC, or under request of adjacent command. Order of priority from `R1` to `R3`. 
+2. `CORECOM` (Army and Naval Logistics): Control logistical network of the empire. Current configuration includes a replication of top-level structure, with a *static logistic network administration*, and a dynamic one satisfying rapid deployment of payload and routes throughput. Thus, control fuel, spare parts, ammunitions, fundamental sustainment logistics, infrastructures, communication FTL, necessities and QoL amenities, departmental logistics, fleets reserves and mothballing; warehouses, logistic outpost, vacuum ammo dumps, strategic logistical hub, shipyards, repair yards, inter-atmosphere/extra-atmosphere or ground bases, deep-space stations, naval and army FOB, and Her Royal Family Crown Defence Logistics. Responsibility over trade routes, supply routes, replenishment reserves and routes schedule, logistic checkpoints and rapid replenishment tasks, balancing logistic priority, military production and manufacturing acquisition, and bracketed logistical task. Priority `A` on manufacturing access both from military or civilian-classified assets. Priority mode `R2` to `R4` on basis. `CORECOM` administrative command requested for escort semi-independence and changes are being made for making availability on formation. 
+3. `INTELCOM` stays the same as intelligence deployment. Separation to `INTELCOM-N` and `INTELCOM-G` for naval and inter-atmosphere intelligence for legible domain control, also Parliament's transparency requirement. ROE restricted, but unrestricted SIGINT or counter-SIGINT by specification mandate (previously released), thus allow extra-atmosphere inactive transponder. Priority `R3` to `R4`.
+4. `NSC` (Naval Strike Command): Sector standing fleet. No change to structure, but changes to force size and acquisition cycles are considered and implemented. Extension includes standing garrison fleet in support of `CORECOM` aside from their own respective escort force. Priority `R1`. 
+5. `Royal Family Command`: No change. The Royal Family will consider change to integration of the Royal Marine onto deployment, uncertain.
+
+We expect clear separation of order and operation of this reorganization. Identified weakpoints are being resolve, but expect no traceable time availability as such matter lies in the domain within Parliament and Civilian Senate jurisdiction. Budget details will be released on specified time as seen of a separated document (CCA-57-5), however under priority shift, budgetary deliveries will follow the immediate structure at present invocation. `CORECOM` administrative members are required to contact `PODCOM` ground planetary assets for clearance and potential changes orbital paths and/or weapon operational area to mitigate at maximum cross-fire risk and friendly fire via overlapping operating asset. Finally, to satisfy current demand of Outer Colony expansion, CENTCOM are required to create sector expeditionary force before the situation can be resolved. Restriction on path clearance of the following system: `XCT-A-1928`, `CCV-0092-1985`, `Proxima Centauri`, `Bernard`, `Viscious-A`, and  `Harvest-AM10` applies for all priority class, except special operation priority `R0` specified by SHC or High Council, or code band `A/F` of civilian administration. 
+
+End.
+
+SHC, HIGHCOM, SECCOM, Administrative Center H,
+
+Naval Headquarter Hemshire,
+
+Luna.
+
+:::
+
+Those two cemented the prelude section on reorganization purpose. We will be clearing out what listed and mentioned, but currently, nothing can be said much because there are practically not much to think about. Or are we? In fact, as you realized right now, the structure of the title looks like this for all operable document,
+
+```rust
+[Designation]
+[Code]
+[Optional Date],
+ Title - Document class X, subtype [A1,A2,...],
+  Priority RX, 
+  CIVPRI-Y, 
+  Time class 
+  [Time code], 
+  [Status Outline]
+```
+
+or in a more specific form, 
+
+```rust
+[Issuer/Series][Numeric-ID][Optional Suffix], 
+[Title] – 
+Document class X, 
+subtype [A1/A2/…], 
+Priority RX, 
+CIVPRI-Y, 
+Time class [Time-Code], 
+[Status Flags]
+```
+
+Here, we have a set of **military priority** designation on order or decision templates, starting of `R1` to `R6`. Civilian authority, as expected of institutional, civilian-dominated government structure, requires specification on *civilian priority*, specified via `CIVPRI-Y` for `Y` ranging from `A` to `F`. Most of the time, it is used for classification and categorization of assets or relational actions, but we bracketed the entire civilian government to such interface via `CIVGOV` and designated code of communication; this is because we focus on *the military's POV*, which makes sense. However, two actors are there to restrict what they do, and must be intact in purpose of constraints: the civilian government, as said, and the Royal Family, with a collection of political and noble entities. That said, since the messages are from `R1` to `R2`, we would not be hearing from said actors many times, but more so the Royal Family substantial force projection and crown defence. Accordingly, when `CIVPRI` is specified for operational purpose and not order document designation, we use them as **code band** `A/F`, where one of their most important identification is the *degree of information specificity*. Simply speak, code band `A` is where the entire central government must be informed immediately, bypassing scheduled meetings and hearing and push to, realistically in our world, priority one message, so are for decision. We reserve `R0` for **absolute** bypass. This is only required in very specific case basis, and is rather extremely heavy. In essence, it is an *overriding option*, so much similar to `CCHC035`, but to a given time frame, it overrides priorities for **all active class**. Similar thing goes for `CIVPRI-A`, however, options on elevation to `R0`-equivalent, `CIVPRI-O`, lies in the hand of the Head of State, in conjunction with the Crown, and partial majority in both Parliament and the Low Senate.  
+
+Separating from such, the codes are rather simple. For example, `CCHC` means Central Command, High Command. If, for example, the order is from `CCNV`, we says it is of Central Command, Naval (Command). `HIGHCOM` is the only designation with abbreviation on central command with classification explicit, because it contains `HIGHCOM-A` in tangent of Supreme High Command (SHC), and `HIGHCOM-B` for another document classification of `CO`, by Command Operation. In fact, Supreme High Command can be considered a Joint Force Command Structure (JFCS), in which they are the combination of `CIVGOV` high-order communication pathway, special operations and separated operational entities, `HIGHCOM`, and `INTELCOM`, though nominally `INTELCOM` is *under* `SHC`. 
+
+So, let us recall of the structure that is present at the moment. The principle of the reorganization is the acceptance that "Any concentration of force will eventually try to optimize for itself.", thus making two directive of reorganization as being forced hands. On one side, you remove legible security against forced coup d'tat, and on the other side, there exists pressure that change the dynamic in such way. Granted, there exists no available internal pressure stemming from civil war issues, social issues and so on large enough to justify a structural change in Army composition. Such is obvious as to extend `PODCOM` only to be a rational mode in such issue, not directly removing a barrier set precedent from constitution. Thus, it means that there exists **external pressure**, one that is large enough, but also ambiguous enough to force changing hand, from both the Crown and indirectly majorative wing of constitutional and formed nobles influence, civilian government with majority on Senate, and overriding constitutional organization means alignment of also all High Council, Parliament, and within all civilian oversight and independent watchdogs. Justifying such move is done by all parties, thus pertaining to shared cost, and not sided responsibility. 
+
+About structure, up to `CCHC044`, the organizational template of the Central Military is as followed. 
+
+| Command                                               | Priority                             | Report directive (nominal)                                                                                                                               |
+| ----------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Supreme High Command (`SHC`)                          | `R0` to `R1`                         | `CIVPRI-A` maximum, context per basis.                                                                                                                   |
+| High Command (`HIGHCOM`)                              | `R1` to below                        | `CIVPRI-A` maximum, `CIVPRI-Null` for convention on `HIGHCOM-B`.                                                                                         |
+| Intelligence Command (`INTELCOM`)                     | `R1` to below                        | `CIVPRI-A` maximum, sector command requires `CIVPRI-B`, all default `CIVPRI-Null` in special operation.                                                  |
+| Sector Command (`SECCOM`)                             | `R1` to below                        | `CIVPRI-A` maximum, default `CIVPRI-B`.                                                                                                                  |
+| Civilian Administration (`CIVGOV`)                    | `R0` or default `Null`.              | None.                                                                                                                                                    |
+| Central Administrative Military Logistics (`CORECOM`) | `R2` to `R4`                         | `CIVPRI-B` maximum, default `CIVPRI-C` or `CIVPRI-Null`, special protocol for elevation to `CIVPRI-A`, defer to `HIGHCOM-B`.                             |
+| Central Operation Command (`CENTCOM`)                 | `R2` to `R4`, special operation `R1` | `CIVPRI-B` default, `CIVPRI-C` to `CIVPRI-F`, no `CIVPRI-Null`, elevation to `CIVPRI-A` requires code band `A` override or `R0` from SHC.                |
+| Naval Strike Command (`NASCOM`)                       | `R2` to `R3`                         | Standing fleet, `CIVPRI-B` by default, reorganization or sweep schedule elevation to `CIVPRI-A`.                                                         |
+| Royal Family Command (`RAFCOM`)                       | `R1` to `R3`                         | Default `CIVPRI-F`, issues under `R3` pertain `CIVPRI-Null` possible, override by `R1` to elevation to maximum `CIVPRI-B`. `R0` overrides to `CIVPRI-A`. |
+
+The structure is good enough, and I think further clarification, for example, Survey Naval Command (`SEVCOM`) and its cousin Science Command `SCICOM` is not that necessary, and they inherit the rule on `-1` priority shift. From the reorganization, we can also see that `PODCOM` would be nested into `CORECOM`, branch `CORECOM-C`, alongside `COLCOM` i.e. Colonial Logistic Command, `PLACOM` for Planetary Logistics Command, and subsections directive, for `CORECOM-A` Naval Logistics with subcommand Naval Escort (semi-independent escort force), `CORECOM-B` Naval Colonization Directive in tangent of the branch. With this, the only thing in waiting, is time. 
+
+## Phase II
+
+Phase two will be different. We will go through series of reports, before doing anything of analysis. So let us gather them up. The date is 2056, i.e. within reorganization time frame, there exists a six-year gap. Just to be clear, the minimum depth of the Empire, spanning from Sol axis, is 41LY, so for anything going inside such, for example, Proxima Centauri, condition protocol elevates to `R1`-capable order. We assume jump points or FTL jump-capable assets. Lastly, we introduce the concept of **condition directive**, in real world can be analogous to `DEFCON`, but here, we set them apart a bit. Functionally, there are,
+
+- `SEC-CON-X` for `X` from 1 to 5. This is **operational condition code**, specified for active alert condition. Used for operations and active movement interdiction, i.e. anything that requires sector concentration. Limits to sector governance of all sub-districts. 
+- `UNV-CON-X` for `X` from 1 to 4. This is again, operational condition code, but differs in scope range for **all legible territory** under control or partial control. Alert status on latent frame. 
+- `SEC-DEFCON-Q` for `Q` from `A` to `E`. This is **operational protocol condition code**, i.e. we can say as the *background addition* level specifiable for protocols. It will enact specific double measure or heightened procedures during condition alert. Use in separation to the above two codes, but usually comparable. 
+- `UNV-DEFCON-Q` is the same, but for universal condition, not sector-based. 
+
+This is the basic lingua franca for the section itself. 
+
+### First contact, II.A.
+
+:::{.callout-important}
+# CCNV093, Battlefield Report - Document class N, subtype M/A/R, Priority R1, CIVPRI-Null, Time class OX-I-2056, Confirmed
+
+4th Fleet, in effective responsibility over Proxima Sector B, Subsector C report. Detachment 4, Battlegroup A has been rendered ineffective of combat potential. Blockade over Aristotle-C is in effect, priority `R2`. Request limited reinforcement from Sector Command. 
+
+End.
+
+4th Fleet, Proxima Sector B Subsector C General Staff,
+
+Admiral Fuchida Naoki,
+
+Forward Naval Operating Base Alpha-Angelina,
+
+Proxima Centauri A-IV
+:::
+
+:::{.callout-important}
+# CCNV094, Battlefield Report - Document class N, subtype M/A/R, Priority R1, CIVPRI-A, Time class OX-I-2056, Confirmed
+
+4th Fleet, in effective responsibility over Proxima Sector B, Subsector C report. Battlegroup A, B sustained critical operational attrition. Blockade over Aristotle-C is in effect, priority upgrade to `R1`, code band `A`. Request reinforcement from Sector Command. Deep-space outpost Prima-A reports critical masses, range 72000, bearing 244, angle 44, reading above sector condition. Request `SEC-CON-1` to be instated, effective immediately on issue. 
+
+End.
+
+4th Fleet, Proxima Sector B Subsector C General Staff,
+
+Admiral Fuchida Naoki,
+
+Forward Naval Operating Base Alpha-Angelina,
+
+Proxima Centauri A-IV
+:::
+
+:::{.callout-important}
+# CCNV093i, Battlefield Adjustment - Document class M/N, subtype I/N/A/R, Priority R0, CIVPRI-A, Time class OX-I-2056, Confirmed, Approved, Immediate
+
+SHC and HIGHCOM have received reports on unknown threats acquisition in the last 72 hours time frame. Sector under clear threat overrun includes Sector B/11, Secundia A, Proxima B, VC-111C, situated Southern Command of Imperial topology. Effective immediately, `SEC-CON-1` and `UNV-CON-1` is activated. `CENTCOM` will provide further deployment and details. Defensively around Melbridge Cosmic Belt is advised as force concentration, depth 40, range 112AU approximately. All remaining sectors expect invasion force moving from bearing 225, all angle, all range. REDFOR has pinpoint jump. 
+
+End.
+
+SHC, PODCOM,
+
+Central Command Headquarter, London,
+
+Earth.
+
+Naval High Command,
+
+Naval Headquarter Hemshire,
+
+Luna.
+:::
+
+:::{.callout-important}
+# CCNV093-C, Battlefield Adjustment - Document class M/N, subtype I/N/A/R, Priority R0, CIVPRI-A, Time class OX-I-2056, Confirmed, Approved, Immediate
+
+SHC and HIGHCOM received further information. 4th Fleet is ineffective. Naval High Command is concentrating assets along Melbridge Belt. All remaining force retreat to defensive posture, effective immediately. REDFOR is still unknown, suspected hostile extraterrestrial force. Communication is not possible. Sector jamming is in effect, time to estimated deployment of 5 unit, angle 335, comm band A, degree G, offset 44FA+, Base frequency 123000+5. Counter-jamming is in effect, with 3 unit strength lift, run-time class A4. Expect total blindness. Gravitational blockage is deployed, ETA 33 Standard Unit Time. 
+
+End.
+
+SHC, PODCOM,
+
+Central Command Headquarter, London,
+Earth.
+
+INTELCOM,
+
+Office of Naval Intelligence,
+
+Central Intelligence Headquarter,
+
+San Mariano, 
+
+Earth.
+:::
+
+:::{.callout-important}
+# CCNV093-Q, Battlefield Adjustment - Document class M/N, subtype I/N/A/R, Priority R0, CIVPRI-A, Time class OX-I-2056, Confirmed, Approved, Immediate
+
+SHC and HIGHCOM received further information. Melbridge Defensive Line has been breached. All on-contact forces hold standing order for reinforcement. Earth is under siege condition, traffic restriction `R2`. 
+
+End.
+
+SHC, PODCOM,
+
+Central Command Headquarter, London,
+
+Earth.
+:::
+
+:::{.callout-important}
+# CCNV093-Z, Battlefield Adjustment - Document class M/N/F, subtype I/N/A/R, Priority R0, CIVPRI-A, Time class OX-I-2056, Confirmed, Approved, Immediate
+
+SHC and HIGHCOM received further information. All hostile units have retreated or diverted from current contact line, estimate gap 4420, outside of standing borders. All remaining unit reports immediately after blackout condition has been lifted. Home Fleet sustained long-term ineffective attrition. `CORECOM` has been ordered, priority `R0`, code `A` for immediate reinforcement and activation of reserve assets. Central Intelligence Headquarter is ineffective. 
+
+End.
+
+SHC, PODCOM,
+
+Central Command Headquarter, London,
+
+Earth.
+:::
+
+:::{.callout-important}
+# CCNV/CT094-A, Logistics and Design Adjustment - Document class M/Mn/F/D, subtype I/N/A/R, Priority R0, CIVPRI-A, Time class OX-I-2057, Confirmed, Approved
+
+Effective on 2057, July, 25th, time 0566, SHC and HIGHCOM received reports from CORECOM and CENTCOM reports and reconnaissance result. Adjustment is received as followed from CCNVC113A-FR,
+
+- CORECOM, code `A`, adjust hulls design DDG, FT, CA, CC, BBG (Barge), DD(B), and sub-variants for lengthen deployment window 40, month, and adjust armour rating preferable to limits by CCLR2056-A. 
+- CORECOM, priority `R1`, adjust force projection tonnage from 27,000,000 to 35,500,230 for SECCOM Northern Ethio. 
+- CORECOM, priority `R2`, adjust logistic schedule D1 to D20, C24 to C66, B128 to B133, A5 to A20 by approximately 0500, EECM sweep in effect window. Further designate new logistical support lane D21 to D25, C70 to C82, B141 to B144, specified by requirement report attached on CT094-B. 
+
+CENTCOM reports mass 55600, mass 123000, mass 444600, bearing 224, 190, 320, angle 44, 120, 280, count from 30 to 450, path unknown, range 120000. SHC reduces condition to `SEC-DEFCON-C` and `UNV-DEFCON-D`. 
+
+End.
+
+CENTCOM, CORECOM, SHC, HIGHCOM, 
+
+Central Command Headquarter, London,
+
+Earth.
+:::
+
+And that concludes Phase II of the conflict. There are a lot to unpack, so let's see what are there to be unpacked. 
+
+### Analysis
+
+So, the situation simulates *first-contact* scenario on procedure. However, while most scenarios would be giving such in the stance of border contact, or exploration contact, here, we shift to *core contact*. As specified, Proxima Centauri is one of many Core Systems, not Inner Colonies or Outer Colonies. This marks the situation as penetration in depth, and breach of critical level. That is why per usual, procedure concurs the use of `R2` shift and request, but immediately `CIVPRI-A` and `R1` is enacted, by severity and so is `SEC-CON-1`. The condition code is conservative, speaking from position of Admiral Naoki. However, it implies larger attention, since sector defence, condition code 1 means that it has potential for near-sector code 2. If such situation is not resolved, `UNV-CON-2` at least follows, and right now, that code is not on the border, but from the elevated core. Thus justified the reaction. 
+
+Secondly, is the ineffectiveness of combat. While it is not true that the hostile force, or REDFOR, has the total damage upper hand or offensive capacity advantage, what they have is shielding, implicitly, and manoeuvring capacity. Such allows for unrestricted paths or attack vector, thus renders prediction and orbital $\Delta V$ ineffective, thus losing tactical leverage. Couple that with near-peer level of offensive capacity, and superior EWAR capacity, results in later total collapse of operational effectiveness of 4th Fleet. They are not totally destroyed, however, since Admiral Naoki escaped while relaying position of enemy, thus allowing SHC to specify breach range and direct Melbridge Cosmic Belt defensive posture, which is situated between Proxima Centauri and other inner system colonies. 100+ AU is the section length, i.e., by Empire doctrine, each defensive line in space must be specified by at least two parameters: depth $d$ on minimum attack vector prevention, and length $\ell$ for maximal deviation from standard vector, i.e. orthorgonal plane coverage. The actual defensively is the entire Melbridge Belt, with extension to cover almost all angles. This is also because upon realization, as we have seen,
+
+> All remaining sectors expect invasion force moving from bearing 225, all angle, all range. 
+
+This includes the acceptance of condition that hostile force has potentially unlimited mobility. Under such condition, defensively cannot be simply provided under non-umbrella posture, and must be full coverage by priority of core systems. However, this leads to disorganization made by rapid attack and surprised vector destruction, so the forces are thinned out, and part of the line was exposed, and hostile force punched through this. 
+
+After punching through, the force goes straight for vector toward Sol System. Upon not knowing which vector in specific would it take, whether Earth or anywhere, HIGHCOM realizes that aside from this extremely strong vector, the threat still remains, but are small or conditionally focused. Thus, the order is to remain umbrella, and gather a substantial deployment force, priority `R1` to defend Sol, while also keeping other Outer Colonies and further sectors with warnings and communication of elevated condition status. In further notice, where the threat is clear, and enemy breach Inter-Sol and various defensive layers of the system themselves to Earth, HIGHCOM issued the final order conjunction, which says basically, 
+
+> Expect hostile vectors from all bearing, all angle, all range, no prediction available. All traffic `R2` and below not permitted to Sol Sector (to prevent casualties under existential threat), but allows for earlier `R1` detachment to enter the system for reinforcement. 
+
+The strategy is to force a dual pinning on the enemy. Sol system has Gravity Well, which distort Jump capacity, of which was deployed en-mass in the previous CCNV093-C and CCNV093-Q where Melbridge was breached. The pincer movement is to force time, and to learn more about what the hostile force wants. Under the same line, implicitly mentioned, SHC and CIVGOV also enacted protocol Alpha, which enables activation of a deactivated unless conditions are met, `CIVPRI-O`, for `MOTCOM`, or Mothership Command. This is existential crisis, thus allows for activation of such force. Fortunately, the adversary did retreat, though that does not change their posture for the longer duration of the defence and buildup phase. 
+
+What can we learn about this part is not much. The situation is already laid out as said. However, the narrative is clear. This is a total shock to the entire military, though much are anticipated beforehand ever since ground reorganization. In fact, most gravity wells are concentrated on Earth's surface sections, and was defended against orbital detachments from spaces by hostile forces. They are marginally equivalent in strength, however with contested and often superior orbital control, assets on ground of REDFOR has the upper hand if and only if PODCOM was retained. The decision to actualize GRPCOM was then evaluated as a right decision despite its dangers, and here is perhaps why the decision while of good faith, is irreversible. Still, it was a success. 
+
+There exists a part of few designation that would be of interest. For example, the simple document class and subclass. We have been seeing this ever since the first record, however, what do they mean? Well, realistic military also has its own share of class enumeration and tagging, but there are a few general one. For example, `Mn` for maintainance, `M` for military, as certain records are from `CIVGOV`, or coauthored of such, `N` is Naval, `G` is Ground, `A` is for Active (meaning considering active operations or conditions), `I` for intelligence, `R` is for Readjustment (can overlap with Ne, for Neuausrichtung, or FR for force readjustment). Aside from that, technical section is contained in parts, for example,
+
+> Sector jamming is in effect, time to estimated deployment of 5 unit, angle 335, comm band A, degree G, offset 44FA+, Base frequency 123000+5. Counter-jamming is in effect, with 3 unit strength lift, run-time class A4. Expect total blindness. Gravitational blockage is deployed, ETA 33 Standard Unit Time. 
+
+We have been seeing coordinates. Let us start with it first. Nominally, three-dimensional warfare, ignoring cost topology, and geometric terrains, we have a set of three-parameter focal to take care of, being
+$$
+\mathbf{r} = (b,[\theta_{x},\theta_{y},\theta_{z}],r)
+$$
+This stems from probabilistic and Keplerian orbit. Basically, for each $dr$, we need to specify the orbital plane that the path is on. This requires plane alignment, i.e. bearing $b$. Furthermore, since orbital difference is measured of angle of path elevation, conditioning on the Galatic Centre or Earth Centre axis, the angle is calculated relative to said axis, and expressed by the three-$\theta$ treatment. Finally, radial orbital $\Delta V$ manoeuvre accepts motion cost by default, thus most navigation requires vector-free distance. This is the standard computational doctrine of the Imperial Navy. With such, you can perhaps derive why they failed during combat records, of which if released, would be able to simulate the superiority in movements. 
+
+Now, for the technical part. There is this technique in technical writing and realism forcing, that to be *world-aware* and *context-heavy*. Think about it a bit. This is an early-stage, semi-mature interstellar empire, spanned after a unification war implicitly, and of constitutional monarchy system. They will, obviously, have different standards, EWAR techs, encryption schemes, information carrier specification different from what we currently have, for example, using optical system instead, or quantum Q-224 encryption scheme. The system is mature, and there are things that would be **taken for granted**, because they are not simply naive and starting from zero. Such is to say, the documents are specified by insiders, for insiders. The writing by then, would like to be referencible by design dimension. That is, *what should be written down to express* (what kind of information matters), and not actual metric. Or simply speak, give information density and interpretability, not ultra-specific technical specification, because when writing of a far-flung future, it **is future** for a reason, and furthermore, to work inside a machine, not to operate like a narrator outside of it. Functionally real internal documents never explain their own infrastructure. Aside from scientific showdown, most scenario when writing such, degrades the individual in question for incompetence, in-universe awkward and rather impotent, and many if not all to simply be a wasteful timing of relevance and so on. Listing wavelengths, algorithms, or quantum jargon would actually make the text less believable, because real operational writing never does that outside of manuals, so to speak, so stop bringing them in. At least, do it in the footnote. 
+
+## Phase III
+
+Phase three can be said to be the storyline for post-intense war conflict. The story is interesting from now under individual storyline, and is also where you can start inserting characters with rather quite dynamical setting at will. 
+
+:::{.callout-note}
+
+# CCGV95, Intelligence Report - Document class M/IT/F/D, subtype I/G, Priority R2, CIVPRI-C, Time class OX-I-2057, Confirmed, Approved
+
+58-Eridani, Eridani-V-III Local Ground Command, Eridani Sector Command, Eridani 34th Rhine Scientific Division Administration report. Unknown planetary asset, class R, designed Relic/Archeological was detected on surface, size 4000, approximate coordinate 55d23mN, 123d55mW on Eridani Orbital Coordinate 4. Asset is inactive. SECCOM Eridani has issued restriction on traffic of code band `D`, priority code `R3` and `R4`. Eridani 34th Rhine Scientific Division issued expeditionary notice on deployment, effective 1250 local time. Request additional sector asset and/or scientific specialists task force.
+
+End.
+
+Eridani Sector Command Headquarter,
+
+Elgenta, Eridani-V,
+
+58-Eridani Local Ground Command Installation,
+
+Tabit, Eridani-V-III,
+
+Eridani 34th Rhine Scientific Division Laboratory,
+
+Tabit, Eridani-V-III.
+:::
+
+Well, we have scientific exploration. With our previous setting, now living aliens are in effect, we are discovering potentially *dead alien*. However, that does not guarantee it being safe. Implicitly, whenever you see certain kind of specification, like "Asset is inactive", assumes something happens when it is *not inactive*. In such case, accidents indeed happened, and even resulted in a nuclear explosion of 150MT size. So, it is not a trivial matter. But, again, to break realism is to realize what should be common, and to spell out what should be subconscious. Rather, if you explain obvious institutional assumptions, you turn procedure into exposition and the world is not lived-in, but rather observed of. Procedures, and often the living graces, rely on shared fear, shared memory, shared precedent. Failure in during such, and your realism would be already downgraded. And fundamentally, it elevates, and implies the severity of at least, code routine `R2`. It is not normal, not, well, particularly dangerous, but still there. 
+
+:::{.callout-note}
+# CCNV/ND12005, Naval Order - Document class M/N/G, subtype I/G/N/A, Priority R1, CIVPRI-Null, Time class OX-I-2057, Confirmed, Approved 
+
+SHC to 7th Fleet. Following 2300, June, 22, Earth (Galactic) Time, adjust course bearing 280, angle 32, specified by attachment specifically. Logistics adjustment as followed.
+
+- DDG-1124, DDG-2240, CX-440, CX-220 attached to fleet, extend logistics by LS-66822, LS-66844. 
+- Ground adjustment complement from 45th Luna Expeditionary Research Task Force, aboard CX-45, no attachment. 
+
+Expect ETA within three Earth week. Response if required and/or adjustment request. 
+
+End.
+
+SHC,
+
+Central Command Headquarter, London,
+
+Earth.
+:::
+
+I hope you can learn a bit about the phrasing, the talk and address of the text, but one of the most important things to add is this. In a system like this, *do not oversell events*. Not everything is `R1`. The activation or `R0` is extremely rare outside crisis, that is why upon realization, only in existential threat that `R0` was used so many times. To provide realism, or rather, to provide also coherence, you need to realize between objective, majorative, and individual perspectives and priorities. For an intergalactic government, such event is `R2`. But for the person trapped inside, it is `R0`. Be careful with that, and with the contrast clear, the leverage on story telling should be better than simply treating every event with dramatic inputs. Though, if you want to write **melodrama**, incoherent escalation, super heroic stories, the choice is yours. But the cost you pay, explicit of it, is what was said. 
+
+Also, a quick mention. See all those stories where the main character elevated to god-like events accidentally and whatever, and totally breaks the scale, or with events and so on that an in-universe SHC is aware of someone spoofing around? That makes the entire system dumb, and not just that, the story to be shallow. There is only so much you can do with that setup, and most of them are instant noodle-tier stories. Still, it means we have stuff to do. 4-size attachment task force was sent, 7th Fleet diverted from previous routine to Eridani, and the Pandora box is ticking slowly. What will happen? Only the next report might take a glimpse at it. Or the beginning of a certain character stories. Where Tennouji Mirei is in charge of 7th Fleet. By reference, she is the "Her Royal Highness Mirei". On the flip side, lots of stuff happens to `CORECOM` and `CIVGOV`. 
+
+:::{.callout-important}
+# CCHC120, On naval assignment adjustment and standing order - Document class N, subtype A/Aj/T, Priority R2, CIVPRI-A, Time class OX-III-2058, Approved.
+
+Under `CCHC125`series, approved per SHC and `CIVGOV`, Parliament and High Council specifically, `R0` Admiral of the Navy, Fujimiya Amane, will be reassigned to Mothership Command and all operational acquisition of `MOTCOM`. As per procedure, effective command rank will be demoted to `R1`, Admiral. Replacement `R0` will be announced. 
+
+End. 
+
+SHC, CIVGOV,
+Central Command Headquarter, London,
+Earth.
+Tower of Parliament, Crete, 
+Earth.
+:::
+
+And I would say they are plenty busy. Who would have thought that he would be demoted as such. That said, it is rather reasonable. F. Amane *cannot be lost*, due to both his performance during the crisis, and the order of power he can wield. As such, acknowledging elevation of resources for Mothership Command as the last, existential option available, the civilian government assigned him to such position, to wish using his ability to further such Alpha finality, and both to constrain legitimacy and order of basis, especially after a crisis which cripples authoritative normality. In hindsight, this is not a demotion. But rather, strictly speaking, it gives him more leverage than most, if you consider the fact Mothership Command is traditionally *headless*. 
+
+:::{.callout-important}
+# CIVGOV-441204-A, On Science and Technology Acquisition - Document class SC, subtype P/C/T, Priority R5, CIVPRI-A, Time class OX-III-2058, Approved, Classified
+
+`CIVGOV` and High Council, receivable to Admiral, `R1`, Fujimiya Amane, and `MOTCOM`. Due to legislature `PAR-114550-FF` of Parliament, in accordance to Senate, the following agency package is requisitioned under `MOTCOM`, effective immediately. 
+
+1. `SORAD`, command type `MILDEF`, current `COMSTAFF` `R4`, Commander or Major (GF), Andrew Wittgenstein. 
+2. `DARPA`, `RINALAB` (Rhine Institutional National Laboratory), `IMTC` (Imperial Ministerial Technological Complexes), command type `CIV`, current `COMSTAFF` under civilian assignment. 
+
+All agency will be reassigned under MOTCOM, default priority `R2`, code band `B`. Requisition of resources under code band D for civilian procurement, and `R2` for military procurement. Budgetary management follows `PAR-B-2058-Q2` adjustment, extension trial period 4 (months). Request clarification or adjustment if required. 
+
+End. 
+
+SHC, CIVGOV, SENATE
+
+Central Command Headquarter, London,
+Earth.
+
+Tower of Parliament, Crete, 
+
+Earth.
+
+House of Senate, Xiaohan (Old Beijing), 
+
+Earth.
+:::
+
+:::{.callout-important}
+# OCOLGOV-1122-B, Naval Request Order - Document class CIV/A, subtype P/Mn, Priority R3, CIVPRI-B, Time class OX-II-2058, Approved, Confirmed
+
+Outer Colony Government responds to `CIVGOV441196` series, effective as stated. `SECCOM` under `OCOLGOV` request the following change of parameters. 
+
+- Budgetary priority shift, `R2`. 
+- Tonnage maximum procurement, class `C2`. 
+- Static installation ceiling up from 50 to 120. 
+- Logistic routes acquisition from 300 to 350. 
+
+Request is directed, per `CIVGOV`, `PAR`, `HIGHCOM`, `CORECOM`, respectively. Please contact Naval Office Evereston, comm line 4450 (priority), code band `A` for clarification. Specific details is attached in `OCOLGOB-1122-B1`, procurement active. 
+
+End.
+
+Outer Colony House of Senate, 
+
+Outer Colony Naval Command, 
+
+OCOLGOV,
+
+Evereston, Colstone-V-III (SC11B-AVH, cluster astronomical designation)
+:::
+
+:::{.callout-important}
+# CIVGOV-441205, Naval Force Adjustment - Document class CIV/A/N, subtype N/A/M/L, Priority R2, CIVPRI-A, Time class OX-II-2058, Approved, Confirmed
+
+CIVGOV and SHC respond to `OCOLGOV`. Parliament and Senate have accepted request and funding shift, declare class `R2` independent priority. However, we place additional ceiling as followed. 
+
+- Static installation ceiling up from 50 to 1200. Minimum as required, 10 (ten) yards class `R`, 5 (five) yards class `N`, and minimum 40 (forty) Class-L Defence Clusters. 
+- Logistic routes acquisition from 300 to 495, adjust portion priority A/B/C/D as 0.2/0.25/0.35/0.2, respectively. 
+
+Reconfirmation and clarification if required. Additionally, INTELCOM requests priority `R1`, operational details on existing sensor manifold for all SECCOM under command. Additionally, `CIVRRP` requests, code band `B`, clearance for colonial expansion, class `I`. Details attached in `CIVGOV-441205-A`. 
+
+End. 
+
+SHC, CIVGOV, SENATE, CIVRRP
+
+Central Command Headquarter, London,
+
+Earth.
+
+Tower of Parliament, Crete, 
+
+Earth.
+
+House of Senate, Xiaohan (Old Beijing), 
+
+Earth.
+
+Civilian Representative Parliament, Elenora Orbital City,
+
+Earth.
+:::
+
+### Side logistics
+
+`CORECOM` is one of the most important actor of the playing field. Usually, most people would think of them as rather inept and boring. However, when pushes come to shove, they are detrimental, as for not if they exist, guns would not be loaded, and cars would be a chunk of metal on the sideway. That is how important it is. And the ice-cream ships, too. 
+
+:::{.callout-important}
+# CCC4-033, On naval class and reconfiguration - Document class N, subtype L/D/Mn, Priority R2, CIVPRI-C, Time class OX-III-2057, Confirmed, Approved
+
+CORECOM reports on reorganization of fleet capacity and new class construction. The following adjustment will apply, effective 0800, August 27th, 2057 Earth time to Naval Shipbuilding Complex, type N, Logistics Complex, type L/ECR, as mentioned, and stated. 
+
+### A. Hull specification and lifetime
+
+Adjust on new hulls, including the following.
+
+1. **Destroyer (DD)**: Following subclasses are defined - DD (Standard), DDG, DL, DE, CCD, JD, JDC, DSC. 
+2. **Cruiser (CA)**: Following subclasses are defined - CA (Standard), CC, ADC, CA (Armoured), CA (Heavy), CG. 
+3. **Frigate (FF)**: Following subclasses are defined - FF (Standard), FFE, SF. 
+4. **Carrier (CV)**: Following subclasses are defined - CV (Standard), CVA. 
+
+All detailed classifications attached in mentioned subfiles, for `CCC4-033-1` on DD, `CCC4-033-2` on CA, `CCC4-033-3` on FF, and `CCC4-033-4` on CV. Additionally, upgradable specs and in-research assets expectation are attached in `CCC4-033-CL`. 
+
+Hull lifetimes are expected of 50 years, maximum cycle maintenance 3.1 years, refit cycle 10 years. Information regarding specific components maintenance specified in `CCC4--033-IVMN`. 
+
+### B. Naming convention
+
+All standard ship-of-the-line classes will be named by `Standard [Main class] - [Subclass]`, with additional version upgrade specified by `Block [Main Variation] [Subversion]`, respectively. Additional specialized requisition will be specified with additional prefix `SP` or specified by Naval Command Organization. 
+
+Explicit naming convention remains the same, all ships are attached with serial identification and optional name, specified by respective crew, acquired on basis standard `RN012`. 
+
+### C. Minimal specification requirement
+
+During manufacturing and deployments, and tethering, ships can be modified and modularized depends on mission package and extending military requirement at present. As such, minimal requirement on tonnage and specification is as followed. 
+
+- **DD**: Tonnage maximum 30.000 (DDG), Armour class R4 (15-20), deployment cycle 40 (months), magazine depth `2540` (Heavy), ECCM minimum rating 100/150/0/0, ELINT 7/6/7. $\Delta V$ minimum 25.000. 
+- **CA**: Tonnage maximum 50.000 (CA-Heavy), Armour class R3M (25-35+4), deployment cycle 80 (months), magazine depth `3000` (CA-Heavy), ECCM minimum rating 150/350/2/2, ELINT 8/7/9. $\Delta V$ minimum 13.000. 
+- **FF**: Tonnage maximum 10.000, Armour class R5 (1-14), deployment cycle 40 (months), magazine depth `400`, ECCM minimum rating 50/100/1/1, ELINT 5/5/7, $\Delta V$ minimum 30.000. 
+- **CV**: Specified in `CCC4-033-CVS` specification directly, no brief. 
+
+### D. Shipyard notification
+
+The following shipyard complexes are required to report for retooling and reschedule. 
+
+1. Fujimiya Naval Shipyard A to I (Earth). 
+2. Amamiya Naval Yard A,B (Mars). 
+3. Haugaard State Shipyard (Earth). 
+
+Tooling schedule will begin by attachment `CCC4-033-MND`. Specification of logistic requirement, resource acquisition and time windows, and further schedules are listed in `CCC4-033-MNS`. 
+
+End. 
+
+CORECOM, Naval Administration Task Force H,
+
+Command Naval Army Logistics Headquarter, 
+
+Centurius, Europa.
+:::
+
+:::{.callout-important}
+# CCC4-034-N, Maintenance Adjustment - Document class N/S, subtype L/D/Mn, Priority R1, CIVPRI-Null, Time class OX-I-2057, Confirmed, Approved, Classified
+
+CORECOM-C adjustment order in session, following `CCHC-100`. Following adjustment is valid, designated P/S/A, applies for 7th Fleet and attachment squadrons, receivables 7th Fleet Navigation Command, class navigation patterns `A0`, as specified. 
+
+1. Designated special lane JP0058-S/C, checkpoints (A44,B50,C120) to (AN22,B90,CN4), parameters control 00449, 004555, 11220, 0XX445, 111-114-005, deviation 20, initial condition ideal 44, 11, 1450, fleet size 5 for each entry package, modify as required. 
+2. Communication in-lane restricted, no STC. Restriction is code band A, R0, universal, no deviation, all frequency except EM000 emergency frequency. 
+3. Weather forecast on JP0058-S/C indicates small gravitational fluctuation, adjust per deviation as required. JP1120-L and JP4450-F (11th Fleet Squadron A/1) has been delayed, however intersection might happen due to time deviation. Advise preliminary navigation landscape probing. Eridani STC will provide final approach. 
+
+Pre-entry verification will be diverted to CORECOM-C, STC Neptune-A, comm band D, frequency 230040. Further information will be included per `CCC4-034-NA`. Request adjustment and recourse if required. 
+
+End. 
+
+CORECOM(-C), HIGHCOM,
+
+Command Naval Army Logistics Headquarter, 
+
+Centurius, Europa.
+
+Central Command Headquarter, 
+
+London, Earth.
+:::
+
+A bit of clarification, `JP` designation during navigation data means Jump Pattern, while in real space, it would be `NP` for Navigation Pattern as universal, with classification aside for `S/C` means Special, Classified, since a lot of Special corridor is public or not classified. CORECOM-C does not issue specific initial `NP` is because as per working corridor of the Imperial Navy, 7th Fleet and all attachments, and all naval forces on active motion is required to report or response to communication designation, thus having them specific `NP` or local modified `NP-D` deviation. Thus, only after re-entry to real space, Eridani STC (Space Traffic Control) would be required to specify lane approach for 7th Fleet. All parameters are there because of the chaotic model control of Imperial Navy Jump Navigational Installation, standardized to all fleet except special fleet class A above, which 7th Fleet is not one of. 
+
+:::{.callout-important}
+# CCC4-035-1, Procurement Adjustment - Document class Mn/P, subtype L/D/Pr, Priority R3, CIVPRI-E, Time class OX-II-2057, Confirming, Approved
+
+CORECOM-B and Naval Administration Task Force H to Fujimiya Naval Shipyard Complex and Fujimiya National Armoury. Procurement of assets specified by `CCHC-099` has been confirmed and approved by Parliament. Specifically from HIGHCOM and NAT, the following package would be of priority `A` for production:
+
+- FFG-111A Eridanus Missile Package (package size 4), unit counts 440000 (four hundred thousand forty thousand). 
+- MAA-224 Eridanus AAM Systems (package size 12), unit counts 1200000 (one million two hundred thousand). 
+
+Further information specified by previous document, specifically `CCC4-032` series. Request additional clarification via direct contact line to CORECOM-B and NAT central office, priority R1. 
+
+End. 
+
+CORECOM, Naval Administration Task Force H,
+
+Command Naval Army Logistics Headquarter, 
+
+Centurius, Europa.
+:::
+
+## Story 
+
+Now, here comes one of the many things that I would love to add. After you have all this, what do you get? Per my view, you get *scaffolding*. Beside from personal brilliance, let's see what I can deploy for you to see, of the historical record. Not by anyone, but by the people lived in it. 
+
+### Historian's remark - *The Record of Equitia* (Empire of the Far Land)
+
+
+#### On Melbridge-Proxima Catastrophe, and the start of the Long War
+[...]
+
+During the first few months after the Melbridge-Proxima Catastrophe, military command, including `HIGHCOM`, which acted conspicuously against hostile forces in a manner that can be call above normal competence of the general public, soared to push for more military reform within the narrow window of disorganization. Perhaps, recognizing the situational opportunity after-shock to complete pre-Melbridge incident reorganization, SHC agrees with this initiative, and accelerated the first end-year fiscal meeting of the Parliament into three central legislatures: each of which, would extend naval rearmament, and extension of clearance to technologies class A, which directly led to, or rather, benefited from, the Eridani Expedition itself.
+
+Unlike what of people expectation, Crown Princess Mirei was not in a great position during this time period. Despite not being targeted deliberately during the major vector toward Sol, military High Command records at the time during the blockade and was later confirmed by real casualties on the ground, determined a sizeable strike force directed for the Crown World. While it is not known of the true cause of this breach, in which the defence of Alpha Centauri Crown System is often considered of pre-Melbridge standard to be extraordinary, it resulted in abdication of death, for both the Queen, and the King. As such, the Royal Family itself was urged to find a successor, but also realized of internal strifes unsuitable for inter-war - if we take Melbridge as the starting point that most historians concur - period. Out of all the large pool of candidates from the Royal Family, Princess Mirei, bearing the age of sixteen, yet risen through early exposure and merits to the rank of Commander, was chosen for the tile out of necessity, and thus, made the de facto Head of Monarchy by Imperial standard. To prove herself and stabilize the situation in light of this elevation and a better succession process in which she agreed to aim for, and by procedure on dictation for military-involved Royal Family member upon enough merit to be promoted of one (1) rank, she was put in charge of the 7th Fleet, and with rank NC4, or Rear Admiral. The intention of assignment for the 7th Fleet is unknown, but by historical accounts, such enabled a rather extraordinary period of success to the new ruler, and the unprepared state of the Imperial Command.
+
+[...]
+
+#### On the Second Age of Sails, and El Dorado in Space
+
+[...]
+
+In reality, the Empire does have a lot of fringe colonies, fragments and of requirement from old expedition requests. They are permitted to venture far into deep space for colonization and sufficient activities, with one condition - their defence priority will be at most `R4` (which is, minimal priority by military language, though some readers will notice difference in standard overtime of military transition), especially for 10,000LY and beyond. Furthermore, because of such distance, the colonists themselves agreed, and hedge on with all designated settlement city or city clusters size, and full local defence fleet capacity, without relying on anyone. Designated via specific command minimum, independent or semi-independent of `HIGHCOM`, those are the only force standing between them, and the dead or alive alien, living in real space. For example, Tuco del Elmo Colonial City, 22400LY from Imperial Center, often known by local and interstellar traders as 'the far light of El Dorado', has itself a defence fleet, numbered around 120 hulls. Of such, the fleet operates with at least of all time including maintenance a battleship, hovering above the tusk planet known as Lacole de Paris, coming from the ancient city of Paris on the Imperial Homeworld. Some records mentioned different interpretation of El Dorado in the local mythology. Some concerns of it to point to Earth, as the second Earth of the distant arm, while some believe it is the symbol, taken from the Age of Sail, 1500s to 1600s of the Old Calendar, where many boarded wooden ships, primitive and dangerous, and sail the seas to the golden land, to the Lost City of Gold. Such are some of the myths surrounding El Dorado. However, El Dorado indeed earned those title on itself, as during the event known as  El Torcal de Antequera en el Espacio, the nominal attachment from Tuco saved the settlement from a solar flare so devastating, that such would be another entry of lost effort. 
+
+Tuco del Elmo is a proof of preserverance, the mark of the continuity from the old time where dreams of conquering stars and 'the gentle Muspelheim on the edge of the eye', according to a depiction in La Marce, the famous newspaper of the time (which even now, they still operate, though it would take a while to notice where had they been of the time and the distant past). Many soon followed, though with their fair share of unsuccessful and lackluster results; but nevertheless surged the hope, and dream of leaving their homeworld, and engulf themselves into the dark abyss of *spatium* (an ancient Roman term for space). 
+
+
+[...]
+
+___
+
+Such are stories that we can write, of those we can hedge, from what to see and to get, of the world building itself. It might be simple, or might be not. But I am and would not claiming it to be not so interesting by itself. Let the world live. Us writers are there to settle the deal. Let those depend on it, to hold the pen. 
+
+With that said, those are my two cents. Do with them what you want, if you will. The waltz cannot be done of oneself, and thus accept such invitation.  
+

@@ -6,10 +6,11 @@ listing:
   fields: [image, title, categories, description, reading-time,
            date]
   sort: "date desc"
-  type: default
+  type: grid
   categories: true
   sort-ui: false
   filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
+What to be said? What to be more than what it is. 

@@ -10,15 +10,31 @@ about:
     - icon: github
       text: Github
       href: https://github.com/Amane-Fujimiya
+format:
+  html: 
+    grid:
+      body-width: 1000px
+listing:
+  date-format: iso
+  contents: blogs/posts
+  fields: [image, title, categories, description, reading-time,
+           date]
+  sort: "date desc"
+  type: grid
+  categories: false
+  sort-ui: false
+  grid-columns: 3
+  image-placeholder: "images/blogicon.png"
+  filter-ui: false
 ---
 
-::: {#about-block}
+
+Hello, good morning, good afternoon, and goodnight. Welcome to my website (or just a plain webpage). I am 藤宮天音 (Fujimiya Amane, or あまね for short), i.e. Bui Gia Khanh (Vietnamese name). I am a former major in Physics, Mathematics and Computer Science. For my current works in private, please see [the AML main page](https://aml_reposition_sub_centre.gitlab.io/AML_Reposition_Sub-Main/).
+
+My main field of interest includes philosophy (more on system philosophy, like Heideggerian philosophy), physics (theoretical physics, foundational physics and *quantum optics* of which I am researching in), theoretical aspects of sciences — for example, theoretical machine learning, theoretical artificial intelligence (a broader term, while still exists, is partially faded into the history more or less), theoretical computer science, and something else. 
+
+Currently, my works include researching on the topic of *double descent* in theoretical consideration of machine learning, Raman spectroscopy with machine learning-aid application, and theoretical analysis on nonlinear absorption coefficients of quantum well in setting of semiconductor structures. I also have plans for multiple things include *online books* or *research documentary*, though that remains to be seen. Right now, I also intend to prepare a research team, or laboratory, named RHINELAB, of which will be here shortly, I guess.
+
+Collaboration is gratefully welcome, since I do not have much thing to do anyway. Probably have to make the spare part goes away. For more information, please see the **about page**.
 
 
-Hello, good morning, good afternoon, and goodnight. Welcome to my website (or just a plain webpage). I am 藤宮天音 (Fujimiya Amane, or あまね for short), i.e. Bui Gia Khanh (Vietnamese name). I am a second-year undergraduate student, majoring in Physics, Mathematics and Computer Science in Department of Physics, Hanoi University of Science, college of Vietnam National University. 
-
-My main field of interest includes philosophy (more on system philosophy, like Heideggerian philosophy), physics (theoretical physics, foundational physics and *quantum optics* of which I am researching in), theoretical aspects of sciences - for example, theoretical machine learning, theoretical artificial intelligence (a broader term, while still exists, is partially faded into the history more or less), theoretical computer science, and something else. 
-
-Currently, my works include researching on the topic of *double descent* in theoretical consideration of machine learning, Raman spectroscopy with machine learning-aid application, and theoretical analysis on nonlinear absorption coefficients of quantum well in setting of semiconductor structures. I also have plans for multiple things include *online books* or *research documentary*, though that remains to be seen. 
-
-Collaboration is gratefully welcome, since I do not have much thing to do anyway. Probably have to make the spare part goes away. For more information, please see the **about page**. 

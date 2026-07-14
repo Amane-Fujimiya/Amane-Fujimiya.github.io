@@ -1,15 +1,5 @@
 ---
 title: "Documentation"
-listing:
-  date-format: iso
-  contents: posts
-  fields: [image, title, categories, description, reading-time,
-           date]
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
@@ -19,12 +9,23 @@ For the new version, it is where I do my own reorganization of different content
 
 ## The main documents
 
-The main documentation site for now, is obviously this site on its own, [my personal website](https://amane-fujimiya.github.io/). The research hub in which contents will be written down would be organized in [this research sub-partition](https://amane-fujimiya.github.io/Research/) under the domain. For now, it is also the main hub of operations. 
+- [Main website](https://amane-fujimiya.github.io/). 
+- [Research Frontloader](https://amane-fujimiya.github.io/Research/).
+- [AML Deployment Section](https://aml_reposition_sub_centre.gitlab.io/AML_Reposition_Sub-Main/) with smaller linked delegation.
 
-For main projects, we have the now-postponed [Neural Network (re)Design](https://amane-fujimiya.github.io/ML_Aneurysm) document. For other in-progress works, we have a few options, bust most of them are and will be hosted on either `eigenmane` GitHub, mainly [this domain (to be deployed)](eigenmane.github.io) and for completeness, [this repository](https://github.com/Eigenmane/Neural) for a neuroscience topic preparation. 
+The main documentation site for now, is obviously this site on its own, [my personal website](https://amane-fujimiya.github.io/). The research hub in which contents will be written down would be organized in [this research sub-partition](https://amane-fujimiya.github.io/Research/) under the domain. There is also [AML](https://aml_reposition_sub_centre.gitlab.io/AML_Reposition_Sub-Main/) as a deployment central zone, holding everything together (almost so). 
 
-Other documentation flavours would be preferable to be published onto `Netlify`. Specifically, with the domain intrinsic of Netlify, and using their own free plan (might be upgraded later on), for example, the [Physics Companion](https://physics-companion.netlify.app/) where I retain certain amount of lecture notes and material preparation.
+For main projects, we have the now-postponed [Neural Network (re)Design](https://amane-fujimiya.github.io/ML_Aneurysm) document (*I will soon migrate it over to* `GitLab`). For other in-progress works, we have a few options, bust most of them are and will be hosted on either `eigenmane` GitHub, mainly [this domain (to be deployed)](eigenmane.github.io) and for completeness, [this repository](https://github.com/Eigenmane/Neural) for a neuroscience topic preparation. That said, as of 2026, it has been migrated to GitLab. 
+
+Other documentation flavours would be preferable to be published onto `GitLab` or `Netlify`. Specifically, with the domain intrinsic of Netlify, and using their own free plan (might be upgraded later on). THough, I would say that I use Netlify for hosting contents or files rather than works or public organization. 
 
 ## Planned
 
-For planned content, I am exploring options regarding the use of forums, `XWiki`, and so on infrastructures, for example, lifting myself out of primitive notion and start using `Docker`, They are there, for the purpose to host a new *knowledge sharing and organization* idea that I have in mind, and also for *documentation* of knowledge and projects, much similar to CV and others. Further on, using that, we can also use the infrastructures for hosting frameworks and further research framework that would be detrimental in advancing the theory that is in mind.
+For planned content, I am exploring options regarding the use of forums, `XWiki`, and so on infrastructures, for example, lifting myself out of primitive notion and start using `Docker`, They are there, for the purpose to host a new *knowledge sharing and organization* idea that I have in mind, and also for *documentation* of knowledge and projects, much similar to CV and others. Further on, using that, we can also use the infrastructures for hosting frameworks and further research framework that would be detrimental in advancing the theory that is in mind. That is: 
+
+- A presentation website. 
+- A `XWiki` website infrastructures, plus a software-domain deployment of a research network (?) for collaboration, I guess? Right now it is a hurdle because of research communication between fields or so is rather hard at a distance. 
+- A CV website and PDF-generation option for offline uses, or legacy stuff. 
+- The, tech-stack and tools I want to use that is not available elsewhere. 
+
+Not too much, but the list can always go wider. 

@@ -13,20 +13,14 @@ website:
     
     # your sub-pages
     left:
-      - text: "Projects"
-        href: projects/index.qmd
       - text: "Notes"
         href: notes/index.qmd
       - text: "Document"
         href: documents/index.qmd
-      - text: "Main"
-        href: main/index.qmd
       - text: "Blogs"
         href: blogs/index.qmd
       - text: "Essays"
         href: essays/index.qmd
-      - text: "Sketches"
-        href: sketches/index.qmd
       - text: "About"
         href: about/about.qmd
       # - text: "CV"
@@ -63,12 +57,11 @@ project:
     - "404.qmd"
     - "essays/**/*.qmd"
     - "documents/**/*.qmd"
-    - "sketches/**/*.qmd"
     - "about/**/*.qmd"
-    - "projects/**/*.qmd"
     - "notes/**/*.qmd"
-    - "main/**/*.qmd"
     - "blogs/**/*.qmd"
+  resources:
+    - "google*.html"
 
   preview: 
     port: 22222
@@ -83,9 +76,10 @@ format:
   html:
     css: /styles.css
     fontsize: 1.1em
+    #mainfont: "Minion Pro"
     theme: 
-      light: flatly
-      dark: darkly
+      light: [flatly,theme.scss]
+      dark: [darkly,theme.scss]
       # light: html/theme-light.scss
       # dark: html/theme-dark.scss
     toc: true
@@ -104,3 +98,5 @@ editor:
   render-on-save: true
 comments:
   hypothesis: true
+
+

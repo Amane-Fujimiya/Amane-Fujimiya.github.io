@@ -1,0 +1,18 @@
+---
+title: "Rustlang, and what not to use it sometimes"
+author: "Fujimiya Amane"
+date: "2026-06-07"
+image: /images/this_is_fine.png
+categories: [Blog, life, daily]
+format:
+  html:
+    toc: true
+description: "I want monuments and unglamorous achievements. Rhetoric, however, stands out as the ideological crusade reigning on realities unfolding."
+status: "done"
+---
+
+(Not done, I just up it here). 
+
+Using `rust` is quite an experience. As far as I am aware of, it is rather pretty much quite hypnotically nice with `mdbook` as the direct contestant of clean and well-defined static website generation for courses and so on. Which is good, because that is what it is. A very well established `rustlang` community effort for a book system. However, using it and of such dependency, is a problem in itself. 
+
+When choosing something to work in long terms, for the time can span to years and decades, where the infrastructures are similar to buildings - we build them to live and to host of functional, but not more so to the working way of changing the socket and replacing the core every few months or years. We want system to be unglamorous, system to be in tangent to hype, system to not care about your whining and keep moving rigidly so, yet flexible enough to make the logistics of those relying on the system to not care of its internal mechanism, for dedicated maintainer to also be fluidly transferred between times, decades and years. But not Rust. What I have seen, is that `rustlang` is more so of an *ideological crusade*, with its **RIRR** (Rewrite it in Rust) agenda, and various rhetoric by its members against immense importance and roles of the previous system, being it C, FORTRAN, or so on, without regard for the **engineering side** of the necessity and such, on how C behaves and delegate the interpretative choices onto the human developers, and whatever contexts are there that will have people to use C over Rust. However, Rustaceans apparently like their little crusade of programming ideology, flatten the discussion on engineerings into rhetoric like only *Rust way is the best way*. This creates the anxiety perhaps for even internal features of Rust itself, which, I might say, is the dealbreaker for me to only partially using it. 
