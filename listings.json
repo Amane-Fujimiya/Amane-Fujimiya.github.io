@@ -1,14 +1,8 @@
 [
   {
-    "listing": "/essays/index.html",
+    "listing": "/blogs/index.html",
     "items": [
-      "/essays/posts/old_essay.html",
-      "/essays/posts/essay_1_raman.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
+      "/blogs/posts/suffocating.html",
       "/blogs/posts/lamenting.html",
       "/blogs/posts/fascism.html",
       "/blogs/posts/Rust_first.html",
@@ -71,8 +65,9 @@
     ]
   },
   {
-    "listing": "/blogs/index.html",
+    "listing": "/index.html",
     "items": [
+      "/blogs/posts/suffocating.html",
       "/blogs/posts/lamenting.html",
       "/blogs/posts/fascism.html",
       "/blogs/posts/Rust_first.html",
@@ -120,6 +115,13 @@
       "/blogs/posts/MathGM.html",
       "/blogs/posts/Physics_trick.html",
       "/blogs/posts/Cleaning.html"
+    ]
+  },
+  {
+    "listing": "/essays/index.html",
+    "items": [
+      "/essays/posts/old_essay.html",
+      "/essays/posts/essay_1_raman.html"
     ]
   }
 ]
